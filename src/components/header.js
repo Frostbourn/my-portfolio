@@ -1,42 +1,44 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const StyledHeader = styled.header`
+  margin: 1rem 0;
+  padding: 0 1rem;
+
+  nav {
+    margin: 0;
+    list-style: none;
+    float: right;
+  }
+  a {
+    text-shadow: none;
+    text-decoration: none;
+  }
+`
+
+const ListLink = props => (
+  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+    <Link to={props.to}>{props.children}</Link>
+  </li>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header = ({ children }) => {
+  return (
+    <StyledHeader>
+      <Link to="/" style={{ textShadow: `none` }}>
+        <h3 class="logo" style={{ display: `inline`, color: `navyblue` }}>
+          Jakub<span style={{ color: `purple` }}>Skowronski</span>
+        </h3>
+      </Link>
+      <nav>
+        <ListLink to="#">O mnie</ListLink>
+        <ListLink to="#">Portfolio</ListLink>
+        <ListLink to="#">Kontakt</ListLink>
+      </nav>
+      {children}
+    </StyledHeader>
+  )
 }
 
 export default Header
