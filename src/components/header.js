@@ -77,6 +77,8 @@ const StyledHeader = styled.header`
       }
 
       .btn-success-outline {
+        display: flex;
+        align-items: center;
         border-radius: 100px;
         cursor: pointer;
         padding: 0.4rem 1.5rem;
@@ -84,7 +86,7 @@ const StyledHeader = styled.header`
         color: #5b00ec !important;
         font-weight: 600;
         letter-spacing: 2px;
-        border: 1px solid;
+        border: 2px solid;
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
@@ -95,6 +97,9 @@ const StyledHeader = styled.header`
           border-color: #9553ff;
           box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
           -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
+        }
+        svg {
+          margin-right: 5px;
         }
       }
     }
@@ -112,7 +117,6 @@ const StyledHeader = styled.header`
       }
     }
   }
-
 `
 
 const ListLink = props => (
@@ -136,6 +140,19 @@ const Header = props => (
         <ListLink to="#">O mnie</ListLink>
         <ListLink to="#">Portfolio</ListLink>
         <ListLink to="#" class="btn-success-outline">
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="bi bi-envelope"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"
+            />
+          </svg>
           Kontakt
         </ListLink>
       </Navbar.Collapse>

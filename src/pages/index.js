@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif !important;
     font-size: 16px;
     color: var(--primary);
+    overflow-x: hidden;
   }
 `
 
