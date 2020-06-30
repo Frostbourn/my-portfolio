@@ -9757,23 +9757,23 @@ body {
 @media (max-width: 768px) {
   .display-1 {
     font-size: 3.2rem;
-    font-size: calc( 2.05rem + (4 - 2.05) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (2.05rem + (4 - 2.05) * ((100vw - 20rem) / (48 - 20))));
+    font-size: calc(2.05rem + (4 - 2.05) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc(1.4 * (2.05rem + (4 - 2.05) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-2 {
     font-size: 1.44rem;
-    font-size: calc( 1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
+    font-size: calc(1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc(1.4 * (1.28rem + (1.8 - 1.28) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-4 {
     font-size: 0.64rem;
-    font-size: calc( 0.93rem + (0.8 - 0.93) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (0.93rem + (0.8 - 0.93) * ((100vw - 20rem) / (48 - 20))));
+    font-size: calc(0.93rem + (0.8 - 0.93) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc(1.4 * (0.93rem + (0.8 - 0.93) * ((100vw - 20rem) / (48 - 20))));
   }
   .display-5 {
     font-size: 1.12rem;
-    font-size: calc( 1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
-    line-height: calc( 1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))));
+    font-size: calc(1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20)));
+    line-height: calc(1.4 * (1.14rem + (1.4 - 1.14) * ((100vw - 20rem) / (48 - 20))));
   }
 }
 
@@ -10703,6 +10703,7 @@ body {
 .hero H1 {
   text-align: center;
   color: #293347;
+  font-weight: normal;
 }
 
 .hero .mbr-text,
@@ -10711,17 +10712,25 @@ body {
   color: #293347;
 }
 
-.cid-rCwVVuTaus {
+.waves {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
   background: #ffffff;
 }
 
-.cid-rCwVVuTaus .image-block {
+.waves .image-block {
   margin: auto;
   width: 100% !important;
 }
 
+.waves .image-block img {
+  width: 100% !important;
+}
+
 @media (max-width: 768px) {
-  .cid-rCwVVuTaus .image-block {
+  .waves .image-block {
     width: 100% !important;
   }
 }
@@ -11734,7 +11743,7 @@ body {
   visibility: hidden;
   padding: 0;
   transition-duration: .25s;
-  transition-property: opacity,padding,height;
+  transition-property: opacity, padding, height;
 }
 
 .cid-rBXkB9rbi7 .collapsed .dropdown.open > .dropdown-menu {
@@ -11842,7 +11851,7 @@ body {
     visibility: hidden;
     padding: 0;
     transition-duration: .5s;
-    transition-property: opacity,padding,height;
+    transition-property: opacity, padding, height;
   }
   .cid-rBXkB9rbi7 .dropdown.open > .dropdown-menu {
     position: relative;

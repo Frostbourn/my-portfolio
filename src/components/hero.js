@@ -3,10 +3,6 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import { Container, Row, Col } from "react-bootstrap"
-import styled from "styled-components"
-
-const StyledHero = styled.section`
-`
 
 const HeroLink = props => (
   <li>
@@ -17,7 +13,7 @@ const HeroLink = props => (
 )
 
 const Hero = ({ siteTitle }) => (
-  <StyledHero className="hero">
+  <section className="hero">
     {/* <HeroLink to="#">Wylij brief</HeroLink> */}
     {/* <img src="https://jakubskowronski.com/assets/images/bg-waves-img.svg" /> */}
     <Container>
@@ -48,7 +44,15 @@ const Hero = ({ siteTitle }) => (
         </Col>
       </Row>
     </Container>
-  </StyledHero>
+    
+  <div className="waves content4">
+    <figure class="mbr-figure">
+            <div class="image-block">
+                <img src="https://jakubskowronski.com/assets/images/bg-waves-img.svg" width="1400" alt="" title="" />
+            </div>
+        </figure>
+  </div>
+  </section>
 )
 
 export default Hero
