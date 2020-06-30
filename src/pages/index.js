@@ -1,7 +1,8 @@
 import React from "react"
-import 'bootstrap/dist/css/bootstrap.css';
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
 import { createGlobalStyle } from "styled-components"
-import Header from "../components/header"
 
 const GlobalStyle = createGlobalStyle`
    :root {
@@ -20,11 +21,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const IndexPage = () => (
-  <React.Fragment>
-    <GlobalStyle />
-    <Header />
-  </React.Fragment>
+const IndexPage = (data) => (
+    <Layout>
+      <GlobalStyle />
+      <SEO title="Strona główna" keywords="frontend developer" />
+    </Layout>
 )
 
 export default IndexPage
