@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <ortfolio>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Hero />
       <About />
