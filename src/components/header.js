@@ -1,10 +1,9 @@
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import styled from "styled-components"
 import { Navbar } from "react-bootstrap"
-import ScrollShadow from 'react-scroll-shadow';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -32,21 +31,23 @@ const StyledHeader = styled.header`
       color: var(--secondary);
     }
   }
-  .navbar-collapse.show:after {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    content: "";
-    background-color: rgba(0, 0, 0, 0.3);
-    left: 0;
-    bottom: 0;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    z-index: 1000;
-  }
   nav {
     width: 100%;
     background: #fff;
+    transition: 0.2s;
+    
+  .navbar-collapse.show:after {
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3);
+      left: 0;
+      bottom: 0;
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+      z-index: 1000;
+    }
 
     .navbar-toggler {
       border: none;
@@ -98,6 +99,9 @@ const StyledHeader = styled.header`
       }
     }
   }
+  .scrollBox {
+    box-shadow: 0px 1px 10px #999;
+  }
   @media (max-width: 835px) {
     nav {
       justify-content: center;
@@ -121,9 +125,28 @@ const ListLink = props => (
   </li>
 )
 
-const Header = props => (
+const Header = props => {
+  // determined if page has scrolled and if the view is on mobile
+  const [state, setState] = useState(false)
+
+  // change state on scroll
+  useEffect(() => {
+    const onScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== state.scrolled) {
+        setState(isScrolled);
+      }
+    };
+    document.addEventListener('scroll', onScroll);
+    return () => {
+      // clean up the event handler when the component unmounts
+      document.removeEventListener('scroll', onScroll);
+    };
+  }, [state, setState]);
+
+  return (
   <StyledHeader>
-    <Navbar collapseOnSelect expand="md" fixed="top">
+    <Navbar className={`${state ? 'scrollBox' : ''}`} collapseOnSelect expand="md" fixed="top">
       <Navbar.Brand href="/">
         <h3 class="logo">
           Jakub<span>Skowroński.</span>
@@ -131,8 +154,8 @@ const Header = props => (
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <ListLink to="#">O mnie</ListLink>
-        <ListLink to="#">Portfolio</ListLink>
+        <ListLink to="#about">O mnie</ListLink>
+        <ListLink to="#portfolio">Portfolio</ListLink>
         <ListLink to="#" class="btn-success-outline">
           <svg
             width="1em"
@@ -152,7 +175,7 @@ const Header = props => (
       </Navbar.Collapse>
     </Navbar>
   </StyledHeader>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

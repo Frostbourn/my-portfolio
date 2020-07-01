@@ -12,7 +12,7 @@ const AboutLink = props => (
 )
 
 const About = () => (
-  <section className="about">
+  <section id="about" className="about">
     <Container fluid>
       <Row className="align-items-center content-row">
         <Col lg={6} className="wrap-block">

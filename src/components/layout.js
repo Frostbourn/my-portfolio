@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Hero from "./hero"
 import About from "./about"
+import Portfolio from "./portfolio"
 import '../styles/index.css'
 
 const Layout = ({ children }) => {
@@ -26,10 +27,11 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <ortfolio>
+    <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Hero />
       <About />
+      <Portfolio />
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with

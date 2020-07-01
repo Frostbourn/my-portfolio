@@ -14,19 +14,22 @@ const GlobalStyle = createGlobalStyle`
     --pink: #e83e8c;
     --red: #dc3545;
     }
-  body {
-    font-family: 'Montserrat', sans-serif !important;
-    font-size: 16px;
-    color: var(--primary);
-    overflow-x: hidden;
-  }
+    html {
+        scroll-behavior: smooth; 
+    }
+    body {
+        font-family: 'Montserrat', sans-serif !important;
+        font-size: 16px;
+        color: var(--primary);
+        overflow-x: hidden;
+    }
 `
 
-const IndexPage = (data) => (
-    <Layout>
-      <GlobalStyle />
-      <SEO title="Strona główna" keywords="frontend developer" />
-    </Layout>
+const IndexPage = data => (
+  <Layout>
+    <GlobalStyle />
+    <SEO title="Strona główna" keywords="frontend developer" />
+  </Layout>
 )
 
 export default IndexPage
