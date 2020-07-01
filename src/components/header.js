@@ -3,15 +3,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import styled from "styled-components"
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from "react-bootstrap"
+import { Navbar } from "react-bootstrap"
+import ScrollShadow from 'react-scroll-shadow';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -20,6 +13,7 @@ const StyledHeader = styled.header`
   width: 100%;
   height: 75px;
   background-color: #ffffff;
+  z-index: 99;
 
   a {
     text-shadow: none;
