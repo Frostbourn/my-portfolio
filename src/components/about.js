@@ -16,22 +16,22 @@ const About = () => (
     <Container fluid>
       <Row className="align-items-center content-row">
         <Col lg={6} className="wrap-block">
-          <h1 class="mbr-section-title mbr-fonts-style mbr-light display-2">
+          <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
             <strong>KIM JESTEM?</strong>
           </h1>
 
-          <h3 class="mbr-text mbr-fonts-style mbr-light display-7">
+          <h3 className="mbr-text mbr-fonts-style mbr-light display-7">
             Jestem Freelancerem/Web Developerem i motocyklistą z pasji. Zajmuję
             się tworzeniem nowoczesnych stron internetowych od A do Z&nbsp;z
             wykorzystaniem HTML, CSS, JavaScript, PHP i wielu frameworków.
             Projekty które wdrażam są wysokiej jakości. Duża uwagę przywiązuje
             do szczegółów projektu. Swoją kariere zawodową rozpocząłem na
             stanowisku Joomla! Developera w serwisie{" "}
-            <a href="https://www.facebook.com/androidappspl"target="_blank" rel="noreferrer"class="text-white">
+            <a href="https://www.facebook.com/androidappspl"target="_blank" rel="noreferrer"className="text-white">
               androidapps.pl
             </a>
             . W 2013 roku otworzyłem własną stronę -{" "}
-            <a href="https://jsns.eu" target="_blank" rel="noreferrer" class="text-white">
+            <a href="https://jsns.eu" target="_blank" rel="noreferrer" className="text-white">
               jsns.eu
             </a>
             , opartą o Joomla!, gdzie oferuję moje usługi oraz wtyczki do tegoż

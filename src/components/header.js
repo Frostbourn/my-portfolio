@@ -148,11 +148,11 @@ const Header = props => {
         fixed="top"
       >
         <Navbar.Brand href="/">
-          <h3 class="logo">
+          <h3 className="logo">
             Jakub<span>Skowroński.</span>
           </h3>
         </Navbar.Brand>
-        <Navbar.Toggle isActive={state} aria-controls="responsive-navbar-nav" />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav.Item as={`li`}>
             <Nav.Link href="#about">O mnie</Nav.Link>

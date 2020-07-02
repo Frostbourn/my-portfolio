@@ -1025,10 +1025,13 @@ body {
 .dropup .dropdown-toggle::after {
     display: none;
 }
+
 .align-center {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
+
 .hero {
     height: 100vh;
     padding-top: 30vh;
@@ -1077,6 +1080,12 @@ body {
     }
 }
 
+@media (min-width: 1600px) {
+    .waves .image-block img {
+        margin-top: -80px
+    }
+}
+
 .about {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -1086,8 +1095,8 @@ body {
 .about::before {
     content: "";
     display: block;
-    height: 245px;
-    margin: -245px 0 0;
+    height: 190px;
+    margin: -190px 0 0;
 }
 
 .about .icon-transition span {
@@ -1194,6 +1203,7 @@ body {
     .about .social-list {
         text-align: center !important;
     }
+
     .about::before {
         height: 83px;
         margin: -83px 0 0;
@@ -1229,6 +1239,7 @@ body {
     border-radius: 20px;
     box-shadow: 2px 8px 20px -6px #999;
 }
+
 .portfolio .card:hover {
     -moz-transform: translate(0, -2px);
     -ms-transform: translate(0, -2px);
