@@ -54,7 +54,7 @@ body {
 
 .display-5 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 
@@ -1086,8 +1086,8 @@ body {
 .about::before {
     content: "";
     display: block;
-    height: 96px;
-    margin: -96px 0 0;
+    height: 245px;
+    margin: -245px 0 0;
 }
 
 .about .icon-transition span {
@@ -1194,6 +1194,10 @@ body {
     .about .social-list {
         text-align: center !important;
     }
+    .about::before {
+        height: 83px;
+        margin: -83px 0 0;
+    }
 }
 
 .about .mbr-section-title {
@@ -1205,20 +1209,36 @@ body {
 }
 
 .portfolio {
-    padding-top: 135px;
-    padding-bottom: 90px;
+    padding: 135px 90px;
     background-color: #ffffff;
 }
 
 .portfolio .card-title {
     letter-spacing: 0.03em;
     color: #232323;
+    font-weight: 700;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
 }
 
 .portfolio .card {
-    margin-bottom: 2rem;
+    margin: 2rem;
+    flex: 1 1 25%;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 8px 20px -6px #999;
+}
+.portfolio .card:hover {
+    -moz-transform: translate(0, -2px);
+    -ms-transform: translate(0, -2px);
+    -o-transform: translate(0, -2px);
+    -webkit-transform: translate(0, -2px);
+    transform: translate(0, -2px)
+}
+
+.portfolio .card-img img {
+    width: 100%;
 }
 
 .portfolio .card-box {
@@ -1229,12 +1249,14 @@ body {
 .portfolio .card-box p {
     color: #444;
     letter-spacing: 0.03em;
+    font-weight: 300;
     margin: 0;
     padding-bottom: 1.5rem;
 }
 
 .portfolio .btn {
     margin: .3rem;
+    font-size: 0.6rem;
 }
 
 .portfolio .mbr-section-title {

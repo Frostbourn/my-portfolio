@@ -14,7 +14,7 @@ const PortfolioLink = props => (
 const Portfolio = () => (
   <section id="portfolio" className="portfolio features8">
     <Container fluid>
-      <Row className="blog-block">
+      <Row className="blog-block justify-content-around">
         <Col md={12}>
           <h2 class="mbr-section-title mbr-fonts-style align-center display-2">
             <strong>OSTATNIE PRACE</strong>
@@ -26,7 +26,7 @@ const Portfolio = () => (
         <div class="card py-3 col-12 col-md-6 col-lg-4">
             <div class="card-wrapper">
                 <div class="card-img">
-                    <img src="assets/images/postplaner_pl.png" title="" alt="" />
+                    <img src="https://jakubskowronski.com/assets/images/postplaner_pl.png" title="" alt="" />
                 </div>
                 <div class="card-box">
                     <h4 class="card-title mbr-fonts-style mbr-bold align-center display-5">
@@ -43,7 +43,7 @@ const Portfolio = () => (
         <div class="card py-3 col-12 col-md-6 col-lg-4">
             <div class="card-wrapper">
                 <div class="card-img">
-                    <img src="assets/images/mltranseu.png" title="" alt="" />
+                    <img src="https://jakubskowronski.com/assets/images/mltranseu.png" title="" alt="" />
                 </div>
                 <div class="card-box">
                     <h4 class="card-title mbr-fonts-style mbr-bold align-center display-5">
@@ -60,7 +60,7 @@ const Portfolio = () => (
         <div class="card py-3 col-12 col-md-6 col-lg-4">
             <div class="card-wrapper">
                 <div class="card-img">
-                    <img src="assets/images/lakinipl.png" title="" alt="" />
+                    <img src="https://jakubskowronski.com/assets/images/lakinipl.png" title="" alt="" />
                 </div>
                 <div class="card-box">
                     <h4 class="card-title mbr-fonts-style mbr-bold align-center display-5">
@@ -74,7 +74,7 @@ const Portfolio = () => (
                 <div class="mbr-section-btn align-center"><a href="https://lakini.pl" class="btn btn-success display-4" target="_blank">ODWIEDŹ STRONĘ</a></div>
             </div>
         </div>
-        <div class="row row-content justify-content-center">
+        {/* <div class="row row-content justify-content-center">
             <div class="card py-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
@@ -128,7 +128,7 @@ const Portfolio = () => (
                     <div class="mbr-section-btn align-center"><a href="https://jsns.eu" class="btn btn-success display-4" target="_blank">ODWIEDŹ STRONĘ</a></div>
                 </div>
             </div>
-        </div>    
+        </div>     */}
       </Row>
     </Container>
   </section>
