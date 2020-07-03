@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
+import { Bounce } from 'react-awesome-reveal';
 
 const HeroLink = props => (
   <Link to={props.to} class={props.className}>
@@ -10,6 +11,7 @@ const HeroLink = props => (
 )
 
 const Hero = () => (
+  <Bounce direction="top" triggerOnce>
   <section className="hero">
     <Container fluid>
       <Row className="justify-content-center">
@@ -53,6 +55,7 @@ const Hero = () => (
       </figure>
     </div>
   </section>
+  </Bounce>
 )
 
 export default Hero

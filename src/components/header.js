@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 
 import styled from "styled-components"
 import { Nav, Navbar } from "react-bootstrap"
+import { Bounce } from 'react-awesome-reveal';
 
 const StyledHeader = styled.header`
   display: flex;
@@ -140,6 +141,7 @@ const Header = props => {
 
   return (
     <StyledHeader>
+      <Bounce direction="bottom" triggerOnce>
       <Navbar
         collapseOnSelect
         className={`${state ? "scrollBox" : ""}` + " shadowBox"}
@@ -179,6 +181,7 @@ const Header = props => {
           </Nav.Item>
         </Navbar.Collapse>
       </Navbar>
+      </Bounce>
     </StyledHeader>
   )
 }

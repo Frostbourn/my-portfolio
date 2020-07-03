@@ -10758,13 +10758,12 @@ body {
   background-color: #9e61fc;
 }
 
-.about::before {
-  content: "";
-  display: block;
-  height: 190px;
-  margin: -190px 0 0;
-}
-
+/* .about::before {
+    content: "";
+    display: block;
+    height: 190px;
+    margin: -190px 0 0;
+} */
 .about .icon-transition span {
   padding: 0.1rem 0.9rem;
   border-radius: 50%;

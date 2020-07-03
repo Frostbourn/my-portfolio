@@ -8,12 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import "../styles/index.css"
 
 import Header from "./header"
 import Hero from "./hero"
 import About from "./about"
 import Portfolio from "./portfolio"
-import '../styles/index.css'
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,19 +25,18 @@ const Layout = ({ children }) => {
       }
     }
   `)
-
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-
+  
   if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]')
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
   }
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Hero />
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Hero />
       <About />
       <Portfolio />
       <main>{children}</main>
