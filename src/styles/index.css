@@ -10695,6 +10695,7 @@ body {
 .align-center {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .hero {

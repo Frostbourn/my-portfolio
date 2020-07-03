@@ -14,9 +14,6 @@ const GlobalStyle = createGlobalStyle`
     --pink: #e83e8c;
     --red: #dc3545;
     }
-    html {
-        scroll-behavior: smooth; 
-    }
     body {
         font-family: 'Montserrat', sans-serif !important;
         font-size: 16px;

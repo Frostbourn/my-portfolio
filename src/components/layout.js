@@ -26,6 +26,14 @@ const Layout = ({ children }) => {
     }
   `)
 
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+  if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]')
+  }
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />

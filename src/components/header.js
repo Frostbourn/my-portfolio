@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 
 import styled from "styled-components"
 import { Nav, Navbar } from "react-bootstrap"
@@ -22,7 +21,7 @@ const StyledHeader = styled.header`
     margin: 1rem 4rem;
     display: inline;
     color: #293347;
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     font-weight: 700;
     white-space: normal;
 
@@ -103,7 +102,7 @@ const StyledHeader = styled.header`
     }
   }
   .scrollBox {
-    box-shadow: 0px 1px 10px #999;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.08);;
   }
   @media (max-width: 835px) {
     nav {
@@ -155,10 +154,10 @@ const Header = props => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav.Item as={`li`}>
-            <Nav.Link href="#about">O mnie</Nav.Link>
+            <Nav.Link href="/#about">O mnie</Nav.Link>
           </Nav.Item>
           <Nav.Item as={`li`}>
-            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="/#portfolio">Portfolio</Nav.Link>
           </Nav.Item>
           <Nav.Item as={`li`}>
             <Nav.Link href="#" className="btn-success-outline">
