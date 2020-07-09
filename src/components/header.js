@@ -10,6 +10,7 @@ const StyledHeader = styled.header`
   align-items: center;
   position: fixed;
   width: 100%;
+  height: 75px;
   background-color: #ffffff;
   z-index: 99;
 
@@ -140,7 +141,7 @@ const Header = props => {
   }, [state, setState])
 
   return (
-    <StyledHeader>
+    <StyledHeader data-scroll-header>
       <Bounce direction="bottom" triggerOnce>
       <Navbar
         collapseOnSelect
@@ -148,7 +149,7 @@ const Header = props => {
         expand="md"
         fixed="top"
       >
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="#">
           <h3 className="logo">
             Jakub<span>Skowroński.</span>
           </h3>

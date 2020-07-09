@@ -27,7 +27,12 @@ const Layout = ({ children }) => {
   `)
   
   if (typeof window !== "undefined") {
-    require("smooth-scroll")('a[href*="#"]')
+    require("smooth-scroll")('a[href*="#"]', {
+      header: '[data-scroll-header]', 
+	    topOnEmptyHash: true,
+      speed: 500,
+      speedAsDuration: true
+    });
     window.onbeforeunload = function () {
       window.scrollTo(0, 0);
     }

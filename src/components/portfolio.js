@@ -13,10 +13,10 @@ const PortfolioLink = props => (
 )
 
 const Portfolio = () => (
-    <Fade triggerOnce>
-  <section id="portfolio" className="portfolio features8">
-    <Container>
-      <Row className="blog-block justify-content-around">
+  <Fade triggerOnce>
+    <section id="portfolio" className="portfolio features8">
+      <Container>
+        <Row className="blog-block justify-content-around">
           <Col md={12}>
             <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
               <strong>OSTATNIE PRACE</strong>
@@ -119,7 +119,7 @@ const Portfolio = () => (
               </div>
             </div>
           </div>
-        {/* <div className="row row-content justify-content-center">
+          {/* <div className="row row-content justify-content-center">
             <div className="card py-3 col-12 col-md-6 col-lg-4">
                 <div className="card-wrapper">
                     <div className="card-img">
@@ -174,10 +174,9 @@ const Portfolio = () => (
                 </div>
             </div>
         </div>     */}
-      </Row>
-    </Container>
-  </section>
-  
+        </Row>
+      </Container>
+    </section>
   </Fade>
 )
 
