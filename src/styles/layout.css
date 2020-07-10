@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap);
 
-
-
-
-
 body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -1234,10 +1230,15 @@ body {
 
 .portfolio .card {
     margin: 2rem;
-    flex: 1 1 25%;
     border: none;
     border-radius: 20px;
     box-shadow: 2px 8px 20px -6px #999;
+}
+
+@media (min-width: 768px) {
+    .portfolio .card {
+        flex: 1 1 25%;
+    }
 }
 
 .portfolio .card:hover {

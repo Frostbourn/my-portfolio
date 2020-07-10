@@ -10896,10 +10896,15 @@ body {
 
 .portfolio .card {
   margin: 2rem;
-  flex: 1 1 25%;
   border: none;
   border-radius: 20px;
   box-shadow: 2px 8px 20px -6px #999;
+}
+
+@media (min-width: 768px) {
+  .portfolio .card {
+    flex: 1 1 25%;
+  }
 }
 
 .portfolio .card:hover {

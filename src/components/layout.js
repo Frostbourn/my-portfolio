@@ -25,23 +25,23 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  
+
   if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]', {
-      header: '[data-scroll-header]', 
-	    topOnEmptyHash: true,
+      header: "[data-scroll-header]",
+      topOnEmptyHash: true,
       speed: 500,
-      speedAsDuration: true
-    });
+      speedAsDuration: true,
+    })
     window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
+      window.scrollTo(0, 0)
     }
   }
 
   return (
     <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Hero />
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <Hero />
       <About />
       <Portfolio />
       <main>{children}</main>
