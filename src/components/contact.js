@@ -3,8 +3,11 @@ import axios from "axios"
 import { Link } from "gatsby"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Container, Row, Col } from "react-bootstrap"
 
+=======
+>>>>>>> 192475a... Added GetForm.io contact form
 =======
 >>>>>>> 192475a... Added GetForm.io contact form
 const ContactForm = () => {
@@ -38,6 +41,7 @@ const ContactForm = () => {
       })
   }
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <section
       id="contact"
@@ -144,6 +148,8 @@ const ContactForm = () => {
       </Container>
     </section>
 =======
+=======
+>>>>>>> 192475a... Added GetForm.io contact form
       <div>
         <div className="col-md-8 mt-5">
           <h3>Getform.io Gatsby Form Example</h3>
@@ -199,6 +205,9 @@ const ContactForm = () => {
           </form>
         </div>
       </div>
+<<<<<<< HEAD
+>>>>>>> 192475a... Added GetForm.io contact form
+=======
 >>>>>>> 192475a... Added GetForm.io contact form
   )
 }
