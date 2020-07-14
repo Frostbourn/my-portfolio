@@ -14,6 +14,7 @@ import Header from "./header"
 import Hero from "./hero"
 import About from "./about"
 import Portfolio from "./portfolio"
+import ContactForm from "./contact"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -44,11 +45,12 @@ const Layout = ({ children }) => {
       <Hero />
       <About />
       <Portfolio />
+      <ContactForm />
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © {new Date().getFullYear()}, 
         {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        jakubskowronski.com. All rights reserved
       </footer>
     </>
   )
