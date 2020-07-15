@@ -67,15 +67,14 @@ const ContactForm = () => {
                   />
                 </div>
                 <div className="form-group">
-                  <input
-                    type="textarea"
+                  <textarea
                     name="message"
                     className="form-control"
                     id="exampleTextareaName"
                     placeholder="W czym mogę Ci pomóc?"
                     rows="3"
                     required="required"
-                  />
+                  ></textarea>
                 </div>
                 <button
                   type="submit"
@@ -139,7 +138,7 @@ const ContactForm = () => {
         </div>
       </Container>
     </section>
-)
+  )
 }
 
 export default ContactForm
