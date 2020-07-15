@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import axios from "axios"
 import { Link } from "gatsby"
 
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Alert } from "react-bootstrap"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -28,7 +28,7 @@ const ContactForm = () => {
       data: new FormData(form),
     })
       .then(r => {
-        handleServerResponse(true, "Thanks!", form)
+        handleServerResponse(true, "Dziękuję za wiadomość! Skontaktuje się z Tobą najszybciej jak to możliwe.", form)
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error, form)
@@ -44,7 +44,13 @@ const ContactForm = () => {
         <div className="media-container-row">
           <div className="col-md-6 col-lg-6 block-content">
             <div className="col-md-12">
-              <form onSubmit={handleOnSubmit}>
+              <form onSubmit={handleOnSubmit} className="text-center">
+                <h4 className="mb-4 mbr-fonts-style display-6 text-left">Wyślij wiadomość</h4>
+                {serverState.status && (
+                  <Alert variant={serverState.status.ok ? "success" : "danger"}>
+                    {serverState.status.msg}
+                  </Alert>
+                )}
                 <div className="form-group">
                   <input
                     type="email"
@@ -78,16 +84,11 @@ const ContactForm = () => {
                 </div>
                 <button
                   type="submit"
-                  className="btn btn-primary"
+                  className="btn btn-primary btn-form btn-bgr display-4"
                   disabled={serverState.submitting}
                 >
                   Wyślij
                 </button>
-                {serverState.status && (
-                  <p className={!serverState.status.ok ? "errorMsg" : ""}>
-                    {serverState.status.msg}
-                  </p>
-                )}
               </form>
             </div>
           </div>

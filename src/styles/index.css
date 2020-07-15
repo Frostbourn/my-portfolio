@@ -10343,7 +10343,7 @@ a.text-black:focus {
 }
 
 .btn-form {
-  border-radius: 0;
+  border-radius: 100px;
 }
 
 .btn-form:hover {
@@ -10452,7 +10452,7 @@ a:hover {
 
 .alert {
   color: #ffffff;
-  border-radius: 0;
+  border-radius: 5px;
   border: 0;
   font-size: .875rem;
   line-height: 1.5;
@@ -10461,7 +10461,7 @@ a:hover {
   position: relative;
 }
 
-.alert.alert-form::after {
+.alert.alert-success::after {
   background-color: inherit;
   bottom: -7px;
   content: "";
@@ -10572,6 +10572,14 @@ pre {
   .btn .mbr-iconfont {
     font-size: 1rem !important;
   }
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Social block */
