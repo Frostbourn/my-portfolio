@@ -2,14 +2,8 @@ import React, { useState } from "react"
 import axios from "axios"
 import { Link } from "gatsby"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Container, Row, Col } from "react-bootstrap"
 
-=======
->>>>>>> 192475a... Added GetForm.io contact form
-=======
->>>>>>> 192475a... Added GetForm.io contact form
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
     submitting: false,
@@ -41,8 +35,6 @@ const ContactForm = () => {
       })
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <section
       id="contact"
       className="contact features8 mbr-section form2 mbr-parallax-background"
@@ -147,69 +139,7 @@ const ContactForm = () => {
         </div>
       </Container>
     </section>
-=======
-=======
->>>>>>> 192475a... Added GetForm.io contact form
-      <div>
-        <div className="col-md-8 mt-5">
-          <h3>Getform.io Gatsby Form Example</h3>
-          <form onSubmit={handleOnSubmit}>
-            <div className="form-group">
-              <label for="exampleInputEmail1" required="required">
-                Email
-              </label>
-              <input
-                type="email"
-                name="email"
-                className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Email"
-                required="required"
-              />
-            </div>
-            <div className="form-group">
-              <label for="exampleInputName">Imię</label>
-              <input
-                type="text"
-                name="name"
-                className="form-control"
-                id="exampleInputName"
-                placeholder="Imię"
-                required="required"
-              />
-            </div>
-            <div className="form-group">
-              <label for="exampleTextareaName">Wiadomość</label>
-              <input
-                type="textarea"
-                name="message"
-                className="form-control"
-                id="exampleTextareaName"
-                placeholder="Wiadomość"
-                required="required"
-              />
-            </div>
-            <button
-              type="submit"
-              className="btn btn-primary"
-              disabled={serverState.submitting}
-            >
-              Submit
-            </button>
-            {serverState.status && (
-              <p className={!serverState.status.ok ? "errorMsg" : ""}>
-                {serverState.status.msg}
-              </p>
-            )}
-          </form>
-        </div>
-      </div>
-<<<<<<< HEAD
->>>>>>> 192475a... Added GetForm.io contact form
-=======
->>>>>>> 192475a... Added GetForm.io contact form
-  )
+)
 }
 
 export default ContactForm
