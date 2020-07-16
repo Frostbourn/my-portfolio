@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 const IndexPage = data => (
   <Layout>
     <GlobalStyle />
-    <SEO title="Strona główna" keywords="frontend developer" />
+    <SEO title="Jakub Skowroński" keywords="frontend developer" />
   </Layout>
 )
 

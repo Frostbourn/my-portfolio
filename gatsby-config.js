@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Jakub Skowroński / Webdesigner Portfolio`,
+    title: `Webdesigner Portfolio`,
     description: `Jestem web developerem freelancerem, specjalizuję się w projektowaniu stron www. Skutecznych stron www! Sprawdź moje portfolio i referencje.`,
     author: `Jakub Skowroński`,
   },

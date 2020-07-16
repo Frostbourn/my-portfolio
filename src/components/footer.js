@@ -14,7 +14,7 @@ const Footer = () => (
             </div>
             <div class="col-md-4 col-lg-5 copyright mb-3 mt-3">
               <p class="mb-0 text-copyright mbr-fonts-style display-6">
-                © {new Date().getFullYear()},{` `}jakubskowronski.com. All
+                © {new Date().getFullYear()} {` `}jakubskowronski.com. All
                 rights reserved
               </p>
             </div>

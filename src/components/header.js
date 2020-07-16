@@ -46,7 +46,7 @@ const Header = props => {
             <Nav.Item as={`li`}>
               <Nav.Link href="#contact" className="btn-success-outline">
                 <FaEnvelope />
-                Kontakt
+                  &nbsp;Kontakt
               </Nav.Link>
             </Nav.Item>
           </Navbar.Collapse>
