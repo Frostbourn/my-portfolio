@@ -8,7 +8,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Container } from "react-bootstrap"
 import "../styles/index.css"
 
 import Header from "./header"
@@ -16,6 +15,7 @@ import Hero from "./hero"
 import About from "./about"
 import Portfolio from "./portfolio"
 import ContactForm from "./contact"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -48,21 +48,7 @@ const Layout = ({ children }) => {
       <Portfolio />
       <ContactForm />
       <main>{children}</main>
-      <footer>
-        <Container>
-          <div class="media-container-row">
-            <div class="col-md-4 col-lg-4 logo-footer mb-3 mt-3 align-center">
-              <div class="navbar-brand">
-                <h3 className="logo">
-                  Jakub<span>Skowroński.</span>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </Container>
-        © {new Date().getFullYear()},{` `}
-        jakubskowronski.com. All rights reserved
-      </footer>
+      <Footer />
     </>
   )
 }
