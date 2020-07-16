@@ -6,6 +6,10 @@ body {
     line-height: 1.5;
 }
 
+svg {
+    vertical-align: initial;
+}
+
 .mbr-section-title {
     font-style: normal;
     line-height: 1.2;

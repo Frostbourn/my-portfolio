@@ -3,6 +3,7 @@ import axios from "axios"
 import { Link } from "gatsby"
 
 import { Container, Row, Col, Alert } from "react-bootstrap"
+import { FaFacebookF, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -111,7 +112,7 @@ const ContactForm = () => {
                       href="https://www.facebook.com/skowronski.jakub"
                       target="_blank"
                     >
-                      <span className="mbr-iconfont socicon-facebook socicon"></span>
+                      <span className="mbr-iconfont"><FaFacebookF /></span>
                     </a>
                   </li>
                   <li>
@@ -120,7 +121,7 @@ const ContactForm = () => {
                       href="https://github.com/Frostbourn?tab=repositories"
                       target="_blank"
                     >
-                      <span className="mbr-iconfont socicon-github socicon"></span>
+                      <span className="mbr-iconfont"><FaGithub /></span>
                     </a>
                   </li>
                   <li>
@@ -129,7 +130,7 @@ const ContactForm = () => {
                       href="https://www.linkedin.com/in/jakubskowronki"
                       target="_blank"
                     >
-                      <span className="mbr-iconfont socicon-linkedin socicon"></span>
+                      <span className="mbr-iconfont"><FaLinkedin /></span>
                     </a>
                   </li>
                 </ul>

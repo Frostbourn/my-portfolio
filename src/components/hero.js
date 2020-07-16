@@ -32,8 +32,7 @@ const Hero = () => (
             </HeroLink>
             <a
               class="btn btn-md btn-bgr btn-warning display-4"
-              href="#"
-              target="_blank"
+              href="#contact"
             >
               KONTAKT
             </a>
