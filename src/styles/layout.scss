@@ -105,8 +105,23 @@ nav {
     text-align: center !important;
 
     svg {
-        color: #ffffff !important;
-    }
+		color: #ffffff !important;
+		animation: updown 2s ease infinite;
+	}
+
+	@keyframes updown {
+		0% {
+		  transform: translateY(-30%);
+		}
+	  
+		50% {
+		  transform: translateY(30%);
+		}
+	  
+		100% {
+		  transform: translateY(-30%);
+		}
+	  }
 }
 
 .btn-success-outline {
@@ -1718,7 +1733,7 @@ html {
             position: absolute;
             left: 10px;
             top: 7px;
-            height: 3px;
+            height: 6px;
             width: 3px;
             background: #9553ff;
             border-radius: 50%;
