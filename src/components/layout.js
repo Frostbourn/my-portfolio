@@ -8,10 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import "../styles/index.css"
 
 import Header from "./header"
 import Hero from "./hero"
-import '../styles/index.css'
+import About from "./about"
+import Portfolio from "./portfolio"
+import ContactForm from "./contact"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,16 +28,27 @@ const Layout = ({ children }) => {
     }
   `)
 
+  if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]', {
+      header: "[data-scroll-header]",
+      topOnEmptyHash: true,
+      speed: 500,
+      speedAsDuration: true,
+    })
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0)
+    }
+  }
+
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Hero></Hero>
+      <Hero />
+      <About />
+      <Portfolio />
+      <ContactForm />
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </footer>
+      <Footer />
     </>
   )
 }

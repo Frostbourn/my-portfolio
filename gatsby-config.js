@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Jakub Skowroński / Webdesigner Portfolio`,
+    title: `Webdesigner Portfolio`,
     description: `Jestem web developerem freelancerem, specjalizuję się w projektowaniu stron www. Skutecznych stron www! Sprawdź moje portfolio i referencje.`,
     author: `Jakub Skowroński`,
   },
@@ -26,6 +26,23 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /svgs/
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
