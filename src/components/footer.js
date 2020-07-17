@@ -1,25 +1,27 @@
 import React from "react"
-import { Container, Row, Col, Alert } from "react-bootstrap"
+import { Container, Button, Row, Col, Alert } from "react-bootstrap"
 import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa"
 
 const Footer = () => (
   <footer>
     <Container>
       <div class="media-container-row">
-        <div class="col-md-4 col-lg-4 logo-footer mb-3 mt-3 align-center">
+        {/* <div class="col-md-4 col-lg-4 logo-footer mb-3 mt-3 align-center">
           <div class="navbar-brand">
             <h3 className="logo">
               Jakub<span>Skowroński.</span>
             </h3>
           </div>
-        </div>
+        </div> */}
         <div class="col-md-4 col-lg-5 copyright mb-3 mt-3">
           <p class="mb-0 text-copyright mbr-fonts-style display-6">
-            © {new Date().getFullYear()} {` `}jakubskowronski.com. All rights
+            © {new Date().getFullYear()} {` `}<span className="logo-footer">
+              Jakub<span>Skowroński.</span>
+            </span> All rights
             reserved
           </p>
         </div>
-        <div className="mb-4 pt-5 mbr-fonts-style subtext display-7">
+        {/* <div className="mb-4 pt-5 mbr-fonts-style subtext display-7">
           <div className="social-media col-md-12 col-sm-12">
             <ul className="social-list">
               <li>
@@ -57,7 +59,7 @@ const Footer = () => (
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </Container>
   </footer>

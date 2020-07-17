@@ -93,6 +93,22 @@ nav {
     }
 }
 
+.btn-circle {
+    display: block !important;
+    position: relative !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: -25px auto !important;
+    padding: 7px 7px !important;
+    border-radius: 25px !important;
+    font-size: 10px !important;
+    text-align: center !important;
+
+    svg {
+        color: #ffffff !important;
+    }
+}
+
 .btn-success-outline {
     display: flex;
     align-items: center;
@@ -1694,7 +1710,8 @@ html {
         border-radius: 20px;
         border: 1px solid #5b00ec;
         position: relative;
-        z-index: 999;
+		z-index: 999;
+		box-shadow: 0px 15px 20px 0px rgba(209, 218, 235, 0.35);
 
         &:before {
             content: '';
@@ -2152,8 +2169,7 @@ html {
 }
 
 footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 100px;
     background-color: #ffffff;
 
     p {
@@ -2190,6 +2206,15 @@ footer {
 
     .logo-footer {
         line-height: normal;
+        display: inline;
+        color: #293347;
+        font-size: 1rem;
+        font-weight: 700;
+        white-space: normal;
+
+        span {
+            color: var(--secondary);
+        }
     }
 
     .copyright {

@@ -2,8 +2,8 @@ import React, { useState } from "react"
 import axios from "axios"
 import { Link } from "gatsby"
 
-import { Container, Row, Col, Alert } from "react-bootstrap"
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa"
+import { Container, Button, Row, Col, Alert } from "react-bootstrap"
+import { FaFacebookF, FaGithub, FaLinkedin, FaChevronUp } from "react-icons/fa"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -40,6 +40,7 @@ const ContactForm = () => {
       })
   }
   return (
+    <>
     <section
       id="contact"
       className="contact features8 mbr-section form2 mbr-parallax-background"
@@ -152,6 +153,8 @@ const ContactForm = () => {
         </div>
       </Container>
     </section>
+    <Button variant="primary" className="btn-circle"><a href="#top"><FaChevronUp /></a></Button>
+    </>
   )
 }
 
