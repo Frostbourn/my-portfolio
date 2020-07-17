@@ -118,7 +118,7 @@ const ContactForm = () => {
                   <li>
                     <a
                       className="icon-transition"
-                      href="https://github.com/Frostbourn?tab=repositories"
+                      href="https://github.com/Frostbourn"
                       target="_blank"
                     >
                       <span className="mbr-iconfont"><FaGithub /></span>

@@ -22,20 +22,11 @@ const Footer = () => (
                     <a href="https://www.facebook.com/skowronski.jakub" target="_blank">
                         <span class="px-3 mbr-iconfont mbr-iconfont-social socicon-facebook socicon"></span>
                     </a>
-                    <a href="https://github.com/Frostbourn?tab=repositories" target="_blank">
+                    <a href="https://github.com/Frostbourn" target="_blank">
                         <span class="px-3 mbr-iconfont mbr-iconfont-social socicon-github socicon"></span>
                     </a>
                     <a href="https://www.linkedin.com/in/jakubskowronki" target="_blank">
                         <span class="px-3 mbr-iconfont mbr-iconfont-social socicon-linkedin socicon"></span>
-                    </a>
-                    <a href="https://www.youtube.com/c/mobirise" target="_blank">
-
-                    </a>
-                    <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
-
-                    </a>
-                    <a href="https://www.behance.net/Mobirise" target="_blank">
-
                     </a>
                 </div>
           </div>
