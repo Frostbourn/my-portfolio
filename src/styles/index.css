@@ -11258,11 +11258,11 @@ html {
 }
 
 .hero .scroll {
-  margin: 0 auto;
+  margin: 18vh auto;
   height: 40px;
   width: 25px;
   border-radius: 20px;
-  border: 2px solid #5b00ec;
+  border: 1px solid #5b00ec;
   position: relative;
   z-index: 999;
 }
@@ -11270,10 +11270,10 @@ html {
 .hero .scroll:before {
   content: '';
   position: absolute;
-  left: 8px;
+  left: 10px;
   top: 7px;
-  height: 5px;
-  width: 5px;
+  height: 3px;
+  width: 3px;
   background: #9553ff;
   border-radius: 50%;
   animation: scroll 4s infinite;
@@ -11292,7 +11292,7 @@ html {
   }
   100% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
 }
 
