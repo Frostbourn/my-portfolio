@@ -3,7 +3,7 @@ import axios from "axios"
 import { Link } from "gatsby"
 
 import { Container, Row, Col, Alert } from "react-bootstrap"
-import { FaFacebookF, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -29,7 +29,11 @@ const ContactForm = () => {
       data: new FormData(form),
     })
       .then(r => {
-        handleServerResponse(true, "Dziękuję za wiadomość! Skontaktuje się z Tobą najszybciej jak to możliwe.", form)
+        handleServerResponse(
+          true,
+          "Dziękuję za wiadomość! Skontaktuje się z Tobą najszybciej jak to możliwe.",
+          form
+        )
       })
       .catch(r => {
         handleServerResponse(false, r.response.data.error, form)
@@ -46,7 +50,9 @@ const ContactForm = () => {
           <div className="col-md-6 col-lg-6 block-content">
             <div className="col-md-12">
               <form onSubmit={handleOnSubmit} className="text-center">
-                <h4 className="mb-4 mbr-fonts-style display-6 text-left">Wyślij wiadomość</h4>
+                <h4 className="mb-4 mbr-fonts-style display-6 text-left">
+                  Wyślij wiadomość
+                </h4>
                 {serverState.status && (
                   <Alert variant={serverState.status.ok ? "success" : "danger"}>
                     {serverState.status.msg}
@@ -112,7 +118,9 @@ const ContactForm = () => {
                       href="https://www.facebook.com/skowronski.jakub"
                       target="_blank"
                     >
-                      <span className="mbr-iconfont"><FaFacebookF /></span>
+                      <span className="mbr-iconfont">
+                        <FaFacebookF />
+                      </span>
                     </a>
                   </li>
                   <li>
@@ -121,7 +129,9 @@ const ContactForm = () => {
                       href="https://github.com/Frostbourn"
                       target="_blank"
                     >
-                      <span className="mbr-iconfont"><FaGithub /></span>
+                      <span className="mbr-iconfont">
+                        <FaGithub />
+                      </span>
                     </a>
                   </li>
                   <li>
@@ -130,7 +140,9 @@ const ContactForm = () => {
                       href="https://www.linkedin.com/in/jakubskowronki"
                       target="_blank"
                     >
-                      <span className="mbr-iconfont"><FaLinkedin /></span>
+                      <span className="mbr-iconfont">
+                        <FaLinkedin />
+                      </span>
                     </a>
                   </li>
                 </ul>
