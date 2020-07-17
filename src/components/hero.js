@@ -41,7 +41,7 @@ const Hero = () => (
         </Col>
       </Row>
     </Container>
-    <img className="scroll-img" src={scroll} alt="Scroll" />
+    <div className="scroll"></div>
     <div className="waves content4">
       <figure className="mbr-figure">
         <div className="image-block">

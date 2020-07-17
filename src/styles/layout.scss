@@ -1685,15 +1685,49 @@ html {
     .mbr-section-btn {
         text-align: center;
         color: #293347;
-	}
-	
-	.scroll-img {
-		width: 50px;
-		display: block;
-		margin: 15vh auto;
-		z-index: 99999;
-		position: relative;
-	}
+    }
+
+    .scroll {
+        margin: 18vh auto;
+        height: 40px;
+        width: 25px;
+        border-radius: 20px;
+        border: 1px solid #5b00ec;
+        position: relative;
+        z-index: 999;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 7px;
+            height: 3px;
+            width: 3px;
+            background: #9553ff;
+            border-radius: 50%;
+            animation: scroll 4s infinite;
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        40% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+    }
 }
 
 .waves {
