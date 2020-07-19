@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
+import DarkLightSwitch from "./themeToggler"
 
 import { Nav, Navbar } from "react-bootstrap"
 import { Bounce } from "react-awesome-reveal"
@@ -49,6 +50,7 @@ const Header = props => {
                   &nbsp;<strong>Kontakt</strong>
               </Nav.Link>
             </Nav.Item>
+            <DarkLightSwitch />
           </Navbar.Collapse>
         </Navbar>
       </Bounce>
