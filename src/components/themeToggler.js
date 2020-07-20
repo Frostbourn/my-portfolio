@@ -4,13 +4,13 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 const DarkLightSwitch = () => (
       <ThemeToggler> 
         {({ theme, toggleTheme }) => (
-          <label>
+          <label className="switch">
           <input
             type="checkbox"
             onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
             checked={theme === 'dark'}
           />{' '}
-          Dark mode
+          <span class="slider round"></span>
         </label>
         )}
       </ThemeToggler>
