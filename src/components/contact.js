@@ -48,6 +48,11 @@ const ContactForm = () => {
       <div className="mbr-overlay"></div>
       <Container>
         <div className="media-container-row">
+            {/* <div className="animation_background" style={{"position" : "fixed", "z-index" : "-1"}}>
+          <div className="big_circle1"></div>
+          <div className="big_circle2"></div>
+          <div className="big_circle3"></div>
+        </div>  */}
           <div className="col-md-6 col-lg-6 block-content">
             <div className="col-md-12">
               <form onSubmit={handleOnSubmit} className="text-center">
@@ -153,7 +158,7 @@ const ContactForm = () => {
         </div>
       </Container>
     </section>
-    <Button variant="primary" className="btn-circle"><a href="#top"><FaChevronUp /></a></Button>
+    <Button variant="primary" className="btn-circle"><a href="#top"><FaChevronUp value={{ style: { color: '#ffffff !important' } }}/></a></Button> 
     </>
   )
 }

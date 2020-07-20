@@ -11299,6 +11299,11 @@ pre {
   border-radius: 100px !important;
 }
 
+.hidden {
+  filter: alpha(opacity=50);
+  opacity: 0 !important;
+}
+
 .carousel-item.active {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11383,6 +11388,8 @@ html {
   position: relative;
   z-index: 999;
   box-shadow: 0px 15px 20px 0px var(--boxShadow);
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .hero .scroll:before {
@@ -11394,7 +11401,7 @@ html {
   width: 3px;
   background-color: #ff90b3;
   border-radius: 50%;
-  animation: scroll 4s infinite;
+  animation: scroll 2s infinite;
 }
 
 @keyframes scroll {
@@ -11412,6 +11419,10 @@ html {
     opacity: 0;
     transform: translateY(15px);
   }
+}
+
+.wave-img path {
+  fill: var(--buttonColor) !important;
 }
 
 .waves {
@@ -11557,11 +11568,13 @@ html {
   background-color: var(--background);
   border: none;
   border-radius: 20px;
+  overflow: hidden;
   box-shadow: 2px 8px 20px -6px var(--boxShadow);
   transition: all 0.2s ease-in-out;
 }
 
 .portfolio .card:hover {
+  overflow: hidden;
   -moz-transform: scale(1.04, 1.04);
   -ms-transform: scale(1.04, 1.04);
   -o-transform: scale(1.04, 1.04);
@@ -11572,22 +11585,6 @@ html {
 .portfolio .card:hover::after {
   opacity: 1;
   transform: scale(1);
-}
-
-.portfolio .card::after {
-  content: '';
-  position: absolute;
-  background: rgba(255, 255, 255, 0.25);
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  top: -80px;
-  right: -80px;
-  opacity: 0;
-  z-index: 4;
-  transform: scale(0.2);
-  transition: all 0.3s ease-in-out;
-  transition-duration: 1s;
 }
 
 .portfolio .card-img img {
@@ -11709,6 +11706,10 @@ html {
   opacity: 1;
   z-index: 0;
   padding: 40px;
+}
+
+.contact svg path {
+  fill: #ffffff !important;
 }
 
 .contact .mbr-overlay {
@@ -12315,7 +12316,7 @@ footer .media-container-row {
   }
 }
 
-@-webkit-keyframes scale__three {
+@keyframes scale__three {
   0% {
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
