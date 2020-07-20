@@ -3,13 +3,43 @@
     src: url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap);
 }
 
+$primary: #293347;
+$secondary: #8c43ff;
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
+    font-size: 16px;
+    overflow-x: hidden;
     line-height: 1.5;
     height: auto;
     min-height: 100vh;
 }
+body.light {
+    --anchorLink: #293347;
+    --background: #ffffff;
+    --textColor: #293347;
+    --buttonColor: #8c43ff;
+    color: var(--textColor);
+    background-color: var(--background);
+    --boxShadow: #999999;
+}
+
+body.dark {
+    -webkit-font-smoothing: antialiased;
+    --anchorLink: #f0da4f;
+    --background: #293347;
+    --textColor: white;
+    --buttonColor: #8c43ff;
+    color: var(--textColor);
+    background-color: var(--background);
+    --boxShadow: #999999;
+  }
 
 svg {
     vertical-align: initial;
@@ -20,9 +50,9 @@ header {
     align-items: center;
     position: fixed;
     width: 100%;
-    height: 75px;
-    background-color: #ffffff;
-    z-index: 99;
+    height: 97px;
+    background-color: var(--background);
+    z-index: 9999;
 
     a {
         text-shadow: none;
@@ -33,24 +63,24 @@ header {
 .logo {
     margin: 1rem 4rem;
     display: inline;
-    color: #293347;
+    color: var(--textColor);
     font-size: 1.75rem;
     font-weight: 700;
     white-space: normal;
 
     span {
-        color: var(--secondary);
+        color: $secondary;
     }
 }
 
 nav {
     width: 100%;
-    background: #fff;
-    -webkit-transition: all 0.6s ease-out;
-    -moz-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
-    -ms-transition: all 0.6s ease-out;
-    transition: all 0.6s ease-out;
+    background: var(--background);
+    -webkit-transition: box-shadow 0.6s ease-out;
+    -moz-transition: box-shadow 0.6s ease-out;
+    -o-transition: box-shadow 0.6s ease-out;
+    -ms-transition: box-shadow 0.6s ease-out;
+    transition: box-shadow 0.6s ease-out;
 }
 
 .navbar-collapse.show {
@@ -84,7 +114,7 @@ nav {
 
     a {
         font-weight: 400;
-        color: var(--primary);
+        color: var(--textColor);
         transition: color 0.2s ease-in-out;
 
         &:hover {
@@ -105,23 +135,23 @@ nav {
     text-align: center !important;
 
     svg {
-		color: #ffffff !important;
-		animation: updown 2s ease infinite;
-	}
+        color: #ffffff !important;
+        animation: updown 2s ease infinite;
+    }
 
-	@keyframes updown {
-		0% {
-		  transform: translateY(-30%);
-		}
-	  
-		50% {
-		  transform: translateY(30%);
-		}
-	  
-		100% {
-		  transform: translateY(-30%);
-		}
-	  }
+    @keyframes updown {
+        0% {
+            transform: translateY(-30%);
+        }
+
+        50% {
+            transform: translateY(30%);
+        }
+
+        100% {
+            transform: translateY(-30%);
+        }
+    }
 }
 
 .btn-success-outline {
@@ -131,7 +161,7 @@ nav {
     cursor: pointer;
     padding: 0.4rem 1.5rem;
     background: none;
-    color: #5b00ec !important;
+    color: $secondary !important;
     font-weight: 600;
     letter-spacing: 2px;
     border: 2px solid;
@@ -139,15 +169,15 @@ nav {
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background: none;
-    border-color: #5b00ec;
-    color: #5b00ec !important;
+    border-color: $secondary;
+    color: $secondary !important;
 
     &:hover {
         color: #ffffff !important;
         background-color: #9553ff;
         border-color: #9553ff;
-        box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
-        -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
+        -webkit-box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
         color: #ffffff !important;
         background-color: #9553ff;
         border-color: #9553ff;
@@ -173,7 +203,7 @@ nav {
 }
 
 .scrollBox {
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 0px 20px 0px var(--boxShadow);
 }
 
 .mbr-section-title {
@@ -1185,14 +1215,14 @@ a.text-black {
 
             &:hover {
                 box-shadow: none !important;
-                box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
-                -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
+                box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
+                -webkit-box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
             }
 
             &:focus {
                 box-shadow: none !important;
-                box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
-                -webkit-box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2) !important;
+                box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
+                -webkit-box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
             }
         }
     }
@@ -1460,7 +1490,7 @@ pre {
             border-radius: 100px !important;
 
             &:hover {
-                box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 10px 40px 0 var(--boxShadow);
             }
         }
 
@@ -1468,7 +1498,7 @@ pre {
             border-radius: 100px !important;
 
             &:hover {
-                box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+                box-shadow: 0 10px 40px 0 var(--boxShadow);
             }
         }
     }
@@ -1694,7 +1724,7 @@ html {
     height: 100vh;
     padding-top: 30vh;
     padding-bottom: 120px;
-    background-color: #ffffff;
+    background-color: var(--background);
 
     .media-container-column {
         .btn-bgr {
@@ -1704,18 +1734,18 @@ html {
 
     H1 {
         text-align: center;
-        color: #293347;
+        color: var(--textColor);
         font-weight: normal;
     }
 
     .mbr-text {
         text-align: center;
-        color: #293347;
+        color: var(--textColor);
     }
 
     .mbr-section-btn {
         text-align: center;
-        color: #293347;
+        color: var(--textColor);
     }
 
     .scroll {
@@ -1723,10 +1753,10 @@ html {
         height: 40px;
         width: 25px;
         border-radius: 20px;
-        border: 1px solid #5b00ec;
+        border: 1px solid var(--textColor);
         position: relative;
-		z-index: 999;
-		box-shadow: 0px 15px 20px 0px rgba(209, 218, 235, 0.35);
+        z-index: 999;
+        box-shadow: 0px 15px 20px 0px var(--boxShadow);
 
         &:before {
             content: '';
@@ -1735,7 +1765,7 @@ html {
             top: 7px;
             height: 6px;
             width: 3px;
-            background: #9553ff;
+            background-color: var(--buttonColor);
             border-radius: 50%;
             animation: scroll 4s infinite;
         }
@@ -1767,15 +1797,15 @@ html {
     width: 100vw;
     bottom: 0;
     left: 0;
-    background: #ffffff;
+    background: var(--background);
 
     .image-block {
         margin: auto;
         width: 100% !important;
 
-        img {
+        svg {
             width: 100% !important;
-            margin-top: 0px;
+            margin-bottom: -40px;
             z-index: -1;
         }
     }
@@ -1784,7 +1814,7 @@ html {
 .about {
     padding-top: 70px;
     padding-bottom: 0px;
-    background-color: #9e61fc;
+    background-color: $secondary;
 
     .icon-transition {
         span {
@@ -1888,30 +1918,30 @@ html {
 
 .portfolio {
     padding: 135px 90px;
-    background-color: #ffffff;
+    background-color: var(--background);
 
     .card-title {
         letter-spacing: 0.03em;
-        color: #232323;
+        color: var(--textColor);
         font-weight: 700;
         font-size: 1.2rem;
         margin: 0;
         padding: 0;
-        color: #293347;
     }
 
     .card {
         margin: 2rem;
         border: none;
         border-radius: 20px;
-        box-shadow: 2px 8px 20px -6px #999;
+        box-shadow: 2px 8px 20px -6px var(--boxShadow);
+        transition: all 0.2s ease-in-out;
 
         &:hover {
-            -moz-transform: translate(0, -2px);
-            -ms-transform: translate(0, -2px);
-            -o-transform: translate(0, -2px);
-            -webkit-transform: translate(0, -2px);
-            transform: translate(0, -2px);
+            -moz-transform: scale(1.04, 1.04);
+            -ms-transform: scale(1.04, 1.04);
+            -o-transform: scale(1.04, 1.04);
+            -webkit-transform: scale(1.04, 1.04);
+            transform: scale(1.04, 1.04);
         }
     }
 
@@ -1934,7 +1964,7 @@ html {
         }
 
         >p {
-            color: #293347;
+            color: var(--textColor);
         }
     }
 
@@ -1945,7 +1975,7 @@ html {
 
     .mbr-section-title {
         margin: 0;
-        color: #293347;
+        color: var(--textColor);
     }
 
     .card-underline {
@@ -1953,7 +1983,7 @@ html {
         margin-bottom: -0.5rem;
         margin-bottom: 1.5rem;
         margin-top: 0 !important;
-        color: #293347;
+        color: var(--textColor);
 
         .line {
             width: 3rem;
@@ -1978,11 +2008,11 @@ html {
     }
 
     .mbr-section-subtitle {
-        color: #293347;
+        color: var(--textColor);
     }
 
     .mbr-section-btn {
-        color: #293347;
+        color: var(--textColor);
     }
 }
 
@@ -2185,7 +2215,7 @@ html {
 
 footer {
     padding: 100px;
-    background-color: #ffffff;
+    background-color: var(--background);
 
     p {
         text-align: center;
@@ -2206,7 +2236,7 @@ footer {
 
     .text-copyright {
         width: 100%;
-        color: #293347;
+        color: var(--textColor);
     }
 
     .img-logo-footer {
@@ -2222,13 +2252,13 @@ footer {
     .logo-footer {
         line-height: normal;
         display: inline;
-        color: #293347;
+        color: var(--textColor);
         font-size: 1rem;
         font-weight: 700;
         white-space: normal;
 
         span {
-            color: var(--secondary);
+            color: $secondary;
         }
     }
 
