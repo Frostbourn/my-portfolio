@@ -63,13 +63,11 @@ const Portfolio = () => {
   return (
     <Fade triggerOnce>
       <section id="portfolio" className="portfolio features8">
-      <div className="animation__background">
-        <div className="circle1"></div>
-        <div className="circle2"></div>
-        <div className="circle3"></div>
-        <div className="circle4"></div>
-        <div className="circle5"></div>
-    </div>
+        {/* <div className="animation__background">
+          <div className="big__circle1"></div>
+          <div className="big__circle2"></div>
+          <div className="big__circle3"></div>
+        </div> */}
         <Container>
           <Row className="blog-block justify-content-around">
             <Col md={12}>

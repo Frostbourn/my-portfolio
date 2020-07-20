@@ -11370,6 +11370,10 @@ html {
   color: var(--textColor);
 }
 
+.hero .container-fluid, .hero .container-sm, .hero .container-md, .hero .container-lg, .hero .container-xl {
+  z-index: 2;
+}
+
 .hero .scroll {
   margin: 18vh auto;
   height: 40px;
@@ -12000,28 +12004,61 @@ footer .media-container-row {
   }
 }
 
-.animation__background {
+.animation_background {
   position: absolute;
+  height: 88vh;
   z-index: 1;
-  top: 0;
+  top: 96px;
   bottom: 0;
   right: 0;
   left: 0;
 }
 
-.animation__background .circle1 {
+.animation_background .big_circle1 {
+  position: absolute;
+  width: 662px;
+  height: 662px;
+  background: rgba(255, 255, 255, 0.1);
+  top: -346px;
+  left: -75px;
+  border-radius: 50%;
+}
+
+.animation_background .big_circle2 {
+  position: absolute;
+  width: 1372px;
+  height: 1372px;
+  background: rgba(255, 255, 255, 0.1);
+  top: -689px;
+  left: -368px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.animation_background .big_circle3 {
+  position: absolute;
+  width: 2242px;
+  height: 2242px;
+  background: rgba(255, 255, 255, 0.1);
+  top: -1161px;
+  left: -779px;
+  border-radius: 50%;
+  z-index: -3;
+}
+
+.animation_background .circle1 {
   display: inline-block;
   width: 15px;
   height: 15px;
   top: 2%;
   left: 32%;
   border-radius: 50%;
-  background: #06df9e;
+  background: #7d06df;
   position: absolute;
   animation: animationTwo 25s infinite linear;
 }
 
-.animation__background .circle2 {
+.animation_background .circle2 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -12029,11 +12066,11 @@ footer .media-container-row {
   top: 42%;
   position: absolute;
   border-radius: 50%;
-  background-color: #ff6400;
+  background-color: #e3b23c;
   animation: animationOne 33s infinite linear;
 }
 
-.animation__background .circle3 {
+.animation_background .circle3 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -12041,11 +12078,11 @@ footer .media-container-row {
   bottom: 130px;
   position: absolute;
   border-radius: 50%;
-  background-color: #bf6cff;
+  background-color: #2c528b;
   animation: animationTwo 30s infinite linear;
 }
 
-.animation__background .circle4 {
+.animation_background .circle4 {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -12053,11 +12090,11 @@ footer .media-container-row {
   top: 23%;
   position: absolute;
   border-radius: 50%;
-  background-color: #ff3a46;
+  background-color: #ff3a75;
   animation: animationOne 23s infinite linear;
 }
 
-.animation__background .circle5 {
+.animation_background .circle5 {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -12065,8 +12102,20 @@ footer .media-container-row {
   bottom: 20%;
   position: absolute;
   border-radius: 50%;
-  background-color: #233d63;
+  background-color: #2bcf90;
   animation: animationTwo 26s infinite linear;
+}
+
+.animation_background .circle6 {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  right: 30%;
+  bottom: 32%;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #9b6aeb;
+  animation: animationTwo 43s infinite linear;
 }
 
 @media screen and (min-width: 1400px) {
