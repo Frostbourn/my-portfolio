@@ -1702,6 +1702,7 @@ html {
 }
 
 .hero .container-fluid {
+  position: relative;
   z-index: 2;
 }
 
@@ -1713,7 +1714,7 @@ html {
   border: 1px solid var(--textColor);
   position: relative;
   z-index: 999;
-  box-shadow: 0px 15px 20px 0px var(--boxShadow);
+  box-shadow: 0px 15px 20px -7px var(--boxShadow);
   opacity: 1;
   transition: opacity 0.3s;
 }
@@ -1876,7 +1877,7 @@ html {
 }
 
 .portfolio {
-  padding: 135px 90px;
+  padding: 65px 90px;
   background-color: var(--background);
 }
 
