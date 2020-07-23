@@ -84,7 +84,7 @@ header nav {
 header nav .switch {
   position: relative;
   display: flex;
-  margin: unset;
+  margin: 0 auto;
   width: 40px;
   height: 40px;
 }
@@ -155,7 +155,8 @@ header .navbar-toggler {
 }
 
 header .navbar-collapse {
-  justify-content: flex-end;
+  width: 100vw;
+  flex-basis: unset;
   transition: all 0.45s ease;
 }
 
@@ -1701,11 +1702,6 @@ html {
   color: var(--textColor);
 }
 
-.hero .container-fluid {
-  position: relative;
-  z-index: 2;
-}
-
 .hero .scroll {
   margin: 18vh auto;
   height: 40px;
@@ -2245,6 +2241,11 @@ footer .social-btns {
 footer .media-container-row {
   -webkit-align-items: center;
   align-items: center;
+}
+
+.container-fluid {
+  position: relative;
+  z-index: 2;
 }
 
 @media screen and (max-width: 835px) {

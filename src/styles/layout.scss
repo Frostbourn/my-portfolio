@@ -82,7 +82,7 @@ header {
         .switch {
             position: relative;
             display: flex;
-            margin: unset;
+            margin: 0 auto;
             width: 40px;
             height: 40px;
         }
@@ -165,7 +165,8 @@ header {
     }
 
     .navbar-collapse {
-        justify-content: flex-end;
+        width: 100vw;
+        flex-basis: unset;
         transition: all 0.45s ease;
 
         li {
@@ -1817,11 +1818,6 @@ html {
         color: var(--textColor);
     }
 
-    .container-fluid {
-        position: relative;
-        z-index: 2;
-    }
-
     .scroll {
         margin: 18vh auto;
         height: 40px;
@@ -1867,11 +1863,13 @@ html {
         }
     }
 }
+
 .wave-img {
     path {
         fill: var(--buttonColor) !important;
     }
 }
+
 .waves {
     position: absolute;
     width: 100vw;
@@ -2403,6 +2401,11 @@ footer {
         -webkit-align-items: center;
         align-items: center;
     }
+}
+
+.container-fluid {
+    position: relative;
+    z-index: 2;
 }
 
 @media screen and (max-width: 835px) {

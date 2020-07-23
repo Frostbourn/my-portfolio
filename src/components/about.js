@@ -17,7 +17,7 @@ const About = () => (
     <section id="about" className="about">
       <Container fluid>
         <Row className="align-items-center content-row">
-          <Parallax x={[-5, 5]} styleInner={{"display" : "flex", "align-items" : "center", "justify-content" : "center"}}>
+          {/* <Parallax x={[-5, 5]} styleInner={{"display" : "flex", "align-items" : "center", "justify-content" : "center"}}> */}
             <Col lg={6} className="wrap-block">
               <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
                 <strong>KIM JESTEM?</strong>
@@ -58,7 +58,7 @@ const About = () => (
                 title=""
               />
             </Col>
-          </Parallax>
+          {/* </Parallax> */}
         </Row>
       </Container>
     </section>
