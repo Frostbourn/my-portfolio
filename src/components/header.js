@@ -24,7 +24,6 @@ const Header = props => {
 
   return (
     <header data-scroll-header>
-      <Bounce direction="bottom" triggerOnce>
         <Navbar
           collapseOnSelect
           className={`${state ? "scrollBox" : ""}` + " shadowBox"}
@@ -53,7 +52,6 @@ const Header = props => {
             <DarkLightSwitch />
           </Navbar.Collapse>
         </Navbar>
-      </Bounce>
     </header>
   )
 }

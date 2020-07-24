@@ -36,7 +36,6 @@ const Hero = () => {
         <div className="circle5"></div>
         <div className="circle6"></div>
       </div>
-      <Fade triggerOnce delay={1000}>
         <Container fluid>
           <Row className="justify-content-center">
             <Col md={10}>
@@ -64,9 +63,7 @@ const Hero = () => {
             </Col>
           </Row>
         </Container>
-      </Fade>
       <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
-      <Bounce direction="top" triggerOnce>
         <div className="waves">
           <figure className="mbr-figure">
             <div className="image-block">
@@ -96,7 +93,6 @@ const Hero = () => {
             </div>
           </figure>
         </div>
-      </Bounce>
     </section>
   )
 }

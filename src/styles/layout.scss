@@ -3,6 +3,11 @@
     src: url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap);
 }
 
+
+html {
+    height: auto;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -20,7 +25,7 @@ body.light {
     --buttonColor: #8c43ff;
     color: var(--textColor);
     background-color: var(--background);
-    --boxShadow: #999999;
+    --boxShadow: rgba(153, 153, 153, 0.5);
     --navBackground: #ffffff;
     --contactBackground: #3a405a;
 }
@@ -47,7 +52,7 @@ header {
     align-items: center;
     position: fixed;
     width: 100%;
-    height: 97px;
+    height: auto;
     background-color: var(--background);
     z-index: 9999;
 
@@ -71,7 +76,7 @@ header {
     }
 
     nav {
-        width: 100%;
+        width: 100vw;
         background: var(--background);
         -webkit-transition: box-shadow 0.6s ease-out;
         -moz-transition: box-shadow 0.6s ease-out;
@@ -82,7 +87,7 @@ header {
         .switch {
             position: relative;
             display: flex;
-            margin: 0 auto;
+            margin: unset;
             width: 40px;
             height: 40px;
         }
@@ -165,8 +170,7 @@ header {
     }
 
     .navbar-collapse {
-        width: 100vw;
-        flex-basis: unset;
+        justify-content: flex-end;
         transition: all 0.45s ease;
 
         li {
@@ -1771,11 +1775,6 @@ pre {
     }
 }
 
-html {
-    height: auto;
-    min-height: 100vh;
-}
-
 .dropup {
     .dropdown-toggle {
         &::after {
@@ -2416,12 +2415,19 @@ footer {
     .logo {
         margin: 0 !important;
     }
+    .switch {
+        margin: 0 auto !important;
+    }
 
     .navbar-collapse {
         li {
             padding: 0.5rem !important;
             justify-content: center !important;
         }
+    }
+
+    .portfolio {
+        padding: unset;
     }
 }
 

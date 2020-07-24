@@ -74,7 +74,7 @@ const Portfolio = () => {
               więcej? Napisz do mnie.
             </h3>
           </Col>
-          <div className="card py-3 col-12 col-md-6 col-lg-4">
+          <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
             <div className="card-wrapper">
               <div className="card-img">
                 <Img fluid={data.portfolioOne.childImageSharp.fluid} />
