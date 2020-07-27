@@ -16,7 +16,6 @@ const DarkLightSwitch = () => (
           <span class="toggle__handler">
             <span class="crater crater--1"></span>
             <span class="crater crater--2"></span>
-            <span class="crater crater--3"></span>
           </span>
           <span class="star star--1"></span>
           <span class="star star--2"></span>

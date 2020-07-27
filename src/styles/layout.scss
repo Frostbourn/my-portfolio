@@ -87,6 +87,7 @@ header {
         .toggleWrapper {
             position: relative;
             display: flex;
+            justify-content: center;
             align-items: center;
             padding: 0 20px 0 8px;
 
@@ -132,24 +133,17 @@ header {
             }
 
             .crater--1 {
-                top: 18px;
-                left: 10px;
+                top: 7px;
+                left: 8px;
                 width: 4px;
                 height: 4px;
             }
 
             .crater--2 {
-                top: 28px;
-                left: 22px;
-                width: 6px;
-                height: 6px;
-            }
-
-            .crater--3 {
-                top: 10px;
-                left: 25px;
-                width: 8px;
-                height: 8px;
+                top: 3px;
+                left: 5px;
+                width: 3px;
+                height: 3px;
             }
         }
 
@@ -161,11 +155,11 @@ header {
         }
 
         .star--1 {
-            top: 10px;
-            left: 35px;
-            z-index: 0;
-            width: 30px;
-            height: 3px;
+            top: 5px;
+            left: 20px;
+            z-index: 1;
+            width: 10px;
+            height: 10px;
         }
 
         .star--2 {
@@ -210,12 +204,13 @@ header {
                 .star--1 {
                     width: 2px;
                     height: 2px;
+                    transform: translate3d(-4px, 0, 0);
                 }
 
                 .star--2 {
                     width: 4px;
                     height: 4px;
-                    transform: translate3d(-5px, 0, 0);
+                    transform: translate3d(-6px, 2px, 0);
                 }
 
                 .star--3 {
@@ -1960,7 +1955,6 @@ pre {
         svg {
             width: 100% !important;
             margin-bottom: -40px;
-            z-index: -1;
 
             path {
                 fill: var(--buttonColor) !important;
@@ -2493,8 +2487,8 @@ footer {
         margin: 0 !important;
     }
 
-    .switch {
-        margin: 0 auto !important;
+    .wave-img {
+        margin: unset;
     }
 
     .navbar-collapse {
@@ -2505,7 +2499,11 @@ footer {
     }
 
     .portfolio {
-        padding: unset;
+        padding: 50px 0;
+    }
+
+    footer {
+        padding: 20px;
     }
 }
 

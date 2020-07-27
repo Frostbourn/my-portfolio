@@ -88,6 +88,7 @@ header nav {
 header nav .toggleWrapper {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0 20px 0 8px;
 }
@@ -134,24 +135,17 @@ header nav .toggle__handler .crater {
 }
 
 header nav .toggle__handler .crater--1 {
-  top: 18px;
-  left: 10px;
+  top: 7px;
+  left: 8px;
   width: 4px;
   height: 4px;
 }
 
 header nav .toggle__handler .crater--2 {
-  top: 28px;
-  left: 22px;
-  width: 6px;
-  height: 6px;
-}
-
-header nav .toggle__handler .crater--3 {
-  top: 10px;
-  left: 25px;
-  width: 8px;
-  height: 8px;
+  top: 3px;
+  left: 5px;
+  width: 3px;
+  height: 3px;
 }
 
 header nav .star {
@@ -162,11 +156,11 @@ header nav .star {
 }
 
 header nav .star--1 {
-  top: 10px;
-  left: 35px;
-  z-index: 0;
-  width: 30px;
-  height: 3px;
+  top: 5px;
+  left: 20px;
+  z-index: 1;
+  width: 10px;
+  height: 10px;
 }
 
 header nav .star--2 {
@@ -209,12 +203,13 @@ header nav input:checked + .toggle .toggle__handler .crater {
 header nav input:checked + .toggle .star--1 {
   width: 2px;
   height: 2px;
+  transform: translate3d(-4px, 0, 0);
 }
 
 header nav input:checked + .toggle .star--2 {
   width: 4px;
   height: 4px;
-  transform: translate3d(-5px, 0, 0);
+  transform: translate3d(-6px, 2px, 0);
 }
 
 header nav input:checked + .toggle .star--3 {
@@ -1844,7 +1839,6 @@ pre {
 .waves .image-block svg {
   width: 100% !important;
   margin-bottom: -40px;
-  z-index: -1;
 }
 
 .waves .image-block svg path {
@@ -2335,15 +2329,18 @@ footer .media-container-row {
   .logo {
     margin: 0 !important;
   }
-  .switch {
-    margin: 0 auto !important;
+  .wave-img {
+    margin: unset;
   }
   .navbar-collapse li {
     padding: 0.5rem !important;
     justify-content: center !important;
   }
   .portfolio {
-    padding: unset;
+    padding: 50px 0;
+  }
+  footer {
+    padding: 20px;
   }
 }
 

@@ -101,7 +101,7 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="card py-3 col-12 col-md-6 col-lg-4">
+          <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
             <div className="card-wrapper">
               <div className="card-img">
                 <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
@@ -128,7 +128,7 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="card py-3 col-12 col-md-6 col-lg-4">
+          <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
             <div className="card-wrapper">
               <div className="card-img">
                 <Img fluid={data.portfolioThree.childImageSharp.fluid} />
@@ -155,7 +155,7 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="card py-3 col-12 col-md-6 col-lg-4">
+          <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
             <div className="card-wrapper">
               <div className="card-img">
                 <Img fluid={data.portfolioFour.childImageSharp.fluid} />
@@ -183,7 +183,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="card py-3 col-12 col-md-6 col-lg-4">
+          <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
             <div className="card-wrapper">
               <div className="card-img">
                 <Img fluid={data.portfolioFive.childImageSharp.fluid} />
@@ -209,7 +209,7 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="card py-3 col-12 col-md-6 col-lg-4">
+          <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
             <div className="card-wrapper">
               <div className="card-img">
                 <Img fluid={data.portfolioSix.childImageSharp.fluid} />

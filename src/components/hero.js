@@ -92,7 +92,7 @@ const Hero = () => {
               </svg>{" "}
             </div>
           </figure>
-        </div>
+        </div> 
     </section>
   )
 }
