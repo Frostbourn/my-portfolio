@@ -20,13 +20,16 @@ body {
 
 body.light {
   --anchorLink: #3a405a;
-  --background: #ffffff;
+  --background: #FBFBFB;
   --textColor: #3a405a;
   --buttonColor: #8c43ff;
+  --wavesColor: #8c43ff;
+  --cardColor: #FFFFF;
+  --cardText: var(--textColor);
   color: var(--textColor);
   background-color: var(--background);
   --boxShadow: rgba(153, 153, 153, 0.5);
-  --navBackground: #ffffff;
+  --navBackground: #FBFBFB;
   --contactBackground: #3a405a;
 }
 
@@ -34,13 +37,16 @@ body.dark {
   -webkit-font-smoothing: antialiased;
   --anchorLink: #e3b23c;
   --background: #3a405a;
-  --textColor: white;
-  --buttonColor: #924dff;
+  --textColor: #FBFBFB;
+  --buttonColor: #bb8fff;
+  --wavesColor: #282c3b;
+  --cardColor: #282c3b;
+  --cardText: #F4F3F1;
   color: var(--textColor);
   background-color: var(--background);
   --boxShadow: none;
   --navBackground: #2f3449;
-  --contactBackground: #6A23DF;
+  --contactBackground: #FBFBFB;
 }
 
 svg {
@@ -392,7 +398,7 @@ header .scrollBox {
 
 .display-7 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 
@@ -1820,7 +1826,7 @@ pre {
 }
 
 .wave-img path {
-  fill: var(--buttonColor) !important;
+  fill: var(--wavesColor) !important;
 }
 
 .waves {
@@ -1842,13 +1848,13 @@ pre {
 }
 
 .waves .image-block svg path {
-  fill: var(--buttonColor) !important;
+  fill: var(--wavesColor) !important;
 }
 
 .about {
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: var(--buttonColor);
+  background-color: var(--wavesColor);
 }
 
 .about .icon-transition span {
@@ -1953,7 +1959,7 @@ pre {
 
 .portfolio .card-title {
   letter-spacing: 0.03em;
-  color: var(--textColor);
+  color: var(--cardText);
   font-weight: 700;
   font-size: 1.2rem;
   margin: 0;
@@ -1962,9 +1968,9 @@ pre {
 
 .portfolio .card {
   margin: 2rem;
-  background-color: var(--background);
+  background-color: var(--cardColor);
   border: none;
-  border-radius: 20px;
+  border-radius: 6px;
   overflow: hidden;
   box-shadow: 2px 8px 20px -6px var(--boxShadow);
   transition: all 0.2s ease-in-out;
@@ -2002,7 +2008,7 @@ pre {
 }
 
 .portfolio .card-box > p {
-  color: var(--textColor);
+  color: var(--cardText);
 }
 
 .portfolio .btn {
@@ -2012,7 +2018,7 @@ pre {
 
 .portfolio .mbr-section-title {
   margin: 0;
-  color: var(--textColor);
+  color: var(--cardText);
 }
 
 .portfolio .card-underline {
@@ -2020,7 +2026,7 @@ pre {
   margin-bottom: -0.5rem;
   margin-bottom: 1.5rem;
   margin-top: 0 !important;
-  color: var(--textColor);
+  color: var(--cardText);
 }
 
 .portfolio .card-underline .line {
@@ -2079,19 +2085,19 @@ pre {
 }
 
 .contact h2 {
-  color: #ffffff;
+  color: var(--background);
 }
 
 .contact h3 {
-  color: #ffffff;
+  color: var(--background);
 }
 
 .contact h4 {
-  color: #ffffff;
+  color: var(--background);
 }
 
 .contact p {
-  color: #ffffff;
+  color: var(--background);
 }
 
 .contact form {
@@ -2103,6 +2109,7 @@ pre {
   opacity: 1;
   z-index: 0;
   padding: 40px;
+  border-radius: 6px;
 }
 
 .contact svg path {
