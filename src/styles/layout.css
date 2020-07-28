@@ -259,7 +259,7 @@ header .navbar-collapse a {
 }
 
 header .navbar-collapse a:hover {
-  color: #8c43ff;
+  color: var(--buttonColor);
 }
 
 header .btn-success-outline {

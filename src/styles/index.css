@@ -9933,7 +9933,7 @@ header .navbar-collapse a {
 }
 
 header .navbar-collapse a:hover {
-  color: #8c43ff;
+  color: var(--buttonColor);
 }
 
 header .btn-success-outline {
@@ -10072,7 +10072,7 @@ header .scrollBox {
 
 .display-7 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 200;
 }
 
@@ -11644,7 +11644,7 @@ pre {
   margin: 2rem;
   background-color: var(--cardColor);
   border: none;
-  border-radius: 20px;
+  border-radius: 6px;
   overflow: hidden;
   box-shadow: 2px 8px 20px -6px var(--boxShadow);
   transition: all 0.2s ease-in-out;
@@ -11783,6 +11783,7 @@ pre {
   opacity: 1;
   z-index: 0;
   padding: 40px;
+  border-radius: 6px;
 }
 
 .contact svg path {

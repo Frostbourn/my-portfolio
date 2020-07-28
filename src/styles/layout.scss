@@ -263,7 +263,7 @@ header {
             transition: color 0.2s ease-in-out;
 
             &:hover {
-                color: #8c43ff;
+                color: var(--buttonColor);
             }
         }
     }
