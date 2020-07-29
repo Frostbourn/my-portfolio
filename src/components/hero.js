@@ -28,14 +28,17 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="animation_background">
-        <div className="circle1"></div>
-        <div className="circle2"></div>
-        <div className="circle3"></div>
-        <div className="circle4"></div>
-        <div className="circle5"></div>
-        <div className="circle6"></div>
-      </div>
+      <Fade delay="500" triggerOnce>
+        <div className="animation_background">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
+          <div className="circle4"></div>
+          <div className="circle5"></div>
+          <div className="circle6"></div>
+        </div>
+      </Fade>
+      <Fade delay="1000" triggerOnce>
         <Container fluid>
           <Row className="justify-content-center">
             <Col md={10}>
@@ -63,7 +66,11 @@ const Hero = () => {
             </Col>
           </Row>
         </Container>
-      <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
+      </Fade>
+      <Fade delay="1500" triggerOnce>
+        <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
+      </Fade>
+      <Bounce direction="top" triggerOnce>
         <div className="waves">
           <figure className="mbr-figure">
             <div className="image-block">
@@ -92,7 +99,8 @@ const Hero = () => {
               </svg>{" "}
             </div>
           </figure>
-        </div> 
+        </div>
+      </Bounce>
     </section>
   )
 }

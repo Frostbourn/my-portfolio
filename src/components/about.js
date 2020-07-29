@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
-import { Parallax } from "react-scroll-parallax"
+import { Slide } from "react-awesome-reveal"
 
 const AboutLink = props => (
   <li>
@@ -18,7 +18,8 @@ const About = () => (
       <Container fluid>
         <Row className="align-items-center content-row">
           {/* <Parallax x={[-5, 5]} styleInner={{"display" : "flex", "align-items" : "center", "justify-content" : "center"}}> */}
-            <Col lg={6} className="wrap-block">
+          <Col lg={6} className="wrap-block">
+            <Slide direction="left" triggerOnce>
               <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
                 <strong>KIM JESTEM?</strong>
               </h1>
@@ -50,14 +51,17 @@ const About = () => (
                 , opartą o Joomla!, gdzie oferuję moje usługi oraz wtyczki do
                 tegoż CMS'u.
               </h3>
-            </Col>
-            <Col lg={6} className="photo-split">
+            </Slide>
+          </Col>
+          <Col lg={6} className="photo-split">
+            <Slide direction="right" triggerOnce>
               <img
                 src="https://jakubskowronski.com/assets/images/header-photo-1400x882.jpg"
                 alt=""
                 title=""
               />
-            </Col>
+            </Slide>
+          </Col>
           {/* </Parallax> */}
         </Row>
       </Container>

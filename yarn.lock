@@ -10966,10 +10966,10 @@ rc@^1.2.7, rc@^1.2.8:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-awesome-reveal@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/react-awesome-reveal/-/react-awesome-reveal-2.4.2.tgz#341368bddcffaddf8a3130d5ac2cb25247246aae"
-  integrity sha512-vXd1EyfL/aqBa5jy5tVVkdicGZclCV0fVRroTBqxftU42sMF3qqcRSquHC0UUfQkzvoy8hHqilHDq+CMBwatlg==
+react-awesome-reveal@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-awesome-reveal/-/react-awesome-reveal-2.4.0.tgz#602323c847de2445833536438727702638b7d9e3"
+  integrity sha512-MXlSSMDfDc+rDVy1qfZ3SyM+/h1MlXsWnQ5i+h1xeqrhE4CoreAQg3kQXLHGwhmkHXs3tU4cezXDX3A2EZkcBA==
   dependencies:
     classnames "^2.2.6"
     react-intersection-observer "^8.25.1"

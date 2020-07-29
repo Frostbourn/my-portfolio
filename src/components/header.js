@@ -23,7 +23,8 @@ const Header = props => {
   }, [state, setState])
 
   return (
-    <header data-scroll-header>
+    <Bounce direction="bottom" triggerOnce>
+      <header data-scroll-header>
         <Navbar
           collapseOnSelect
           className={`${state ? "scrollBox" : ""}` + " shadowBox"}
@@ -46,13 +47,14 @@ const Header = props => {
             <Nav.Item as={`li`}>
               <Nav.Link href="#contact" className="btn-success-outline">
                 <FaEnvelope />
-                  &nbsp;<strong>Kontakt</strong>
+                &nbsp;<strong>Kontakt</strong>
               </Nav.Link>
             </Nav.Item>
             <DarkLightSwitch />
           </Navbar.Collapse>
         </Navbar>
-    </header>
+      </header>
+    </Bounce>
   )
 }
 
