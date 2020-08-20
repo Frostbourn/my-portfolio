@@ -247,6 +247,10 @@ header {
         border: none;
     }
 
+    .navbar-brand {
+        visibility: hidden;
+    }
+
     .navbar-collapse {
         justify-content: flex-end;
         transition: all 0.45s ease;

@@ -9915,6 +9915,10 @@ header .navbar-toggler {
   border: none;
 }
 
+header .navbar-brand {
+  visibility: hidden;
+}
+
 header .navbar-collapse {
   justify-content: flex-end;
   transition: all 0.45s ease;
