@@ -1,22 +1,15 @@
-import React, { useRef, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import DarkLightSwitch from "./themeToggler"
 
 import { Nav, Navbar } from "react-bootstrap"
-import { gsap, TimelineLite, Power3 } from 'gsap'
+import { Bounce } from "react-awesome-reveal"
 import { FaEnvelope } from "react-icons/fa"
 
 const Header = props => {
   const [state, setState] = useState(false)
-  
-  gsap.set(['.navbar-brand'], {autoAlpha: 0})
 
   useEffect(() => {
-
-    const tl = new TimelineLite({delay: 0.5})
-    tl.fromTo('.navbar-brand', {y: -60, autoAlpha: 0, ease: Power3.easeOut, delay: 0.2}, {y: 0, autoAlpha: 1})
-      
-
     const onScroll = () => {
       const isScrolled = window.scrollY > 10
       if (isScrolled !== state.scrolled) {
@@ -29,8 +22,8 @@ const Header = props => {
     }
   }, [state, setState])
 
-
   return (
+    <Bounce direction="bottom" triggerOnce>
       <header data-scroll-header>
         <Navbar
           collapseOnSelect
@@ -61,6 +54,7 @@ const Header = props => {
           </Navbar.Collapse>
         </Navbar>
       </header>
+    </Bounce>
   )
 }
 

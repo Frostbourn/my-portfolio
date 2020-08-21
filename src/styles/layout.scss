@@ -247,10 +247,6 @@ header {
         border: none;
     }
 
-    .navbar-brand {
-        visibility: hidden;
-    }
-
     .navbar-collapse {
         justify-content: flex-end;
         transition: all 0.45s ease;
@@ -2665,7 +2661,8 @@ footer {
         border-radius: 50%;
         background: #7d06df;
         position: absolute;
-        animation: animationTwo 25s infinite linear;
+        // animation: animationTwo 25s infinite linear;
+        visibility: hidden;
     }
 
     .circle2 {
@@ -2677,7 +2674,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #e3b23c;
-        animation: animationOne 33s infinite linear;
+        // animation: animationOne 33s infinite linear;
+        visibility: hidden;
     }
 
     .circle3 {
@@ -2689,7 +2687,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #2c528b;
-        animation: animationTwo 30s infinite linear;
+        // animation: animationTwo 30s infinite linear;
+        visibility: hidden;
     }
 
     .circle4 {
@@ -2701,7 +2700,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #ff3a75;
-        animation: animationOne 23s infinite linear;
+        // animation: animationOne 23s infinite linear;
+        visibility: hidden;
     }
 
     .circle5 {
@@ -2713,7 +2713,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #2bcf90;
-        animation: animationTwo 26s infinite linear;
+        // animation: animationTwo 26s infinite linear;
+        visibility: hidden;
     }
 
     .circle6 {
@@ -2725,7 +2726,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #9b6aeb;
-        animation: animationTwo 43s infinite linear;
+        // animation: animationTwo 43s infinite linear;
+        visibility: hidden;
     }
 }
 

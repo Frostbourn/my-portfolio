@@ -9915,10 +9915,6 @@ header .navbar-toggler {
   border: none;
 }
 
-header .navbar-brand {
-  visibility: hidden;
-}
-
 header .navbar-collapse {
   justify-content: flex-end;
   transition: all 0.45s ease;
@@ -12152,7 +12148,7 @@ footer .media-container-row {
   border-radius: 50%;
   background: #7d06df;
   position: absolute;
-  animation: animationTwo 25s infinite linear;
+  visibility: hidden;
 }
 
 .animation_background .circle2 {
@@ -12164,7 +12160,7 @@ footer .media-container-row {
   position: absolute;
   border-radius: 50%;
   background-color: #e3b23c;
-  animation: animationOne 33s infinite linear;
+  visibility: hidden;
 }
 
 .animation_background .circle3 {
@@ -12176,7 +12172,7 @@ footer .media-container-row {
   position: absolute;
   border-radius: 50%;
   background-color: #2c528b;
-  animation: animationTwo 30s infinite linear;
+  visibility: hidden;
 }
 
 .animation_background .circle4 {
@@ -12188,7 +12184,7 @@ footer .media-container-row {
   position: absolute;
   border-radius: 50%;
   background-color: #ff3a75;
-  animation: animationOne 23s infinite linear;
+  visibility: hidden;
 }
 
 .animation_background .circle5 {
@@ -12200,7 +12196,7 @@ footer .media-container-row {
   position: absolute;
   border-radius: 50%;
   background-color: #2bcf90;
-  animation: animationTwo 26s infinite linear;
+  visibility: hidden;
 }
 
 .animation_background .circle6 {
@@ -12212,7 +12208,7 @@ footer .media-container-row {
   position: absolute;
   border-radius: 50%;
   background-color: #9b6aeb;
-  animation: animationTwo 43s infinite linear;
+  visibility: hidden;
 }
 
 @media screen and (min-width: 1400px) {
