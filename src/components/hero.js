@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
-import { gsap, Power3 } from 'gsap'
 import { Bounce, Fade } from "react-awesome-reveal"
 
 const HeroLink = props => (
@@ -14,12 +13,7 @@ const HeroLink = props => (
 const Hero = () => {
   const [state, setState] = useState(false)
 
-  gsap.set(['.circle1, .circle2, .circle3, .circle4, .circle5, .circle6'], {autoAlpha: 0})
-
   useEffect(() => {
-    const tl = gsap.timeline({delay: 1})
-    tl.fromTo('.circle1', {y: -60, autoAlpha: 0, ease: Power3.easeOut, delay: 0.2}, {y: 0, autoAlpha: 1})
-
     const onScroll = () => {
       const isScrolled = window.scrollY > 10
       if (isScrolled !== state.scrolled) {
@@ -62,12 +56,12 @@ const Hero = () => {
                 >
                   WYPEŁNIJ BRIEF
                 </HeroLink>
-                <a
-                  class="btn btn-md btn-bgr btn-warning display-4"
-                  href="#contact"
+                <HeroLink
+                  className="btn btn-md btn-bgr btn-warning display-4"
+                  to="#contact"
                 >
                   KONTAKT
-                </a>
+                </HeroLink>
               </div>
             </Col>
           </Row>

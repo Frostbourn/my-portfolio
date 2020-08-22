@@ -67,8 +67,7 @@ const About = () => (
       </Container>
     </section>
     <svg
-      className="wave-img"
-      style={{ "margin-top": "-170px" }}
+      className="bottom-wave-img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1440 320"
     >

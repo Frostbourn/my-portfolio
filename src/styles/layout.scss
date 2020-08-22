@@ -99,7 +99,7 @@ header {
 
             input {
                 position: absolute;
-                left: -99em;
+                left: -199em;
             }
         }
 
@@ -1947,6 +1947,12 @@ pre {
     }
 }
 
+.bottom-wave-img {
+    path {
+        fill: var(--wavesColor) !important;
+    }
+}
+
 .waves {
     position: absolute;
     width: 100vw;
@@ -2661,60 +2667,55 @@ footer {
         border-radius: 50%;
         background: #7d06df;
         position: absolute;
-        // animation: animationTwo 25s infinite linear;
-        visibility: hidden;
+        animation: animationTwo 25s infinite linear;
     }
 
     .circle2 {
         display: inline-block;
         width: 10px;
         height: 10px;
-        left: 6%;
-        top: 42%;
+        left: 7%;
+        top: 30%;
         position: absolute;
         border-radius: 50%;
         background-color: #e3b23c;
-        // animation: animationOne 33s infinite linear;
-        visibility: hidden;
+        animation: animationOne 33s infinite linear;
     }
 
     .circle3 {
         display: inline-block;
         width: 10px;
         height: 10px;
-        left: 6%;
-        bottom: 130px;
+        left: 10%;
+        bottom: 260px;
         position: absolute;
         border-radius: 50%;
         background-color: #2c528b;
-        // animation: animationTwo 30s infinite linear;
-        visibility: hidden;
+        animation: animationTwo 30s infinite linear;
     }
 
     .circle4 {
         display: inline-block;
         width: 15px;
         height: 15px;
-        right: 12%;
+        right: 24%;
         top: 23%;
         position: absolute;
         border-radius: 50%;
         background-color: #ff3a75;
-        // animation: animationOne 23s infinite linear;
-        visibility: hidden;
+        animation: animationOne 23s infinite linear;
     }
 
     .circle5 {
         display: inline-block;
         width: 10px;
         height: 10px;
-        right: 40%;
-        bottom: 20%;
+        right: 63%;
+        bottom: 39%;
         position: absolute;
         border-radius: 50%;
         background-color: #2bcf90;
-        // animation: animationTwo 26s infinite linear;
-        visibility: hidden;
+        animation: animationTwo 26s infinite linear;
     }
 
     .circle6 {
@@ -2722,12 +2723,11 @@ footer {
         width: 13px;
         height: 13px;
         right: 30%;
-        bottom: 32%;
+        bottom: 37%;
         position: absolute;
         border-radius: 50%;
         background-color: #9b6aeb;
-        // animation: animationTwo 43s infinite linear;
-        visibility: hidden;
+        animation: animationTwo 43s infinite linear;
     }
 }
 
@@ -2738,6 +2738,9 @@ footer {
                 margin-bottom: calc(100vh - 990px) !important;
             }
         }
+    }
+    .bottom-wave-img {
+        margin-top: calc(100vh - 990px) !important;
     }
 }
 
