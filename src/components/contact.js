@@ -14,7 +14,10 @@ const ContactForm = () => {
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
       submitting: false,
-      status: { ok, msg },
+      status: { 
+        ok, 
+        msg 
+      },
     })
     if (ok) {
       form.reset()
@@ -37,7 +40,10 @@ const ContactForm = () => {
         )
       })
       .catch(r => {
-        handleServerResponse(false, r.response.data.error, form)
+        handleServerResponse(
+          false, 
+          r.response.data.error, 
+          form)
       })
   }
   return (
