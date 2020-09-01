@@ -5,7 +5,7 @@ module.exports = {
     description: `I am a web developer freelancer, I specialize in designing websites. Effective Websites! Check my portfolio and references.`,
     author: `Jakub Skowronski`,
     url: `https://jakubskowronski.com`,
-    image: `src/images/screenshot.png`
+    image: `src/images/screenshot.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -32,17 +32,46 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /svgs/
-        }
-      }
+          include: /svgs/,
+        },
+      },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-github",
+      options: {
+        headers: {
+          Authorization: `Bearer a5908d390e2de859fa89a5eea163d952ea550ae7`,
+        },
+        queries: [
+          `{ viewer {                 
+            pinnedItems(first: 3, types: REPOSITORY){
+             nodes {
+              ... on Repository {
+                name
+                description
+                forkCount
+                stargazers {
+                  totalCount
+                }
+                url
+                id
+                diskUsage
+                primaryLanguage {
+                  name
+                  color
+                }
+            }
+           }
+          }
+        }
+        }`,
+        ],
+      },
+    },
   ],
 }

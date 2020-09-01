@@ -19,9 +19,9 @@ body {
 }
 
 body.light {
-    --anchorLink: #3a405a;
-    --background: #FBFBFB;
-    --textColor: #3a405a;
+    --anchorLink: #24292e;
+    --background: #FFFFFF;
+    --textColor: #24292e;
     --buttonColor: #8c43ff;
     --wavesColor: #8c43ff;
     --cardColor: #FFFFF;
@@ -30,13 +30,13 @@ body.light {
     background-color: var(--background);
     --boxShadow: rgba(153, 153, 153, 0.5);
     --navBackground: #FBFBFB;
-    --contactBackground: #3a405a;
+    --contactBackground: #24292e;
 }
 
 body.dark {
     -webkit-font-smoothing: antialiased;
     --anchorLink: #e3b23c;
-    --background: #3a405a;
+    --background: #24292e;
     --textColor: #FBFBFB;
     --buttonColor: #bb8fff;
     --wavesColor: #282c3b;
@@ -2084,6 +2084,82 @@ pre {
     padding: 65px 90px;
     background-color: var(--background);
 
+    .repo-card-div {
+        background-color: rgb(255, 255, 255);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+        padding: 2rem;
+        cursor: pointer;
+    }
+
+    .repo-card-div:hover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
+    }
+
+    .repo-stats {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        font-size: 13px;
+
+        p {
+            margin: 10px 0;
+        }
+    }
+
+    .repo-left-stat {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        display: flex;
+    }
+
+    .language-color {
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+        margin-right: 0.25rem;
+        border-radius: 100%;
+    }
+
+    .repo-left-stat span {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        margin-right: 0.75rem;
+    }
+
+    .repo-name-div {
+        display: flex;
+        align-items: center;
+    }
+
+    .repo-svg {
+        margin-right: 0.5rem;
+        min-width: 16px;
+    }
+
+    .repo-name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: rgb(36, 41, 46);
+        margin-bottom: 0.75rem;
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        overflow: hidden;
+        margin: 0px;
+    }
+
+    .repo-star-svg {
+        margin-right: 0.3rem;
+    }
+
+    .repo-description {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
     .card-title {
         letter-spacing: 0.03em;
         color: var(--cardText);
@@ -2144,14 +2220,6 @@ pre {
     .card-box {
         word-break: break-word;
         padding-top: 2rem;
-
-        p {
-            color: #444;
-            letter-spacing: 0.03em;
-            font-weight: 300;
-            margin: 0;
-            padding-bottom: 1.5rem;
-        }
 
         >p {
             color: var(--cardText);
@@ -2739,6 +2807,7 @@ footer {
             }
         }
     }
+
     .bottom-wave-img {
         margin-top: calc(100vh - 1020px) !important;
     }
