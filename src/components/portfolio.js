@@ -86,7 +86,8 @@ const Portfolio = () => {
                 <strong>LATEST WORK</strong>
               </h2>
               <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
-                You can find here some of my latest project. Want to see more? Leave me a message!
+                You can find here some of my latest project. Want to see more?
+                Leave me a message!
               </h3>
             </Col>
             <Col md={12}>
@@ -181,89 +182,86 @@ const Portfolio = () => {
                 </Fade>
               </div>
             ))}
-            
+
             <Col md={12}>
               <h2 className="mbr-section-title mbr-fonts-style align-left display-2 py-3">
                 <strong>Commercial Projects</strong>
               </h2>
             </Col>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-            <Fade bottom duration={1000} distance="20px">
-              <div className="card-wrapper" onClick={() => openRepoinNewTab('https://postplaner.pl')}>
-              <div className="repo-card-div">
-                <div className="card-img">
-                  <Img fluid={data.portfolioOne.childImageSharp.fluid} />
-                </div>
-                <div className="card-box">
-                  <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                    POST PLANER
-                  </h4>
-                  <div className="card-underline align-center">
-                    <div className="line"></div>
+              <Fade bottom duration={1000} distance="20px">
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://postplaner.pl")}
+                >
+                  <div className="repo-card-div">
+                    <div className="card-img">
+                      <Img fluid={data.portfolioOne.childImageSharp.fluid} />
+                    </div>
+                    <div className="card-box">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                        POST PLANER
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="align-center repo-description">
+                        Social media post planner
+                      </p>
+                    </div>
                   </div>
-                  <p className="align-center  repo-description">
-                    Planer postów społecznościowych
-                  </p>
                 </div>
-              </div>
-            </div>
-            </Fade>
-            </div>
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <div className="card-wrapper">
-                <div className="card-img">
-                  <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
-                </div>
-                <div className="card-box">
-                  <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
-                    ML TRANS
-                  </h4>
-                  <div className="card-underline align-center">
-                    <div className="line"></div>
-                  </div>
-                  <p className="mbr-text mbr-fonts-style align-center display-7">
-                    Strona firmy transportowej
-                  </p>
-                </div>
-                <div className="mbr-section-btn align-center">
-                  <a
-                    href="https://mltrans.eu"
-                    className="btn btn-success display-4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ODWIEDŹ STRONĘ
-                  </a>
-                </div>
-              </div>
+              </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <div className="card-wrapper">
-                <div className="card-img">
-                  <Img fluid={data.portfolioThree.childImageSharp.fluid} />
-                </div>
-                <div className="card-box">
-                  <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
-                    LAKINI
-                  </h4>
-                  <div className="card-underline align-center">
-                    <div className="line"></div>
+              <Fade bottom duration={1000} distance="20px">
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://mltrans.eu")}
+                >
+                  <div className="repo-card-div">
+                    <div className="card-img">
+                      <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
+                    </div>
+                    <div className="card-box">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                        ML TRANS
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="align-center repo-description">
+                        Strona firmy transportowej
+                      </p>
+                    </div>
                   </div>
-                  <p className="mbr-text mbr-fonts-style align-center display-7">
-                    Sklep z obuwiem
-                  </p>
                 </div>
-                <div className="mbr-section-btn align-center">
-                  <a
-                    href="https://lakini.pl"
-                    className="btn btn-success display-4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ODWIEDŹ STRONĘ
-                  </a>
+              </Fade>
+            </div>
+            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+              <Fade bottom duration={1000} distance="20px">
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://lakini.pl")}
+                >
+                  <div className="repo-card-div">
+                    <div className="card-img">
+                      <Img fluid={data.portfolioThree.childImageSharp.fluid} />
+                    </div>
+                    <div className="card-box">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                        LAKINI
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="align-center repo-description">
+                        Sklep z obuwiem
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <div className="card-wrapper">
