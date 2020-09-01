@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 const DarkLightSwitch = () => (

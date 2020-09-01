@@ -4,12 +4,6 @@ import { Link } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade } from "react-awesome-reveal"
 
-const HeroLink = props => (
-  <Link to={props.to} className={props.className}>
-    {props.children}
-  </Link>
-)
-
 const Hero = () => {
   const [state, setState] = useState(false)
 
@@ -46,22 +40,23 @@ const Hero = () => {
                 <strong>Web Developer</strong>
               </h1>
               <p className="mbr-text pb-3 mbr-fonts-style display-5">
-                Koduje proste strony i kocham to co robię.
+                I code simple websites and I love it!
               </p>
               <div className="mbr-section-btn">
-                <HeroLink
+                <a
                   className="btn btn-md btn-bgr btn-success display-4"
-                  to="https://forms.gle/GJ3GfPGWaQhdpoMR9"
+                  href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  WYPEŁNIJ BRIEF
-                </HeroLink>
-                <HeroLink
+                  Get a quote
+                </a>
+                <Link
                   className="btn btn-md btn-bgr btn-warning display-4"
                   to="#contact"
                 >
-                  KONTAKT
-                </HeroLink>
+                  Get in touch
+                </Link>
               </div>
             </Col>
           </Row>

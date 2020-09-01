@@ -1,6 +1,5 @@
 import React from "react"
-import { Container, Button, Row, Col, Alert } from "react-bootstrap"
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa"
+import { Container } from "react-bootstrap"
 
 const Footer = () => (
   <footer>

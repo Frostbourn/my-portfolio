@@ -39,15 +39,15 @@ const Header = props => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav.Item as={`li`}>
-              <Nav.Link href="/#about">O mnie</Nav.Link>
+              <Nav.Link href="/#about">About</Nav.Link>
             </Nav.Item>
             <Nav.Item as={`li`}>
-              <Nav.Link href="/#portfolio">Portfolio</Nav.Link>
+              <Nav.Link href="/#portfolio">Work</Nav.Link>
             </Nav.Item>
             <Nav.Item as={`li`}>
               <Nav.Link href="#contact" className="btn-success-outline">
                 <FaEnvelope />
-                &nbsp;<strong>Kontakt</strong>
+                &nbsp;<strong>Contact</strong>
               </Nav.Link>
             </Nav.Item>
             <DarkLightSwitch />

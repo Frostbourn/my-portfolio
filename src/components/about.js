@@ -1,16 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Slide } from "react-awesome-reveal"
-
-const AboutLink = props => (
-  <li>
-    <Link to={props.to} className={props.class}>
-      {props.children}
-    </Link>
-  </li>
-)
 
 const About = () => (
   <>

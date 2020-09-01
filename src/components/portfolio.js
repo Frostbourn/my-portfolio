@@ -1,17 +1,9 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
-
-const PortfolioLink = props => (
-  <li>
-    <Link to={props.to} className={props.class}>
-      {props.children}
-    </Link>
-  </li>
-)
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
@@ -95,6 +87,7 @@ const Portfolio = () => {
                     href="https://postplaner.pl"
                     className="btn btn-success display-4"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     ODWIEDŹ STRONĘ
                   </a>
@@ -122,6 +115,7 @@ const Portfolio = () => {
                     href="https://mltrans.eu"
                     className="btn btn-success display-4"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     ODWIEDŹ STRONĘ
                   </a>
@@ -149,6 +143,7 @@ const Portfolio = () => {
                     href="https://lakini.pl"
                     className="btn btn-success display-4"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     ODWIEDŹ STRONĘ
                   </a>
@@ -176,6 +171,7 @@ const Portfolio = () => {
                     href="https://jakubskowronski.com/rscar"
                     className="btn btn-success display-4"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     ODWIEDŹ STRONĘ
                   </a>
@@ -203,6 +199,8 @@ const Portfolio = () => {
                   <a
                     href="https://jakubskowronski.com/hfb"
                     className="btn btn-success display-4"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     ODWIEDŹ STRONĘ
                   </a>
@@ -230,6 +228,7 @@ const Portfolio = () => {
                     href="https://jsns.eu"
                     className="btn btn-success display-4"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     ODWIEDŹ STRONĘ
                   </a>

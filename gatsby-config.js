@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Webdesigner Portfolio`,
-    description: `Jestem web developerem freelancerem, specjalizuję się w projektowaniu stron www. Skutecznych stron www! Sprawdź moje portfolio i referencje.`,
-    author: `Jakub Skowroński`,
+    title: `Jakub Skowronski`,
+    titleTemplate: ` - Web Developer Porfolio`,
+    description: `I am a web developer freelancer, I specialize in designing websites. Effective Websites! Check my portfolio and references.`,
+    author: `Jakub Skowronski`,
+    url: `https://jakubskowronski.com`,
+    image: `src/images/screenshot.png`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,15 +23,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `JS Soft`,
+        short_name: `JSNS`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
       },
     },
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {

@@ -1,8 +1,7 @@
 import React, { useState } from "react"
 import axios from "axios"
-import { Link } from "gatsby"
 
-import { Container, Button, Row, Col, Alert } from "react-bootstrap"
+import { Container, Button, Alert } from "react-bootstrap"
 import { FaFacebookF, FaGithub, FaLinkedin, FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
 
@@ -134,6 +133,7 @@ const ContactForm = () => {
                           className="icon-transition"
                           href="https://www.facebook.com/skowronski.jakub"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <span className="mbr-iconfont">
                             <FaFacebookF />
@@ -145,6 +145,7 @@ const ContactForm = () => {
                           className="icon-transition"
                           href="https://github.com/Frostbourn"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <span className="mbr-iconfont">
                             <FaGithub />
@@ -156,6 +157,7 @@ const ContactForm = () => {
                           className="icon-transition"
                           href="https://www.linkedin.com/in/jakubskowronki"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <span className="mbr-iconfont">
                             <FaLinkedin />

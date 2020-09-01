@@ -2543,10 +2543,10 @@ footer .media-container-row {
 
 @media screen and (min-width: 1400px) {
   .waves .image-block svg {
-    margin-bottom: calc(100vh - 990px) !important;
+    margin-bottom: calc(100vh - 1020px) !important;
   }
   .bottom-wave-img {
-    margin-top: calc(100vh - 990px) !important;
+    margin-top: calc(100vh - 1020px) !important;
   }
 }
 
