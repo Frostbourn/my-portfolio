@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade } from "react-awesome-reveal"
-import Image from "../images/svgs/hero-image.svg";
+import Image from "../images/svgs/hero-image-secondary.svg";
 
 const Hero = () => {
   const [state, setState] = useState(false)
@@ -35,7 +35,7 @@ const Hero = () => {
       </Fade>
       <Fade delay="1000" triggerOnce>
         <Container fluid>
-          <Row className="justify-content-left">
+          <Row className="align-items-center content-row row">
             <Col md={6} className="hero-text">
               <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                 <strong>Web Developer</strong>

@@ -1879,8 +1879,8 @@ pre {
         margin-bottom: -100px;
 
         svg {
-            height: 375px;
-            margin-top: -65px;
+            height: 270px;
+            margin: -85px -280px 0;
         }
     }
 
@@ -2094,6 +2094,25 @@ pre {
 .portfolio {
     padding: 65px 90px;
     background-color: var(--background);
+
+    .blob {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50vmax;
+        z-index: -1;
+        animation: move 10s ease-in-out infinite;
+        transform-origin: 50% 50%;
+      }
+      
+      @keyframes move {
+        0%   { transform: scale(1)   translate(10px, -30px); }
+        38%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+        40%  { transform: scale(0.8, 1) translate(80vw, 30vh) rotate(160deg); }
+        78%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+        80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
+        100% { transform: scale(1)   translate(10px, -30px); }
+      }
 
     .repo-card-div {
         background-color: rgb(255, 255, 255);
@@ -2572,7 +2591,7 @@ footer {
 
 @media screen and (min-width: 835px) {
     .hero .hero-text {
-        padding-left: 8rem !important;
+        padding-left: 10rem !important;
     }
 }
 
@@ -2856,13 +2875,13 @@ footer {
     .waves {
         .image-block {
             svg {
-                margin-bottom: calc(100vh - 950px) !important;
+                margin-bottom: calc(100vh - 850px) !important;
             }
         }
     }
 
     .bottom-wave-img {
-        margin-top: calc(100vh - 950px) !important;
+        margin-top: calc(100vh - 850px) !important;
     }
 }
 

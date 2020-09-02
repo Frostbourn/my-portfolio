@@ -240,27 +240,24 @@ const Portfolio = () => {
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px">
-                <div
-                  className="card-wrapper"
-                  onClick={() => openRepoinNewTab("https://lakini.pl")}
-                >
+              <div className="card-wrapper" onClick={() => openRepoinNewTab("https://lakini.pl")}>
                   <div className="repo-card-div">
-                    <div className="card-img">
-                      <Img fluid={data.portfolioThree.childImageSharp.fluid} />
-                    </div>
-                    <div className="card-box">
-                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                        LAKINI
-                      </h4>
-                      <div className="card-underline align-center">
-                        <div className="line"></div>
-                      </div>
-                      <p className="align-center repo-description">
-                        Sklep z obuwiem
-                      </p>
-                    </div>
-                  </div>
+                <div className="card-img">
+                  <Img fluid={data.portfolioThree.childImageSharp.fluid} />
                 </div>
+                <div className="card-box">
+                  <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                    LAKINI
+                  </h4>
+                  <div className="card-underline align-center">
+                    <div className="line"></div>
+                  </div>
+                      <p className="align-center repo-description">
+                    Sklep z obuwiem
+                  </p>
+                </div>
+                </div>
+              </div>
               </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
