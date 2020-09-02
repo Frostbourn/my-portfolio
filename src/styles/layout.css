@@ -1768,7 +1768,7 @@ pre {
 }
 
 .hero .hero-svg svg {
-  margin-top: -130px;
+  margin-top: -140px;
 }
 
 .hero .media-container-column .btn-bgr {
@@ -2442,7 +2442,7 @@ footer .media-container-row {
 
 @media screen and (min-width: 835px) {
   .hero .hero-text {
-    padding-left: 10rem !important;
+    padding-left: 13rem !important;
   }
 }
 

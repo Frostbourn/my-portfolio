@@ -50,7 +50,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Resume
+                  Download CV
                 </a>
                 <Link
                   className="btn btn-md btn-bgr btn-warning display-4"
