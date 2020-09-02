@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade } from "react-awesome-reveal"
+import Image from "../images/svgs/hero-image.svg";
 
 const Hero = () => {
   const [state, setState] = useState(false)
@@ -34,12 +35,12 @@ const Hero = () => {
       </Fade>
       <Fade delay="1000" triggerOnce>
         <Container fluid>
-          <Row className="justify-content-center">
-            <Col md={10}>
+          <Row className="justify-content-left">
+            <Col md={6} className="hero-text">
               <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                 <strong>Web Developer</strong>
               </h1>
-              <p className="mbr-text pb-3 mbr-fonts-style display-5">
+              <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
                 I code simple websites and I love it!
               </p>
               <div className="mbr-section-btn">
@@ -58,6 +59,9 @@ const Hero = () => {
                   Get in touch
                 </Link>
               </div>
+            </Col>
+            <Col md={6} className="hero-svg">
+              <Image />
             </Col>
           </Row>
         </Container>
