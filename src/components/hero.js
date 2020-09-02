@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade } from "react-awesome-reveal"
-import Image from "../images/svgs/hero-image-secondary.svg";
+import Image from "../images/svgs/hero-image-fourth.svg";
 
 const Hero = () => {
   const [state, setState] = useState(false)
@@ -50,13 +50,13 @@ const Hero = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Get a quote
+                  Resume
                 </a>
                 <Link
                   className="btn btn-md btn-bgr btn-warning display-4"
                   to="#contact"
                 >
-                  Get in touch
+                  Contact me
                 </Link>
               </div>
             </Col>
