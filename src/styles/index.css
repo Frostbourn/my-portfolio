@@ -9688,6 +9688,7 @@ body {
   font-size: 16px;
   overflow-x: hidden;
   line-height: 1.5;
+  letter-spacing: -0.5px;
   height: auto;
   min-height: 100vh;
 }
@@ -9927,7 +9928,7 @@ header .navbar-collapse li {
 }
 
 header .navbar-collapse a {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--textColor);
   transition: color 0.2s ease-in-out;
 }
@@ -9945,7 +9946,6 @@ header .btn-success-outline {
   background: none;
   color: var(--buttonColor) !important;
   font-weight: 600;
-  letter-spacing: 2px;
   border: 2px solid;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -10063,7 +10063,7 @@ header .scrollBox {
 .display-5 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .display-5 > .mbr-iconfont {
@@ -10073,7 +10073,7 @@ header .scrollBox {
 .display-7 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .display-7 > .mbr-iconfont {
@@ -10096,7 +10096,6 @@ header .scrollBox {
   font-weight: 600;
   border-width: 2px;
   font-style: normal;
-  letter-spacing: 2px;
   margin: .4rem .8rem;
   white-space: normal;
   -webkit-transition: all 0.3s ease-in-out;
@@ -10115,7 +10114,6 @@ header .scrollBox {
 
 .btn-sm, .btn-group-sm > .btn {
   font-weight: 600;
-  letter-spacing: 2px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -10125,7 +10123,6 @@ header .scrollBox {
 
 .btn-md {
   font-weight: 600;
-  letter-spacing: 2px;
   margin: .4rem .8rem !important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -10136,7 +10133,6 @@ header .scrollBox {
 
 .btn-lg, .btn-group-lg > .btn {
   font-weight: 600;
-  letter-spacing: 2px;
   margin: .4rem .8rem !important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -11734,7 +11730,6 @@ pre {
   margin-bottom: 0.75rem;
   font-size: 25px;
   font-weight: 700;
-  letter-spacing: -0.5px;
   overflow: hidden;
   margin: 0px;
 }
@@ -12116,7 +12111,7 @@ footer .media-container-row {
 
 @media screen and (min-width: 835px) {
   .hero .hero-text {
-    padding-left: 10rem !important;
+    padding-left: 13rem !important;
   }
 }
 

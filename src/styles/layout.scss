@@ -14,6 +14,7 @@ body {
     font-size: 16px;
     overflow-x: hidden;
     line-height: 1.5;
+    letter-spacing: -0.5px;
     height: auto;
     min-height: 100vh;
 }
@@ -258,7 +259,7 @@ header {
         }
 
         a {
-            font-weight: 400;
+            font-weight: 500;
             color: var(--textColor);
             transition: color 0.2s ease-in-out;
 
@@ -277,7 +278,6 @@ header {
         background: none;
         color: var(--buttonColor) !important;
         font-weight: 600;
-        letter-spacing: 2px;
         border: 2px solid;
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
@@ -388,7 +388,7 @@ header {
 
 .display-4 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 
     >.mbr-iconfont {
         font-size: 1.28rem;
@@ -398,7 +398,7 @@ header {
 .display-5 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
 
     >.mbr-iconfont {
         font-size: 2.24rem;
@@ -408,7 +408,7 @@ header {
 .display-7 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
-    font-weight: 200;
+    font-weight: 300;
 
     >.mbr-iconfont {
         font-size: 1.6rem;
@@ -431,7 +431,6 @@ header {
     font-weight: 600;
     border-width: 2px;
     font-style: normal;
-    letter-spacing: 2px;
     margin: .4rem .8rem;
     white-space: normal;
     -webkit-transition: all 0.3s ease-in-out;
@@ -450,7 +449,6 @@ header {
 
 .btn-sm {
     font-weight: 600;
-    letter-spacing: 2px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -460,7 +458,6 @@ header {
 
 .btn-md {
     font-weight: 600;
-    letter-spacing: 2px;
     margin: .4rem .8rem !important;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -471,7 +468,6 @@ header {
 
 .btn-lg {
     font-weight: 600;
-    letter-spacing: 2px;
     margin: .4rem .8rem !important;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -2173,7 +2169,6 @@ pre {
         margin-bottom: 0.75rem;
         font-size: 25px;
         font-weight: 700;
-        letter-spacing: -0.5px;
         overflow: hidden;
         margin: 0px;
     }
