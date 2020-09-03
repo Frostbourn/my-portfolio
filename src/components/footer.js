@@ -14,10 +14,12 @@ const Footer = () => (
         </div> */}
         <div className="col-md-4 col-lg-5 copyright mb-3 mt-3">
           <p className="mb-0 text-copyright mbr-fonts-style display-6">
-            © {new Date().getFullYear()} {` `}<span className="logo-footer">
+            Made with ❤️ by Jakub Skowroński<br />
+            <hr width="100%" />
+            © {new Date().getFullYear()} {` `}
+            <span className="logo-footer">
               Jakub<span>Skowroński.</span>
-            </span> All rights
-            reserved
+            </span>
           </p>
         </div>
         {/* <div className="mb-4 pt-5 mbr-fonts-style subtext display-7">

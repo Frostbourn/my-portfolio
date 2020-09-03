@@ -13,9 +13,9 @@ const ContactForm = () => {
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
       submitting: false,
-      status: { 
-        ok, 
-        msg 
+      status: {
+        ok,
+        msg,
       },
     })
     if (ok) {
@@ -39,10 +39,7 @@ const ContactForm = () => {
         )
       })
       .catch(r => {
-        handleServerResponse(
-          false, 
-          r.response.data.error, 
-          form)
+        handleServerResponse(false, r.response.data.error, form)
       })
   }
   return (
@@ -64,7 +61,7 @@ const ContactForm = () => {
                 <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="text-center">
                     <h4 className="mb-4 mbr-fonts-style display-6 text-left">
-                      Wyślij wiadomość
+                      Leave me a message
                     </h4>
                     {serverState.status && (
                       <Alert
@@ -80,7 +77,7 @@ const ContactForm = () => {
                         className="form-control"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
-                        placeholder="Twój e-mail"
+                        placeholder="Email address"
                         required="required"
                       />
                     </div>
@@ -90,7 +87,7 @@ const ContactForm = () => {
                         name="name"
                         className="form-control"
                         id="exampleInputName"
-                        placeholder="Twoje imię"
+                        placeholder="Name"
                         required="required"
                       />
                     </div>
@@ -99,7 +96,7 @@ const ContactForm = () => {
                         name="message"
                         className="form-control"
                         id="exampleTextareaName"
-                        placeholder="W czym mogę Ci pomóc?"
+                        placeholder="How may I help you?"
                         rows="3"
                         required="required"
                       ></textarea>
@@ -109,7 +106,7 @@ const ContactForm = () => {
                       className="btn btn-primary btn-form btn-bgr display-4"
                       disabled={serverState.submitting}
                     >
-                      Wyślij
+                      Send mail
                     </button>
                   </form>
                 </div>
@@ -117,12 +114,11 @@ const ContactForm = () => {
               <div className="col-md-6 col-lg-6">
                 <div className="text-block">
                   <h2 className="mb-4 mbr-fonts-style mbr-section-title display-2">
-                    <strong>KONTAKT</strong>
+                    <strong>Contact me</strong>
                   </h2>
                   <h3 className="mbr-section-subtitle mbr-fonts-style mb-4 display-5">
-                    Możesz mnie znaleźć w paru miejscach w sieci, ale jeśli
-                    wolisz zrobić to „po staremu” to po prostu napisz do mnie
-                    wiadomość.
+                    You can find me in a few places on the web, but if if you
+                    prefer to do it the "old way" then just write to me message.
                   </h3>
                 </div>
                 <div className="mb-4 pt-5 mbr-fonts-style subtext display-7">

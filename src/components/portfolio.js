@@ -86,8 +86,8 @@ const Portfolio = () => {
                 <strong>LATEST WORK</strong>
               </h2>
               <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
-                You can find here some of my latest project. Want to see more?
-                Leave me a message!
+                Here are some of my recent works. Want to see more? Leave me a
+                message!
               </h3>
             </Col>
             <Col md={12}>
@@ -231,7 +231,7 @@ const Portfolio = () => {
                         <div className="line"></div>
                       </div>
                       <p className="align-center repo-description">
-                        Strona firmy transportowej
+                        Transport and logistic comapny website
                       </p>
                     </div>
                   </div>
@@ -240,110 +240,107 @@ const Portfolio = () => {
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px">
-              <div className="card-wrapper" onClick={() => openRepoinNewTab("https://lakini.pl")}>
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://lakini.pl")}
+                >
                   <div className="repo-card-div">
-                <div className="card-img">
-                  <Img fluid={data.portfolioThree.childImageSharp.fluid} />
-                </div>
-                <div className="card-box">
-                  <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                    LAKINI
-                  </h4>
-                  <div className="card-underline align-center">
-                    <div className="line"></div>
-                  </div>
+                    <div className="card-img">
+                      <Img fluid={data.portfolioThree.childImageSharp.fluid} />
+                    </div>
+                    <div className="card-box">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                        LAKINI
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
                       <p className="align-center repo-description">
-                    Sklep z obuwiem
-                  </p>
+                        eCommerce shoes store
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                </div>
-              </div>
               </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <div className="card-wrapper">
-                <div className="card-img">
-                  <Img fluid={data.portfolioFour.childImageSharp.fluid} />
-                </div>
-                <div className="card-box">
-                  <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
-                    RS CAR
-                  </h4>
-                  <div className="card-underline align-center">
-                    <div className="line"></div>
+              <Fade bottom duration={1000} distance="20px">
+                <div
+                  className="card-wrapper"
+                  onClick={() =>
+                    openRepoinNewTab("https://jakubskowronski.com/rscar")
+                  }
+                >
+                  <div className="repo-card-div">
+                    <div className="card-img">
+                      <Img fluid={data.portfolioFour.childImageSharp.fluid} />
+                    </div>
+                    <div className="card-box">
+                      <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
+                        RS CAR
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="mbr-text mbr-fonts-style align-center display-7">
+                        Car paint website
+                      </p>
+                    </div>
                   </div>
-                  <p className="mbr-text mbr-fonts-style align-center display-7">
-                    Wizytówka lakierni samochodowej
-                  </p>
                 </div>
-                <div className="mbr-section-btn align-center">
-                  <a
-                    href="https://jakubskowronski.com/rscar"
-                    className="btn btn-success display-4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ODWIEDŹ STRONĘ
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <div className="card-wrapper">
-                <div className="card-img">
-                  <Img fluid={data.portfolioFive.childImageSharp.fluid} />
-                </div>
-                <div className="card-box">
-                  <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
-                    HFB BROKER
-                  </h4>
-                  <div className="card-underline align-center">
-                    <div className="line"></div>
-                  </div>
-                  <p className="mbr-text mbr-fonts-style align-center display-7">
-                    Strona brokera ubezpieczeń
-                  </p>
-                </div>
-                <div className="mbr-section-btn align-center">
-                  <a
-                    href="https://jakubskowronski.com/hfb"
-                    className="btn btn-success display-4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ODWIEDŹ STRONĘ
-                  </a>
-                </div>
-              </div>
+              </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <div className="card-wrapper">
-                <div className="card-img">
-                  <Img fluid={data.portfolioSix.childImageSharp.fluid} />
-                </div>
-                <div className="card-box">
-                  <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
-                    JS Soft
-                  </h4>
-                  <div className="card-underline align-center">
-                    <div className="line"></div>
+              <Fade bottom duration={1000} distance="20px">
+                <div
+                  className="card-wrapper"
+                  onClick={() =>
+                    openRepoinNewTab("https://jakubskowronski.com/hfb")
+                  }
+                >
+                  <div className="repo-card-div">
+                    <div className="card-img">
+                      <Img fluid={data.portfolioFive.childImageSharp.fluid} />
+                    </div>
+                    <div className="card-box">
+                      <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
+                        HFB BROKER
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="mbr-text mbr-fonts-style align-center display-7">
+                        Insurance broker website
+                      </p>
+                    </div>
                   </div>
-                  <p className="mbr-text mbr-fonts-style align-center display-7">
-                    Rozszerzenia do CMS Joomla!
-                  </p>
                 </div>
-                <div className="mbr-section-btn align-center">
-                  <a
-                    href="https://jsns.eu"
-                    className="btn btn-success display-4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ODWIEDŹ STRONĘ
-                  </a>
+              </Fade>
+            </div>
+            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+              <Fade bottom duration={1000} distance="20px">
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://jsns.eu")}
+                >
+                  <div className="repo-card-div">
+                    <div className="card-img">
+                      <Img fluid={data.portfolioSix.childImageSharp.fluid} />
+                    </div>
+                    <div className="card-box">
+                      <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
+                        JS Soft
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="mbr-text mbr-fonts-style align-center display-7">
+                        Rozszerzenia do CMS Joomla!
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Fade>
             </div>
           </Row>
         </Container>
