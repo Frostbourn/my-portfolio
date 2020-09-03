@@ -47,7 +47,7 @@ const Header = props => {
             <Nav.Item as={`li`}>
               <Nav.Link href="#contact" className="btn-success-outline">
                 <FaEnvelope />
-                &nbsp;<strong>Contact</strong>
+                &nbsp;<strong>Let's talk!</strong>
               </Nav.Link>
             </Nav.Item>
             <DarkLightSwitch />
