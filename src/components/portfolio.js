@@ -83,7 +83,7 @@ const Portfolio = () => {
           <Row className="blog-block justify-content-around">
             <Col md={12}>
               <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
-                <strong>LATEST WORK</strong>
+                <strong>LATEST WORK 🏆</strong>
               </h2>
               <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
                 Here are some of my recent works. Want to see more? Leave me a
