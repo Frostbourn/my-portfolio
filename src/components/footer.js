@@ -13,14 +13,14 @@ const Footer = () => (
           </div>
         </div> */}
         <div className="col-md-4 col-lg-5 copyright mb-3 mt-3">
-          <p className="mb-0 text-copyright mbr-fonts-style display-6">
-            Made with ❤️ by Jakub Skowroński<br />
+          <div className="mb-0 text-copyright mbr-fonts-style display-6">
+            Made with ❤️ by Jakub Skowroński<br /> 
             <hr width="100%" />
             © {new Date().getFullYear()} {` `}
             <span className="logo-footer">
               Jakub<span>Skowroński.</span>
             </span>
-          </p>
+          </div>
         </div>
         {/* <div className="mb-4 pt-5 mbr-fonts-style subtext display-7">
           <div className="social-media col-md-12 col-sm-12">
