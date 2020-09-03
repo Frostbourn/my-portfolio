@@ -2393,6 +2393,7 @@ footer .social-list a:focus {
 footer .text-copyright {
   width: 100%;
   color: var(--textColor);
+  text-align: center;
 }
 
 footer .img-logo-footer {
