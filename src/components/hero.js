@@ -41,7 +41,7 @@ const Hero = () => {
                 <strong>Web Developer</strong>
               </h1>
               <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
-                I code simple websites and I love it!
+                I code simple websites and I love it! 🚀
               </p>
               <div className="mbr-section-btn">
                 <a
