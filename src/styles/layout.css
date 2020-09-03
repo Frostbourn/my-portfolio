@@ -84,12 +84,13 @@ header .logo span {
 
 header nav {
   width: 100vw;
+  max-height: 90px;
   background: var(--background);
-  -webkit-transition: box-shadow 0.6s ease-out;
-  -moz-transition: box-shadow 0.6s ease-out;
-  -o-transition: box-shadow 0.6s ease-out;
-  -ms-transition: box-shadow 0.6s ease-out;
-  transition: box-shadow 0.6s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 header nav .toggleWrapper {
@@ -311,8 +312,14 @@ header .btn-success-outline:disabled {
 }
 
 header .scrollBox {
-  box-shadow: 0px 0px 20px 0px var(--boxShadow);
+  max-height: 70px;
   background: var(--navBackground);
+  box-shadow: 0px 0px 20px 0px var(--boxShadow);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .btn-circle {
@@ -2437,7 +2444,7 @@ footer .media-container-row {
 
 @media screen and (min-width: 835px) {
   .hero .hero-text {
-    padding-left: 13rem !important;
+    padding-left: 16vw !important;
   }
 }
 
