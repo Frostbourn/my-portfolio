@@ -12,7 +12,7 @@ const About = () => (
           <Col lg={6} className="wrap-block">
             <Slide direction="left" triggerOnce>
               <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
-                <strong>KIM JESTEM?</strong>
+                <strong>Who am I? 🤓</strong>
               </h1>
 
               <h3 className="mbr-text mbr-fonts-style mbr-light display-7">
