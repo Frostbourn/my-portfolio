@@ -20,7 +20,7 @@ Jakub Skowroński Portfolio's personal portflio site, built with GatsbyJS.
 
 ## Deploying 🚀 
 
-This site is hosted on Netflify and builds to `https://jakubskowronski.com`. 
+This site is hosted on a private server and builds to `https://jakubskowronski.com`. 
 
 Prod will only deploy on merges to master.
 
