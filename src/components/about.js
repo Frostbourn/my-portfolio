@@ -2,6 +2,7 @@ import React from "react"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Slide } from "react-awesome-reveal"
+import Emoji from "./Emoji"
 
 const About = () => (
   <>
@@ -12,7 +13,7 @@ const About = () => (
           <Col lg={6} className="wrap-block">
             <Slide direction="left" triggerOnce>
               <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
-                <strong>Who am I? 🤓</strong>
+                <strong>Who am I? <Emoji symbol="🤓" label="smile"/></strong>
               </h1>
 
               <h3 className="mbr-text mbr-fonts-style mbr-light display-7">

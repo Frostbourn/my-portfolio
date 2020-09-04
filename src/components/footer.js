@@ -1,5 +1,6 @@
 import React from "react"
 import { Container } from "react-bootstrap"
+import Emoji from "./Emoji"
 
 const Footer = () => (
   <footer>
@@ -14,7 +15,7 @@ const Footer = () => (
         </div> */}
         <div className="col-md-4 col-lg-5 copyright mb-3 mt-3">
           <div className="mb-0 text-copyright mbr-fonts-style display-6">
-            Made with ❤️ by Jakub Skowroński<br /> 
+            Made with <Emoji symbol="❤️" label="heart"/> by Jakub Skowroński<br /> 
             <hr width="100%" />
             © {new Date().getFullYear()} {` `}
             <span className="logo-footer">

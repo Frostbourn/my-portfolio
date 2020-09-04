@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
+import Emoji from "./Emoji"
 
 const Portfolio = () => {
   function openRepoinNewTab(url) {
@@ -83,7 +84,9 @@ const Portfolio = () => {
           <Row className="blog-block justify-content-around">
             <Col md={12}>
               <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
-                <strong>LATEST WORK 🏆</strong>
+                <strong>
+                  LATEST WORK <Emoji symbol="🏆" label="contact" />
+                </strong>
               </h2>
               <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
                 Here are some of my recent works. Want to see more? Leave me a
@@ -96,13 +99,17 @@ const Portfolio = () => {
               </h2>
             </Col>
             {data.githubViewer.pinnedItems.nodes.map((repository, i) => (
-              <div className="card py-3 col-sm-12 col-md-12 col-lg-12"
-              key={repository.id}>
+              <div
+                className="card py-3 col-sm-12 col-md-12 col-lg-12"
+                key={repository.id}
+              >
                 <Fade bottom duration={1000} distance="20px">
                   <div className="card-wrapper">
                     <div
                       className="repo-card-div"
                       onClick={() => openRepoinNewTab(repository.url)}
+                      onKeyDown={() => openRepoinNewTab(repository.url)}
+                      role="presentation"
                     >
                       <div className="repo-name-div">
                         <svg
@@ -193,6 +200,8 @@ const Portfolio = () => {
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://postplaner.pl")}
+                  onKeyDown={() => openRepoinNewTab("https://postplaner.pl")}
+                  role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">
@@ -218,6 +227,8 @@ const Portfolio = () => {
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://mltrans.eu")}
+                  onKeyDown={() => openRepoinNewTab("https://mltrans.eu")}
+                  role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">
@@ -243,6 +254,8 @@ const Portfolio = () => {
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://lakini.pl")}
+                  onKeyDown={() => openRepoinNewTab("https://lakini.pl")}
+                  role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">
@@ -270,6 +283,9 @@ const Portfolio = () => {
                   onClick={() =>
                     openRepoinNewTab("https://jakubskowronski.com/rscar")
                   }
+                  onKeyDown={() =>
+                    openRepoinNewTab("https://jakubskowronski.com/rscar")}
+                    role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">
@@ -297,6 +313,9 @@ const Portfolio = () => {
                   onClick={() =>
                     openRepoinNewTab("https://jakubskowronski.com/hfb")
                   }
+                  onKeyDown={() =>
+                    openRepoinNewTab("https://jakubskowronski.com/hfb")}
+                    role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">
@@ -322,6 +341,8 @@ const Portfolio = () => {
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://jsns.eu")}
+                  onKeyDown={() => openRepoinNewTab("https://jsns.eu")}
+                  role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">

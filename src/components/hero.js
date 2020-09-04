@@ -3,7 +3,8 @@ import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade } from "react-awesome-reveal"
-import Image from "../images/svgs/hero-image-fourth.svg";
+import Image from "../images/svgs/hero-image-fourth.svg"
+import Emoji from "./Emoji"
 
 const Hero = () => {
   const [state, setState] = useState(false)
@@ -35,13 +36,13 @@ const Hero = () => {
       </Fade>
       <Fade delay="1000" triggerOnce>
         <Container fluid>
-          <Row className="align-items-center content-row row">
+          <Row className="align-items-center content-row row hero-margin">
             <Col md={6} className="hero-text">
               <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                 <strong>Web Developer</strong>
               </h1>
               <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
-                I code simple websites and I love it! 🚀
+                I code simple websites and I love it! <Emoji symbol="🚀" label="rocket"/>
               </p>
               <div className="mbr-section-btn">
                 <a

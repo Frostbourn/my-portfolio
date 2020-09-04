@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import "../styles/index.css"
+import "../styles/layout.min.css"
 
 import Header from "./header"
 import Hero from "./hero"

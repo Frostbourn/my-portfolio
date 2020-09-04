@@ -4,6 +4,7 @@ import axios from "axios"
 import { Container, Button, Alert } from "react-bootstrap"
 import { FaFacebookF, FaGithub, FaLinkedin, FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
+import Emoji from "./Emoji"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -114,7 +115,7 @@ const ContactForm = () => {
               <div className="col-md-6 col-lg-6">
                 <div className="text-block">
                   <h2 className="mb-4 mbr-fonts-style mbr-section-title display-2">
-                    <strong>Contact me 💬</strong>
+                    <strong>Contact me <Emoji symbol="💬" label="contact"/></strong>
                   </h2>
                   <h3 className="mbr-section-subtitle mbr-fonts-style mb-4 display-5">
                     You can find me in a few places on the web, but if if you
