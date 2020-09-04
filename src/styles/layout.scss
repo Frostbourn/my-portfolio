@@ -24,9 +24,10 @@ body.light {
     --anchorLink: #24292e;
     --background: #FFFFFF;
     --textColor: #24292e;
+    --headingColor: #121212;
     --buttonColor: #8c43ff;
     --wavesColor: #8c43ff;
-    --cardColor: #FFFFF;
+    --cardColor: #FFFFFF;
     --cardText: var(--textColor);
     color: var(--textColor);
     background-color: var(--background);
@@ -38,12 +39,13 @@ body.light {
 body.dark {
     -webkit-font-smoothing: antialiased;
     --anchorLink: #e3b23c;
-    --background: #24292e;
-    --textColor: #FBFBFB;
+    --background: #121212;
+    --textColor: #cacaca;
+    --headingColor: #FFFFFF;
     --buttonColor: #bb8fff;
     --wavesColor: #282c3b;
     --cardColor: #282c3b;
-    --cardText: #F4F3F1;
+    --cardText: var(--background);
     color: var(--textColor);
     background-color: var(--background);
     --boxShadow: none;
@@ -73,7 +75,7 @@ header {
     .logo {
         margin: 1rem 4rem;
         display: inline;
-        color: var(--textColor);
+        color: var(--headingColor);
         font-size: 1.75rem;
         font-weight: 700;
         white-space: normal;
@@ -262,7 +264,7 @@ header {
 
         a {
             font-weight: 500;
-            color: var(--textColor);
+            color: var(--headingColor);
             transition: color 0.2s ease-in-out;
 
             &:hover {
@@ -462,9 +464,9 @@ header {
 .btn-md {
     font-weight: 600;
     margin: .4rem .8rem !important;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: box-shadow 0.3s ease-in-out;
+    -moz-transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
     padding: 0.8rem 2rem;
     border-radius: 0px;
 }
@@ -1888,7 +1890,7 @@ pre {
 
     H1 {
         text-align: left;
-        color: var(--textColor);
+        color: var(--headingColor);
         font-weight: normal;
     }
 
@@ -2872,7 +2874,7 @@ footer {
 
 @media screen and (max-width: 1550px) {
     .hero-margin {
-        margin-top: -60px !important;
+        margin-top: -40px !important;
     }
 } 
 
