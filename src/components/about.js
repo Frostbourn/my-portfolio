@@ -1,7 +1,7 @@
 import React from "react"
 
 import { Container, Row, Col } from "react-bootstrap"
-import { Slide } from "react-awesome-reveal"
+import { Fade } from "react-awesome-reveal"
 import Emoji from "./Emoji"
 
 const About = () => (
@@ -11,7 +11,7 @@ const About = () => (
         <Row className="align-items-center content-row">
           {/* <Parallax x={[-5, 5]} styleInner={{"display" : "flex", "align-items" : "center", "justify-content" : "center"}}> */}
           <Col lg={6} className="wrap-block">
-            <Slide direction="left" triggerOnce>
+            <Fade triggerOnce>
               <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
                 <strong>Who am I? <Emoji symbol="🤓" label="smile"/></strong>
               </h1>
@@ -43,16 +43,16 @@ const About = () => (
                 , opartą o Joomla!, gdzie oferuję moje usługi oraz wtyczki do
                 tegoż CMS'u.
               </h3>
-            </Slide>
+            </Fade>
           </Col>
           <Col lg={6} className="photo-split">
-            <Slide direction="right" triggerOnce>
+            <Fade direction="right" triggerOnce>
               <img
                 src="https://jakubskowronski.com/assets/images/header-photo-1400x882.jpg"
                 alt=""
                 title=""
               />
-            </Slide>
+            </Fade>
           </Col>
           {/* </Parallax> */}
         </Row>
