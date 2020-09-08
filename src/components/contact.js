@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import axios from "axios"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import { Container, Button, Alert } from "react-bootstrap"
 import { FaFacebookF, FaGithub, FaLinkedin, FaChevronUp } from "react-icons/fa"
@@ -43,13 +45,25 @@ const ContactForm = () => {
         handleServerResponse(false, r.response.data.error, form)
       })
   }
+  const data = useStaticQuery(graphql`
+    query {
+      background: file(relativePath: { eq: "map-background.webp" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   return (
     <>
       <section
         id="contact"
         className="contact features8 mbr-section form2 mbr-parallax-background"
+        style={{backgroundImage: data.background.childImageSharp.fluid}}
       >
-        <div className="mbr-overlay"></div>
+        <div className="mbr-overlay"></div> 
         <Fade delay="300" triggerOnce>
           <Container>
             <div className="media-container-row">
