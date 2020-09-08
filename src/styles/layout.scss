@@ -25,7 +25,6 @@ body.light {
     --background: #FFFFFF;
     --textColor: #24292e;
     --headingColor: #121212;
-    --outlineBtnColor: #8c43ff;
     --buttonColor: #8c43ff;
     --hoverColor: #7934FF;
     --wavesColor: #8c43ff;
@@ -45,7 +44,6 @@ body.dark {
     --background: #121212;
     --textColor: #cacaca;
     --headingColor: #FFFFFF;
-    --outlineBtnColor: #FFFFFF;
     --buttonColor: #C6A1FF;
     --hoverColor: #B98FFF;
     --wavesColor: #1f1f1f;
@@ -294,7 +292,7 @@ header {
         transition: all 0.3s ease-in-out;
         background: none;
         border-color: var(--buttonColor);
-        color: var(--outlineBtnColor) !important;
+        color: var(--buttonColor) !important;
 
         &:hover {
             color: #ffffff !important;
@@ -2186,7 +2184,6 @@ pre {
 .contact {
     padding-top: 90px;
     padding-bottom: 90px;
-    background-image: url("https://jakubskowronski.com/assets/images/map-background.webp");
     position: relative;
 
     h2 {
