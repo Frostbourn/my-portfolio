@@ -7,6 +7,7 @@ import { Container, Button, Alert } from "react-bootstrap"
 import { FaFacebookF, FaGithub, FaLinkedin, FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
 import Emoji from "./Emoji"
+import Background from "../images/map-background.webp"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -47,9 +48,9 @@ const ContactForm = () => {
   }
   const data = useStaticQuery(graphql`
     query {
-      background: file(relativePath: { eq: "map-background.webp" }) {
+      background: file(relativePath: { eq: "about-photo.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -61,17 +62,12 @@ const ContactForm = () => {
       <section
         id="contact"
         className="contact features8 mbr-section form2 mbr-parallax-background"
-        style={{backgroundImage: data.background.childImageSharp.fluid}}
+        style={{backgroundImage: `url(${Background})`}}
       >
         <div className="mbr-overlay"></div> 
         <Fade delay="300" triggerOnce>
           <Container>
             <div className="media-container-row">
-              {/* <div className="animation_background" style={{"position" : "fixed", "z-index" : "-1"}}>
-          <div className="big_circle1"></div>
-          <div className="big_circle2"></div>
-          <div className="big_circle3"></div>
-        </div>  */}
               <div className="col-md-6 col-lg-6 block-content">
                 <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="text-center">
