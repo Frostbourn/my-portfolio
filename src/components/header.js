@@ -31,7 +31,7 @@ const Header = props => {
           expand="md"
           fixed="top"
         >
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/#top">
             <h3 className="logo">
               Jakub<span>Skowroński.</span>
             </h3>
