@@ -35,6 +35,7 @@ body.light {
     --boxShadow: rgba(153, 153, 153, 0.5);
     --navBackground: #FBFBFB;
     --contactBackground: #24292e;
+    --contactHeading: var(--background);
     --svgFilter: unset;
 }
 
@@ -54,6 +55,7 @@ body.dark {
     --boxShadow: none;
     --navBackground: #1f1f1f;
     --contactBackground: #1f1f1f;
+    --contactHeading: var(--headingColor);
     --svgFilter: saturate(0.5);
 }
 
@@ -2187,19 +2189,19 @@ pre {
     position: relative;
 
     h2 {
-        color: var(--textColor);
+        color: var(--contactHeading);
     }
 
     h3 {
-        color: var(--textColor);
+        color: var(--contactHeading);
     }
 
     h4 {
-        color: var(--textColor);
+        color: var(--contactHeading);
     }
 
     p {
-        color: var(--textColor);
+        color: var(--contactHeading);
     }
 
     form {
@@ -2720,7 +2722,7 @@ footer {
     .hero-margin {
         margin-top: -40px !important;
     }
-} 
+}
 
 @media screen and (min-height: 835px) {
     .waves {
