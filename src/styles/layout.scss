@@ -1821,7 +1821,6 @@ pre {
 
         svg {
             width: 100% !important;
-            margin-bottom: -40px;
 
             path {
                 fill: var(--wavesColor) !important;
@@ -1831,8 +1830,7 @@ pre {
 }
 
 .about {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 45px 0 0;
     background-color: var(--wavesColor);
 
     .icon-transition {
@@ -1936,7 +1934,9 @@ pre {
 }
 
 .portfolio {
-    padding: 65px 90px;
+    width: 90%;
+    padding: 20px 10px;
+    margin: 4rem auto 0;
     background-color: var(--background);
 
     .blob {
@@ -2498,10 +2498,6 @@ footer {
         }
     }
 
-    .portfolio {
-        padding: 50px 0;
-    }
-
     footer {
         padding: 20px;
     }
@@ -2724,32 +2720,25 @@ footer {
     }
 }
 
-@media screen and (min-height: 835px) {
+@media screen and (min-width: 835px) {
     .waves {
         .image-block {
             svg {
-                margin-bottom: calc(100vh - 990px) !important;
+                margin-bottom: -120px;
             }
         }
-    }
-
-    .bottom-wave-img {
-        margin-top: calc(100vh - 1000px) !important;
     }
 }
 
-@media screen and (min-height: 400px) and (max-height: 835px) {
+@media screen and (max-width: 835px) {
     .waves {
         .image-block {
             svg {
-                margin-bottom: calc(100vh - 870px) !important;
+                margin-bottom: -35px;
             }
         }
     }
 
-    .bottom-wave-img {
-        margin-top: calc(100vh - 930px) !important;
-    }
 }
 
 @media screen and (max-width: 500px) {
