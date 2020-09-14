@@ -14,6 +14,7 @@ import About from "./about"
 import Portfolio from "./portfolio"
 import ContactForm from "./contact"
 import Footer from "./footer"
+import kursor from "kursor"
 
 const Layout = () => {
 
@@ -28,6 +29,12 @@ const Layout = () => {
       window.scrollTo(0, 0)
     }
   }
+
+  new kursor({
+    type: 2,
+    color: '#C6A1FF',
+    removeDefaultCursor: true
+  })
 
   return (
     <>
