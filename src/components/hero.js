@@ -68,9 +68,11 @@ const Hero = () => {
                 </Bounce>
               </div>
             </Col>
+            <Fade delay="1000" triggerOnce>
             <Col md={6} className="hero-svg">
               <Image />
             </Col>
+            </Fade>
           </Row>
         </Container>
       </Fade>
