@@ -38,32 +38,34 @@ const Hero = () => {
         <Container fluid>
           <Row className="align-items-center content-row row hero-margin">
             <Col md={6} className="hero-text">
-                  <Fade direction="left" delay="800" triggerOnce>
-              <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
-                <strong>
-                    Web Developer
-                </strong>
-              </h1>
-                  </Fade>
-              <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
-                I code simple websites and I love it!{" "}
-                <Emoji symbol="🚀" label="rocket" />
-              </p>
+              <Fade direction="left" delay="1000" triggerOnce>
+                <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
+                  <strong>Web Developer</strong>
+                </h1>
+              </Fade>
+              <Fade direction="left" delay="1400" triggerOnce>
+                <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
+                  I code simple websites and I love it!{" "}
+                  <Emoji symbol="🚀" label="rocket" />
+                </p>
+              </Fade>
               <div className="mbr-section-btn">
-                <a
-                  className="btn btn-md btn-bgr btn-success display-4"
-                  href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Download CV
-                </a>
-                <Link
-                  className="btn btn-md btn-bgr btn-warning display-4"
-                  to="#contact"
-                >
-                  Contact me
-                </Link>
+                <Bounce delay="2000" triggerOnce>
+                  <a
+                    className="btn btn-md btn-bgr btn-success display-4"
+                    href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Download CV
+                  </a>
+                  <Link
+                    className="btn btn-md btn-bgr btn-warning display-4"
+                    to="#contact"
+                  >
+                    Contact me
+                  </Link>
+                </Bounce>
               </div>
             </Col>
             <Col md={6} className="hero-svg">
@@ -72,9 +74,9 @@ const Hero = () => {
           </Row>
         </Container>
       </Fade>
-      <Fade delay="1500" triggerOnce>
+      <Bounce delay="3000" triggerOnce>
         <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
-      </Fade>
+      </Bounce>
       <Bounce direction="top" triggerOnce>
         <div className="waves">
           <figure className="mbr-figure">
