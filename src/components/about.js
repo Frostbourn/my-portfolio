@@ -25,7 +25,7 @@ const About = () => {
           <Row className="align-items-center content-row">
             {/* <Parallax x={[-5, 5]} styleInner={{"display" : "flex", "align-items" : "center", "justify-content" : "center"}}> */}
             <Col lg={6} className="wrap-block">
-              <Fade triggerOnce>
+              <Fade direction="left" triggerOnce>
                 <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
                     Who am I? <Emoji symbol="🤓" label="smile" />
