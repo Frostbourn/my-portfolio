@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import "../styles/layout.min.css"
+import "../styles/layout.scss"
 
 import Header from "./header"
 import Hero from "./hero"
@@ -32,7 +32,7 @@ const Layout = () => {
 
   new kursor({
     type: 2,
-    color: '#C6A1FF',
+    color: '#975bf4',
     removeDefaultCursor: true
   })
 
