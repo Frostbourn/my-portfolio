@@ -69,9 +69,9 @@ const ContactForm = () => {
           <Container>
             <div className="media-container-row">
               <div className="col-md-6 col-lg-6 block-content">
-                <div className="col-md-12">
-                  <form onSubmit={handleOnSubmit} className="text-center">
-                    <h4 className="mb-4 mbr-fonts-style display-6 text-left">
+                <div className="col-md-10">
+                  <form onSubmit={handleOnSubmit} className="row g-3 d-flex">
+                    <h4 className="mb-4 mbr-fonts-style display-2 text-left">
                       Leave me a message
                     </h4>
                     {serverState.status && (
