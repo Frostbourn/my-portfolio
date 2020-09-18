@@ -36,8 +36,8 @@ const Hero = () => {
       </Fade>
       <Fade triggerOnce>
         <Container fluid>
-          <Row className="align-items-center content-row row hero-margin">
-            <Col md={6} className="hero-text">
+          <Row className="align-items-center hero-margin">
+            <Col className="hero-text">
               <Fade direction="left" delay="1000" triggerOnce>
                 <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                   <strong>Web Developer</strong>
@@ -68,11 +68,11 @@ const Hero = () => {
                 </Bounce>
               </div>
             </Col>
-            <Fade delay="1000" triggerOnce>
-            <Col md={6} className="hero-svg">
-              <Image />
+            <Col className="hero-svg">
+              <Fade delay="1000" triggerOnce>
+                <Image />
+              </Fade>
             </Col>
-            </Fade>
           </Row>
         </Container>
       </Fade>
