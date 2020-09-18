@@ -13,8 +13,8 @@ const Footer = () => (
             </h3>
           </div>
         </div> */}
-        <div className="col-md-4 col-lg-5 copyright mb-3 mt-3">
-          <div className="mb-0 text-copyright mbr-fonts-style display-6">
+        <div className="col-6 copyright mb-3 mt-3">
+          <div className="mb-0 text-copyright mbr-fonts-style">
             Made with <Emoji symbol="❤️" label="heart"/> by Jakub Skowroński<br /> 
             <hr width="100%" />
             © {new Date().getFullYear()} {` `}
