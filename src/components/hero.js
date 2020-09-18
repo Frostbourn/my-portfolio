@@ -36,8 +36,8 @@ const Hero = () => {
       </Fade>
       <Fade triggerOnce>
         <Container fluid>
-          <Row className="align-items-center hero-margin">
-            <Col className="hero-text">
+          <Row className="align-items-center content-row row">
+            <Col lg={6} className="hero-text">
               <Fade direction="left" delay="1000" triggerOnce>
                 <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                   <strong>Web Developer</strong>
