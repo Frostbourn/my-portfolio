@@ -114,7 +114,7 @@ const ContactForm = () => {
                     </div>
                     <button
                       type="submit"
-                      className="btn btn-primary btn-form btn-bgr display-4"
+                      className="btn btn-primary btn-form btn-bgr display-4 mt-4"
                       disabled={serverState.submitting}
                     >
                       Send mail
@@ -122,7 +122,8 @@ const ContactForm = () => {
                   </form>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-6">
+              <div className="col-md-6 col-lg-6 d-flex justify-content-center">
+                <div className="col-md-10">
                 <div className="text-block">
                   <h2 className="mb-4 mbr-fonts-style mbr-section-title display-2">
                     <strong>Contact me <Emoji symbol="💬" label="contact"/></strong>
@@ -172,6 +173,7 @@ const ContactForm = () => {
                         </a>
                       </li>
                     </ul>
+                  </div>
                   </div>
                 </div>
               </div>
