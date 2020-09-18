@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Montserrat', sans-serif;
-    src: url(https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap);
+    font-family: 'Poppins', sans-serif;
+    src: url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 }
 
 html {
@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-size: 16px;
     overflow-x: hidden;
@@ -61,7 +61,8 @@ svg {
     vertical-align: initial;
 }
 
-button, .btn {
+button,
+.btn {
     cursor: none !important;
 }
 
@@ -96,6 +97,7 @@ header {
     nav {
         width: 100vw;
         max-height: 90px;
+        padding: 0.7rem !important;
         background: var(--background);
         -webkit-transition: box-shadow 0.3s ease-out, max-height 0.3s ease-out;
         -moz-transition: box-shadow 0.3s ease-out, max-height 0.3s ease-out;
@@ -257,6 +259,56 @@ header {
 
     .navbar-toggler {
         border: none;
+        background: transparent !important;
+      
+      &:focus {
+        outline: none;
+        background: transparent !important;
+      }
+      
+      .icon-bar {
+        background-color: var(--headingColor);
+        transform: rotate(0deg) translate(0px, 0px);
+        transition: ease all .2s;
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+      }
+      
+       .icon-bar+.icon-bar {
+        margin-top: 4px;
+      }
+      
+      .icon-bar:nth-child(2) {
+        width: 16px;
+        transition: ease all .2s;
+      }
+      
+    &:hover>.icon-bar:nth-child(2) {
+        width: 22px;
+        transition: ease all .2s;
+      }
+      
+      &:active>.icon-bar:nth-child(2) {
+        width: 22px;
+        transition: ease all .2s;
+      }
+      
+      &:not(.collapsed) .icon-bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 4px);
+        transition: ease all .2s;
+      }
+      
+      &:not(.collapsed) .icon-bar:nth-child(2) {
+        opacity: 0;
+        transition: ease all .2s;
+      }
+      
+      &:not(.collapsed) .icon-bar:nth-child(3) {
+        transform: rotate(-45deg) translate(4px, -4px);
+        transition: ease all .2s;
+      }
     }
 
     .navbar-collapse {
@@ -276,6 +328,56 @@ header {
 
             &:hover {
                 color: var(--buttonColor);
+            }
+        }
+
+        .hover {
+            font-weight: 500;
+            color: var(--headingColor);
+            transition: color 0.2s ease-in-out;
+            position: relative;
+            text-decoration: none;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 20px;
+                left: 25px;
+                right: 25px;
+                border-bottom: 3px dotted var(--buttonColor);
+                transform: rotate(5deg);
+            }
+
+            &:before {
+                opacity: 0;
+                transform: translateY(- 8px);
+                transition: transform 0s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s;
+            }
+
+            &:after {
+                opacity: 0;
+                transform: translateY(8px/2);
+                transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+            }
+
+            &:hover,
+            &:focus {
+                color: var(--buttonColor);
+
+                &:before,
+                &:after {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+
+                &:before {
+                    transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+                }
+
+                &:after {
+                    transition: transform 0s .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s .2s;
+                }
             }
         }
     }
@@ -358,7 +460,7 @@ header {
 }
 
 .display-1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 4rem;
 
     >.mbr-iconfont {
@@ -367,7 +469,7 @@ header {
 }
 
 .display-2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     font-weight: 500;
 
@@ -377,7 +479,7 @@ header {
 }
 
 .display-4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
 
     >.mbr-iconfont {
@@ -386,7 +488,7 @@ header {
 }
 
 .display-5 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
 
@@ -396,7 +498,7 @@ header {
 }
 
 .display-7 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
 
@@ -1406,7 +1508,7 @@ a {
     background-color: #f5f5f5;
     box-shadow: none;
     color: #565656;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     line-height: 1.43;
     min-height: 3.5em;
@@ -1720,6 +1822,7 @@ pre {
 
         svg {
             margin-top: -140px;
+            max-width: 100%;
             filter: var(--svgFilter);
         }
     }
@@ -2450,13 +2553,13 @@ footer {
     z-index: 2;
 }
 
-@media screen and (min-width: 835px) {
+@media screen and (min-width: 992px) {
     .hero .hero-text {
         padding-left: 16vw !important;
     }
 }
 
-@media screen and (max-width: 835px) {
+@media screen and (max-width: 992px) {
     nav {
         justify-content: center;
     }
@@ -2467,11 +2570,11 @@ footer {
 
     .hero {
         .hero-svg {
-            visibility: hidden;
+            display: none;
         }
 
         .scroll {
-            margin: 0vh auto !important;
+            margin: 20vh auto !important;
         }
     }
 
