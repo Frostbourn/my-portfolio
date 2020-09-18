@@ -32,7 +32,7 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
-    "gatsby-plugin-offline",
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -41,7 +41,8 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-sass",
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-preact`,
     {
       resolve: "gatsby-source-github",
       options: {
