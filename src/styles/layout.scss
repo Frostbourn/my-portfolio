@@ -96,14 +96,14 @@ header {
 
     nav {
         width: 100vw;
-        max-height: 90px;
+        height: 90px;
         padding: 0.7rem !important;
         background: var(--background);
-        -webkit-transition: box-shadow 0.3s ease-out, max-height 0.3s ease-out;
-        -moz-transition: box-shadow 0.3s ease-out, max-height 0.3s ease-out;
-        -o-transition: box-shadow 0.3s ease-out, max-height 0.3s ease-out;
-        -ms-transition: box-shadow 0.3s ease-out, max-height 0.3s ease-out;
-        transition: box-shadow 0.3s ease-out, max-height 0.3s ease-out;
+        -webkit-transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
+        -moz-transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
+        -o-transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
+        -ms-transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
+        transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
 
         .toggleWrapper {
             position: relative;
@@ -260,55 +260,56 @@ header {
     .navbar-toggler {
         border: none;
         background: transparent !important;
-      
-      &:focus {
-        outline: none;
-        background: transparent !important;
-      }
-      
-      .icon-bar {
-        background-color: var(--headingColor);
-        transform: rotate(0deg) translate(0px, 0px);
-        transition: ease all .2s;
-        display: block;
-        width: 22px;
-        height: 2px;
-        border-radius: 1px;
-      }
-      
-       .icon-bar+.icon-bar {
-        margin-top: 4px;
-      }
-      
-      .icon-bar:nth-child(2) {
-        width: 16px;
-        transition: ease all .2s;
-      }
-      
-    &:hover>.icon-bar:nth-child(2) {
-        width: 22px;
-        transition: ease all .2s;
-      }
-      
-      &:active>.icon-bar:nth-child(2) {
-        width: 22px;
-        transition: ease all .2s;
-      }
-      
-      &:not(.collapsed) .icon-bar:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 4px);
-        transition: ease all .2s;
-      }
-      
-      &:not(.collapsed) .icon-bar:nth-child(2) {
-        opacity: 0;
-        transition: ease all .2s;
-      }
-      
-      &:not(.collapsed) .icon-bar:nth-child(3) {
-        transform: rotate(-45deg) translate(4px, -4px);
-        transition: ease all .2s;
-      }
+
+        &:focus {
+            outline: none;
+            background: transparent !important;
+            box-shadow: none;
+        }
+
+        .icon-bar {
+            background-color: var(--headingColor);
+            transform: rotate(0deg) translate(0px, 0px);
+            transition: ease all .2s;
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+        }
+
+        .icon-bar+.icon-bar {
+            margin-top: 4px;
+        }
+
+        .icon-bar:nth-child(2) {
+            width: 16px;
+            transition: ease all .2s;
+        }
+
+        &:hover>.icon-bar:nth-child(2) {
+            width: 22px;
+            transition: ease all .2s;
+        }
+
+        &:active>.icon-bar:nth-child(2) {
+            width: 22px;
+            transition: ease all .2s;
+        }
+
+        &:not(.collapsed) .icon-bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 4px);
+            transition: ease all .2s;
+        }
+
+        &:not(.collapsed) .icon-bar:nth-child(2) {
+            opacity: 0;
+            transition: ease all .2s;
+        }
+
+        &:not(.collapsed) .icon-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -4px);
+            transition: ease all .2s;
+        }
     }
 
     .navbar-collapse {
@@ -389,7 +390,7 @@ header {
         padding: 0.4rem 1.5rem;
         background: none;
         color: var(--buttonColor) !important;
-        font-weight: 500;
+        font-weight: 600;
         border: 2px solid;
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
@@ -408,7 +409,7 @@ header {
     }
 
     .scrollBox {
-        max-height: 70px;
+        height: 70px;
         background: var(--navBackground);
         box-shadow: 0px 0px 20px 0px var(--boxShadow);
     }
@@ -1821,7 +1822,7 @@ pre {
         margin-bottom: -100px;
 
         svg {
-            margin-top: -140px;
+            margin-top: -80px;
             max-width: 100%;
             filter: var(--svgFilter);
         }
@@ -2562,6 +2563,15 @@ footer {
 @media screen and (max-width: 992px) {
     nav {
         justify-content: center;
+        height: auto !important;
+
+        .hover {
+
+            &:before,
+            &:after {
+                display: none !important;
+            }
+        }
     }
 
     .logo {
