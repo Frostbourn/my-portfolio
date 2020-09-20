@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
 
 import { Container, Row, Col } from "react-bootstrap"
-import { Bounce, Slide, Fade } from "react-awesome-reveal"
+import { Bounce, Fade } from "react-awesome-reveal"
 import Image from "../images/svgs/hero-image-fourth.svg"
 import Emoji from "./Emoji"
 
@@ -59,12 +58,12 @@ const Hero = () => {
                   >
                     Download CV
                   </a>
-                  <Link
+                  <a
                     className="btn btn-md btn-bgr btn-warning display-4"
-                    to="#contact"
+                    href="#contact"
                   >
                     Contact me
-                  </Link>
+                  </a>
                 </Bounce>
               </div>
             </Col>
