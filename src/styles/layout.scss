@@ -2077,8 +2077,9 @@ pre {
 
     .repo-card-div {
         background-color: var(--cardColor);
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+        // box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
         padding: 2rem;
+        border-radius: 5px;
     }
 
     .repo-card-div:hover {
