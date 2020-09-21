@@ -89,8 +89,7 @@ const Portfolio = () => {
                 </strong>
               </h2>
               <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
-                Here are some of my recent works. Want to see more? Leave me a
-                message!
+                Here are some of my recent works.
               </h3>
             </Col>
             <Col md={12}>
@@ -103,7 +102,7 @@ const Portfolio = () => {
                 className="card py-3 col-sm-12 col-md-12 col-lg-12"
                 key={repository.id}
               >
-                <Fade bottom duration={1000} distance="20px">
+                <Fade bottom duration={1000} distance="20px" triggerOnce>
                   <div className="card-wrapper">
                     <div
                       className="repo-card-div"
@@ -196,7 +195,7 @@ const Portfolio = () => {
               </h2>
             </Col>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <Fade bottom duration={1000} distance="20px">
+              <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://postplaner.pl")}
@@ -223,7 +222,7 @@ const Portfolio = () => {
               </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <Fade bottom duration={1000} distance="20px">
+              <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://mltrans.eu")}
@@ -250,7 +249,7 @@ const Portfolio = () => {
               </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <Fade bottom duration={1000} distance="20px">
+              <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://lakini.pl")}
@@ -277,15 +276,16 @@ const Portfolio = () => {
               </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <Fade bottom duration={1000} distance="20px">
+              <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
                   onClick={() =>
                     openRepoinNewTab("https://jakubskowronski.com/rscar")
                   }
                   onKeyDown={() =>
-                    openRepoinNewTab("https://jakubskowronski.com/rscar")}
-                    role="presentation"
+                    openRepoinNewTab("https://jakubskowronski.com/rscar")
+                  }
+                  role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">
@@ -307,15 +307,16 @@ const Portfolio = () => {
               </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <Fade bottom duration={1000} distance="20px">
+              <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
                   onClick={() =>
                     openRepoinNewTab("https://jakubskowronski.com/hfb")
                   }
                   onKeyDown={() =>
-                    openRepoinNewTab("https://jakubskowronski.com/hfb")}
-                    role="presentation"
+                    openRepoinNewTab("https://jakubskowronski.com/hfb")
+                  }
+                  role="presentation"
                 >
                   <div className="repo-card-div">
                     <div className="card-img">
@@ -337,7 +338,7 @@ const Portfolio = () => {
               </Fade>
             </div>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
-              <Fade bottom duration={1000} distance="20px">
+              <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://jsns.eu")}
@@ -363,6 +364,9 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
+          </Row>
+          <Row>
+            <p class="display-2 py-5 align-center">Want to see more? Leave me a message!</p>
           </Row>
         </Container>
       </Fade>
