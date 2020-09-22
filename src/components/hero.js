@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import { Container, Row, Col } from "react-bootstrap"
-import { Bounce, Fade } from "react-awesome-reveal"
+import { Bounce, Fade, Spin } from "react-awesome-reveal"
 import Image from "../images/svgs/hero-image-fourth.svg"
 import Emoji from "./Emoji"
 
@@ -44,7 +44,7 @@ const Hero = () => {
               </Fade>
               <Fade direction="left" delay="1400" triggerOnce>
                 <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
-                  I code simple websites and I love it!{" "}
+                  I {'\u003Ccode \u002F\u003E'} simple websites and I love it!{" "}
                   <Emoji symbol="🚀" label="rocket" />
                 </p>
               </Fade>
