@@ -32,7 +32,7 @@ const Header = props => {
         >
           <a class="navbar-brand" href="/#top">
             <h3 className="logo">
-              Jakub<span>Skowroński.</span>
+              Jakub<span>Skowronski.</span>
             </h3>
           </a>
           <button
