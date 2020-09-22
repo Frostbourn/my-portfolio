@@ -15,11 +15,11 @@ const Footer = () => (
         </div> */}
         <div className="col-6 copyright mb-3 mt-3">
           <div className="mb-0 text-copyright mbr-fonts-style">
-            Made with <Emoji symbol="❤️" label="heart"/> by Jakub Skowroński<br /> 
+            Made with <Emoji symbol="❤️" label="heart"/> by Jakub Skowronski<br /> 
             <hr width="100%" />
             © {new Date().getFullYear()} {` `}
             <span className="logo-footer">
-              Jakub<span>Skowroński.</span>
+              Jakub<span>Skowronski.</span>
             </span>
           </div>
         </div>
