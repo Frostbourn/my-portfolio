@@ -23,8 +23,8 @@ if (typeof window !== "undefined") {
   }
 }
 
-new kursor({
-  type: 2,
-  color: "#975bf4",
-  removeDefaultCursor: true,
-})
+// new kursor({
+//   type: 2,
+//   color: "#975bf4",
+//   removeDefaultCursor: true,
+// })
