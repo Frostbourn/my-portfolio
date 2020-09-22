@@ -11,6 +11,7 @@ import Header from "./header"
 import Hero from "./hero"
 import About from "./about"
 import Portfolio from "./portfolio"
+import SocialLinks from "./socialLinks"
 import ContactForm from "./contact"
 import Footer from "./footer"
 
@@ -20,6 +21,7 @@ const Layout = () => {
     <>
       <Header />
       <Hero />
+      <SocialLinks />
       <About />
       <Portfolio />
       <ContactForm />
