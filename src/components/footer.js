@@ -6,22 +6,14 @@ const Footer = () => (
   <footer>
     <Container>
       <div className="media-container-row">
-        {/* <div className="col-md-4 col-lg-4 logo-footer mb-3 mt-3 align-center">
-          <div className="navbar-brand">
-            <h3 className="logo">
-              Jakub<span>Skowroński.</span>
-            </h3>
+        <div className="col-md-6 col-lg-6 mb-3 mt-3 align-center">
+          
+            <div className="mb-0 text-copyright mbr-fonts-style">
+            Made with <Emoji symbol="❤️" label="heart"/> by Jakub Skowronski
           </div>
-        </div> */}
-        <div className="col-6 copyright mb-3 mt-3">
-          <div className="mb-0 text-copyright mbr-fonts-style">
-            Made with <Emoji symbol="❤️" label="heart"/> by Jakub Skowronski<br /> 
-            <hr width="100%" />
-            © {new Date().getFullYear()} {` `}
-            <span className="logo-footer">
-              Jakub<span>Skowronski.</span>
-            </span>
-          </div>
+        </div>
+        <div className="col-6 copyright mb-3 mt-3 align-center">
+        © {new Date().getFullYear()} {` `}<span className="logo-footer">Jakub<span>Skowronski.</span></span>
         </div>
         {/* <div className="mb-4 pt-5 mbr-fonts-style subtext display-7">
           <div className="social-media col-md-12 col-sm-12">
