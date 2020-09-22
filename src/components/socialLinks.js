@@ -2,7 +2,8 @@ import React from "react"
 
 import { Slide } from "react-awesome-reveal"
 import Emoji from "./Emoji"
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa"
+import 'balloon-css';
 
 const SocialLinks = () => {
   function openRepoinNewTab(url) {
@@ -11,11 +12,11 @@ const SocialLinks = () => {
   }
 
   return (
-    <Slide direction="top" triggerOnce>
+    <Slide direction="top" delay="3100" triggerOnce>
       <section id="social-links" className="social-links">
         <div className="social-media">
           <ul className="social-list">
-            <li>
+            <li aria-label="Facebook" data-balloon-pos="left">
               <a
                 className="icon-transition"
                 href="https://www.facebook.com/skowronski.jakub"
@@ -25,7 +26,7 @@ const SocialLinks = () => {
                 <FaFacebookF />
               </a>
             </li>
-            <li>
+            <li aria-label="Github" data-balloon-pos="left">
               <a
                 className="icon-transition"
                 href="https://github.com/Frostbourn"
@@ -35,14 +36,14 @@ const SocialLinks = () => {
                 <FaGithub />
               </a>
             </li>
-            <li>
+            <li aria-label="Linkedin" data-balloon-pos="left">
               <a
                 className="icon-transition"
                 href="https://www.linkedin.com/in/jakubskowronki"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaLinkedin />
+                <FaLinkedinIn />
               </a>
             </li>
             <div className="social-line"></div>
