@@ -2298,12 +2298,12 @@ pre {
 
     svg {
         path {
-            fill: var(--headingColor) !important;
+            fill: var(--textColor) !important;
         }
     }
 
     .social-line {
-        background-color: var(--headingColor);
+        background-color: var(--textColor);
         width: 2px;
         height: 300px;
         margin: 11px;
@@ -2511,7 +2511,7 @@ pre {
 }
 
 footer {
-    padding: 100px;
+    padding: 175px 90px;
     background-color: var(--background);
 
     p {
