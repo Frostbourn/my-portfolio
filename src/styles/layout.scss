@@ -16,9 +16,6 @@ body {
     letter-spacing: -0.5px;
     height: auto;
     min-height: 100vh;
-}
-
-body.light {
     --anchorLink: #24292e;
     --background: #FFFFFF;
     --textColor: #24292e;
@@ -109,8 +106,7 @@ header {
             position: relative;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 0 20px 0 8px;
+            align-items: center; 
 
             input {
                 position: absolute;
@@ -243,6 +239,7 @@ header {
     }
 
     .navbar-collapse.show {
+
         &:after {
             position: absolute;
             width: 100vw;
@@ -316,19 +313,22 @@ header {
         justify-content: flex-end;
         transition: all 0.3s ease;
 
-        li {
-            padding: 1.25rem;
-            display: flex;
-            font-size: 1rem;
-        }
+        .navbar-nav {
+            margin: 0 2rem;
 
-        a {
-            font-weight: 500;
-            color: var(--headingColor);
-            transition: color 0.2s ease-in-out;
+            .nav-item {
+                padding: 1.25rem;
+                display: flex;
+                font-size: 1rem;
+            }
 
-            &:hover {
-                color: var(--buttonColor);
+            .nav-link {
+                color: var(--headingColor);
+                transition: color 0.2s ease-in-out;
+
+                &:hover {
+                    color: var(--buttonColor);
+                }
             }
         }
     }
@@ -337,14 +337,12 @@ header {
         display: flex;
         align-items: center;
         border-radius: 100px;
-        padding: 0.4rem 1.5rem;
-        background: none;
-        color: var(--buttonColor) !important;
+        padding: 0.4rem 1.5rem !important;
         font-weight: 600;
         border: 2px solid;
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out !important;
         background: none;
         border-color: var(--buttonColor);
         color: var(--buttonColor) !important;
@@ -2016,6 +2014,7 @@ pre {
             li {
                 padding: 4px;
                 display: inline-block;
+                cursor: none;
             }
         }
     }
@@ -2297,19 +2296,23 @@ pre {
     z-index: 99999;
 
     svg {
-        path {
-            fill: var(--textColor) !important;
+        fill: var(--textColor) !important;
+        filter: drop-shadow(1px 1px 1px var(--boxShadow));
+
+        &:hover {
+            path {
+                fill: var(--buttonColor);
+            }
         }
     }
 
     .social-line {
         background-color: var(--textColor);
+        padding: unset !important;
         width: 2px;
         height: 300px;
         margin: 11px;
     }
-
-
 
     .social-media {
         padding: 0;
@@ -2595,6 +2598,10 @@ footer {
     nav {
         justify-content: center;
         height: auto !important;
+
+        .toggleWrapper {
+            padding: unset !important;
+        }
 
         .hover {
 
