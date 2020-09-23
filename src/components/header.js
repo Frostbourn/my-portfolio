@@ -50,23 +50,25 @@ const Header = props => {
             <span className="sr-only">Toggle navigation</span>
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
-            <li className="hover nav-item">
-              <a className="nav-link" href="#about">
-                About
-              </a>
-            </li>
-            <li className="hover nav-item">
-              <a className="nav-link" href="#portfolio">
-                Work
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="btn-success-outline nav-link" href="#contact">
-                <FaEnvelope />
-                &nbsp;Let's talk!
-              </a>
-            </li>
-            <DarkLightSwitch />
+            <ul class="nav navbar-nav">
+              <li className="hover nav-item">
+                <a className="nav-link" href="#about">
+                  About
+                </a>
+              </li>
+              <li className="hover nav-item">
+                <a className="nav-link" href="#portfolio">
+                  Work
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="btn-success-outline nav-link" href="#contact">
+                  <FaEnvelope />
+                  &nbsp;Let's talk!
+                </a>
+              </li>
+              <DarkLightSwitch />
+            </ul>
           </div>
         </nav>
       </header>
