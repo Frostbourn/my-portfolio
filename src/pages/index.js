@@ -21,6 +21,7 @@ const IndexPage = () => {
   return (
     <>
       <Helmet>
+        <html lang="en" />
         <title>
           {data.site.siteMetadata.title + data.site.siteMetadata.titleTemplate}
         </title>
