@@ -30,9 +30,9 @@ module.exports = {
         theme_color: `#663399`,
         display: `standalone`,
         icon: `src/images/favicon.png`,
+        cache_busting_mode: 'none'
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
@@ -75,5 +75,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+         workboxConfig: {
+            globPatterns: ['/src/images/'] 
+         }
+      }
+   }
   ],
 }
