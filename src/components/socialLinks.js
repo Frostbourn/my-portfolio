@@ -12,7 +12,7 @@ const SocialLinks = () => {
   }
 
   return (
-    <Slide direction="top" delay="3100" triggerOnce>
+    <Slide direction="top" delay="2500" triggerOnce>
       <section id="social-links" className="social-links">
         <div className="social-media">
           <ul className="social-list">
@@ -22,6 +22,7 @@ const SocialLinks = () => {
                 href="https://www.facebook.com/skowronski.jakub"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Facebook"
               >
                 <FaFacebookF />
               </a>
@@ -32,6 +33,7 @@ const SocialLinks = () => {
                 href="https://github.com/Frostbourn"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Github"
               >
                 <FaGithub />
               </a>
@@ -42,11 +44,12 @@ const SocialLinks = () => {
                 href="https://www.linkedin.com/in/jakubskowronki"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="Linkedin"
               >
                 <FaLinkedinIn />
               </a>
             </li>
-            <div className="social-line"></div>
+            <li className="social-line"></li>
           </ul>
         </div>
       </section>
