@@ -75,7 +75,7 @@ const Hero = () => {
           </Row>
         </Container>
       </Fade>
-      <Bounce delay="3000" triggerOnce>
+      <Bounce delay="2300" triggerOnce>
         <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
       </Bounce>
       <Bounce direction="top" triggerOnce>
