@@ -71,9 +71,9 @@ const ContactForm = () => {
               <div className="col-md-5 col-lg-5 block-content">
                 <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="row g-3 d-flex">
-                    <h4 className="mb-4 mbr-fonts-style display-2 text-left">
+                    <p className="mb-4 mbr-fonts-style display-2 text-left">
                       Leave me a message <Emoji symbol="💬" label="contact" />
-                    </h4>
+                    </p>
                     {serverState.status && (
                       <Alert
                         variant={serverState.status.ok ? "success" : "danger"}
@@ -82,31 +82,34 @@ const ContactForm = () => {
                       </Alert>
                     )}
                     <div className="form-group">
+                      <label for="emailAddress"></label>
                       <input
                         type="email"
                         name="email"
                         className="form-control"
-                        id="exampleInputEmail1"
+                        id="emailAddress"
                         aria-describedby="emailHelp"
                         placeholder="Email address"
                         required="required"
                       />
                     </div>
                     <div className="form-group">
+                    <label for="contactName"></label>
                       <input
                         type="text"
                         name="name"
                         className="form-control"
-                        id="exampleInputName"
+                        id="contactName"
                         placeholder="Name"
                         required="required"
                       />
                     </div>
                     <div className="form-group">
+                      <label for="contactMessage"></label>
                       <textarea
                         name="message"
                         className="form-control"
-                        id="exampleTextareaName"
+                        id="contactMessage"
                         placeholder="How may I help you?"
                         rows="3"
                         required="required"
@@ -126,8 +129,8 @@ const ContactForm = () => {
           </Container>
         </Fade>
       </section>
-      <Button variant="primary" className="btn-circle">
-        <a href="#top">
+      <Button variant="primary" className="btn-circle" aria-label="Go to top">
+        <a href="#top" aria-label="Go to top">
           <FaChevronUp value={{ style: { color: "#ffffff !important" } }} />
         </a>
       </Button>
