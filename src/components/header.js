@@ -22,7 +22,7 @@ const Header = props => {
   }, [state, setState])
 
   return (
-    <Bounce direction="bottom" triggerOnce>
+    <Bounce cascade direction="bottom" triggerOnce>
       <header data-scroll-header>
         <nav
           className={
