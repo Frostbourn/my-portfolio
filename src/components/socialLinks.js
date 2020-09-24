@@ -12,7 +12,7 @@ const SocialLinks = () => {
   }
 
   return (
-    <Slide direction="top" delay="2500" triggerOnce>
+    <Slide direction="top" delay="1500" triggerOnce>
       <section id="social-links" className="social-links">
         <div className="social-media">
           <ul className="social-list">
