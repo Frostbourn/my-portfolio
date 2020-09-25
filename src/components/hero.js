@@ -34,19 +34,19 @@ const Hero = () => {
           <div className="circle6"></div>
         </div>
       </Fade>
-      <Fade triggerOnce>
+      <Fade delay="500" triggerOnce>
         <Container fluid>
           <Row className="align-items-center content-row row hero-margin">
             <Col lg={6} className="hero-text">
-              <Typing loop>
+              <Typing delay={1500} loop>
                 <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                   <strong>Web Developer</strong>
-                  <Typing.Backspace count={15} delay={500} />
+                  <Typing.Backspace count={15} delay={1500} />
                   <strong>Programmer</strong>
-                  <Typing.Backspace count={15} delay={500} />
+                  <Typing.Backspace count={15} delay={1500} />
                   <strong>UI/UX Designer</strong>
-                  <Typing.Backspace count={15} delay={500} />
-                  <Typing.Reset count={3} delay={2500} />
+                  <Typing.Backspace count={15} delay={1500} />
+                  <Typing.Reset count={3} delay={3000} />
                 </h1>
               </Typing>
               <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
@@ -54,7 +54,7 @@ const Hero = () => {
                 <Emoji symbol="🚀" label="rocket" />
               </p>
               <div className="mbr-section-btn">
-                <Bounce cascade damping="1" triggerOnce>
+                <Bounce cascade delay="1500" damping="1" triggerOnce>
                   <a
                     className="btn btn-md btn-bgr btn-success display-4"
                     href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
@@ -80,7 +80,7 @@ const Hero = () => {
           </Row>
         </Container>
       </Fade>
-      <Bounce delay="2300" triggerOnce>
+      <Bounce delay="1500" triggerOnce>
         <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
       </Bounce>
       <div className="waves">
