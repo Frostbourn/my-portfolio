@@ -94,7 +94,7 @@ const Portfolio = () => {
             </Col>
             <Col md={12}>
               <h2 className="mbr-section-title mbr-fonts-style align-left display-2 py-3">
-                <strong>{'\u003Copen source projects \u002F\u003E'}</strong>
+                <strong>{"\u003Copen source projects \u002F\u003E"}</strong>
               </h2>
             </Col>
             {data.githubViewer.pinnedItems.nodes.map((repository, i) => (
@@ -191,7 +191,7 @@ const Portfolio = () => {
 
             <Col md={12}>
               <h2 className="mbr-section-title mbr-fonts-style align-left display-2 py-3">
-              <strong>{'\u003Ccommercial projects \u002F\u003E'}</strong>
+                <strong>{"\u003Ccommercial projects \u002F\u003E"}</strong>
               </h2>
             </Col>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
@@ -366,7 +366,9 @@ const Portfolio = () => {
             </div>
           </Row>
           <Row>
-            <p class="display-2 py-5 align-center"><strong>Want to see more? Leave me a message!</strong></p>
+            <p class="display-2 py-5 align-center">
+              <strong>Want to see more? Leave me a message!</strong>
+            </p>
           </Row>
         </Container>
       </Fade>
