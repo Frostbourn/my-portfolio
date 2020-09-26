@@ -38,7 +38,7 @@ const Hero = () => {
         <Container fluid>
           <Row className="align-items-center content-row row hero-margin">
             <Col lg={6} className="hero-text">
-              <Typing delay={1500} loop>
+              <Typing cursorClassName="hero-cursor" delay={1500} loop>
                 <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                   <strong>Web Developer</strong>
                   <Typing.Backspace count={15} delay={1500} />
