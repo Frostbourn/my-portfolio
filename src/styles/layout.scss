@@ -16,6 +16,8 @@ body {
     letter-spacing: -0.5px;
     height: auto;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     --anchorLink: #24292e;
     --background: #FFFFFF;
     --textColor: #24292e;
@@ -36,6 +38,7 @@ body {
 
 body.dark {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     --anchorLink: #e3b23c;
     --background: #121212;
     --textColor: #cacaca;
