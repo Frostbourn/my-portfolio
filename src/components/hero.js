@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade, Spin } from "react-awesome-reveal"
 import Image from "../images/svgs/hero-image-fourth.svg"
 import Emoji from "./Emoji"
-import Typing from "react-typing-animation"
+import Typical from "react-typical"
 
 const Hero = () => {
   const [state, setState] = useState(false)
@@ -38,17 +38,28 @@ const Hero = () => {
         <Container fluid>
           <Row className="align-items-center content-row row hero-margin">
             <Col lg={6} className="hero-text">
-              <Typing cursorClassName="hero-cursor" delay={1500} loop>
+              <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
+                <strong>
+                  <Typical
+                    className="hero-cursor"
+                    steps={["Web Developer", 1500, "Programmer", 1500]}
+                    loop={Infinity}
+                    wrapper="p"
+                  />
+                </strong>
+              </h1>
+              {/* <Typing cursorClassName="hero-cursor" delay={1500} loop>
+                <Typing.Backspace count={1} />
                 <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                   <strong>Web Developer</strong>
-                  <Typing.Backspace count={15} delay={1500} />
+                  <Typing.Backspace count={20} delay={1500} />
                   <strong>Programmer</strong>
-                  <Typing.Backspace count={15} delay={1500} />
+                  <Typing.Backspace count={20} delay={1500} />
                   <strong>UI/UX Designer</strong>
-                  <Typing.Backspace count={15} delay={1500} />
-                  <Typing.Reset count={3} delay={3000} />
+                  <Typing.Backspace count={20} delay={1500} />
+                  <Typing.Reset count={1} delay={3000} />
                 </h1>
-              </Typing>
+              </Typing> */}
               <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
                 I {"\u003Ccode \u002F\u003E"} simple websites and I love it!{" "}
                 <Emoji symbol="🚀" label="rocket" />
