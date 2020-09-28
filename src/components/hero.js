@@ -23,32 +23,34 @@ const Hero = () => {
   }, [state, setState])
 
   return (
-    <section className="hero">
-      <Fade delay="500" triggerOnce>
-        <div className="animation_background">
-          <div className="circle1"></div>
-          <div className="circle2"></div>
-          <div className="circle3"></div>
-          <div className="circle4"></div>
-          <div className="circle5"></div>
-          <div className="circle6"></div>
-        </div>
-      </Fade>
-      <Fade delay="500" triggerOnce>
-        <Container fluid>
-          <Row className="align-items-center content-row row hero-margin">
-            <Col lg={6} className="hero-text">
-              <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
-                <strong>
-                  <Typical
-                    className="hero-cursor"
-                    steps={["Web Developer", 1500, "Programmer", 1500]}
-                    loop={Infinity}
-                    wrapper="p"
-                  />
-                </strong>
-              </h1>
-              {/* <Typing cursorClassName="hero-cursor" delay={1500} loop>
+    <>
+      <Fade triggerOnce>
+        <section className="hero">
+          <Fade delay="500" triggerOnce>
+            <div className="animation_background">
+              <div className="circle1"></div>
+              <div className="circle2"></div>
+              <div className="circle3"></div>
+              <div className="circle4"></div>
+              <div className="circle5"></div>
+              <div className="circle6"></div>
+            </div>
+          </Fade>
+          <Fade delay="500" triggerOnce>
+            <Container fluid>
+              <Row className="align-items-center content-row row hero-margin">
+                <Col lg={6} className="hero-text">
+                  <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
+                    <strong>
+                      <Typical
+                        className="hero-cursor"
+                        steps={["Web Developer", 1500, "Programmer", 1500]}
+                        loop={Infinity}
+                        wrapper="p"
+                      />
+                    </strong>
+                  </h1>
+                  {/* <Typing cursorClassName="hero-cursor" delay={1500} loop>
                 <Typing.Backspace count={1} />
                 <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                   <strong>Web Developer</strong>
@@ -60,43 +62,43 @@ const Hero = () => {
                   <Typing.Reset count={1} delay={3000} />
                 </h1>
               </Typing> */}
-              <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
-                I {"\u003Ccode \u002F\u003E"} simple websites and I love it!{" "}
-                <Emoji symbol="🚀" label="rocket" />
-              </p>
-              <div className="mbr-section-btn">
-                <Bounce cascade delay="1500" damping="1" triggerOnce>
-                  <a
-                    className="btn btn-md btn-bgr btn-success display-4"
-                    href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Download CV
-                  </a>
-                  <a
-                    className="btn btn-md btn-bgr btn-warning display-4"
-                    href="#contact"
-                  >
-                    Contact me
-                  </a>
-                </Bounce>
-              </div>
-            </Col>
-            <Col className="hero-svg">
-              <Fade delay="1000" triggerOnce>
-                <Image />
-              </Fade>
-            </Col>
-          </Row>
-        </Container>
-      </Fade>
-      <Bounce delay="1500" triggerOnce>
-        <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
-      </Bounce>
-      <div className="waves">
-        <figure className="mbr-figure">
-          <div className="image-block">
+                  <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
+                    I {"\u003CCode \u002F\u003E"} simple websites and I love it!{" "}
+                    <Emoji symbol="🚀" label="rocket" />
+                  </p>
+                  <div className="mbr-section-btn">
+                    <Bounce delay="800" triggerOnce>
+                      <Bounce cascade delay="1800" damping="1" triggerOnce>
+                        <a
+                          className="btn btn-md btn-bgr btn-success display-4"
+                          href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Download CV
+                        </a>
+                        <a
+                          className="btn btn-md btn-bgr btn-warning display-4"
+                          href="#contact"
+                        >
+                          Contact me
+                        </a>
+                      </Bounce>
+                    </Bounce>
+                  </div>
+                </Col>
+                <Col className="hero-svg">
+                  <Fade delay="1000" triggerOnce>
+                    <Image />
+                  </Fade>
+                </Col>
+              </Row>
+            </Container>
+          </Fade>
+          <Bounce delay="1500" triggerOnce>
+            <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
+          </Bounce>
+          <div className="waves">
             <svg
               className="wave-img"
               style={{ position: "absolute" }}
@@ -121,9 +123,9 @@ const Hero = () => {
               ></path>
             </svg>{" "}
           </div>
-        </figure>
-      </div>
-    </section>
+        </section>
+      </Fade>
+    </>
   )
 }
 export default Hero
