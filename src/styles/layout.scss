@@ -374,7 +374,6 @@ header {
         left: 25px;
         right: 25px;
         border-bottom: 3px dotted var(--buttonColor);
-        transform: rotate(5deg);
     }
 
     &:before {
@@ -2267,10 +2266,8 @@ pre {
         color: var(--cardText);
 
         .line {
-            width: 3rem;
-            height: 2px;
-            background: #ff90b3;
-            display: inline-block;
+            width: 4rem;
+            border-bottom: 3px dotted var(--buttonColor);
         }
     }
 
@@ -2327,11 +2324,11 @@ pre {
     }
 
     .social-line {
-        background-color: var(--textColor);
         padding: unset !important;
         width: 2px;
         height: 300px;
         margin: 11px;
+        border-left: 3px dotted black;
     }
 
     .social-media {
