@@ -9,10 +9,11 @@ import Emoji from "./Emoji"
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      aboutPhoto: file(relativePath: { eq: "about-photo.jpg" }) {
+      aboutPhoto: file(relativePath: { eq: "about-photo-square.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
+          fluid(maxWidth: 700, quality: 100) {
             ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
@@ -24,7 +25,7 @@ const About = () => {
         <Container fluid>
           <Row className="align-items-center content-row">
             {/* <Parallax x={[-5, 5]} styleInner={{"display" : "flex", "align-items" : "center", "justify-content" : "center"}}> */}
-            <Col lg={6} className="wrap-block">
+            <Col lg={7} className="wrap-block pl-4">
               <Fade direction="left" triggerOnce>
                 <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
@@ -62,9 +63,14 @@ const About = () => {
                 </h3>
               </Fade>
             </Col>
-            <Col lg={6} className="photo-split">
+            <Col lg={5} className="photo-split">
               <Fade direction="right" triggerOnce>
-                <Img fluid={data.aboutPhoto.childImageSharp.fluid} />
+                <Img
+                  fluid={data.aboutPhoto.childImageSharp.fluid}
+                  style={{
+                    margin: "0 auto", // Used to center the image
+                  }}
+                />
               </Fade>
             </Col>
             {/* </Parallax> */}
