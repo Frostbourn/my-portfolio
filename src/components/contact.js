@@ -62,13 +62,13 @@ const ContactForm = () => {
       <section
         id="contact"
         className="contact features8 mbr-section mbr-parallax-background"
-        style={{backgroundImage: `url(${Background})`}}
+        style={{ backgroundImage: `url(${Background})` }}
       >
-        <div className="mbr-overlay"></div> 
+        <div className="mbr-overlay"></div>
         <Fade delay="300" triggerOnce>
           <Container>
             <div className="media-container-row">
-              <div className="col-md-5 col-lg-5 block-content">
+              <div className="col-sm-10 col-md-8 col-lg-5 block-content">
                 <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="row g-3 d-flex">
                     <p className="mb-4 mbr-fonts-style display-2 text-left">
@@ -94,7 +94,7 @@ const ContactForm = () => {
                       />
                     </div>
                     <div className="form-group">
-                    <label for="contactName"></label>
+                      <label for="contactName"></label>
                       <input
                         type="text"
                         name="name"
@@ -129,11 +129,9 @@ const ContactForm = () => {
           </Container>
         </Fade>
       </section>
-      <Button variant="primary" className="btn-circle" aria-label="Go to top">
-        <a href="#top" aria-label="Go to top">
-          <FaChevronUp value={{ style: { color: "#ffffff !important" } }} />
-        </a>
-      </Button>
+      <a href="#top" className="btn-primary btn-circle" aria-label="Go to top">
+        <FaChevronUp value={{ style: { color: "#ffffff !important" } }} />
+      </a>
     </>
   )
 }
