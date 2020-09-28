@@ -420,6 +420,7 @@ header {
     text-align: center !important;
 
     svg {
+        margin-top: 10px;
         color: #ffffff !important;
         -webkit-animation: updown 2s ease infinite;
         animation: updown 2s ease infinite;
@@ -1924,17 +1925,14 @@ pre {
     left: 0;
     background: var(--background);
 
-    .image-block {
-        margin: auto;
+
+    svg {
         width: 100% !important;
 
-        svg {
-            width: 100% !important;
-
-            path {
-                fill: var(--wavesColor) !important;
-            }
+        path {
+            fill: var(--wavesColor) !important;
         }
+
     }
 }
 
@@ -1965,7 +1963,8 @@ pre {
         padding: 0;
 
         img {
-            width: 100%;
+            border: 3px dotted var(--buttonColor);
+            border-radius: 50%;
         }
     }
 
@@ -1993,7 +1992,7 @@ pre {
     }
 
     .wrap-block {
-        padding: 3rem 3rem;
+        padding: 3rem 0rem 3rem 9rem;
 
         ul {
             margin: 0;
@@ -2328,7 +2327,7 @@ pre {
         width: 2px;
         height: 300px;
         margin: 11px;
-        border-left: 3px dotted black;
+        border-left: 3px dotted var(--textColor);
     }
 
     .social-media {
@@ -2603,7 +2602,11 @@ footer {
 
 @media screen and (min-width: 992px) {
     .hero .hero-text {
-        padding-left: 16vw !important;
+        padding-left: 13vw !important;
+    }
+
+    .bottom-wave-img {
+        margin-top: -50px;
     }
 }
 
@@ -2697,9 +2700,7 @@ footer {
     }
 
     .waves {
-        .image-block {
-            width: 100% !important;
-        }
+        width: 100% !important;
     }
 }
 
@@ -2896,21 +2897,18 @@ footer {
 
 @media screen and (min-width: 835px) {
     .waves {
-        .image-block {
-            svg {
-                margin-bottom: -120px;
-            }
+        svg {
+            margin-bottom: -120px;
         }
     }
 }
 
 @media screen and (max-width: 835px) {
     .waves {
-        .image-block {
-            svg {
-                margin-bottom: -35px;
-            }
+        svg {
+            margin-bottom: -35px;
         }
+
     }
 
 }
