@@ -11,7 +11,7 @@ const About = () => {
     query {
       aboutPhoto: file(relativePath: { eq: "about-photo-square.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700, quality: 100) {
+          fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
           }
@@ -25,7 +25,7 @@ const About = () => {
         <Container fluid>
           <Row className="align-items-center content-row">
             {/* <Parallax x={[-5, 5]} styleInner={{"display" : "flex", "align-items" : "center", "justify-content" : "center"}}> */}
-            <Col lg={7} className="wrap-block pl-4">
+            <Col lg={7} className="wrap-block">
               <Fade direction="left" triggerOnce>
                 <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
