@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Jakub Skowronski`,
-    titleTemplate: ` - Web Developer Porfolio`,
+    title: `Front End Developer `,
+    titleTemplate: `| Jakub Skowronski | Portfolio`,
     description: `I am a web developer freelancer, I specialize in designing websites. Effective Websites! Check my portfolio and references.`,
     author: `Jakub Skowronski`,
     url: `https://jakubskowronski.com`,
@@ -30,7 +30,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `standalone`,
         icon: `src/images/favicon.png`,
-        cache_busting_mode: 'none'
+        cache_busting_mode: "none",
       },
     },
     {
@@ -76,12 +76,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-offline',
+      resolve: "gatsby-plugin-offline",
       options: {
-         workboxConfig: {
-            globPatterns: ['/src/images/'] 
-         }
-      }
-   }
+        workboxConfig: {
+          globPatterns: ["/src/images/"],
+        },
+      },
+    },
   ],
 }
