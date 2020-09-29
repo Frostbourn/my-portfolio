@@ -1,19 +1,32 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 import { Slide } from "react-awesome-reveal"
 import Emoji from "./Emoji"
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa"
-import 'balloon-css';
+import "balloon-css"
 
 const SocialLinks = () => {
-  function openRepoinNewTab(url) {
-    var win = window.open(url, "_blank")
-    win.focus()
-  }
+  const [state, setState] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => {
+      const isScrolled = window.scrollY > 10
+      if (isScrolled !== state.scrolled) {
+        setState(isScrolled)
+      }
+    }
+    document.addEventListener("scroll", onScroll)
+    return () => {
+      document.removeEventListener("scroll", onScroll)
+    }
+  }, [state, setState])
 
   return (
     <Slide direction="top" delay="1500" triggerOnce>
-      <section id="social-links" className="social-links">
+      <section
+        id="social-links"
+        className={`${state ? "hidden" : ""}` + " social-links"}
+      >
         <div className="social-media">
           <ul className="social-list">
             <li aria-label="Facebook" data-balloon-pos="left">
