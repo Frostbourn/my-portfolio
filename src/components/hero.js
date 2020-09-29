@@ -77,12 +77,12 @@ const Hero = () => {
                         >
                           Download CV
                         </a>
-                        <a
+                        {/* <a
                           className="btn btn-md btn-bgr btn-warning display-4"
                           href="#contact"
                         >
                           Contact me
-                        </a>
+                        </a> */}
                       </Bounce>
                     </Bounce>
                   </div>
@@ -95,6 +95,11 @@ const Hero = () => {
               </Row>
             </Container>
           </Fade>
+          {/* <Col className="hero-container">
+            <Fade delay="1000" triggerOnce>
+              <div className="hero-shape"></div>
+            </Fade>
+          </Col> */}
           <Bounce delay="1500" triggerOnce>
             <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
           </Bounce>
