@@ -22,9 +22,9 @@ body {
     --background: #FFFFFF;
     --textColor: #24292e;
     --headingColor: #121212;
-    --buttonColor: #8c43ff;
-    --hoverColor: #7934FF;
-    --wavesColor: #8c43ff;
+    --buttonColor: #4528DC;
+    --hoverColor: #8731E8;
+    --wavesColor: #4528DC;
     --cardColor: #FFFFFF;
     --cardText: var(--textColor);
     color: var(--textColor);
@@ -345,8 +345,8 @@ header {
 
         &:hover {
             color: #ffffff !important;
-            background-color: var(--hoverColor);
-            border-color: var(--hoverColor);
+            background-color: var(--buttonColor);
+            border-color: var(--buttonColor);
             box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
             -webkit-box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
         }
@@ -693,9 +693,9 @@ header {
 }
 
 .btn-success {
-    background-color: var(--buttonColor) !important;
-    border-color: var(--buttonColor) !important;
+    background: linear-gradient(-47deg, var(--hoverColor) 0%, var(--buttonColor) 100%);
     color: #ffffff !important;
+    border: 0 none;
 
     &:hover {
         color: #ffffff !important;
@@ -1752,6 +1752,7 @@ pre {
 .hidden {
     filter: alpha(opacity=50);
     opacity: 0 !important;
+    transition: all 0.2s ease-out;
 }
 
 .carousel-item.active {
@@ -1802,6 +1803,27 @@ pre {
     padding-bottom: 120px;
     background-color: var(--background);
 
+    .hero-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        .hero-shape {
+            position: absolute;
+            height: 190%;
+            width: 100%;
+            display: block;
+            border-radius: 120px;
+            background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);
+            bottom: 0;
+            right: 0;
+            transform: translate(35%, -28%) rotate(-35deg);
+            z-index: 0;
+        }
+    }
+
     .hero-cursor {
         color: var(--headingColor)
     }
@@ -1848,8 +1870,7 @@ pre {
         position: relative;
         z-index: 999;
         box-shadow: 0px 15px 20px -7px var(--boxShadow);
-        opacity: 1;
-        transition: opacity 0.3s;
+        transition: all 0.7s ease-out;
 
         &:before {
             content: '';
@@ -2114,14 +2135,8 @@ pre {
     }
 
     .repo-card-div {
-        background-color: var(--cardColor);
         // box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
         padding: 2rem;
-        border-radius: 5px;
-    }
-
-    .repo-card-div:hover {
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
     }
 
     .repo-stats {
@@ -2198,14 +2213,16 @@ pre {
         margin: 2rem;
         background-color: var(--cardColor);
         border: none;
-        border-radius: 6px;
         overflow: hidden;
-        box-shadow: 2px 8px 20px -6px var(--boxShadow);
-        transition: all 0.3s ease-in-out;
+        position: relative;
+        box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.12);
+        border-radius: 1.5rem;
+        transition: transform 0.3s ease 0s;
 
         &:hover {
             overflow: hidden;
             transform: scale(1.04, 1.04);
+            box-shadow: 0 1rem 3rem rgba(31, 45, 61, .125) !important;
 
             &::after {
                 opacity: 1;
@@ -2309,6 +2326,7 @@ pre {
     top: 66%;
     transform: none;
     z-index: 99999;
+    transition: all 0.2s ease-out;
 
     svg {
         fill: var(--textColor) !important;
@@ -2602,7 +2620,7 @@ footer {
 
 @media screen and (min-width: 992px) {
     .hero .hero-text {
-        padding-left: 13vw !important;
+        padding-left: 11vw !important;
     }
 
     .bottom-wave-img {
