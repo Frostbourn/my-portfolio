@@ -1964,19 +1964,20 @@ pre {
 
     .icon-transition {
         span {
-            padding: 0.1rem 0.9rem;
+            padding: 0.1em 0.8em;
             border-radius: 50%;
-            color: #ffffff;
+            color: var(--buttonColor);
             display: block;
             height: 3em;
             line-height: 3em;
             width: 3em;
-            background: #3a405a none repeat scroll 0 0;
             transition: all 0.3s ease-out 0s;
             font-size: 14px;
+            border: 2px solid var(--buttonColor);
 
             &:hover {
-                background-color: #8c43ff;
+                background-color: var(--buttonColor);
+                color: var(--headingColor)
             }
         }
     }
@@ -2316,7 +2317,7 @@ pre {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .social-links {
@@ -2410,11 +2411,6 @@ pre {
         }
     }
 
-    svg {
-        path {
-            fill: #ffffff !important;
-        }
-    }
 
     .container {}
 
@@ -2555,25 +2551,36 @@ pre {
 
     .icon-transition {
         span {
-            padding: 0.1rem 0.9rem;
+            padding: 0.1em 0.8em;
             border-radius: 50%;
-            color: #ffffff;
+            color: var(--buttonColor);
             display: block;
             height: 3em;
             line-height: 3em;
             width: 3em;
-            background: var(--buttonColor) none repeat scroll 0 0;
             transition: all 0.3s ease-out 0s;
             font-size: 14px;
+            border: 2px solid var(--buttonColor);
 
             &:hover {
                 background-color: var(--buttonColor);
-                -webkit-filter: saturate(80%);
-                filter: saturate(80%);
+
+                svg {
+                    path {
+                        fill: #ffffff !important;
+                    }
+                }
+            }
+
+            svg {
+                path {
+                    fill: var(--buttonColor) !important;
+                }
             }
         }
     }
 }
+
 
 footer {
     background-color: var(--background);
@@ -2610,10 +2617,11 @@ footer {
             list-style: none;
 
             li {
-                padding: 15px 20px;
+                padding: 25px 20px;
 
                 a {
                     color: var(--headingColor);
+                    text-decoration: none;
                 }
             }
         }
