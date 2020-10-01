@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import { Container, Button, Alert } from "react-bootstrap"
-import { FaFacebookF, FaGithub, FaLinkedin, FaChevronUp } from "react-icons/fa"
+import { FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
 import Emoji from "./Emoji"
 import Background from "../images/map-background.webp"
@@ -139,48 +139,6 @@ const ContactForm = () => {
                       You can find me in a few places on the web, but if if you
                       prefer to do it the "old way" then just write to me
                       message.
-                    </div>
-                  </div>
-                  <div className="mb-4 pt-5 mbr-fonts-style subtext display-7">
-                    <div className="social-media col-md-12 col-sm-12">
-                      <ul className="social-list">
-                        <li>
-                          <a
-                            className="icon-transition"
-                            href="https://www.facebook.com/skowronski.jakub"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <span className="mbr-iconfont">
-                              <FaFacebookF />
-                            </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="icon-transition"
-                            href="https://github.com/Frostbourn"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <span className="mbr-iconfont">
-                              <FaGithub />
-                            </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="icon-transition"
-                            href="https://www.linkedin.com/in/jakubskowronki"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <span className="mbr-iconfont">
-                              <FaLinkedin />
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
                     </div>
                   </div>
                 </div>
