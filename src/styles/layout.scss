@@ -1796,6 +1796,7 @@ pre {
     display: flex;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 
 .hero {
@@ -2528,25 +2529,74 @@ pre {
         }
     }
 
+
+}
+
+
+footer {
+    background-color: var(--background);
+
+    p {
+        text-align: center;
+    }
+
+    .hidden-height {
+        float: left;
+        height: 370px;
+    }
+
+    .container {
+        height: 200px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        .row {
+            height: 100px;
+        }
+    }
+
+    nav {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+
+            li {
+                padding: 2px 20px;
+
+                a {
+                    color: var(--headingColor);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
     .social-media {
-        padding: 0;
-        margin: unset;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
 
         ul {
+            text-align: center;
             margin: 0;
             padding: 0;
-            margin-bottom: 8px;
-            text-align: right;
 
             li {
                 padding: 4px;
                 display: inline-block;
             }
         }
-    }
-
-    .mbr-list {
-        text-align: right;
     }
 
     .icon-transition {
@@ -2579,51 +2629,12 @@ pre {
             }
         }
     }
-}
 
+    .hover {
 
-footer {
-    background-color: var(--background);
-
-    p {
-        text-align: center;
-    }
-
-    .hidden-height {
-        float: left;
-        height: 300px;
-    }
-
-    .container {
-        height: 200px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-    }
-
-    nav {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 15px;
-
-        .navbar-nav {
-            display: flex;
-            flex-direction: row;
-            padding-left: 0;
-            margin-bottom: 0;
-            list-style: none;
-
-            li {
-                padding: 25px 20px;
-
-                a {
-                    color: var(--headingColor);
-                    text-decoration: none;
-                }
-            }
+        &:before,
+        &:after {
+            bottom: 0px !important;
         }
     }
 
