@@ -16,7 +16,6 @@ import ContactForm from "./contact"
 import Footer from "./footer"
 
 const Layout = () => {
-
   return (
     <>
       <Header />
