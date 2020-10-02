@@ -9,7 +9,7 @@ const Footer = () => (
     <Fade triggerOnce>
       <div className="hidden-height"></div>
       <Container>
-        <Row>
+        <Row className="media-container-row">
           <Col lg={4}>
             <nav>
               <ul class="navbar-nav">
