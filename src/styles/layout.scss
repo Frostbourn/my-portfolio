@@ -66,7 +66,7 @@ button,
     cursor: none !important;
 
     &:hover {
-        box-shadow: 0 10px 25px var(--boxShadow) !important;
+        box-shadow: 0 8px 25px var(--boxShadow) !important;
     }
 }
 
@@ -197,7 +197,9 @@ header {
             height: 8px;
         }
 
-
+        .navbar-toggler {
+            box-shadow: none !important;
+        }
 
         input:checked {
             +.toggle {
@@ -351,7 +353,7 @@ header {
             color: #ffffff !important;
             background-color: var(--buttonColor);
             border-color: var(--buttonColor);
-            box-shadow: 0 10px 25px var(--boxShadow) !important;
+            box-shadow: 0 8px 25px var(--boxShadow) !important;
         }
     }
 
@@ -421,7 +423,7 @@ header {
     border-radius: 25px !important;
     font-size: 10px !important;
     text-align: center !important;
-    box-shadow: 0 10px 25px var(--boxShadow) !important;
+    box-shadow: 0 8px 25px var(--boxShadow) !important;
 
     svg {
         margin-top: 10px;
@@ -1973,7 +1975,7 @@ pre {
             &:hover {
                 background-color: var(--buttonColor);
                 color: var(--headingColor);
-                box-shadow: 0 10px 25px var(--boxShadow) !important;
+                box-shadow: 0 8px 25px var(--boxShadow) !important;
             }
         }
     }
@@ -2365,8 +2367,8 @@ pre {
 }
 
 .contact {
-    padding-top: 170px;
-    padding-bottom: 90px;
+    padding-top: 140px;
+    padding-bottom: 140px;
     position: relative;
     background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);
 
@@ -2436,7 +2438,7 @@ pre {
 
     .media-container-row {
         background: #fff;
-        padding: 10vw 2vw;
+        padding: 4vw;
         border-radius: 30px;
         box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
     }
@@ -2609,7 +2611,7 @@ footer {
 
             &:hover {
                 background-color: var(--buttonColor);
-                box-shadow: 0 10px 25px var(--boxShadow) !important;
+                box-shadow: 0 8px 25px var(--boxShadow) !important;
 
                 svg {
                     path {
@@ -2790,6 +2792,14 @@ footer {
 
         .media-container-row {
             width: 100vw;
+            padding: 0;
+            margin: 0;
+
+            .col-lg-4 {
+                display: flex;
+                justify-content: center;
+                padding: .5rem 0;
+            }
         }
     }
 }
@@ -3106,7 +3116,7 @@ footer {
 @media screen and (max-width: 499px) {
     .contact {
         .block-content {
-            padding: 0;
+            padding: 1rem;
         }
 
         .form-block {
