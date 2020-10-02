@@ -6,7 +6,7 @@ import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa"
 
 const Footer = () => (
   <footer>
-    <Fade delay="3500" triggerOnce>
+    <Fade triggerOnce>
       <div className="hidden-height"></div>
       <Container>
         <Row>
