@@ -29,7 +29,7 @@ body {
     --cardText: var(--textColor);
     color: var(--textColor);
     background-color: var(--background);
-    --boxShadow: rgba(24, 24, 24, 0.5);
+    --boxShadow: rgba(24, 24, 24, 0.27);
     --navBackground: #FBFBFB;
     --contactBackground: #24292e;
     --contactHeading: var(--background);
@@ -64,6 +64,10 @@ svg {
 button,
 .btn {
     cursor: none !important;
+
+    &:hover {
+        box-shadow: 0 10px 25px var(--boxShadow) !important;
+    }
 }
 
 header {
@@ -347,8 +351,7 @@ header {
             color: #ffffff !important;
             background-color: var(--buttonColor);
             border-color: var(--buttonColor);
-            box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
-            -webkit-box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
+            box-shadow: 0 10px 25px var(--boxShadow) !important;
         }
     }
 
@@ -418,6 +421,7 @@ header {
     border-radius: 25px !important;
     font-size: 10px !important;
     text-align: center !important;
+    box-shadow: 0 10px 25px var(--boxShadow) !important;
 
     svg {
         margin-top: 10px;
@@ -1305,17 +1309,7 @@ a.text-black {
         &:not(.btn-form) {
             border-radius: 100px;
 
-            &:hover {
-                box-shadow: none !important;
-                box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
-                -webkit-box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
-            }
 
-            &:focus {
-                box-shadow: none !important;
-                box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
-                -webkit-box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
-            }
         }
     }
 }
@@ -1978,7 +1972,8 @@ pre {
 
             &:hover {
                 background-color: var(--buttonColor);
-                color: var(--headingColor)
+                color: var(--headingColor);
+                box-shadow: 0 10px 25px var(--boxShadow) !important;
             }
         }
     }
@@ -2333,8 +2328,8 @@ pre {
 
     svg {
         fill: var(--textColor) !important;
-        -webkit-filter: drop-shadow(1px 1px 1px var(--boxShadow));
-        filter: drop-shadow(1px 1px 1px var(--boxShadow));
+        // -webkit-filter: drop-shadow(1px 1px 1px var(--boxShadow));
+        // filter: drop-shadow(1px 1px 1px var(--boxShadow));
 
         &:hover {
             path {
@@ -2614,6 +2609,7 @@ footer {
 
             &:hover {
                 background-color: var(--buttonColor);
+                box-shadow: 0 10px 25px var(--boxShadow) !important;
 
                 svg {
                     path {
