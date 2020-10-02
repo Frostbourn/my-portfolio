@@ -71,6 +71,22 @@ const ContactForm = () => {
             <div className="media-container-row">
               <div className="col-sm-10 col-md-8 col-lg-5 block-content">
                 <div className="col-md-12">
+                  <div className="text-block">
+                    <div className="mb-4 mbr-fonts-style mbr-section-title display-2">
+                      <strong>
+                        Get In Touch <Emoji symbol="💬" label="contact" />
+                      </strong>
+                    </div>
+                    <div className="mbr-section-subtitle mbr-fonts-style mb-4 display-5">
+                      You can find me in a few places on the web, but if if you
+                      prefer to do it the "old way" then just write to me
+                      message.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-6 d-flex justify-content-center">
+                <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="row gy-3 d-flex">
                     <div className="mbr-fonts-style mbr-section-title display-2">
                       <strong>Send a Message</strong>{" "}
@@ -83,7 +99,7 @@ const ContactForm = () => {
                         {serverState.status.msg}
                       </Alert>
                     )}
-                    <div className="form-group">
+                    <div className="form-group my-0">
                       <label for="emailAddress"></label>
                       <input
                         type="email"
@@ -95,7 +111,7 @@ const ContactForm = () => {
                         required="required"
                       />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-0">
                       <label for="contactName"></label>
                       <input
                         type="text"
@@ -106,7 +122,7 @@ const ContactForm = () => {
                         required="required"
                       />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-0">
                       <label for="contactMessage"></label>
                       <textarea
                         name="message"
@@ -125,22 +141,6 @@ const ContactForm = () => {
                       Send mail
                     </button>
                   </form>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-6 d-flex justify-content-center">
-                <div className="col-md-10">
-                  <div className="text-block">
-                    <div className="mb-4 mbr-fonts-style mbr-section-title display-2">
-                      <strong>
-                        Get In Touch <Emoji symbol="💬" label="contact" />
-                      </strong>
-                    </div>
-                    <div className="mbr-section-subtitle mbr-fonts-style mb-4 display-5">
-                      You can find me in a few places on the web, but if if you
-                      prefer to do it the "old way" then just write to me
-                      message.
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
