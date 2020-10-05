@@ -52,32 +52,17 @@ const Header = props => {
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul class="nav navbar-nav">
               <li className="hover nav-item">
-                <a
-                  className="nav-link"
-                  href="#about"
-                  data-toggle="collapse"
-                  data-target=".navbar-collapse.showt"
-                >
+                <a className="nav-link" href="#about">
                   About
                 </a>
               </li>
               <li className="hover nav-item">
-                <a
-                  className="nav-link"
-                  href="#portfolio"
-                  data-toggle="collapse"
-                  data-target=".navbar-collapse.show"
-                >
+                <a className="nav-link" href="#portfolio">
                   Work
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="btn-success-outline nav-link"
-                  href="#contact"
-                  data-toggle="collapse"
-                  data-target=".navbar-collapse.show"
-                >
+                <a className="btn-success-outline nav-link" href="#contact">
                   <FaEnvelope />
                   &nbsp;Let's talk!
                 </a>
