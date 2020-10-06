@@ -7,7 +7,6 @@ import { Container, Button, Alert } from "react-bootstrap"
 import { FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
 import Emoji from "./Emoji"
-import Background from "../images/map-background.webp"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -60,12 +59,6 @@ const ContactForm = () => {
   return (
     <>
       <section id="contact" className="contact features8">
-        <div
-          className="contact-map"
-          style={{ backgroundImage: `url(${Background})` }}
-        >
-          <div className="mbr-overlay"></div>
-        </div>
         <Fade delay="300" triggerOnce>
           <Container>
             <div className="media-container-row">

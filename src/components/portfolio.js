@@ -201,9 +201,11 @@ const Portfolio = () => {
             ))}
 
             <Col md={12}>
-              <h2 className="mbr-section-title mbr-fonts-style align-left display-2 py-3">
-                <strong>{"\u003Ccommercial projects \u002F\u003E"}</strong>
-              </h2>
+              <div className="mbr-section-title mbr-fonts-style align-left display-4 py-3">
+                <span class="d-inline-block rounded-pill shadow-sm fw-5 px-4 py-2 mb-3">
+                  <strong>{"\u003Ccommercial projects \u002F\u003E"}</strong>
+                </span>
+              </div>
             </Col>
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px" triggerOnce>

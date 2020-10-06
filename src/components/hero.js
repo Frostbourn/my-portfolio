@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade, Spin } from "react-awesome-reveal"
-import Image from "../images/svgs/hero-image-fourth.svg"
+import Image from "../images/about-photo-square.jpg"
 import Emoji from "./Emoji"
 import Typical from "react-typical"
 
