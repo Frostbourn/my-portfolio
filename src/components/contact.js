@@ -59,6 +59,7 @@ const ContactForm = () => {
   return (
     <>
       <section id="contact" className="contact features8">
+        <div className="contact-shapes"></div>
         <Fade delay="300" triggerOnce>
           <Container>
             <div className="media-container-row">
