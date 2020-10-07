@@ -79,7 +79,7 @@ const ContactForm = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6 col-lg-6 d-flex justify-content-center">
+              <div className="col-sm-10 col-md-8 col-lg-6 d-flex justify-content-center">
                 <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="row gy-3 d-flex">
                     <div className="mbr-fonts-style mbr-section-title display-2">
