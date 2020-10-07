@@ -80,17 +80,6 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="portfolio features8">
       <div className="portfolio-shapes"></div>
-      <svg
-        className="bottom-wave-img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
-        <path
-          fill="#8c43ff"
-          fillOpacity="1"
-          d="M0,224L60,229.3C120,235,240,245,360,234.7C480,224,600,192,720,176C840,160,960,160,1080,170.7C1200,181,1320,203,1380,213.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
-        ></path>
-      </svg>
       <Fade delay="300" triggerOnce>
         <Container>
           <Row className="blog-block justify-content-around">
