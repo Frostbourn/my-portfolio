@@ -79,6 +79,7 @@ const Portfolio = () => {
   `)
   return (
     <section id="portfolio" className="portfolio features8">
+      <div className="portfolio-shapes"></div>
       <svg
         className="bottom-wave-img"
         xmlns="http://www.w3.org/2000/svg"
