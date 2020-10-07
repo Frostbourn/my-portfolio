@@ -1796,6 +1796,7 @@ pre {
 }
 
 .hero {
+    position: relative;
     height: 100vh;
     padding-top: 30vh;
     padding-bottom: 120px;
@@ -1959,8 +1960,21 @@ pre {
 }
 
 .about {
-    padding: 45px 0 0;
-    background-color: var(--wavesColor);
+    padding: 55px 0 0;
+    position: relative;
+
+    .about-shapes {
+        margin: 100px 0;
+        width: 400px;
+        height: 400px;
+        background-repeat: no-repeat;
+        position: absolute;
+        background-image: url(../images/ornament-dotted-white.png);
+        -webkit-filter: var(--svgFilter);
+        filter: var(--svgFilter);
+
+        overflow: hidden;
+    }
 
     .icon-transition {
         span {
@@ -1981,6 +1995,10 @@ pre {
                 box-shadow: 0 8px 25px var(--boxShadow) !important;
             }
         }
+    }
+
+    .container-fluid {
+        background-color: var(--wavesColor);
     }
 
     .photo-split {
@@ -2069,6 +2087,33 @@ pre {
     padding: 20px 10px;
     margin: 4rem auto 0;
     background-color: var(--background);
+    position: relative;
+
+    // &:before {
+    //     content: ' ';
+    //     margin: -100px 0;
+    //     width: 400px;
+    //     height: 400px;
+    //     background-repeat: no-repeat;
+    //     position: absolute;
+    //     background-image: url(../images/ornament-dotted-white.png);
+    //     -webkit-filter: var(--svgFilter);
+    //     filter: var(--svgFilter)
+    // }
+
+    &:after {
+        content: ' ';
+        margin: -90vh -5vw;
+        width: 400px;
+        height: 400px;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0;
+        background-image: url(../images/ornament-dotted-blue.png);
+        z-index: -1;
+        -webkit-filter: var(--svgFilter);
+        filter: var(--svgFilter)
+    }
 
     h2 {
         color: var(--textColor)
@@ -2136,30 +2181,6 @@ pre {
             transform: scale(1) translate(10px, -30px);
         }
     }
-
-
-    &:before {
-        content: ' ';
-        margin: -50px 0;
-        width: 400px;
-        height: 400px;
-        background-repeat: no-repeat;
-        position: absolute;
-        background-image: url(../images/ornament-dotted-white.png);
-    }
-
-    &:after {
-        content: ' ';
-        margin: -90vh -5vw;
-        width: 400px;
-        height: 400px;
-        background-repeat: no-repeat;
-        position: absolute;
-        right: 0;
-        background-image: url(../images/ornament-dotted-blue.png);
-        z-index: -1;
-    }
-
 
     .repo-card-div {
         // box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
@@ -2444,6 +2465,7 @@ pre {
         position: absolute;
         right: 0;
         top: 0;
+        background-color: var(--background);
 
         &:before {
             content: ' ';
@@ -2454,6 +2476,8 @@ pre {
             position: absolute;
             background-position-x: -11vw;
             background-image: url(../images/background-round.png);
+            -webkit-filter: var(--svgFilter);
+            filter: var(--svgFilter)
         }
 
         &:after {
@@ -2465,6 +2489,8 @@ pre {
             position: absolute;
             background-position-x: 10vw;
             background-image: url(../images/background-square.png);
+            -webkit-filter: var(--svgFilter);
+            filter: var(--svgFilter)
         }
     }
 
@@ -2564,6 +2590,7 @@ pre {
 
 footer {
     background-color: var(--background);
+    position: relative;
 
     p {
         text-align: center;
@@ -2735,11 +2762,6 @@ footer {
     .hero .hero-text {
         padding-left: 11vw !important;
     }
-
-    .bottom-wave-img {
-        margin: -150px;
-        padding-bottom: 100px;
-    }
 }
 
 @media screen and (max-width: 992px) {
@@ -2772,11 +2794,6 @@ footer {
         .scroll {
             margin: 20vh auto !important;
         }
-    }
-
-    .bottom-wave-img {
-        margin: -100px;
-        padding-bottom: 100px;
     }
 
     H1 {
