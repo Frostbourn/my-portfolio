@@ -79,7 +79,6 @@ const Portfolio = () => {
   `)
   return (
     <section id="portfolio" className="portfolio features8">
-      <div className="portfolio-shapes"></div>
       <Fade delay="300" triggerOnce>
         <Container>
           <Row className="blog-block justify-content-around">
