@@ -18,6 +18,8 @@ body {
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    color: var(--textColor);
+    background-color: var(--background);
     --anchorLink: #24292e;
     --background: #FFFFFF;
     --textColor: #24292e;
@@ -27,8 +29,6 @@ body {
     --wavesColor: #4528DC;
     --cardColor: #FFFFFF;
     --cardText: var(--textColor);
-    color: var(--textColor);
-    background-color: var(--background);
     --boxShadow: rgba(24, 24, 24, 0.27);
     --navBackground: #FBFBFB;
     --contactBackground: #24292e;
@@ -37,6 +37,8 @@ body {
 }
 
 body.dark {
+    color: var(--textColor);
+    background-color: var(--background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     --anchorLink: #e3b23c;
@@ -48,13 +50,15 @@ body.dark {
     --wavesColor: #1f1f1f;
     --cardColor: #1f1f1f;
     --cardText: var(--background);
-    color: var(--textColor);
-    background-color: var(--background);
     --boxShadow: none;
     --navBackground: #1f1f1f;
     --contactBackground: #1f1f1f;
     --contactHeading: var(--headingColor);
     --svgFilter: saturate(0.5);
+}
+
+#gatsby-focus-wrapper {
+    background-color: var(--background);
 }
 
 svg {
@@ -1798,12 +1802,10 @@ pre {
 .hero {
     position: relative;
     height: 100vh;
-    padding-top: 30vh;
-    padding-bottom: 120px;
+    padding-top: 20vh;
     background-color: var(--background);
     background-image:
         url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1023.891' height='1023.891' viewBox='0 0 1023.891 1023.891'> <rect id='Rectangle' width='724' height='724' rx='100' transform='translate(0 511.945) rotate(-45)' fill='#3138d1'/> </svg>");
-
 
     .hero-container {
         position: absolute;
@@ -1847,6 +1849,13 @@ pre {
         }
     }
 
+    .photo-split {
+        img {
+            border: 3px dotted var(--buttonColor);
+            border-radius: 50%;
+        }
+    }
+
     H1 {
         text-align: left;
         color: var(--headingColor);
@@ -1864,12 +1873,16 @@ pre {
     }
 
     .scroll {
-        margin: 18vh auto;
-        height: 40px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 75vh auto;
         width: 25px;
+        height: 40px;
         border-radius: 20px;
         border: 1px solid var(--textColor);
-        position: relative;
+        position: absolute;
         z-index: 999;
         box-shadow: 0px 15px 20px -7px var(--boxShadow);
         transition: all 0.7s ease-out;
@@ -1881,7 +1894,7 @@ pre {
             top: 7px;
             height: 6px;
             width: 3px;
-            background-color: #ff90b3;
+            background-color: #787878;
             border-radius: 50%;
             -webkit-animation: scroll 2s infinite;
             animation: scroll 2s infinite;
@@ -1951,6 +1964,7 @@ pre {
 
     svg {
         width: 100% !important;
+        position: absolute;
 
         path {
             fill: var(--wavesColor) !important;
@@ -1960,13 +1974,14 @@ pre {
 }
 
 .about {
-    padding: 55px 0 0;
     position: relative;
+    background-color: var(--background);
 
     .about-shapes {
-        margin: 100px 0;
-        width: 400px;
-        height: 400px;
+        bottom: 100px;
+        left: 100px;
+        width: 245px;
+        height: 245px;
         background-repeat: no-repeat;
         position: absolute;
         background-image: url(../images/ornament-dotted-white.png);
@@ -1998,11 +2013,11 @@ pre {
     }
 
     .container-fluid {
+        padding: 85px 0 0;
         background-color: var(--wavesColor);
     }
 
     .photo-split {
-        padding: 0;
 
         img {
             border: 3px dotted var(--buttonColor);
@@ -2104,8 +2119,8 @@ pre {
     &:after {
         content: ' ';
         margin: -90vh -5vw;
-        width: 400px;
-        height: 400px;
+        width: 225px;
+        height: 380px;
         background-repeat: no-repeat;
         position: absolute;
         right: 0;
@@ -2758,13 +2773,11 @@ footer {
     z-index: 2;
 }
 
-@media screen and (min-width: 992px) {
-    .hero .hero-text {
-        padding-left: 11vw !important;
-    }
-}
+
+
 
 @media screen and (max-width: 992px) {
+
     nav {
         justify-content: center;
         height: auto !important;
@@ -2787,12 +2800,8 @@ footer {
     }
 
     .hero {
-        .hero-svg {
+        .photo-split {
             display: none;
-        }
-
-        .scroll {
-            margin: 20vh auto !important;
         }
     }
 
@@ -2821,10 +2830,33 @@ footer {
                 display: none;
             }
         }
+
+        .google-map {
+            padding-bottom: 2rem;
+        }
     }
 
     .mbr-section-btn {
         text-align: center !important;
+    }
+
+    .waves {
+        svg {
+            bottom: 0px;
+        }
+
+    }
+
+    .about {
+        .wrap-block {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .photo-split {
+            padding: 60px 20px;
+            margin: 0 auto;
+        }
     }
 
     .wave-img {
@@ -2860,9 +2892,7 @@ footer {
             }
         }
     }
-}
 
-@media screen and (max-width: 835px) {
     .display-1 {
         font-size: 3.2rem;
         font-size: calc(2.05rem + (4 - 2.05) * ((100vw - 20rem) / (48 - 20)));
@@ -2890,9 +2920,7 @@ footer {
     .waves {
         width: 100% !important;
     }
-}
 
-@media screen and (max-width: 992px) {
     .mbr-arrow {
         display: none;
     }
@@ -3077,45 +3105,19 @@ footer {
     }
 }
 
-@media screen and (max-width: 1550px) {
-    .hero-margin {
-        margin-top: -40px !important;
+@media screen and (min-width: 992px) {
+    .hero {
+        .hero-text {
+            padding-left: 13vw !important;
+        }
     }
-}
 
-@media screen and (min-width: 835px) {
     .waves {
         svg {
-            margin-bottom: -120px;
-        }
-    }
-}
-
-@media screen and (max-width: 835px) {
-    .waves {
-        svg {
-            margin-bottom: -35px;
-        }
-
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-    .about {
-        .wrap-block {
-            padding: 3rem 1rem;
+            bottom: -100px;
         }
     }
 
-    .contact {
-        .wrap-block {
-            padding: 3rem 1rem;
-        }
-    }
-}
-
-@media screen and (min-width: 835px) {
     .portfolio {
         .card {
             flex: 1 1 25%;
@@ -3159,14 +3161,6 @@ footer {
 
         .card {
             display: block;
-        }
-    }
-}
-
-@media screen and (max-width: 835px) {
-    .contact {
-        .google-map {
-            padding-bottom: 2rem;
         }
     }
 }
