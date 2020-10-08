@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade, Spin } from "react-awesome-reveal"
-import Image from "../images/about-photo-square.jpg"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Emoji from "./Emoji"
 import Typical from "react-typical"
 
@@ -22,6 +23,18 @@ const Hero = () => {
     }
   }, [state, setState])
 
+  const data = useStaticQuery(graphql`
+    query {
+      aboutPhoto: file(relativePath: { eq: "about-photo-square.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 450, quality: 100) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
+        }
+      }
+    }
+  `)
   return (
     <>
       <Fade triggerOnce>
@@ -87,9 +100,20 @@ const Hero = () => {
                     </Bounce>
                   </div>
                 </Col>
-                <Col className="hero-svg">
+                {/* <Col className="hero-svg">
                   <Fade delay="1000" triggerOnce>
                     <Image />
+                  </Fade>
+                </Col> */}
+
+                <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
+                  <Fade direction="right" triggerOnce>
+                    <Img
+                      fluid={data.aboutPhoto.childImageSharp.fluid}
+                      style={{
+                        margin: "0 auto", // Used to center the image
+                      }}
+                    />
                   </Fade>
                 </Col>
               </Row>
@@ -106,7 +130,6 @@ const Hero = () => {
           <div className="waves">
             <svg
               className="wave-img"
-              style={{ position: "absolute" }}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
             >
