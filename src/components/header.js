@@ -49,7 +49,7 @@ const Header = props => {
             <span className="icon-bar bottom-bar"></span>
             <span className="sr-only">Toggle navigation</span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarResponsive">
+          <div className="navbar-collapse collapse" id="navbarResponsive">
             <ul class="nav navbar-nav">
               <li className="hover nav-item">
                 <a className="nav-link" href="#about">
