@@ -88,7 +88,7 @@ const Hero = () => {
                           target="_blank"
                           rel="noreferrer"
                         >
-                          Download CV
+                          Hire me
                         </a>
                         {/* <a
                           className="btn btn-md btn-bgr btn-warning display-4"
