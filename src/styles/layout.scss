@@ -784,6 +784,7 @@ header {
     background-color: #ffffff !important;
     border-color: #ffffff !important;
     color: #808080 !important;
+    border-radius: 100px;
 
     &:active {
         background-color: #ffffff !important;
@@ -2021,7 +2022,7 @@ pre {
 
         img {
             border: 3px dotted var(--buttonColor);
-            border-radius: 50%;
+            border-radius: 50px;
         }
     }
 
@@ -2049,7 +2050,6 @@ pre {
     }
 
     .wrap-block {
-        padding: 3rem 0rem 3rem 9rem;
 
         ul {
             margin: 0;
@@ -2848,9 +2848,14 @@ footer {
     }
 
     .about {
+
         .wrap-block {
             margin: 0 auto;
             padding: 0;
+
+            .btn {
+                margin: 0 auto;
+            }
         }
 
         .photo-split {
@@ -3115,6 +3120,12 @@ footer {
     .waves {
         svg {
             bottom: -100px;
+        }
+    }
+
+    .about {
+        .wrap-block {
+            width: 45%;
         }
     }
 
