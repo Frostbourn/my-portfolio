@@ -24,15 +24,24 @@ const About = () => {
       <section id="about" className="about">
         <div className="about-shapes"></div>
         <Container fluid>
-          <Row className="align-items-center content-row">
-            <Col lg={7} md={8} sm={10} xs={10} className="wrap-block">
+          <Row className="align-items-center content-row px-lg-5">
+            <Col lg={6} md={6} sm={8} xs={8} className="photo-split">
               <Fade direction="left" triggerOnce>
+                <Img
+                  fluid={data.aboutPhoto.childImageSharp.fluid}
+                  style={{
+                    margin: "0 auto", // Used to center the image
+                  }}
+                />
+              </Fade>
+            </Col>
+            <Col lg={6} md={6} sm={10} xs={10} className="wrap-block">
+              <Fade direction="right" triggerOnce>
                 <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
                     Who am I? <Emoji symbol="🤓" label="smile" />
                   </strong>
                 </h1>
-
                 <h3 className="mbr-text mbr-fonts-style mbr-light display-7">
                   Jestem Freelancerem/Web Developerem i motocyklistą z pasji.
                   Zajmuję się tworzeniem nowoczesnych stron internetowych od A
@@ -61,19 +70,16 @@ const About = () => {
                   , opartą o Joomla!, gdzie oferuję moje usługi oraz wtyczki do
                   tegoż CMS'u.
                 </h3>
+                <a
+                  className="btn btn-md btn-bgr btn-white display-4"
+                  href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Hire me
+                </a>
               </Fade>
             </Col>
-            <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
-              <Fade direction="right" triggerOnce>
-                <Img
-                  fluid={data.aboutPhoto.childImageSharp.fluid}
-                  style={{
-                    margin: "0 auto", // Used to center the image
-                  }}
-                />
-              </Fade>
-            </Col>
-            {/* </Parallax> */}
           </Row>
         </Container>
         <svg
