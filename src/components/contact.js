@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import axios from "axios"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import { Container, Button, Alert } from "react-bootstrap"
 import { FaChevronUp } from "react-icons/fa"
