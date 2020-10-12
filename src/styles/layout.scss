@@ -780,53 +780,30 @@ header {
 }
 
 .btn-white {
-    color: #333333 !important;
+    color: #090909 !important;
     background-color: #ffffff !important;
     border-color: #ffffff !important;
-    color: #808080 !important;
     border-radius: 100px;
 
     &:active {
         background-color: #ffffff !important;
         border-color: #ffffff !important;
-        color: #808080 !important;
     }
 
     &:hover {
-        color: #808080 !important;
         background-color: #d9d9d9 !important;
         border-color: #d9d9d9 !important;
     }
 
     &:focus {
-        color: #808080 !important;
         background-color: #d9d9d9 !important;
         border-color: #d9d9d9 !important;
     }
 
     &:disabled {
-        color: #808080 !important;
         background-color: #d9d9d9 !important;
         border-color: #d9d9d9 !important;
     }
-}
-
-.btn-white.active {
-    background-color: #ffffff !important;
-    border-color: #ffffff !important;
-    color: #808080 !important;
-}
-
-.btn-white.focus {
-    color: #808080 !important;
-    background-color: #d9d9d9 !important;
-    border-color: #d9d9d9 !important;
-}
-
-.btn-white.disabled {
-    color: #808080 !important;
-    background-color: #d9d9d9 !important;
-    border-color: #d9d9d9 !important;
 }
 
 .btn-black {
@@ -1801,6 +1778,8 @@ pre {
 }
 
 .hero {
+    display: flex;
+    justify-content: center;
     position: relative;
     height: 100vh;
     padding-top: 20vh;
@@ -1838,10 +1817,14 @@ pre {
 
         svg {
             margin-top: -80px;
-            max-width: 100%;
+            max-width: 500px;
             -webkit-filter: var(--svgFilter);
             filter: var(--svgFilter);
         }
+    }
+
+    .hero-text {
+        margin-top: 8vh;
     }
 
     .media-container-column {
@@ -1858,18 +1841,18 @@ pre {
     }
 
     H1 {
-        text-align: left;
+        text-align: center;
         color: var(--headingColor);
         font-weight: normal;
     }
 
     .mbr-text {
-        text-align: left;
+        text-align: center;
         color: var(--textColor);
     }
 
     .mbr-section-btn {
-        text-align: left;
+        text-align: center;
         color: var(--textColor);
     }
 
@@ -2021,8 +2004,10 @@ pre {
     .photo-split {
 
         img {
-            border: 3px dotted var(--buttonColor);
-            border-radius: 50px;
+            width: 450px !important;
+            height: 500px !important;
+            border-radius: 18px !important;
+            box-shadow: 30px 30px 80px -20px rgba(0, 0, 0, 0.5) !important;
         }
     }
 
@@ -3111,11 +3096,6 @@ footer {
 }
 
 @media screen and (min-width: 992px) {
-    .hero {
-        .hero-text {
-            padding-left: 13vw !important;
-        }
-    }
 
     .waves {
         svg {
