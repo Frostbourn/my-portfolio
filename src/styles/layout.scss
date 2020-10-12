@@ -45,7 +45,7 @@ body.dark {
     --background: #121212;
     --textColor: #cacaca;
     --headingColor: #FFFFFF;
-    --buttonColor: #C6A1FF;
+    --buttonColor: #7d69e7;
     --hoverColor: #B98FFF;
     --wavesColor: #1f1f1f;
     --cardColor: #1f1f1f;
@@ -54,7 +54,7 @@ body.dark {
     --navBackground: #1f1f1f;
     --contactBackground: #1f1f1f;
     --contactHeading: var(--headingColor);
-    --svgFilter: saturate(0.5);
+    --svgFilter: saturate(0.4);
 }
 
 #gatsby-focus-wrapper {
@@ -90,7 +90,6 @@ header {
 
 
     .logo {
-        margin: 1rem 4rem;
         display: inline;
         color: var(--headingColor);
         font-size: 1.75rem;
@@ -108,6 +107,10 @@ header {
         padding: 0.7rem !important;
         background: var(--background);
         transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
+
+        .navbar-brand {
+            margin-right: .5rem;
+        }
 
         .toggleWrapper {
             position: relative;
@@ -322,7 +325,6 @@ header {
         transition: all 0.3s ease;
 
         .navbar-nav {
-            margin: 0 2rem;
 
             .nav-item {
                 padding: 1.25rem;
@@ -2004,8 +2006,9 @@ pre {
     .photo-split {
 
         img {
-            width: 450px !important;
-            height: 500px !important;
+            margin: 30px 0 0 30px;
+            max-width: 450px !important;
+            max-height: 500px !important;
             border-radius: 18px !important;
             box-shadow: 30px 30px 80px -20px rgba(0, 0, 0, 0.5) !important;
         }
@@ -2078,6 +2081,7 @@ pre {
     }
 
     .mbr-text {
+        padding: 30px 0;
         color: #ffffff;
     }
 }
@@ -2784,9 +2788,20 @@ footer {
         margin: 0 !important;
     }
 
-    .hero {
+    .about {
         .photo-split {
-            display: none;
+            img {
+                margin: unset;
+            }
+        }
+
+        .wrap-block {
+            .btn {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+            }
         }
     }
 
@@ -3103,11 +3118,11 @@ footer {
         }
     }
 
-    .about {
-        .wrap-block {
-            width: 45%;
-        }
-    }
+    // .about {
+    //     .wrap-block {
+    //         width: 45%;
+    //     }
+    // }
 
     .portfolio {
         .card {
