@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Container } from "react-bootstrap"
 import PropTypes from "prop-types"
 import DarkLightSwitch from "./themeToggler"
 
@@ -30,46 +31,48 @@ const Header = props => {
             "shadowBox px-md-4 px-xs-1 navbar navbar-expand-md navbar-light fixed-top navbar navbar-expand-md navbar-light fixed-top"
           }
         >
-          <a class="navbar-brand" href="/#top">
-            <h3 className="logo">
-              Jakub<span>Skowronski.</span>
-            </h3>
-          </a>
-          <button
-            className="navbar-toggler collapsed"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="icon-bar top-bar"></span>
-            <span className="icon-bar middle-bar"></span>
-            <span className="icon-bar bottom-bar"></span>
-            <span className="sr-only">Toggle navigation</span>
-          </button>
-          <div className="navbar-collapse collapse" id="navbarResponsive">
-            <ul class="nav navbar-nav">
-              <li className="hover nav-item">
-                <a className="nav-link" href="#about">
-                  About
-                </a>
-              </li>
-              <li className="hover nav-item">
-                <a className="nav-link" href="#portfolio">
-                  Work
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="btn-success-outline nav-link" href="#contact">
-                  <FaEnvelope />
-                  &nbsp;Let's talk!
-                </a>
-              </li>
-              <DarkLightSwitch />
-            </ul>
-          </div>
+          <Container>
+            <a class="navbar-brand" href="/#top">
+              <h3 className="logo">
+                Jakub<span>Skowronski.</span>
+              </h3>
+            </a>
+            <button
+              className="navbar-toggler collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarResponsive"
+              aria-controls="navbarResponsive"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="icon-bar top-bar"></span>
+              <span className="icon-bar middle-bar"></span>
+              <span className="icon-bar bottom-bar"></span>
+              <span className="sr-only">Toggle navigation</span>
+            </button>
+            <div className="navbar-collapse collapse" id="navbarResponsive">
+              <ul class="nav navbar-nav">
+                <li className="hover nav-item">
+                  <a className="nav-link" href="#about">
+                    About
+                  </a>
+                </li>
+                <li className="hover nav-item">
+                  <a className="nav-link" href="#portfolio">
+                    Work
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="btn-success-outline nav-link" href="#contact">
+                    <FaEnvelope />
+                    &nbsp;Let's talk!
+                  </a>
+                </li>
+                <DarkLightSwitch />
+              </ul>
+            </div>
+          </Container>
         </nav>
       </header>
     </Bounce>
