@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row, Col, Badge } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
 import Emoji from "./Emoji"
 
@@ -94,7 +94,7 @@ const Portfolio = () => {
             </Col>
             <Col md={12}>
               <h2 className="mbr-section-title mbr-fonts-style align-left display-2 py-3">
-                <strong>{"\u003Copen source projects \u002F\u003E"}</strong>
+                {/* <strong>{"\u003Copen source projects \u002F\u003E"}</strong> */}
               </h2>
             </Col>
             {data.githubViewer.pinnedItems.nodes.map((repository, i) => (
@@ -110,6 +110,7 @@ const Portfolio = () => {
                       onKeyDown={() => openRepoinNewTab(repository.url)}
                       role="presentation"
                     >
+                      <Badge variant="success">Open Source</Badge>
                       <div className="repo-name-div">
                         <svg
                           aria-hidden="true"
@@ -189,13 +190,11 @@ const Portfolio = () => {
               </div>
             ))}
 
-            <Col md={12}>
+            {/* <Col md={12}>
               <div className="mbr-section-title mbr-fonts-style align-left display-4 py-3">
-                <span class="d-inline-block rounded-pill shadow-sm fw-5 px-4 py-2 mb-3">
-                  <strong>{"\u003Ccommercial projects \u002F\u003E"}</strong>
-                </span>
+                <span class="d-inline-block rounded-pill shadow-sm fw-5 px-4 py-2 mb-3"></span>
               </div>
-            </Col>
+            </Col> */}
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
@@ -205,6 +204,7 @@ const Portfolio = () => {
                   role="presentation"
                 >
                   <div className="repo-card-div">
+                    <Badge variant="warning">Commercial</Badge>
                     <div className="card-img">
                       <Img fluid={data.portfolioOne.childImageSharp.fluid} />
                     </div>
@@ -232,6 +232,7 @@ const Portfolio = () => {
                   role="presentation"
                 >
                   <div className="repo-card-div">
+                    <Badge variant="warning">Commercial</Badge>
                     <div className="card-img">
                       <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
                     </div>
@@ -321,6 +322,7 @@ const Portfolio = () => {
                   role="presentation"
                 >
                   <div className="repo-card-div">
+                    <Badge variant="warning">Commercial</Badge>
                     <div className="card-img">
                       <Img fluid={data.portfolioFive.childImageSharp.fluid} />
                     </div>
