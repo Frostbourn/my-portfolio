@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { Bounce, Fade, Spin } from "react-awesome-reveal"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Image from "../images/svgs/hero-image-coding.svg"
 import Emoji from "./Emoji"
 import Typical from "react-typical"
 
@@ -52,7 +52,10 @@ const Hero = () => {
           <Fade delay="500" triggerOnce>
             <Container fluid>
               <Row className="align-items-center content-row row hero-margin">
-                <Col lg={6} className="hero-text">
+                <Col lg={12} className="hero-text">
+                  <p className="mbr-text mbr-fonts-style display-5">
+                    <strong>Hi, I am Jakub and</strong> <br />
+                  </p>
                   <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                     <strong>
                       <Typical
@@ -63,18 +66,6 @@ const Hero = () => {
                       />
                     </strong>
                   </h1>
-                  {/* <Typing cursorClassName="hero-cursor" delay={1500} loop>
-                <Typing.Backspace count={1} />
-                <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
-                  <strong>Web Developer</strong>
-                  <Typing.Backspace count={20} delay={1500} />
-                  <strong>Programmer</strong>
-                  <Typing.Backspace count={20} delay={1500} />
-                  <strong>UI/UX Designer</strong>
-                  <Typing.Backspace count={20} delay={1500} />
-                  <Typing.Reset count={1} delay={3000} />
-                </h1>
-              </Typing> */}
                   <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
                     I {"\u003CCode \u002F\u003E"} simple websites and I love it!{" "}
                     <Emoji symbol="🚀" label="rocket" />
@@ -84,7 +75,7 @@ const Hero = () => {
                       <Bounce cascade delay="1800" damping="1" triggerOnce>
                         <a
                           className="btn btn-md btn-bgr btn-success display-4"
-                          href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
+                          href="#contact"
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -100,13 +91,13 @@ const Hero = () => {
                     </Bounce>
                   </div>
                 </Col>
-                {/* <Col className="hero-svg">
+                {/* <Col lg={6} className="hero-svg">
                   <Fade delay="1000" triggerOnce>
                     <Image />
                   </Fade>
                 </Col> */}
 
-                <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
+                {/* <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
                   <Fade direction="right" triggerOnce>
                     <Img
                       fluid={data.aboutPhoto.childImageSharp.fluid}
@@ -115,7 +106,7 @@ const Hero = () => {
                       }}
                     />
                   </Fade>
-                </Col>
+                </Col> */}
               </Row>
             </Container>
           </Fade>
