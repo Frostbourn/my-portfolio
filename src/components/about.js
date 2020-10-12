@@ -37,46 +37,27 @@ const About = () => {
             </Col>
             <Col lg={6} md={6} sm={10} xs={10} className="wrap-block">
               <Fade direction="right" triggerOnce>
-                <h1 className="mbr-section-title mbr-fonts-style mbr-light display-2">
+                <div className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
                     Who am I? <Emoji symbol="🤓" label="smile" />
                   </strong>
-                </h1>
-                <h3 className="mbr-text mbr-fonts-style mbr-light display-7">
-                  Jestem Freelancerem/Web Developerem i motocyklistą z pasji.
-                  Zajmuję się tworzeniem nowoczesnych stron internetowych od A
-                  do Z&nbsp;z wykorzystaniem HTML, CSS, JavaScript, PHP i wielu
-                  frameworków. Projekty które wdrażam są wysokiej jakości. Duża
-                  uwagę przywiązuje do szczegółów projektu. Swoją kariere
-                  zawodową rozpocząłem na stanowisku Joomla! Developera w
-                  serwisie{" "}
-                  <a
-                    href="https://www.facebook.com/androidappspl"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-white"
-                  >
-                    androidapps.pl
-                  </a>
-                  . W 2013 roku otworzyłem własną stronę -{" "}
-                  <a
-                    href="https://jsns.eu"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-white"
-                  >
-                    jsns.eu
-                  </a>
-                  , opartą o Joomla!, gdzie oferuję moje usługi oraz wtyczki do
-                  tegoż CMS'u.
-                </h3>
+                </div>
+                <div className="mbr-text mbr-fonts-style mbr-light display-7">
+                  I am a Freelancer/Web Developer and passionate motorcyclist. I
+                  create simple and modern designs from scratch using latest
+                  technogies. HTML, CSS, JS, building small and medium web apps
+                  with React/GatsbyJS, custom plugins, animations and
+                  interactive layouts. <br />I have also full-stack developer
+                  experience with open souce CMS like WordPress, Joomla!,
+                  Prestashop and other.
+                </div>
                 <a
-                  className="btn btn-md btn-bgr btn-white display-4"
-                  href="https://forms.gle/GJ3GfPGWaQhdpoMR9"
+                  className="btn btn-md btn-bgr py-3 btn-white display-4"
+                  href="#"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Hire me
+                  Download CV
                 </a>
               </Fade>
             </Col>
