@@ -32,7 +32,7 @@ const SocialLinks = () => {
             <li aria-label="Facebook" data-balloon-pos="left">
               <a
                 className="icon-transition"
-                href="https://www.facebook.com/skowronski.jakub"
+                href="https://www.m.me/skowronski.jakub"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
@@ -51,7 +51,7 @@ const SocialLinks = () => {
                 <FaGithub />
               </a>
             </li>
-            <li aria-label="Linkedin" data-balloon-pos="left">
+            {/* <li aria-label="Linkedin" data-balloon-pos="left">
               <a
                 className="icon-transition"
                 href="https://www.linkedin.com/in/jakubskowronki"
@@ -61,7 +61,7 @@ const SocialLinks = () => {
               >
                 <FaLinkedinIn />
               </a>
-            </li>
+            </li> */}
             <li className="social-line"></li>
           </ul>
         </div>
