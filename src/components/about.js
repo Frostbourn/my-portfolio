@@ -24,7 +24,7 @@ const About = () => {
       <section id="about" className="about">
         <div className="about-shapes"></div>
         <Container fluid>
-          <Row className="align-items-center content-row px-lg-5">
+          <Row className="container align-items-center content-row m-auto px-lg-5">
             <Col lg={6} md={6} sm={8} xs={8} className="photo-split">
               <Fade direction="left" triggerOnce>
                 <Img
@@ -35,11 +35,11 @@ const About = () => {
                 />
               </Fade>
             </Col>
-            <Col lg={6} md={6} sm={10} xs={10} className="wrap-block">
+            <Col lg={5} md={5} sm={10} xs={10} className="wrap-block">
               <Fade direction="right" triggerOnce>
                 <div className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
-                    Who am I? <Emoji symbol="🤓" label="smile" />
+                    A bit about me <Emoji symbol="🤓" label="smile" />
                   </strong>
                 </div>
                 <div className="mbr-text mbr-fonts-style mbr-light display-7">
