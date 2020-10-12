@@ -250,7 +250,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            {/* <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -276,7 +276,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </Fade>
-            </div>
+            </div> 
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
@@ -307,7 +307,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </Fade>
-            </div>
+            </div>*/}
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
@@ -339,7 +339,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            {/* <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -365,7 +365,7 @@ const Portfolio = () => {
                   </div>
                 </div>
               </Fade>
-            </div>
+            </div> */}
           </Row>
           <Row>
             <p class="display-2 py-5 align-center">
