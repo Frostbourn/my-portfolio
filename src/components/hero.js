@@ -53,29 +53,38 @@ const Hero = () => {
             <Container fluid>
               <Row className="align-items-center content-row row hero-margin">
                 <Col lg={12} className="hero-text">
-                  <p className="mbr-text mbr-fonts-style display-5">
-                    <strong>Hi, I am Jakub and</strong> <br />
+                  <p className="mbr-text mbr-fonts-style display-6">
+                    Hi there, I'm Jakub <Emoji symbol="👋" label="hello" />
+                    <br />
                   </p>
                   <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                     <strong>
                       <Typical
                         className="hero-cursor"
-                        steps={["Web Developer", 1500, "Programmer", 1500]}
+                        steps={[
+                          "Frontend Developer",
+                          1500,
+                          "Programmer",
+                          1500,
+                          "Wordpress Developer",
+                          1500,
+                          "Joomla! Developer",
+                          1500,
+                        ]}
                         loop={Infinity}
                         wrapper="p"
                       />
                     </strong>
                   </h1>
                   <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
-                    I {"\u003CCode \u002F\u003E"} simple websites and I love it!{" "}
-                    <Emoji symbol="🚀" label="rocket" />
+                    I code simple websites and I love it!{" "}
                   </p>
                   <div className="mbr-section-btn">
                     <Bounce delay="800" triggerOnce>
                       <Bounce cascade delay="1800" damping="1" triggerOnce>
                         <a
                           className="btn btn-md btn-bgr btn-success display-4"
-                          href="#contact"
+                          href="#about"
                           target="_blank"
                           rel="noreferrer"
                         >
