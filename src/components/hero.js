@@ -54,7 +54,12 @@ const Hero = () => {
               <Row className="align-items-center content-row row hero-margin">
                 <Col lg={12} className="hero-text">
                   <p className="mbr-text mbr-fonts-style display-6">
-                    Hi there, I'm Jakub <Emoji symbol="👋" label="hello" />
+                    Hi there, I'm Jakub{" "}
+                    <Emoji
+                      class="hero-emoji-animation"
+                      symbol="👋"
+                      label="hello"
+                    />
                     <br />
                   </p>
                   <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
