@@ -61,7 +61,7 @@ const Footer = () => (
                   </span>
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   className="icon-transition"
                   href="https://www.linkedin.com/in/jakubskowronki"
@@ -72,7 +72,7 @@ const Footer = () => (
                     <FaLinkedin />
                   </span>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </Col>
         </Row>
