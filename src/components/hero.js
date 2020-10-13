@@ -55,12 +55,12 @@ const Hero = () => {
                 <Col lg={12} className="hero-text">
                   <p className="mbr-text mbr-fonts-style display-6">
                     Hi there, I'm Jakub{" "}
-                    <Emoji
+                    {/* <Emoji
                       class="hero-emoji-animation"
                       symbol="👋"
                       label="hello"
                     />
-                    <br />
+                    <br /> */}
                   </p>
                   <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                     <strong>
@@ -83,6 +83,7 @@ const Hero = () => {
                   </h1>
                   <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
                     I code simple websites and I love it!{" "}
+                    <Emoji symbol="🚀" label="rocket" />
                   </p>
                   <div className="mbr-section-btn">
                     <Bounce delay="800" triggerOnce>
