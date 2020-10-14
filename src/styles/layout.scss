@@ -1786,8 +1786,6 @@ pre {
     height: 100vh;
     padding-top: 20vh;
     background-color: var(--background);
-    background-image:
-        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1023.891' height='1023.891' viewBox='0 0 1023.891 1023.891'> <rect id='Rectangle' width='724' height='724' rx='100' transform='translate(0 511.945) rotate(-45)' fill='#3138d1'/> </svg>");
 
     .hero-container {
         position: absolute;
@@ -2202,6 +2200,19 @@ pre {
         color: var(--textColor)
     }
 
+    .badge {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 5px 45px;
+        transform: rotate(-45deg) translate(-39%, 0);
+        text-align: center;
+        text-transform: uppercase;
+        box-sizing: border-box;
+    }
+
     .badge-success {
         color: #ffffff;
         background-color: #28a745;
@@ -2212,6 +2223,7 @@ pre {
         background-color: #ffc107;
 
     }
+
 
     .blob {
         position: absolute;
@@ -2316,7 +2328,7 @@ pre {
     }
 
     .repo-svg {
-        margin-right: 0.5rem;
+        margin: 0 .5rem 0 1.5rem;
         min-width: 16px;
     }
 
@@ -2352,7 +2364,9 @@ pre {
     }
 
     .card {
+        max-height: 415px;
         margin: 2rem;
+        padding: 0 !important;
         background-color: var(--cardColor);
         border: none;
         overflow: hidden;
@@ -2399,7 +2413,6 @@ pre {
 
     .card-box {
         word-break: break-word;
-        padding-top: 2rem;
 
         >p {
             color: var(--textColor);
