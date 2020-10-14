@@ -203,11 +203,12 @@ const Portfolio = () => {
                   onKeyDown={() => openRepoinNewTab("https://postplaner.pl")}
                   role="presentation"
                 >
+                  {" "}
+                  <div className="card-img">
+                    <Img fluid={data.portfolioOne.childImageSharp.fluid} />
+                  </div>
                   <div className="repo-card-div">
-                    <Badge variant="warning">Commercial</Badge>
-                    <div className="card-img">
-                      <Img fluid={data.portfolioOne.childImageSharp.fluid} />
-                    </div>
+                    {/* <Badge variant="warning">Commercial</Badge> */}
                     <div className="card-box">
                       <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
                         POST PLANER
@@ -231,11 +232,10 @@ const Portfolio = () => {
                   onKeyDown={() => openRepoinNewTab("https://mltrans.eu")}
                   role="presentation"
                 >
+                  <div className="card-img">
+                    <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
+                  </div>
                   <div className="repo-card-div">
-                    <Badge variant="warning">Commercial</Badge>
-                    <div className="card-img">
-                      <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
-                    </div>
                     <div className="card-box">
                       <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
                         ML TRANS
@@ -321,13 +321,12 @@ const Portfolio = () => {
                   }
                   role="presentation"
                 >
+                  <div className="card-img">
+                    <Img fluid={data.portfolioFive.childImageSharp.fluid} />
+                  </div>
                   <div className="repo-card-div">
-                    <Badge variant="warning">Commercial</Badge>
-                    <div className="card-img">
-                      <Img fluid={data.portfolioFive.childImageSharp.fluid} />
-                    </div>
                     <div className="card-box">
-                      <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
                         HFB BROKER
                       </h4>
                       <div className="card-underline align-center">
