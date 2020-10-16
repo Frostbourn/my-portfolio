@@ -49,10 +49,10 @@ const Hero = () => {
               <div className="circle6"></div>
             </div>
           </Fade>
-          <Fade delay="500" triggerOnce>
-            <Container fluid>
-              <Row className="align-items-center content-row row hero-margin">
-                <Col lg={12} className="hero-text">
+          <Container fluid>
+            <Row className="align-items-center content-row row hero-margin">
+              <Col lg={12} className="hero-text">
+                <Fade delay="500" direction="top" triggerOnce>
                   <p className="mbr-text mbr-fonts-style display-6">
                     Hi there, I'm Jakub{" "}
                     {/* <Emoji
@@ -62,6 +62,8 @@ const Hero = () => {
                     />
                     <br /> */}
                   </p>
+                </Fade>
+                <Fade delay="700" direction="top" triggerOnce>
                   <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
                     <strong>
                       <Typical
@@ -81,38 +83,42 @@ const Hero = () => {
                       />
                     </strong>
                   </h1>
+                </Fade>
+
+                <Fade delay="900" direction="top" triggerOnce>
                   <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
                     I code simple websites and I love it!{" "}
                     <Emoji symbol="🚀" label="rocket" />
                   </p>
-                  <div className="mbr-section-btn">
-                    <Bounce delay="800" triggerOnce>
-                      <Bounce cascade delay="1800" damping="1" triggerOnce>
-                        <a
-                          className="btn btn-md btn-bgr btn-success display-4"
-                          href="#about"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Hire me
-                        </a>
-                        {/* <a
+                </Fade>
+                <div className="mbr-section-btn">
+                  <Bounce delay="1500" triggerOnce>
+                    <Bounce cascade delay="1800" damping="1" triggerOnce>
+                      <a
+                        className="btn btn-md btn-bgr btn-success display-4"
+                        href="#about"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Hire me
+                      </a>
+                      {/* <a
                           className="btn btn-md btn-bgr btn-warning display-4"
                           href="#contact"
                         >
                           Contact me
                         </a> */}
-                      </Bounce>
                     </Bounce>
-                  </div>
-                </Col>
-                {/* <Col lg={6} className="hero-svg">
+                  </Bounce>
+                </div>
+              </Col>
+              {/* <Col lg={6} className="hero-svg">
                   <Fade delay="1000" triggerOnce>
                     <Image />
                   </Fade>
                 </Col> */}
 
-                {/* <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
+              {/* <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
                   <Fade direction="right" triggerOnce>
                     <Img
                       fluid={data.aboutPhoto.childImageSharp.fluid}
@@ -122,17 +128,16 @@ const Hero = () => {
                     />
                   </Fade>
                 </Col> */}
-              </Row>
-            </Container>
-          </Fade>
+            </Row>
+          </Container>
           {/* <Col className="hero-container">
             <Fade delay="1000" triggerOnce>
               <div className="hero-shape"></div>
             </Fade>
           </Col> */}
-          <Bounce delay="1500" triggerOnce>
+          <Fade delay="1800" triggerOnce>
             <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
-          </Bounce>
+          </Fade>
           <div className="waves">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path
