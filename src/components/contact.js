@@ -70,21 +70,21 @@ const ContactForm = () => {
                         Get In Touch <Emoji symbol="💬" label="contact" />
                       </strong>
                     </div>
-                    <div className="mbr-section-subtitle mbr-fonts-style mb-4 display-5">
+                    <p className="mbr-section-subtitle mbr-fonts-style mb-4 display-7">
                       You can find me in a few places on the web, but if if you
                       prefer to do it the "old way" then just write to me
                       message.
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>
               <div className="col-sm-10 col-md-8 col-lg-6 d-flex justify-content-center">
                 <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="row gy-3 d-flex">
-                    <div className="mbr-fonts-style mbr-section-title display-2">
-                      <strong>Send a Message</strong>{" "}
-                      <Emoji symbol="💬" label="contact" />
-                    </div>
+                    <p className="mbr-section-subtitle mbr-fonts-style m-2 display-7">
+                      <span className="pulsate"></span> I’m currently available
+                      for freelance work.
+                    </p>
                     {serverState.status && (
                       <Alert
                         variant={serverState.status.ok ? "success" : "danger"}
@@ -131,7 +131,7 @@ const ContactForm = () => {
                       className="btn btn-primary btn-form btn-bgr display-4 mt-4"
                       disabled={serverState.submitting}
                     >
-                      Send mail
+                      Send a message
                     </button>
                   </form>
                 </div>
