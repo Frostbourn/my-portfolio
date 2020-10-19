@@ -40,7 +40,7 @@ const Footer = () => (
               <li>
                 <a
                   className="icon-transition"
-                  href="https://www.facebook.com/skowronski.jakub"
+                  href="https://www.m.me/skowronski.jakub"
                   target="_blank"
                   rel="noreferrer"
                 >
