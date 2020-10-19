@@ -45,7 +45,7 @@ body.dark {
     --background: #121212;
     --textColor: #cacaca;
     --headingColor: #FFFFFF;
-    --buttonColor: #7d69e7;
+    --buttonColor: #B98FFF;
     --hoverColor: #B98FFF;
     --wavesColor: #1f1f1f;
     --cardColor: #1f1f1f;
@@ -483,7 +483,7 @@ header {
 
 .display-1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
+    font-size: 2.25rem;
 
     >.mbr-iconfont {
         font-size: 6.4rem;
@@ -511,7 +511,7 @@ header {
 
 .display-5 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 400;
 
     >.mbr-iconfont {
@@ -2554,7 +2554,7 @@ pre {
         border-radius: 6px;
 
         .btn {
-            width: 150px;
+            width: 200px;
         }
 
         textarea {
@@ -2562,9 +2562,6 @@ pre {
             resize: none !important;
         }
     }
-
-
-    .container {}
 
     .contact-shapes {
         bottom: 0;
@@ -2602,7 +2599,7 @@ pre {
     }
 
     .media-container-row {
-        background: #fff;
+        background-color: var(--cardColor);
         padding: 4vw;
         border-radius: 30px;
         box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
@@ -2621,8 +2618,27 @@ pre {
         border-top: 1px solid rgba(255, 255, 255, 0.5);
     }
 
+    .mbr-section-title {
+        color: var(--headingColor)
+    }
+
     .mbr-text {
-        color: #767676;
+        color: var(--textColor);
+    }
+
+    .pulsate {
+        background-color: var(--buttonColor);
+        display: inline-block;
+        vertical-align: middle;
+        margin-bottom: 3px;
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-clip: padding-box;
+        box-shadow: 0 0 0 rgba(0, 98, 255, .4);
+        -webkit-animation: pulsate 2s infinite;
+        animation: pulsate 2s infinite;
     }
 
     .form-block {
@@ -2644,6 +2660,7 @@ pre {
             position: relative;
             z-index: 1;
         }
+
     }
 
     a {
@@ -3283,6 +3300,34 @@ footer {
         .form-block {
             padding: 1rem;
         }
+    }
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 98, 255, .4)
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 98, 255, 0)
+    }
+
+    to {
+        box-shadow: 0 0 0 0 rgba(0, 98, 255, 0)
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 98, 255, .4)
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 98, 255, 0)
+    }
+
+    to {
+        box-shadow: 0 0 0 0 rgba(0, 98, 255, 0)
     }
 }
 
