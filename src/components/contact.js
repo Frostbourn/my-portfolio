@@ -71,9 +71,10 @@ const ContactForm = () => {
                       </strong>
                     </div>
                     <p className="mbr-section-subtitle mbr-fonts-style mb-4 display-7">
-                      You can find me in a few places on the web, but if if you
-                      prefer to do it the "old way" then just write to me
-                      message.
+                      Have an exciting project where you need some help? Send me
+                      over a message. <br />You can find me in a few places on the
+                      web, but if if you prefer to do it the "old way" then just
+                      write to me message.
                     </p>
                   </div>
                 </div>
