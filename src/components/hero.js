@@ -53,8 +53,8 @@ const Hero = () => {
             <Row className="align-items-center content-row row hero-margin">
               <Col lg={12} className="hero-text">
                 <Fade delay="500" direction="top" triggerOnce>
-                  <p className="mbr-text mbr-fonts-style display-6">
-                    Hi there, I'm Jakub{" "}
+                  <p className="hero-text--main mbr-text mbr-fonts-style display-5">
+                    Hi there <br /> I'm Jakub{" "}
                     {/* <Emoji
                       class="hero-emoji-animation"
                       symbol="👋"
@@ -64,7 +64,7 @@ const Hero = () => {
                   </p>
                 </Fade>
                 <Fade delay="700" direction="top" triggerOnce>
-                  <h1 className="mbr-section-title pb-3 mbr-fonts-style display-1">
+                  <h1 className="mbr-section-title mbr-fonts-style display-1">
                     <strong>
                       <Typical
                         className="hero-cursor"
@@ -85,12 +85,12 @@ const Hero = () => {
                   </h1>
                 </Fade>
 
-                <Fade delay="900" direction="top" triggerOnce>
+                {/* <Fade delay="900" direction="top" triggerOnce>
                   <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
                     I code simple websites and I love it!{" "}
                     <Emoji symbol="🚀" label="rocket" />
                   </p>
-                </Fade>
+                </Fade> */}
                 <div className="mbr-section-btn">
                   <Bounce delay="1500" triggerOnce>
                     <Bounce cascade delay="1800" damping="1" triggerOnce>
