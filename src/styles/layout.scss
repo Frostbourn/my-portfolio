@@ -384,7 +384,7 @@ header {
         bottom: 20px;
         left: 25px;
         right: 25px;
-        border-bottom: 3px dotted var(--buttonColor);
+        border-bottom: 4px dotted var(--buttonColor);
     }
 
     &:before {
@@ -1784,7 +1784,7 @@ pre {
     justify-content: center;
     position: relative;
     height: 100vh;
-    padding-top: 20vh;
+    padding-top: 25vh;
     background-color: var(--background);
 
     .hero-container {
@@ -1903,7 +1903,16 @@ pre {
     }
 
     .hero-text {
-        margin-top: 8vh;
+        .hero-text--main {
+            -webkit-animation-delay: 500ms;
+            animation-delay: 500ms;
+            -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+            text-align: right;
+            font-size: 13vh;
+            font-weight: 600;
+            line-height: 1;
+        }
     }
 
     .media-container-column {
@@ -1914,25 +1923,27 @@ pre {
 
     .photo-split {
         img {
-            border: 3px dotted var(--buttonColor);
+            border: 4px dotted var(--buttonColor);
             border-radius: 50%;
         }
     }
 
     H1 {
-        text-align: center;
+        text-align: right;
         color: var(--headingColor);
-        font-weight: normal;
+        font-weight: 600;
+        text-align: right;
+        font-size: 8vh;
     }
 
     .mbr-text {
-        text-align: center;
-        color: var(--textColor);
+        text-align: right;
+        color: var(--headingColor);
     }
 
     .mbr-section-btn {
-        text-align: center;
-        color: var(--textColor);
+        text-align: right;
+        color: var(--headingColor);
     }
 
     .scroll {
@@ -2083,11 +2094,10 @@ pre {
     .photo-split {
 
         img {
-            margin: 30px 0 0 30px;
             max-width: 450px !important;
-            max-height: 500px !important;
-            border-radius: 18px !important;
-            box-shadow: 30px 30px 80px -20px rgba(0, 0, 0, 0.5) !important;
+            border-radius: 45px !important;
+            padding: 15px;
+            border: 4px dotted #ffffff;
         }
     }
 
@@ -2297,6 +2307,7 @@ pre {
         display: flex;
         justify-content: space-between;
         font-size: 13px;
+        white-space: nowrap;
 
         p {
             margin: 10px 0;
@@ -2438,7 +2449,7 @@ pre {
 
         .line {
             width: 4rem;
-            border-bottom: 3px dotted var(--buttonColor);
+            border-bottom: 4px dotted var(--buttonColor);
         }
     }
 
@@ -2476,7 +2487,7 @@ pre {
 .social-links {
     position: fixed;
     left: initial;
-    right: 3%;
+    left: 10%;
     bottom: initial;
     top: 66%;
     transform: none;
@@ -2500,7 +2511,7 @@ pre {
         width: 2px;
         height: 300px;
         margin: 11px;
-        border-left: 3px dotted var(--textColor);
+        border-left: 4px dotted var(--textColor);
     }
 
     .social-media {
@@ -2912,6 +2923,7 @@ footer {
         .photo-split {
             img {
                 margin: unset;
+                box-shadow: unset;
             }
         }
 
@@ -2923,14 +2935,6 @@ footer {
                 align-items: center;
             }
         }
-    }
-
-    H1 {
-        text-align: center !important;
-    }
-
-    .mbr-text {
-        text-align: center !important;
     }
 
     .contact {
@@ -2954,10 +2958,6 @@ footer {
         .google-map {
             padding-bottom: 2rem;
         }
-    }
-
-    .mbr-section-btn {
-        text-align: center !important;
     }
 
     .waves {
