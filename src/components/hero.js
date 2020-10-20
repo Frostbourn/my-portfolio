@@ -50,75 +50,79 @@ const Hero = () => {
             </div>
           </Fade>
           <Container fluid>
-            <Row className="align-items-center content-row row hero-margin">
-              <Col lg={12} className="hero-text">
-                <Fade delay="500" direction="top" triggerOnce>
-                  <p className="hero-text--main mbr-text mbr-fonts-style display-5">
-                    Hi there <br /> I'm Jakub{" "}
-                    {/* <Emoji
-                      class="hero-emoji-animation"
-                      symbol="👋"
-                      label="hello"
-                    />
-                    <br /> */}
-                  </p>
-                </Fade>
-                <Fade delay="700" direction="top" triggerOnce>
-                  <h1 className="mbr-section-title mbr-fonts-style display-1">
-                    <strong>
-                      <Typical
-                        className="hero-cursor"
-                        steps={[
-                          "Frontend Developer",
-                          1500,
-                          "Programmer",
-                          1500,
-                          "Wordpress Developer",
-                          1500,
-                          "Joomla! Developer",
-                          1500,
-                        ]}
-                        loop={Infinity}
-                        wrapper="p"
-                      />
-                    </strong>
-                  </h1>
-                </Fade>
+            <Col lg={12} className="hero-text">
+              <Fade delay="500" direction="right" triggerOnce>
+                <p className="hero-text--main mbr-text mbr-fonts-style display-5">
+                  {/* <Emoji
+                    class="hero-emoji-animation"
+                    symbol="👋"
+                    label="hello"
+                  /> */}
+                  Hi there
+                </p>
+              </Fade>
 
-                {/* <Fade delay="900" direction="top" triggerOnce>
+              <Fade delay="900" direction="right" triggerOnce>
+                <p className="hero-text--main mbr-text mbr-fonts-style display-5">
+                  I'm Jakub
+                </p>
+              </Fade>
+              <Fade delay="1300" direction="right" triggerOnce>
+                <h1 className="mbr-section-title mbr-fonts-style display-1">
+                  <strong>
+                    <Typical
+                      className="hero-cursor"
+                      steps={[
+                        "Frontend Developer",
+                        1500,
+                        "Programmer",
+                        1500,
+                        "Wordpress Developer",
+                        1500,
+                        "Joomla! Developer",
+                        1500,
+                      ]}
+                      loop={Infinity}
+                      wrapper="p"
+                    />
+                  </strong>
+                </h1>
+              </Fade>
+
+              {/* <Fade delay="900" direction="top" triggerOnce>
                   <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
                     I code simple websites and I love it!{" "}
                     <Emoji symbol="🚀" label="rocket" />
                   </p>
                 </Fade> */}
-                <div className="mbr-section-btn">
-                  <Bounce delay="1500" triggerOnce>
-                    <Bounce cascade delay="1800" damping="1" triggerOnce>
-                      <a
-                        className="btn btn-md btn-bgr btn-success display-4"
-                        href="#about"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Hire me
-                      </a>
-                      {/* <a
+              <div className="mbr-section-btn">
+                <Fade delay="1500" direction="right" triggerOnce>
+                  <Fade cascade delay="1800" damping="1" triggerOnce>
+                    <a
+                      className="btn btn-md btn-bgr btn-success display-4"
+                      href="#about"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Hire me
+                    </a>
+                    {/* <a
                           className="btn btn-md btn-bgr btn-warning display-4"
                           href="#contact"
                         >
                           Contact me
                         </a> */}
-                    </Bounce>
-                  </Bounce>
-                </div>
-              </Col>
-              {/* <Col lg={6} className="hero-svg">
+                  </Fade>
+                </Fade>
+              </div>
+            </Col>
+            {/* <Col lg={6} className="hero-svg">
                   <Fade delay="1000" triggerOnce>
                     <Image />
                   </Fade>
                 </Col> */}
 
-              {/* <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
+            {/* <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
                   <Fade direction="right" triggerOnce>
                     <Img
                       fluid={data.aboutPhoto.childImageSharp.fluid}
@@ -128,7 +132,6 @@ const Hero = () => {
                     />
                   </Fade>
                 </Col> */}
-            </Row>
           </Container>
           {/* <Col className="hero-container">
             <Fade delay="1000" triggerOnce>
