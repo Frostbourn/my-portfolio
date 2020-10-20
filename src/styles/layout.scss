@@ -3186,8 +3186,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #2c528b;
-        -webkit-animation: animationTwo 30s infinite linear;
-        animation: animationTwo 30s infinite linear;
+        -webkit-animation: animationFour 30s infinite linear;
+        animation: animationFour 30s infinite linear;
     }
 
     .circle4 {
@@ -3199,8 +3199,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #ff3a75;
-        -webkit-animation: animationOne 23s infinite linear;
-        animation: animationOne 23s infinite linear;
+        -webkit-animation: animationFive 23s infinite linear;
+        animation: animationFive 23s infinite linear;
     }
 
     .circle5 {
@@ -3225,8 +3225,8 @@ footer {
         position: absolute;
         border-radius: 50%;
         background-color: #9b6aeb;
-        -webkit-animation: animationTwo 43s infinite linear;
-        animation: animationTwo 43s infinite linear;
+        -webkit-animation: animationThree 43s infinite linear;
+        animation: animationThree 43s infinite linear;
     }
 }
 
@@ -3237,12 +3237,6 @@ footer {
             bottom: -100px;
         }
     }
-
-    // .about {
-    //     .wrap-block {
-    //         width: 45%;
-    //     }
-    // }
 
     .portfolio {
         .card {
