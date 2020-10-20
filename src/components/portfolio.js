@@ -334,7 +334,7 @@ const Portfolio = () => {
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
-                      <p className="mbr-text mbr-fonts-style align-center display-7">
+                      <p className="align-center repo-description">
                         Insurance broker website
                       </p>
                     </div>
