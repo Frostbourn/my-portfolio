@@ -59,7 +59,7 @@ const ContactForm = () => {
     <>
       <section id="contact" className="contact features8">
         <div className="contact-shapes"></div>
-        <Fade delay="300" triggerOnce>
+        <Fade triggerOnce>
           <Container>
             <div className="media-container-row">
               <div className="col-sm-10 col-md-8 col-lg-5 block-content">
@@ -72,9 +72,10 @@ const ContactForm = () => {
                     </div>
                     <p className="mbr-section-subtitle mbr-fonts-style mb-4 display-7">
                       Have an exciting project where you need some help? Send me
-                      over a message. <br />You can find me in a few places on the
-                      web, but if if you prefer to do it the "old way" then just
-                      write to me message.
+                      over a message. <br />
+                      You can find me in a few places on the web, but if if you
+                      prefer to do it the "old way" then just write to me
+                      message.
                     </p>
                   </div>
                 </div>
