@@ -14,42 +14,42 @@ const Portfolio = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      portfolioOne: file(relativePath: { eq: "postplaner.png" }) {
+      portfolioOne: file(relativePath: { eq: "postplaner.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioTwo: file(relativePath: { eq: "mltrans.png" }) {
+      portfolioTwo: file(relativePath: { eq: "mltrans.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioThree: file(relativePath: { eq: "lakini.png" }) {
+      portfolioThree: file(relativePath: { eq: "lakini.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioFour: file(relativePath: { eq: "rs-car.png" }) {
+      portfolioFour: file(relativePath: { eq: "rs-car.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioFive: file(relativePath: { eq: "hfb-broker.png" }) {
+      portfolioFive: file(relativePath: { eq: "hfb-broker.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioSix: file(relativePath: { eq: "jsns-eu.jpg" }) {
+      portfolioSix: file(relativePath: { eq: "jsns-eu.webp" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -191,12 +191,6 @@ const Portfolio = () => {
                 </Fade>
               </div>
             ))}
-
-            {/* <Col md={12}>
-              <div className="mbr-section-title mbr-fonts-style align-left display-4 py-3">
-                <span class="d-inline-block rounded-pill shadow-sm fw-5 px-4 py-2 mb-3"></span>
-              </div>
-            </Col> */}
             <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
