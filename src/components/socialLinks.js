@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import { Slide } from "react-awesome-reveal"
-import Emoji from "./Emoji"
-import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa"
+import { FaFacebookF, FaGithub } from "react-icons/fa"
 import "balloon-css"
 
 const SocialLinks = () => {
