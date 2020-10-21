@@ -69,8 +69,8 @@ const Header = props => {
                     &nbsp;Let's talk!
                   </a>
                 </li>
-                <DarkLightSwitch />
               </ul>
+              <DarkLightSwitch />
             </div>
           </Container>
         </nav>
