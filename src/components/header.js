@@ -24,56 +24,57 @@ const Header = props => {
 
   return (
     <Bounce direction="bottom" triggerOnce>
-      <header data-scroll-header>
-        <nav
-          className={
-            `${state ? "scrollBox " : ""}` +
-            "shadowBox px-md-4 px-xs-1 navbar navbar-expand-md navbar-light fixed-top navbar navbar-expand-md navbar-light fixed-top"
-          }
-        >
-          <Container>
-            <a class="navbar-brand" href="/#top">
-              <h3 className="logo">
-                Jakub<span>Skowronski.</span>
-              </h3>
-            </a>
-            <button
-              className="navbar-toggler collapsed"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarResponsive"
-              aria-controls="navbarResponsive"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="icon-bar top-bar"></span>
-              <span className="icon-bar middle-bar"></span>
-              <span className="icon-bar bottom-bar"></span>
-              <span className="sr-only">Toggle navigation</span>
-            </button>
-            <div className="navbar-collapse collapse" id="navbarResponsive">
-              <ul class="nav navbar-nav">
-                <li className="hover nav-item">
-                  <a className="nav-link" href="#about">
-                    About
-                  </a>
-                </li>
-                <li className="hover nav-item">
-                  <a className="nav-link" href="#portfolio">
-                    Work
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="btn-success-outline nav-link" href="#contact">
-                    <FaEnvelope />
-                    &nbsp;Let's talk!
-                  </a>
-                </li>
-              </ul>
-              <DarkLightSwitch />
-            </div>
-          </Container>
-        </nav>
+      <header className={`${state ? "scrollBox" : ""}`} data-scroll-header>
+        <div className="backdrop">
+          <nav
+            className={
+              "px-md-4 px-xs-1 navbar navbar-expand-md navbar-light fixed-top navbar navbar-expand-md navbar-light fixed-top"
+            }
+          >
+            <Container>
+              <a class="navbar-brand" href="/#top">
+                <h3 className="logo">
+                  Jakub<span>Skowronski.</span>
+                </h3>
+              </a>
+              <button
+                className="navbar-toggler collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span className="icon-bar top-bar"></span>
+                <span className="icon-bar middle-bar"></span>
+                <span className="icon-bar bottom-bar"></span>
+                <span className="sr-only">Toggle navigation</span>
+              </button>
+              <div className="navbar-collapse collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav">
+                  <li className="hover nav-item">
+                    <a className="nav-link" href="#about">
+                      About
+                    </a>
+                  </li>
+                  <li className="hover nav-item">
+                    <a className="nav-link" href="#portfolio">
+                      Work
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="btn-success-outline nav-link" href="#contact">
+                      <FaEnvelope />
+                      &nbsp;Let's talk!
+                    </a>
+                  </li>
+                </ul>
+                <DarkLightSwitch />
+              </div>
+            </Container>
+          </nav>
+        </div>
       </header>
     </Bounce>
   )
