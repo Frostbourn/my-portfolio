@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import Emoji from "./Emoji"
 import { Fade } from "react-awesome-reveal"
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaFacebookF, FaGithub } from "react-icons/fa"
 
 const Footer = () => (
   <footer>
@@ -61,18 +61,6 @@ const Footer = () => (
                   </span>
                 </a>
               </li>
-              {/* <li>
-                <a
-                  className="icon-transition"
-                  href="https://www.linkedin.com/in/jakubskowronki"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="mbr-iconfont">
-                    <FaLinkedin />
-                  </span>
-                </a>
-              </li> */}
             </ul>
           </Col>
         </Row>
