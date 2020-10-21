@@ -5,7 +5,9 @@ const DarkLightSwitch = () => (
   <ThemeToggler>
     {({ theme, toggleTheme }) => (
       <div className="toggleWrapper">
-        <label for="dn"></label>
+        <label className="theme-toggler-label" for="dn">
+          Dark theme toggler
+        </label>
         <input
           type="checkbox"
           className="dn"
