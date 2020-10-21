@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react"
 
-import { Container, Row, Col } from "react-bootstrap"
-import { Bounce, Fade, Spin } from "react-awesome-reveal"
+import { Container, Col } from "react-bootstrap"
+import { Fade } from "react-awesome-reveal"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "../images/svgs/hero-image-coding.svg"
 import Emoji from "./Emoji"
 import Typical from "react-typical"
 
@@ -74,13 +73,13 @@ const Hero = () => {
                       className="hero-cursor"
                       steps={[
                         "Frontend Developer",
-                        1500,
+                        2500,
                         "Programmer",
-                        1500,
+                        2500,
                         "Wordpress Developer",
-                        1500,
+                        2500,
                         "Joomla! Developer",
-                        1500,
+                        3000,
                       ]}
                       loop={Infinity}
                       wrapper="p"
@@ -89,12 +88,6 @@ const Hero = () => {
                 </h1>
               </Fade>
 
-              {/* <Fade delay="900" direction="top" triggerOnce>
-                  <p className="mbr-text pb-3 pl-2 mbr-fonts-style display-5">
-                    I code simple websites and I love it!{" "}
-                    <Emoji symbol="🚀" label="rocket" />
-                  </p>
-                </Fade> */}
               <div className="mbr-section-btn">
                 <Fade delay="1500" direction="right" triggerOnce>
                   <Fade cascade delay="1800" damping="1" triggerOnce>
