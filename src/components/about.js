@@ -9,7 +9,7 @@ import Emoji from "./Emoji"
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      aboutPhoto: file(relativePath: { eq: "about-photo-square.jpg" }) {
+      aboutPhoto: file(relativePath: { eq: "about-photo-square.webp" }) {
         childImageSharp {
           fluid(maxWidth: 600, quality: 100) {
             ...GatsbyImageSharpFluid
