@@ -191,7 +191,7 @@ const Portfolio = () => {
                 </Fade>
               </div>
             ))}
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -220,7 +220,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -247,7 +247,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            {/* <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            {/* <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -274,7 +274,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div> 
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -305,7 +305,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>*/}
-            <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -336,7 +336,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            {/* <div className="card py-3 col-sm-12 col-md-6 col-lg-4">
+            {/* <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
