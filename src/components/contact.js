@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import axios from "axios"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Container, Button, Alert } from "react-bootstrap"
+import { Container, Alert } from "react-bootstrap"
 import { FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
 import Emoji from "./Emoji"
