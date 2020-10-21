@@ -20,7 +20,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: var(--textColor);
     background-color: var(--background);
-    --headerColor: hsla(0, 0%, 100%, .9);
+    --headerBackground: hsla(0, 0%, 100%, .9);
     --anchorLink: #24292e;
     --background: #FFFFFF;
     --textColor: #24292e;
@@ -42,7 +42,7 @@ body.dark {
     background-color: var(--background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    --headerColor: hsl(0 0% 20% / 0.85);
+    --headerBackground: hsl(0 0% 20% / 0.85);
     --anchorLink: #e3b23c;
     --background: #121212;
     --textColor: #cacaca;
@@ -76,14 +76,25 @@ button,
     }
 }
 
+.scrollBox {
+    background-color: var(--headerBackground);
+    box-shadow: 0px 0px 20px 0px var(--boxShadow);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    backdrop-filter: saturate(180%) blur(10px);
+    z-index: 50;
+}
+
+header:not(.scrollBox) {
+    height: 90px;
+}
+
 header {
     display: flex;
     align-items: center;
     position: fixed;
     width: 100%;
     height: 70px;
-    -webkit-backdrop-filter: saturate(180%) blur(10px);
-    backdrop-filter: saturate(180%) blur(10px);
+    transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
     z-index: 9999;
 
     a {
@@ -106,9 +117,7 @@ header {
 
     nav {
         width: 100vw;
-        height: 90px;
-        padding: 0.7rem !important;
-        transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
+        height: 70px;
 
         .navbar-brand {
             margin-right: .5rem;
@@ -364,13 +373,6 @@ header {
             border-color: var(--buttonColor);
             box-shadow: 0 8px 25px var(--boxShadow) !important;
         }
-    }
-
-    .scrollBox {
-        height: 70px;
-        background-color: var(--headerColor);
-        box-shadow: 0px 0px 20px 0px var(--boxShadow);
-        z-index: 50;
     }
 }
 
@@ -2099,9 +2101,9 @@ pre {
 
         img {
             max-width: 450px !important;
-            border-radius: 45px !important;
-            padding: 15px;
-            border: 4px dotted #ffffff;
+            border-radius: 15px !important;
+            // padding: 15px;
+            // border: 4px dotted #ffffff;
         }
     }
 
@@ -2205,7 +2207,7 @@ pre {
         position: absolute;
         right: 0;
         background-image: url(../images/ornament-dotted-blue.png);
-        z-index: -1;
+        z-index: 0;
         -webkit-filter: var(--svgFilter);
         filter: var(--svgFilter)
     }
@@ -2387,7 +2389,7 @@ pre {
         overflow: hidden;
         position: relative;
         box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.12);
-        border-radius: 1.5rem;
+        border-radius: 10px;
         transition: transform 0.3s ease 0s;
 
         &:hover {
@@ -2537,8 +2539,8 @@ pre {
 }
 
 .contact {
-    padding-top: 140px;
-    padding-bottom: 140px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     position: relative;
 
     h2 {
@@ -2593,7 +2595,7 @@ pre {
             height: 100%;
             background-repeat: no-repeat;
             position: absolute;
-            background-position-x: -11vw;
+            background-position-x: -22vw;
             background-image: url(../images/background-round.png);
             -webkit-filter: var(--svgFilter);
             filter: var(--svgFilter)
@@ -2606,7 +2608,7 @@ pre {
             width: 500px;
             background-repeat: no-repeat;
             position: absolute;
-            background-position-x: 10vw;
+            background-position-x: 13vw;
             background-image: url(../images/background-square.png);
             -webkit-filter: var(--svgFilter);
             filter: var(--svgFilter)
@@ -2614,10 +2616,10 @@ pre {
     }
 
     .media-container-row {
-        background-color: var(--cardColor);
+        // background-color: var(--cardColor);
         padding: 4vw;
-        border-radius: 30px;
-        box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
+        // border-radius: 30px;
+        // box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
     }
 
     .mbr-iconfont {
@@ -2906,6 +2908,18 @@ footer {
         justify-content: center;
         height: auto !important;
 
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            bottom: -10px;
+            left: -10px;
+            right: -10px;
+            background: var(--navBackground);
+            display: block;
+            z-index: -1;
+        }
+
         .toggleWrapper {
             padding: unset !important;
         }
@@ -2973,6 +2987,12 @@ footer {
 
         .google-map {
             padding-bottom: 2rem;
+        }
+
+        .media-container-row {
+            background-color: var(--cardColor);
+            border-radius: 30px;
+            box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
         }
     }
 
@@ -3256,7 +3276,7 @@ footer {
 
     .portfolio {
         .card {
-            flex: 1 1 25%;
+            flex: 1 1 30%;
         }
     }
 
