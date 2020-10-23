@@ -2311,6 +2311,7 @@ pre {
 
     .repo-stats {
         display: flex;
+        padding: 0 20px;
         justify-content: space-between;
         font-size: 13px;
         white-space: nowrap;
@@ -2365,6 +2366,8 @@ pre {
     }
 
     .repo-description {
+        margin: unset;
+        padding: 20px;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 2;
