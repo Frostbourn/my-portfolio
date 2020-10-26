@@ -25,7 +25,7 @@ const About = () => {
         <div className="about-shapes"></div>
         <Container fluid>
           <Row className="container align-items-center content-row m-auto px-lg-5">
-            <Col lg={6} md={6} sm={8} xs={8} className="photo-split">
+            <Col lg={6} md={6} sm={10} xs={10} className="photo-split">
               <Fade direction="left" triggerOnce>
                 <Img
                   fluid={data.aboutPhoto.childImageSharp.fluid}
@@ -35,7 +35,7 @@ const About = () => {
                 />
               </Fade>
             </Col>
-            <Col lg={5} md={5} sm={10} xs={10} className="wrap-block">
+            <Col lg={6} md={6} sm={10} xs={10} className="wrap-block">
               <Fade direction="right" triggerOnce>
                 <div className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
