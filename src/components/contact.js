@@ -80,7 +80,7 @@ const ContactForm = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-10 col-md-8 col-lg-6 d-flex justify-content-center">
+              <div className="col-sm-10 col-md-8 col-lg-7 d-flex justify-content-center">
                 <div className="col-md-12">
                   <form onSubmit={handleOnSubmit} className="row gy-3 d-flex">
                     <p className="mbr-section-subtitle mbr-fonts-style m-2 display-7">
