@@ -41,7 +41,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    `gatsby-plugin-preact`,
     {
       resolve: "gatsby-source-github",
       options: {
