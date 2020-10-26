@@ -32,7 +32,7 @@ const Header = props => {
             }
           >
             <Container>
-              <a class="navbar-brand" href="/#top">
+              <a className="navbar-brand" href="/#top">
                 <h3 className="logo">
                   Jakub<span>Skowronski.</span>
                 </h3>
