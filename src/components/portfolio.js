@@ -81,7 +81,7 @@ const Portfolio = () => {
     <section id="portfolio" className="portfolio features8">
       <Fade delay="300" triggerOnce>
         <Container>
-          <Row className="blog-block justify-content-around">
+          <Row className="blog-block">
             <Col md={12}>
               <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
                 <strong>
@@ -359,7 +359,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div> */}
-            <div
+            {/* <div
               class="rounded-lg relative overflow-hidden cursor-pointer border project-block p-8 text-left load-hidden v-scroll-reveal"
               style="background-image: linear-gradient(147deg, rgb(251, 219, 54) 0%, rgb(252, 213, 12) 100%); visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"
               data-sr-id="27"
@@ -383,7 +383,7 @@ const Portfolio = () => {
                   Matching platform for students &amp; companies
                 </h3>
               </div>
-            </div>
+            </div> */}
           </Row>
           <Row>
             <p class="display-2 py-5 align-center">
