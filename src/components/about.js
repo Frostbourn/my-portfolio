@@ -30,7 +30,7 @@ const About = () => {
                 <Img
                   fluid={data.aboutPhoto.childImageSharp.fluid}
                   style={{
-                    margin: "0 auto", // Used to center the image
+                    margin: "0 auto",
                   }}
                 />
               </Fade>
