@@ -5,7 +5,6 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
     "balloon-css": "^1.2.0",
     "bootstrap": "4.5.3",
     "gatsby": "^2.24.66",
@@ -15,7 +14,6 @@
     "gatsby-plugin-manifest": "^2.4.27",
     "gatsby-plugin-nprogress": "^2.3.9",
     "gatsby-plugin-offline": "^3.2.26",
-    "gatsby-plugin-preact": "^4.0.12",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-react-svg": "^2.0.0-beta1",
     "gatsby-plugin-sass": "^2.3.12",
