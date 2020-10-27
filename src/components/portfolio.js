@@ -360,23 +360,23 @@ const Portfolio = () => {
               </Fade>
             </div> */}
             {/* <div
-              class="rounded-lg relative overflow-hidden cursor-pointer border project-block p-8 text-left load-hidden v-scroll-reveal"
+              className="rounded-lg relative overflow-hidden cursor-pointer border project-block p-8 text-left load-hidden v-scroll-reveal"
               style="background-image: linear-gradient(147deg, rgb(251, 219, 54) 0%, rgb(252, 213, 12) 100%); visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"
               data-sr-id="27"
             >
               <div
-                class="project-block__titles absolute z-20 left-0 py-8 pl-8 pr-4 w-full"
+                className="project-block__titles absolute z-20 left-0 py-8 pl-8 pr-4 w-full"
                 style="top:0;bottom:auto;"
               >
                 <h4
-                  class="uppercase text-sm md:text-base font-bold tracking-wider mb-2 opacity-75 load-hidden v-scroll-reveal"
+                  className="uppercase text-sm md:text-base font-bold tracking-wider mb-2 opacity-75 load-hidden v-scroll-reveal"
                   style="color:#AA9009; visibility: visible; opacity: 0.75; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"
                   data-sr-id="25"
                 >
                   University of Amsterdam
                 </h4>{" "}
                 <h3
-                  class="font-black text-3xl md:text-4xl leading-tight load-hidden v-scroll-reveal"
+                  className="font-black text-3xl md:text-4xl leading-tight load-hidden v-scroll-reveal"
                   style="color:#222222; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"
                   data-sr-id="26"
                 >
@@ -385,8 +385,8 @@ const Portfolio = () => {
               </div>
             </div> */}
           </Row>
-          <Row>
-            <p class="display-2 py-5 align-center">
+          <Row className="align-center py-5">
+            <p className="display-2">
               <strong>Want to see more? Leave me a message!</strong>
             </p>
           </Row>
