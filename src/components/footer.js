@@ -12,7 +12,7 @@ const Footer = () => (
         <Row className="media-container-row">
           <Col lg={4}>
             <nav>
-              <ul class="navbar-nav">
+              <ul className="navbar-nav">
                 <li className="hover">
                   <a href="#about">About</a>
                 </li>
