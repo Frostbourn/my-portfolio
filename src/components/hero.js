@@ -53,7 +53,7 @@ const Hero = () => {
               <Fade delay="500" direction="right" triggerOnce>
                 <p className="hero-text--main mbr-text mbr-fonts-style display-5">
                   {/* <Emoji
-                    class="hero-emoji-animation"
+                    className="hero-emoji-animation"
                     symbol="👋"
                     label="hello"
                   /> */}
