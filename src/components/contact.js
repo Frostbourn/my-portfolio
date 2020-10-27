@@ -95,7 +95,7 @@ const ContactForm = () => {
                       </Alert>
                     )}
                     <div className="form-group my-0">
-                      <label for="emailAddress"></label>
+                      <label htmlFor="emailAddress"></label>
                       <input
                         type="email"
                         name="email"
@@ -107,7 +107,7 @@ const ContactForm = () => {
                       />
                     </div>
                     <div className="form-group my-0">
-                      <label for="contactName"></label>
+                      <label htmlFor="contactName"></label>
                       <input
                         type="text"
                         name="name"
@@ -118,7 +118,7 @@ const ContactForm = () => {
                       />
                     </div>
                     <div className="form-group my-0">
-                      <label for="contactMessage"></label>
+                      <label htmlFor="contactMessage"></label>
                       <textarea
                         name="message"
                         className="form-control"
