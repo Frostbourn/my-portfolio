@@ -93,6 +93,161 @@ const Portfolio = () => {
               </h3>
             </Col>
             <Col md={12}></Col>
+            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+              <div
+                className="repo-card-div"
+                onClick={() =>
+                  openRepoinNewTab(
+                    "https://github.com/Frostbourn/instagram-widget"
+                  )
+                }
+                onKeyDown={() =>
+                  openRepoinNewTab(
+                    "https://github.com/Frostbourn/instagram-widget"
+                  )
+                }
+                role="presentation"
+              >
+                <span className="badge badge-success">Open Source</span>
+                <div className="repo-name-div">
+                  <svg
+                    aria-hidden="true"
+                    className="repo-svg"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 12 16"
+                    width="14"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
+                    ></path>
+                  </svg>
+                  <p className="repo-name">instagram-widget</p>
+                </div>
+                <p className="repo-description">
+                  Simple, lightweight Instagram Widget without API
+                </p>
+                <div className="repo-stats">
+                  <div className="repo-left-stat">
+                    <span>
+                      <div
+                        className="language-color"
+                        style={{ backgroundColor: "#F1E05A" }}
+                      ></div>
+                      <p>JavaScript</p>
+                    </span>
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        className="repo-star-svg"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 10 16"
+                        width="12"
+                        fill="rgb(106, 115, 125)"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
+                        ></path>
+                      </svg>
+                      <p>3</p>
+                    </span>
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        className="repo-star-svg"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 14 16"
+                        width="14"
+                        fill="rgb(106, 115, 125)"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
+                        ></path>
+                      </svg>
+                      <p>3</p>
+                    </span>
+                  </div>
+                  <div className="repo-right-stat">
+                    <p>68 KB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+              <div
+                className="repo-card-div"
+                onClick={() =>
+                  openRepoinNewTab(
+                    "https://wordpress.org/plugins/responsive-facebook-and-twitter-widget"
+                  )
+                }
+                onKeyDown={() =>
+                  openRepoinNewTab(
+                    "https://wordpress.org/plugins/responsive-facebook-and-twitter-widget"
+                  )
+                }
+                role="presentation"
+              >
+                <span className="badge badge-success">Open Source</span>
+                <div className="repo-name-div">
+                  <svg
+                    aria-hidden="true"
+                    className="repo-svg"
+                    height="20"
+                    role="img"
+                    viewBox="0 0 12 16"
+                    width="14"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"
+                    ></path>
+                  </svg>
+                  <p className="repo-name">
+                    wp-responsive-facebook-and-twitter-widget
+                  </p>
+                </div>
+                <p className="repo-description">
+                  The best Wordpress Social Slider Widget
+                </p>
+                <div className="repo-stats">
+                  <div className="repo-left-stat">
+                    <span>
+                      <div
+                        className="language-color"
+                        style={{ backgroundColor: "#4f5d95" }}
+                      ></div>
+                      <p>PHP</p>
+                    </span>
+                    <span>
+                      <svg
+                        aria-hidden="true"
+                        className="repo-star-svg"
+                        height="20"
+                        role="img"
+                        viewBox="0 0 14 16"
+                        width="14"
+                        fill="rgb(106, 115, 125)"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
+                        ></path>
+                      </svg>
+                      <p>Active installations: 200+</p>
+                    </span>
+                  </div>
+                  <div className="repo-right-stat">
+                    <p>108 KB</p>
+                  </div>
+                </div>
+              </div>
+            </div>
             {data.githubViewer.pinnedItems.nodes.map((repository, i) => (
               <div
                 className="card py-3 col-sm-12 col-md-12 col-lg-12"
@@ -358,31 +513,6 @@ const Portfolio = () => {
                   </div>
                 </div>
               </Fade>
-            </div> */}
-            {/* <div
-              className="rounded-lg relative overflow-hidden cursor-pointer border project-block p-8 text-left load-hidden v-scroll-reveal"
-              style="background-image: linear-gradient(147deg, rgb(251, 219, 54) 0%, rgb(252, 213, 12) 100%); visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s, opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"
-              data-sr-id="27"
-            >
-              <div
-                className="project-block__titles absolute z-20 left-0 py-8 pl-8 pr-4 w-full"
-                style="top:0;bottom:auto;"
-              >
-                <h4
-                  className="uppercase text-sm md:text-base font-bold tracking-wider mb-2 opacity-75 load-hidden v-scroll-reveal"
-                  style="color:#AA9009; visibility: visible; opacity: 0.75; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"
-                  data-sr-id="25"
-                >
-                  University of Amsterdam
-                </h4>{" "}
-                <h3
-                  className="font-black text-3xl md:text-4xl leading-tight load-hidden v-scroll-reveal"
-                  style="color:#222222; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.8s cubic-bezier(0.5, 0, 0, 1) 0s;"
-                  data-sr-id="26"
-                >
-                  Matching platform for students &amp; companies
-                </h3>
-              </div>
             </div> */}
           </Row>
           <Row className="align-center py-5">
