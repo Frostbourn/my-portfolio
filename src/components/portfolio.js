@@ -62,19 +62,18 @@ const Portfolio = () => {
     <section id="portfolio" className="portfolio features8">
       <Fade delay="300" triggerOnce>
         <Container>
-          <Row className="blog-block">
-            <Col md={12}>
-              <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
-                <strong>
-                  LATEST WORK <Emoji symbol="🏆" label="contact" />
-                </strong>
-              </h2>
-              <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
-                Here are some of my recent works.
-              </h3>
-            </Col>
-            <Col md={12}></Col>
-            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+          <Col md={12}>
+            <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
+              <strong>
+                LATEST WORK <Emoji symbol="🏆" label="contact" />
+              </strong>
+            </h2>
+            <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
+              Here are some of my recent works.
+            </h3>
+          </Col>
+          <div className="projects-block card-columns">
+            <div className="card mb-3">
               <div
                 className="repo-card-div"
                 onClick={() =>
@@ -160,7 +159,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            <div className="card mb-3">
               <div
                 className="repo-card-div"
                 onClick={() =>
@@ -230,7 +229,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            <div className="card mb-3">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -259,7 +258,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            <div className="card mb-3">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -286,7 +285,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            <div className="card mb-3">
               <div
                 className="repo-card-div"
                 onClick={() =>
@@ -337,23 +336,6 @@ const Portfolio = () => {
                         className="repo-star-svg"
                         height="20"
                         role="img"
-                        viewBox="0 0 10 16"
-                        width="12"
-                        fill="rgb(106, 115, 125)"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
-                        ></path>
-                      </svg>
-                      <p>40</p>
-                    </span>
-                    <span>
-                      <svg
-                        aria-hidden="true"
-                        className="repo-star-svg"
-                        height="20"
-                        role="img"
                         viewBox="0 0 14 16"
                         width="14"
                         fill="rgb(106, 115, 125)"
@@ -363,7 +345,7 @@ const Portfolio = () => {
                           d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
                         ></path>
                       </svg>
-                      <p>1</p>
+                      <p>40</p>
                     </span>
                   </div>
                   <div className="repo-right-stat">
@@ -372,7 +354,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            {/* <div className="card mb-3">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -398,8 +380,8 @@ const Portfolio = () => {
                   </div>
                 </div>
               </Fade>
-            </div> 
-            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            </div> */}
+            <div className="card mb-3">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -411,10 +393,10 @@ const Portfolio = () => {
                   }
                   role="presentation"
                 >
+                  <div className="card-img">
+                    <Img fluid={data.portfolioFour.childImageSharp.fluid} />
+                  </div>
                   <div className="repo-card-div">
-                    <div className="card-img">
-                      <Img fluid={data.portfolioFour.childImageSharp.fluid} />
-                    </div>
                     <div className="card-box">
                       <h4 className="card-title mbr-fonts-style mbr-bold align-center display-5">
                         RS CAR
@@ -429,8 +411,8 @@ const Portfolio = () => {
                   </div>
                 </div>
               </Fade>
-            </div>*/}
-            <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            </div>
+            <div className="card mb-3">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -461,7 +443,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div>
-            {/* <div className="card py-3 col-sm-12 col-md-12 col-lg-12">
+            <div className="card mb-3">
               <Fade bottom duration={1000} distance="20px" triggerOnce>
                 <div
                   className="card-wrapper"
@@ -487,8 +469,8 @@ const Portfolio = () => {
                   </div>
                 </div>
               </Fade>
-            </div> */}
-          </Row>
+            </div>
+          </div>
           <Row className="align-center py-5">
             <p className="display-2">
               <strong>Want to see more? Leave me a message!</strong>
