@@ -41,37 +41,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
-    {
-      resolve: "gatsby-source-github",
-      options: {
-        headers: {
-          Authorization: `Bearer a5908d390e2de859fa89a5eea163d952ea550ae7`,
-        },
-        queries: [
-          `{ viewer {                 
-            pinnedItems(first: 3, types: REPOSITORY){
-             nodes {
-              ... on Repository {
-                name
-                description
-                forkCount
-                stargazers {
-                  totalCount
-                }
-                url
-                id
-                diskUsage
-                primaryLanguage {
-                  name
-                  color
-                }
-            }
-           }
-          }
-        }
-        }`,
-        ],
-      },
-    },
   ],
 }
