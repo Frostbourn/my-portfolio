@@ -73,8 +73,14 @@ const Portfolio = () => {
             </h3>
           </Col>
           <div className="projects-block card-columns">
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-div"
                   onClick={() =>
@@ -160,10 +166,16 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card text-white bg-dark mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card bg-primary mb-3">
                 <div className="card-div" role="presentation">
                   <div className="card-review">
                     <blockquote>
@@ -182,10 +194,16 @@ const Portfolio = () => {
                     </p>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://postplaner.pl")}
@@ -212,10 +230,16 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-div"
                   onClick={() =>
@@ -283,10 +307,16 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://mltrans.eu")}
@@ -310,11 +340,11 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
+              </div>
+            </Fade>
 
             {/* <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              <Fade bottom delay={200} duration={1000} distance="40px" triggerOnce>
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://lakini.pl")}
@@ -340,8 +370,14 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div> */}
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-wrapper"
                   onClick={() =>
@@ -369,10 +405,16 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-wrapper"
                   onClick={() =>
@@ -400,10 +442,16 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-wrapper"
                   onClick={() => openRepoinNewTab("https://jsns.eu")}
@@ -427,12 +475,18 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card text-white bg-primary mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card bg-warning mb-3">
                 <div className="card-div" role="presentation">
-                  <div className="card-review">
+                  <div className="card-review--secondary">
                     <blockquote>
                       <q>
                         Jakub has been very helpful and did a great job
@@ -442,7 +496,7 @@ const Portfolio = () => {
                       </q>
                     </blockquote>
                   </div>
-                  <div className="card-review-author">
+                  <div className="card-review-author--secondary">
                     <p>
                       <strong>Klaudia Giza</strong>
                       <br />
@@ -450,10 +504,16 @@ const Portfolio = () => {
                     </p>
                   </div>
                 </div>
-              </Fade>
-            </div>
-            <div className="card mb-3">
-              <Fade bottom duration={1000} distance="20px" triggerOnce>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
                 <div
                   className="card-div"
                   onClick={() =>
@@ -524,8 +584,8 @@ const Portfolio = () => {
                     </div>
                   </div>
                 </div>
-              </Fade>
-            </div>
+              </div>
+            </Fade>
           </div>
           <Row className="align-center py-5">
             <p className="display-2">
