@@ -2311,9 +2311,28 @@ pre {
             }
         }
 
-        .repo-card-div {
+        .card-div {
             // box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
             padding: 2rem;
+        }
+
+        .card-review {
+            margin: 20px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+
+            blockquote {
+                text-align: center;
+            }
+        }
+
+        .card-review-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .9rem;
+            text-align: center;
         }
 
         .repo-stats {
@@ -2322,6 +2341,7 @@ pre {
             justify-content: space-between;
             font-size: 13px;
             white-space: nowrap;
+            overflow: hidden;
 
             p {
                 margin: 10px 0;
@@ -2373,12 +2393,12 @@ pre {
         }
 
         .repo-description {
-            margin: unset;
-            padding: 20px;
+            margin: 20px;
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+            white-space: pre-line;
+            word-break: break-word;
         }
 
         .card-title {
@@ -2391,8 +2411,7 @@ pre {
         }
 
         .card {
-            max-height: 415px;
-            margin: 2rem;
+            margin: 2rem 0;
             padding: 0 !important;
             background-color: var(--cardColor);
             border: none;
@@ -2566,7 +2585,7 @@ pre {
     }
 
     p {
-        color: var(--headingColor);
+        color: var(--textColor);
     }
 
     form {
