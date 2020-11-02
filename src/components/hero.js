@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react"
 
 import { Container, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
-import { useStaticQuery, graphql } from "gatsby"
-import Emoji from "./Emoji"
 import Typical from "react-typical"
 
 const Hero = () => {
@@ -22,18 +20,6 @@ const Hero = () => {
     }
   }, [state, setState])
 
-  const data = useStaticQuery(graphql`
-    query {
-      aboutPhoto: file(relativePath: { eq: "about-photo-square.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 450, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
-        }
-      }
-    }
-  `)
   return (
     <>
       <Fade triggerOnce>
