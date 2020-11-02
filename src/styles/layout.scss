@@ -21,13 +21,12 @@ body {
     color: var(--textColor);
     background-color: var(--background);
     --headerBackground: hsla(0, 0%, 100%, .9);
-    --anchorLink: #24292e;
     --background: #FFFFFF;
     --textColor: #24292e;
     --headingColor: #121212;
-    --buttonColor: #4528DC;
-    --hoverColor: #8731E8;
-    --wavesColor: #4528DC;
+    --buttonColor: #542ce2;
+    --hoverColor: #762ce2;
+    --wavesColor: #542ce2;
     --cardColor: #FFFFFF;
     --cardText: var(--textColor);
     --boxShadow: rgba(24, 24, 24, 0.27);
@@ -43,12 +42,11 @@ body.dark {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     --headerBackground: hsl(0 0% 20% / 0.85);
-    --anchorLink: #e3b23c;
     --background: #121212;
     --textColor: #cacaca;
     --headingColor: #FFFFFF;
-    --buttonColor: #B98FFF;
-    --hoverColor: #B98FFF;
+    --buttonColor: #A78CF2;
+    --hoverColor: #a272ec;
     --wavesColor: #1f1f1f;
     --cardColor: #1f1f1f;
     --cardText: var(--background);
@@ -585,20 +583,8 @@ header {
     background-color: var(--buttonColor) !important;
 }
 
-.bg-success {
-    background-color: #9553ff !important;
-}
-
-.bg-info {
-    background-color: #4801ff !important;
-}
-
-.bg-warning {
-    background-color: #3a405a !important;
-}
-
-.bg-danger {
-    background-color: #ea43ff !important;
+.bg-secondary {
+    background-color: var(--hoverColor) !important;
 }
 
 .btn-primary {
@@ -2318,6 +2304,7 @@ pre {
 
         .card-review {
             margin: 20px;
+            color: var(--background);
             overflow: hidden;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -2329,10 +2316,32 @@ pre {
 
         .card-review-author {
             display: flex;
+            font-size: .9rem;
+            color: var(--background);
+            text-align: center;
             align-items: center;
             justify-content: center;
+        }
+
+        .card-review--secondary {
+            margin: 20px;
+            color: #000000;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+
+            blockquote {
+                text-align: center;
+            }
+        }
+
+        .card-review-author--secondary {
+            display: flex;
             font-size: .9rem;
+            color: #000000;
             text-align: center;
+            align-items: center;
+            justify-content: center;
         }
 
         .repo-stats {
