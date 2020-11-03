@@ -53,7 +53,7 @@ const About = () => {
                 </div>
                 <a
                   className="btn btn-md btn-bgr py-3 btn-white display-4"
-                  href="#"
+                  href="CV_Jakub_Skowronski.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
