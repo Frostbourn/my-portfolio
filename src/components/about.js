@@ -43,13 +43,16 @@ const About = () => {
                   </strong>
                 </div>
                 <div className="mbr-text mbr-fonts-style mbr-light display-7">
-                  I am a Freelancer/Web Developer and passionate motorcyclist. I
-                  create simple and modern designs from scratch using latest
-                  technogies. HTML, CSS, JS, building small and medium web apps
-                  with React/GatsbyJS, custom plugins, animations and
-                  interactive layouts. <br />I have also full-stack developer
-                  experience with open souce CMS like WordPress, Joomla!,
-                  Prestashop and other.
+                  I am a Freelancer/Front-end Developer and passionate
+                  motorcyclist. I create simple and modern designs from scratch
+                  using latest technogies. HTML, CSS, JS, building small and
+                  medium web apps with React/GatsbyJS, custom plugins,
+                  animations and interactive layouts. <br />I have also
+                  full-stack developer experience with open souce CMS like
+                  WordPress, Joomla!, Prestashop and other. I've done remote
+                  work for agencies, consulted for startups, and collaborated
+                  with talented people to create digital products for both
+                  business and consumer use.
                 </div>
                 <a
                   className="btn btn-md btn-bgr py-3 btn-white display-4"
