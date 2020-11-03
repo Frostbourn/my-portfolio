@@ -65,6 +65,11 @@ svg {
     vertical-align: initial;
 }
 
+.notCursor,
+.notCursor * {
+    cursor: none !important;
+}
+
 button,
 .btn {
     cursor: none !important;
@@ -1810,7 +1815,7 @@ pre {
         -webkit-animation: blink 0.3s infinite;
         animation: blink 0.3s infinite;
         -webkit-animation-direction: alternate;
-                animation-direction: alternate;
+        animation-direction: alternate;
     }
 
     @keyframes blink {
