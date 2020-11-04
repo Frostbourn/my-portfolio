@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Container, Alert } from "react-bootstrap"
 import { FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
-import Emoji from "./Emoji"
+import Emoji from "./emoji"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({
@@ -67,7 +67,7 @@ const ContactForm = () => {
                   <div className="text-block">
                     <div className="mb-4 mbr-fonts-style mbr-section-title display-2">
                       <strong>
-                        Get In Touch <Emoji symbol="💬" label="contact" />
+                        Get In Touch <Emoji symbol="📬" label="contact" />
                       </strong>
                     </div>
                     <p className="mbr-section-subtitle mbr-fonts-style mb-4 display-7">
