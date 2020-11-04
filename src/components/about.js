@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
-import Emoji from "./Emoji"
+import Emoji from "./emoji"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -39,7 +39,7 @@ const About = () => {
               <Fade direction="right" triggerOnce>
                 <div className="mbr-section-title mbr-fonts-style mbr-light display-2">
                   <strong>
-                    A bit about me <Emoji symbol="🤓" label="smile" />
+                    A bit about me <Emoji symbol="👋" label="smile" />
                   </strong>
                 </div>
                 <div className="mbr-text mbr-fonts-style mbr-light display-7">
