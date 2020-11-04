@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
-import Emoji from "./Emoji"
+import Emoji from "./emoji"
 
 const Portfolio = () => {
   function openRepoinNewTab(url) {
@@ -309,40 +309,6 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
-              <div className="card mb-3">
-                <div
-                  className="card-wrapper"
-                  onClick={() => openRepoinNewTab("https://mltrans.eu")}
-                  onKeyDown={() => openRepoinNewTab("https://mltrans.eu")}
-                  role="presentation"
-                >
-                  <div className="card-img-top img-fluid-top img-fluid">
-                    <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
-                  </div>
-                  <div className="card-div">
-                    <div className="card-box">
-                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                        ML TRANS
-                      </h4>
-                      <div className="card-underline align-center">
-                        <div className="line"></div>
-                      </div>
-                      <p className="align-center repo-description">
-                        Transport and logistic company website
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Fade>
-
             {/* <div className="card mb-3">
               <Fade bottom delay={200} duration={1000} distance="40px" triggerOnce>
                 <div
@@ -401,6 +367,39 @@ const Portfolio = () => {
                       </div>
                       <p className="align-center repo-description">
                         Auto body repair and painting shop website
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Fade>
+            <Fade
+              bottom
+              delay={200}
+              duration={1000}
+              distance="40px"
+              triggerOnce
+            >
+              <div className="card mb-3">
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://mltrans.eu")}
+                  onKeyDown={() => openRepoinNewTab("https://mltrans.eu")}
+                  role="presentation"
+                >
+                  <div className="card-img-top img-fluid-top img-fluid">
+                    <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
+                  </div>
+                  <div className="card-div">
+                    <div className="card-box">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                        ML TRANS
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="align-center repo-description">
+                        Transport and logistic company website
                       </p>
                     </div>
                   </div>
