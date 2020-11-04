@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react"
 
 import { Slide } from "react-awesome-reveal"
-import { FaFacebookF, FaGithub } from "react-icons/fa"
+import {
+  FaFacebookMessenger,
+  FaGithub,
+  FaEnvelopeOpenText,
+} from "react-icons/fa"
 import "balloon-css"
 
 const SocialLinks = () => {
@@ -36,7 +40,7 @@ const SocialLinks = () => {
                 rel="noreferrer"
                 aria-label="Facebook"
               >
-                <FaFacebookF />
+                <FaFacebookMessenger />
               </a>
             </li>
             <li aria-label="Github" data-balloon-pos="left">
@@ -50,17 +54,16 @@ const SocialLinks = () => {
                 <FaGithub />
               </a>
             </li>
-            {/* <li aria-label="Linkedin" data-balloon-pos="left">
+            <li aria-label="E-mail" data-balloon-pos="left">
               <a
                 className="icon-transition"
-                href="https://www.linkedin.com/in/jakubskowronki"
-                target="_blank"
+                href="mailto:kontakt@jakubskowronski.com"
                 rel="noreferrer"
-                aria-label="Linkedin"
+                aria-label="E-mail"
               >
-                <FaLinkedinIn />
+                <FaEnvelopeOpenText />
               </a>
-            </li> */}
+            </li>
             <li className="social-line"></li>
           </ul>
         </div>
