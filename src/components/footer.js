@@ -2,7 +2,11 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import Emoji from "./Emoji"
 import { Fade } from "react-awesome-reveal"
-import { FaFacebookF, FaGithub } from "react-icons/fa"
+import {
+  FaFacebookMessenger,
+  FaGithub,
+  FaEnvelopeOpenText,
+} from "react-icons/fa"
 
 const Footer = () => (
   <footer>
@@ -45,7 +49,7 @@ const Footer = () => (
                   rel="noreferrer"
                 >
                   <span className="mbr-iconfont">
-                    <FaFacebookF />
+                    <FaFacebookMessenger />
                   </span>
                 </a>
               </li>
@@ -58,6 +62,18 @@ const Footer = () => (
                 >
                   <span className="mbr-iconfont">
                     <FaGithub />
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  className="icon-transition"
+                  href="mailto:kontakt@jakubskowronski.com"
+                  rel="noreferrer"
+                  aria-label="E-mail"
+                >
+                  <span className="mbr-iconfont">
+                    <FaEnvelopeOpenText />
                   </span>
                 </a>
               </li>
