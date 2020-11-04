@@ -61,6 +61,14 @@ body.dark {
     background-color: var(--background);
 }
 
+.altumcode-wrapper {
+    background-color: var(--background) !important;
+
+    p {
+        color: var(--textColor) !important;
+    }
+}
+
 svg {
     vertical-align: initial;
 }
