@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { Container, Row, Col, Badge } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
 import Emoji from "./Emoji"
 
