@@ -70,6 +70,15 @@ svg {
     cursor: none !important;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+    border-left: 1px solid var(--headerBackground);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--buttonColor);
+}
+
 button,
 .btn {
     cursor: none !important;
