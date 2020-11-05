@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Jakub Skowronski `,
-    titleTemplate: `| Designer & Front-end Developer | Portfolio`,
+    titleTemplate: `| Front-end Developer & Wordpress Developer | Portfolio`,
     description: `I am a web developer freelancer, I specialize in designing websites. Effective Websites! Check my portfolio and references.`,
     author: `Jakub Skowronski`,
     url: `https://jakubskowronski.com`,
