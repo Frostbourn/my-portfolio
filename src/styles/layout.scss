@@ -34,7 +34,7 @@ body {
     --contactBackground: #24292e;
     --contactHeading: var(--background);
     --svgFilter: unset;
-    --popupColor: #343434;
+    --popupColor: #ffffff;
 }
 
 body.dark {
@@ -56,14 +56,16 @@ body.dark {
     --contactBackground: #1f1f1f;
     --contactHeading: var(--headingColor);
     --svgFilter: saturate(0.4);
-    --popupColor: #ffffff;
+    --popupColor: #343434;
 }
 
 #gatsby-focus-wrapper {
     background-color: var(--popupColor);
 }
+
 .altumcode {
     z-index: 9999 !important;
+
     .altumcode-wrapper {
         background-color: var(--popupColor);
 
@@ -72,6 +74,7 @@ body.dark {
         }
     }
 }
+
 svg {
     vertical-align: initial;
 }
