@@ -3789,14 +3789,12 @@ footer {
     }
 }
 
-/* Kursor */
-
 .notCursor {
-    cursor: none
+    cursor: none !important;
 }
 
 .notCursor * {
-    cursor: none
+    cursor: none !important;
 }
 
 #kursorWrapper {
