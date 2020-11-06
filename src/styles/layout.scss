@@ -60,14 +60,14 @@ body.dark {
 }
 
 #gatsby-focus-wrapper {
-    background-color: var(--popupColor);
+    background-color: var(--background) !important;
 }
 
 .altumcode {
     z-index: 9999 !important;
 
     .altumcode-wrapper {
-        background-color: var(--popupColor);
+        background-color: var(--popupColor) !important;
 
         p {
             color: var(--textColor) !important;
@@ -2584,7 +2584,7 @@ pre {
     left: 10%;
     bottom: initial;
     transform: none;
-    z-index: 99999;
+    z-index: 9999;
     transition: all 0.2s ease-out;
 
     svg {
