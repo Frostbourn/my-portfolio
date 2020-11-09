@@ -65,11 +65,11 @@ const Portfolio = () => {
           <Col md={12}>
             <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
               <strong>
-                LATEST WORK <Emoji symbol="🏆" label="contact" />
+                MY RECENT WORK <Emoji symbol="🏆" label="contact" />
               </strong>
             </h2>
             <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
-              Here are some of my recent works.
+              Here are a few design projects I've worked on recently.
             </h3>
           </Col>
           <div className="projects-block card-columns">
@@ -223,9 +223,15 @@ const Portfolio = () => {
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
+                      <p className="repo-subtitle align-center">
+                        Low-cost Social Media Marketing App for content
+                        scheduling.
+                      </p>
                       <p className="align-center repo-description">
-                        Planner for scheduling posts on popular social media
-                        sites.
+                        I was the front-end developer for the Post Planner
+                        website, and I was tasked with the job of creating an
+                        interactive and smooth front-end experience for users
+                        and visitors of the platform.
                       </p>
                     </div>
                   </div>
@@ -366,7 +372,12 @@ const Portfolio = () => {
                         <div className="line"></div>
                       </div>
                       <p className="align-center repo-description">
-                        Auto body repair and painting shop website
+                        {/* Auto body repair and painting shop website. */}
+                        RS Cars requested a digital representation of their
+                        company and were willing to put their trust in me to
+                        deliver on their requirements. I created a design in
+                        line with their demands, which was performant on
+                        different devices and varying browsers.
                       </p>
                     </div>
                   </div>
@@ -399,7 +410,12 @@ const Portfolio = () => {
                         <div className="line"></div>
                       </div>
                       <p className="align-center repo-description">
-                        Transport and logistic company website
+                        {/* Transport and logistic company website.  */}
+                        This project required me to put in all my experience as
+                        a full-stack developer to create a design and set themes
+                        for the website. It also required a smooth design that
+                        could work on different browsers, and I successfully
+                        achieved the goal.
                       </p>
                     </div>
                   </div>
@@ -436,7 +452,10 @@ const Portfolio = () => {
                         <div className="line"></div>
                       </div>
                       <p className="align-center repo-description">
-                        Insurance broker company website
+                        {/* Insurance broker company website. */}I designed and
+                        developed the front-end for the HFB Broker company; I
+                        have worked closely with this company as the front-end
+                        developer since its operations began eight years ago.
                       </p>
                     </div>
                   </div>
@@ -469,7 +488,7 @@ const Portfolio = () => {
                         <div className="line"></div>
                       </div>
                       <p className="align-center repo-description">
-                        Wordpress & Joomla plugins development
+                        Wordpress & Joomla plugins development e-commerce store.
                       </p>
                     </div>
                   </div>
