@@ -2451,8 +2451,8 @@ pre {
         }
 
         .repo-subtitle {
-            font-style: italic;
-            color: var(--gray);
+            font-style: italic !important;
+            color: var(--gray) !important;
         }
 
         .repo-description {
