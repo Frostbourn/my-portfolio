@@ -43,16 +43,19 @@ const About = () => {
                   </strong>
                 </div>
                 <div className="mbr-text mbr-fonts-style mbr-light display-7">
-                  I am a Freelancer/Front-end Developer and passionate
-                  motorcyclist. I create simple and modern designs from scratch
-                  using latest technogies. HTML, CSS, JS, building small and
-                  medium web apps with React/GatsbyJS, custom plugins,
-                  animations and interactive layouts. <br />I have also
-                  full-stack developer experience with open souce CMS like
-                  WordPress, Joomla!, Prestashop and other. I've done remote
-                  work for agencies, consulted for startups, and collaborated
-                  with talented people to create digital products for both
-                  business and consumer use.
+                  I am a freelance Web Developer with many years of experience
+                  creating simple and modern designs from scratch using
+                  top-notch technology. I put in my best effort to create a
+                  better platform for clients, websites that are user-oriented,
+                  accessible, and with fast loading speed. Whatever your
+                  business requirement is, I’m dedicated to using my years of
+                  experience to pick the right tools and processes in order to
+                  create a design that suits your specific requirement. I
+                  recognize that creating a modern website entails combining
+                  design, server technology, and the platform that visitors and
+                  users interact with. I am also available to join your team,
+                  and I'm willing to work efficiently and thoroughly with your
+                  in-house team.
                 </div>
                 <a
                   className="btn btn-md btn-bgr py-3 btn-white display-4"
