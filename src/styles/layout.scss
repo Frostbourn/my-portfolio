@@ -2450,6 +2450,11 @@ pre {
             margin-right: 0.3rem;
         }
 
+        .repo-subtitle {
+            font-style: italic;
+            color: var(--gray);
+        }
+
         .repo-description {
             margin: 20px;
             overflow: hidden;
