@@ -71,8 +71,11 @@ const ContactForm = () => {
                       </strong>
                     </div>
                     <p className="mbr-section-subtitle mbr-fonts-style mb-4 display-7">
-                      Have an exciting project where you need some help? Send me
-                      over a message. <br />
+                      If you’re ever interested in learning about my work and my
+                      working process with clients, please feel free to contact
+                      me with information about the projects. We can set up a
+                      call or a meet to discuss how I can utilize my skills in
+                      achieving the success of your project. <br />
                       You can find me in a few places on the web, but if if you
                       prefer to do it the "old way" then just write to me
                       message.
