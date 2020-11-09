@@ -371,8 +371,10 @@ const Portfolio = () => {
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
-                      <p className="align-center repo-description">
-                        {/* Auto body repair and painting shop website. */}
+                      <p className="repo-subtitle align-center">
+                        Full-service auto paint, collision repair and body shop
+                      </p>
+                      <p className="repo-description align-center">
                         RS Cars requested a digital representation of their
                         company and were willing to put their trust in me to
                         deliver on their requirements. I created a design in
@@ -409,8 +411,10 @@ const Portfolio = () => {
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
+                      <p className="repo-subtitle align-center">
+                        High quality transport and logistics services
+                      </p>
                       <p className="align-center repo-description">
-                        {/* Transport and logistic company website.  */}
                         This project required me to put in all my experience as
                         a full-stack developer to create a design and set themes
                         for the website. It also required a smooth design that
@@ -451,11 +455,15 @@ const Portfolio = () => {
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
+                      <p className="repo-subtitle align-center">
+                        Specialising in arranging professional and financial
+                        insurances
+                      </p>
                       <p className="align-center repo-description">
-                        {/* Insurance broker company website. */}I designed and
-                        developed the front-end for the HFB Broker company; I
-                        have worked closely with this company as the front-end
-                        developer since its operations began eight years ago.
+                        I designed and developed the front-end for the HFB
+                        Broker company; I have worked closely with this company
+                        as the front-end developer since its operations began
+                        eight years ago.
                       </p>
                     </div>
                   </div>
@@ -487,8 +495,12 @@ const Portfolio = () => {
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
+                      <p className="repo-subtitle align-center">
+                        Wordpress & Joomla plugins development
+                      </p>
                       <p className="align-center repo-description">
-                        Wordpress & Joomla plugins development e-commerce store.
+                        I developed and integrated customized open-source and
+                        commercial plugins into CMS like Wordpress and Joomla!.
                       </p>
                     </div>
                   </div>
