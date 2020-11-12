@@ -36,7 +36,7 @@ const ContactForm = () => {
       .then(r => {
         handleServerResponse(
           true,
-          "Dziękuję za wiadomość! Skontaktuje się z Tobą najszybciej jak to możliwe.",
+          "Thank you for message! I will contact you asap.",
           form
         )
       })
