@@ -79,10 +79,7 @@ svg {
     vertical-align: initial;
 }
 
-.notCursor,
-.notCursor * {
-    cursor: none !important;
-}
+
 
 ::-webkit-scrollbar {
     width: 6px;
@@ -95,7 +92,6 @@ svg {
 
 button,
 .btn {
-    cursor: none !important;
 
     &:hover {
         box-shadow: 0 8px 25px var(--boxShadow) !important;
@@ -2195,7 +2191,6 @@ pre {
             li {
                 padding: 4px;
                 display: inline-block;
-                cursor: none;
             }
         }
     }
@@ -3794,13 +3789,7 @@ footer {
     }
 }
 
-.notCursor {
-    cursor: none !important;
-}
 
-.notCursor * {
-    cursor: none !important;
-}
 
 #kursorWrapper {
     position: fixed;
@@ -4071,9 +4060,6 @@ div[class*=kursorChild].kursorChild:after {
 }
 
 @media screen and (max-width:768px) {
-    .notCursor * {
-        cursor: auto
-    }
 
     div[class*=kursor] {
         display: none !important

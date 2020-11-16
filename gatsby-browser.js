@@ -22,9 +22,3 @@ if (typeof window !== "undefined") {
     window.scrollTo(0, 0)
   }
 }
-
-new kursor({
-  type: 2,
-  color: "#B98FFF",
-  removeDefaultCursor: true,
-})
