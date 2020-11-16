@@ -14,42 +14,42 @@ const Portfolio = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      portfolioOne: file(relativePath: { eq: "postplaner.webp" }) {
+      portfolioOne: file(relativePath: { eq: "postplaner.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioTwo: file(relativePath: { eq: "mltrans.webp" }) {
+      portfolioTwo: file(relativePath: { eq: "mltrans.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioThree: file(relativePath: { eq: "lakini.webp" }) {
+      portfolioThree: file(relativePath: { eq: "lakini.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioFour: file(relativePath: { eq: "rs-car.webp" }) {
+      portfolioFour: file(relativePath: { eq: "rs-car.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioFive: file(relativePath: { eq: "hfb-broker.webp" }) {
+      portfolioFive: file(relativePath: { eq: "hfb-broker.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      portfolioSix: file(relativePath: { eq: "jsns-eu.webp" }) {
+      portfolioSix: file(relativePath: { eq: "jsns-eu.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
