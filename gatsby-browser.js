@@ -9,7 +9,6 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import "popper.js/dist/popper.min.js"
 import "./src/styles/layout.scss"
-import kursor from "kursor"
 
 if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]', {
