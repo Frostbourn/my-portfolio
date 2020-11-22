@@ -62,84 +62,79 @@ const ContactForm = () => {
         <Fade triggerOnce>
           <Container>
             <div className="media-container-row">
-              <div className="col-sm-10 col-md-8 col-lg-5 block-content">
-                <div className="col-md-12">
-                  <div className="text-block">
-                    <div className="mb-4 mbr-fonts-style mbr-section-title display-2">
-                      <strong>
-                        Get In Touch <Emoji symbol="📬" label="contact" />
-                      </strong>
-                    </div>
-                    <p className="mbr-section-subtitle mbr-fonts-style mb-4 display-7">
-                      If you’re ever interested in learning about my work and my
-                      working process with clients, please feel free to contact
-                      me with information about the projects. We can set up a
-                      call or a meet to discuss how I can utilize my skills in
-                      achieving the success of your project. <br />
-                      You can find me in a few places on the web, but if if you
-                      prefer to do it the "old way" then just write to me
-                      message.
-                    </p>
+              <div className="col-lg-6 block-content">
+                <div className="text-block">
+                  <div className="mb-4 mbr-fonts-style mbr-section-title display-2">
+                    <strong>
+                      Get In Touch <Emoji symbol="📬" label="contact" />
+                    </strong>
                   </div>
+                  <p className="mbr-section-subtitle mbr-fonts-style mb-4 display-7">
+                    If you’re ever interested in learning about my work and my
+                    working process with clients, please feel free to contact me
+                    with information about the projects. We can set up a call or
+                    a meet to discuss how I can utilize my skills in achieving
+                    the success of your project. <br />
+                    You can find me in a few places on the web, but if if you
+                    prefer to do it the "old way" then just write to me message.
+                  </p>
                 </div>
               </div>
-              <div className="col-sm-10 col-md-8 col-lg-7 d-flex justify-content-center">
-                <div className="col-md-12">
-                  <form onSubmit={handleOnSubmit} className="row gy-3 d-flex">
-                    <p className="mbr-section-subtitle mbr-fonts-style m-2 display-7">
-                      <span className="pulsate"></span> I’m currently available
-                      for freelance work.
-                    </p>
-                    {serverState.status && (
-                      <Alert
-                        variant={serverState.status.ok ? "success" : "danger"}
-                      >
-                        {serverState.status.msg}
-                      </Alert>
-                    )}
-                    <div className="form-group my-0">
-                      <label htmlFor="emailAddress"></label>
-                      <input
-                        type="email"
-                        name="email"
-                        className="form-control"
-                        id="emailAddress"
-                        aria-describedby="emailHelp"
-                        placeholder="Email address"
-                        required="required"
-                      />
-                    </div>
-                    <div className="form-group my-0">
-                      <label htmlFor="contactName"></label>
-                      <input
-                        type="text"
-                        name="name"
-                        className="form-control"
-                        id="contactName"
-                        placeholder="Name"
-                        required="required"
-                      />
-                    </div>
-                    <div className="form-group my-0">
-                      <label htmlFor="contactMessage"></label>
-                      <textarea
-                        name="message"
-                        className="form-control"
-                        id="contactMessage"
-                        placeholder="How may I help you?"
-                        rows="3"
-                        required="required"
-                      ></textarea>
-                    </div>
-                    <button
-                      type="submit"
-                      className="btn btn-primary btn-form btn-bgr display-4 mt-4"
-                      disabled={serverState.submitting}
+              <div className="col-lg-6 d-flex justify-content-center">
+                <form onSubmit={handleOnSubmit} className="row gy-3 d-flex">
+                  <p className="mbr-section-subtitle mbr-fonts-style m-2 display-7">
+                    <span className="pulsate"></span> I’m currently available
+                    for freelance work.
+                  </p>
+                  {serverState.status && (
+                    <Alert
+                      variant={serverState.status.ok ? "success" : "danger"}
                     >
-                      Send a message
-                    </button>
-                  </form>
-                </div>
+                      {serverState.status.msg}
+                    </Alert>
+                  )}
+                  <div className="form-group my-0">
+                    <label htmlFor="emailAddress"></label>
+                    <input
+                      type="email"
+                      name="email"
+                      className="form-control"
+                      id="emailAddress"
+                      aria-describedby="emailHelp"
+                      placeholder="Email address"
+                      required="required"
+                    />
+                  </div>
+                  <div className="form-group my-0">
+                    <label htmlFor="contactName"></label>
+                    <input
+                      type="text"
+                      name="name"
+                      className="form-control"
+                      id="contactName"
+                      placeholder="Name"
+                      required="required"
+                    />
+                  </div>
+                  <div className="form-group my-0">
+                    <label htmlFor="contactMessage"></label>
+                    <textarea
+                      name="message"
+                      className="form-control"
+                      id="contactMessage"
+                      placeholder="How may I help you?"
+                      rows="3"
+                      required="required"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className="btn btn-primary btn-form btn-bgr display-4 mt-4"
+                    disabled={serverState.submitting}
+                  >
+                    Send a message
+                  </button>
+                </form>
               </div>
             </div>
           </Container>
