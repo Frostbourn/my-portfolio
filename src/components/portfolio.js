@@ -618,7 +618,7 @@ const Portfolio = () => {
             </Fade>
           </div>
           <Row className="align-center py-5">
-            <p className="display-2">
+            <p className="display-5">
               <strong>Want to see more? Leave me a message!</strong>
             </p>
           </Row>

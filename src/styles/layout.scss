@@ -2632,6 +2632,8 @@ pre {
 
         ul {
             display: flex;
+            margin: unset;
+            padding: unset;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
@@ -2744,10 +2746,7 @@ pre {
     }
 
     .media-container-row {
-        // background-color: var(--cardColor);
-        padding: 4vw;
-        // border-radius: 30px;
-        // box-shadow: 0 10px 40px 0 var(--boxShadow) !important;
+        padding: 4vw 0;
     }
 
     .mbr-iconfont {
@@ -3096,6 +3095,10 @@ footer {
     }
 
     .portfolio {
+        &:after {
+            display: none
+        }
+
         .projects-block {
             grid-column-gap: 2rem;
             -moz-column-gap: 2rem;
