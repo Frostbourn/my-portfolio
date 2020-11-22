@@ -9,9 +9,10 @@ import React from "react"
 
 import Header from "./header"
 import Hero from "./hero"
+import SocialLinks from "./socialLinks"
 import About from "./about"
 import Portfolio from "./portfolio"
-import SocialLinks from "./socialLinks"
+import SkillSet from "./skills"
 import ContactForm from "./contact"
 import Footer from "./footer"
 
@@ -23,6 +24,7 @@ const Layout = () => {
       <SocialLinks />
       <About />
       <Portfolio />
+      <SkillSet />
       <ContactForm />
       <Footer />
     </>

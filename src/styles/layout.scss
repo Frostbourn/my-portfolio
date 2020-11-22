@@ -106,10 +106,6 @@ button,
     z-index: 50;
 }
 
-header:not(.scrollBox) {
-    height: 90px;
-}
-
 header {
     display: flex;
     align-items: center;
@@ -119,11 +115,14 @@ header {
     transition: box-shadow 0.3s ease-out, height 0.3s ease-out;
     z-index: 9999;
 
+    &:not(.scrollBox) {
+        height: 90px;
+    }
+
     a {
         text-shadow: none;
         text-decoration: none;
     }
-
 
     .logo {
         display: inline;
@@ -168,42 +167,42 @@ header {
             background-color: #83D8FF;
             border-radius: 84px;
             transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        }
 
-        .toggle__handler {
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            top: 0px;
-            left: 4px;
-            width: 15px;
-            height: 15px;
-            background-color: #FFCF96;
-            border-radius: 50px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            transform: rotate(-45deg);
+            .handler {
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                top: 0px;
+                left: 4px;
+                width: 15px;
+                height: 15px;
+                background-color: #FFCF96;
+                border-radius: 50px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                transform: rotate(-45deg);
 
-            .crater {
-                position: absolute;
-                background-color: #E8CDA5;
-                opacity: 0;
-                transition: opacity 200ms ease-in-out;
-                border-radius: 100%;
-            }
+                .crater {
+                    position: absolute;
+                    background-color: #E8CDA5;
+                    opacity: 0;
+                    transition: opacity 200ms ease-in-out;
+                    border-radius: 100%;
+                }
 
-            .crater--1 {
-                top: 7px;
-                left: 8px;
-                width: 4px;
-                height: 4px;
-            }
+                .crater--1 {
+                    top: 7px;
+                    left: 8px;
+                    width: 4px;
+                    height: 4px;
+                }
 
-            .crater--2 {
-                top: 3px;
-                left: 5px;
-                width: 3px;
-                height: 3px;
+                .crater--2 {
+                    top: 3px;
+                    left: 5px;
+                    width: 3px;
+                    height: 3px;
+                }
             }
         }
 
@@ -2344,6 +2343,7 @@ pre {
         .card-div {
             // box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
             padding: 2rem;
+            cursor: pointer;
         }
 
         .card-review {
@@ -2620,6 +2620,44 @@ pre {
             li {
                 padding: 4px;
                 display: block;
+            }
+        }
+    }
+}
+
+.skills {
+    padding: 50px;
+
+    .skill-list {
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            list-style: none;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                background-color: #fff;
+                width: 120px;
+                height: 120px;
+                border-radius: .5rem;
+                transition: all .6s;
+                box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .05), 0 0 3px 0 rgba(0, 0, 0, .1);
+
+                svg {
+                    display: block;
+                    max-width: 3rem;
+                    max-height: 3rem;
+                    margin: 5px auto;
+                }
+            }
+
+            span {
+                font-weight: bold;
             }
         }
     }
