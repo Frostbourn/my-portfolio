@@ -31,7 +31,7 @@ body {
     --cardText: var(--textColor);
     --boxShadow: rgba(24, 24, 24, 0.27);
     --navBackground: #FBFBFB;
-    --contactBackground: #24292e;
+    --skillsBackground: #FFFFFF;
     --contactHeading: var(--background);
     --svgFilter: unset;
     --popupColor: #ffffff;
@@ -53,7 +53,7 @@ body.dark {
     --cardText: var(--background);
     --boxShadow: none;
     --navBackground: #1f1f1f;
-    --contactBackground: #1f1f1f;
+    --skillsBackground: #1f1f1f;
     --contactHeading: var(--headingColor);
     --svgFilter: saturate(0.4);
     --popupColor: #343434;
@@ -2643,7 +2643,7 @@ pre {
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
-                background-color: #fff;
+                background-color: var(--skillsBackground);
                 width: 120px;
                 height: 120px;
                 border-radius: .5rem;
