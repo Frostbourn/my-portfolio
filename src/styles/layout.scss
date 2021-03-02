@@ -1474,9 +1474,13 @@ a {
     border: 0;
     font-size: .875rem;
     line-height: 1.5;
-    margin-bottom: 1.875rem;
+
     padding: 1.25rem;
     position: relative;
+}
+
+.alert::after {
+    display: none !important
 }
 
 .alert.alert-success {
@@ -3828,8 +3832,6 @@ footer {
         transform: scale(0.7)
     }
 }
-
-
 
 #kursorWrapper {
     position: fixed;
