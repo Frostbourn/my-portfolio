@@ -7,14 +7,14 @@
 
 import React from "react"
 
-import Header from "./header"
-import Hero from "./hero"
-import SocialLinks from "./socialLinks"
-import About from "./about"
-import Portfolio from "./portfolio"
-import SkillSet from "./skills"
-import ContactForm from "./contact"
-import Footer from "./footer"
+import Header from "./Header"
+import Hero from "./Hero"
+import SocialLinks from "./SocialLinks"
+import About from "./About"
+import Portfolio from "./Portfolio"
+import SkillSet from "./Skills"
+import ContactForm from "./Contact"
+import Footer from "./Footer"
 
 const Layout = () => {
   return (

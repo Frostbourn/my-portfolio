@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-import { Slide } from "react-awesome-reveal"
+import { Fade } from "react-awesome-reveal"
 import {
   FaFacebookMessenger,
   FaGithub,
@@ -25,7 +25,7 @@ const SocialLinks = () => {
   }, [state, setState])
 
   return (
-    <Slide direction="top" delay="1500" triggerOnce>
+    <Fade delay="250" triggerOnce>
       <section
         id="social-links"
         className={`${state ? "hidden" : ""}` + " social-links"}
@@ -68,7 +68,7 @@ const SocialLinks = () => {
           </ul>
         </div>
       </section>
-    </Slide>
+    </Fade>
   )
 }
 

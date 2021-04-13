@@ -24,7 +24,7 @@ const Hero = () => {
     <>
       <Fade triggerOnce>
         <section className="hero">
-          <Fade delay="500" triggerOnce>
+          <Fade delay="50" triggerOnce>
             <div className="animation_background">
               <div className="circle1"></div>
               <div className="circle2"></div>
@@ -36,7 +36,7 @@ const Hero = () => {
           </Fade>
           <Container fluid>
             <Col lg={12} className="hero-text">
-              <Fade delay="500" direction="right" triggerOnce>
+              <Fade delay="50" direction="right" triggerOnce>
                 <p className="hero-text--main mbr-text mbr-fonts-style display-5">
                   {/* <Emoji
                     className="hero-emoji-animation"
@@ -47,12 +47,12 @@ const Hero = () => {
                 </p>
               </Fade>
 
-              <Fade delay="900" direction="right" triggerOnce>
+              <Fade delay="90" direction="right" triggerOnce>
                 <p className="hero-text--main mbr-text mbr-fonts-style display-5">
                   I'm Jakub
                 </p>
               </Fade>
-              <Fade delay="1300" direction="right" triggerOnce>
+              <Fade delay="130" direction="right" triggerOnce>
                 <h1 className="mbr-section-title mbr-fonts-style display-1">
                   <strong>
                     <Typical
@@ -75,8 +75,8 @@ const Hero = () => {
               </Fade>
 
               <div className="mbr-section-btn">
-                <Fade delay="1500" direction="right" triggerOnce>
-                  <Fade cascade delay="1800" damping="1" triggerOnce>
+                <Fade delay="150" direction="right" triggerOnce>
+                  <Fade cascade delay="180" damping="1" triggerOnce>
                     <a
                       className="btn btn-md btn-bgr btn-success display-4"
                       href="#about"
@@ -117,7 +117,7 @@ const Hero = () => {
               <div className="hero-shape"></div>
             </Fade>
           </Col> */}
-          <Fade delay="1800" triggerOnce>
+          <Fade delay="180" triggerOnce>
             <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
           </Fade>
           <div className="waves">

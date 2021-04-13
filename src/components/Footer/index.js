@@ -1,6 +1,6 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
-import Emoji from "./emoji"
+import Emoji from "../Emoji"
 import { Fade } from "react-awesome-reveal"
 import {
   FaFacebookMessenger,

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
-import Emoji from "./emoji"
+import Emoji from "../Emoji"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -59,11 +59,9 @@ const About = () => {
                 </div>
                 <a
                   className="btn btn-md btn-bgr py-3 btn-white display-4"
-                  href="CV_Jakub_Skowronski.pdf"
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#portfolio"
                 >
-                  Download CV
+                  My work
                 </a>
               </Fade>
             </Col>

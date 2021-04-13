@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
-import Emoji from "./emoji"
+import Emoji from "../Emoji"
 
 const Portfolio = () => {
   function openRepoinNewTab(url) {
@@ -60,7 +60,7 @@ const Portfolio = () => {
   `)
   return (
     <section id="portfolio" className="portfolio features8">
-      <Fade delay="300" triggerOnce>
+      <Fade triggerOnce>
         <Container>
           <Col md={12}>
             <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
@@ -73,13 +73,7 @@ const Portfolio = () => {
             </h3>
           </Col>
           <div className="projects-block card-columns">
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-div"
@@ -168,13 +162,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card bg-primary mb-3">
                 <div className="card-div" role="presentation">
                   <div className="card-review">
@@ -196,13 +184,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-wrapper"
@@ -238,13 +220,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-div"
@@ -342,13 +318,7 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div> */}
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-wrapper"
@@ -386,13 +356,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-wrapper"
@@ -426,13 +390,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-wrapper"
@@ -470,13 +428,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-wrapper"
@@ -507,13 +459,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card bg-warning mb-3">
                 <div className="card-div" role="presentation">
                   <div className="card-review--secondary">
@@ -536,13 +482,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            <Fade
-              bottom
-              delay={200}
-              duration={1000}
-              distance="40px"
-              triggerOnce
-            >
+            <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-div"

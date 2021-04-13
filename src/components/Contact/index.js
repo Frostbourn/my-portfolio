@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Container, Alert } from "react-bootstrap"
 import { FaChevronUp } from "react-icons/fa"
 import { Fade } from "react-awesome-reveal"
-import Emoji from "./emoji"
+import Emoji from "../Emoji"
 
 const ContactForm = () => {
   const [serverState, setServerState] = useState({

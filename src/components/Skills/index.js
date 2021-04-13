@@ -1,11 +1,11 @@
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
-import Emoji from "./emoji"
+import Emoji from "../Emoji"
 
 const SkillSet = () => (
   <section id="skills" className="skills">
-    <Fade delay="300" triggerOnce>
+    <Fade triggerOnce>
       <Container>
         <Col md={12}>
           <h2 className="mbr-section-title mbr-fonts-style align-center display-2">
