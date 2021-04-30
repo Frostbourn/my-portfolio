@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { Container } from "react-bootstrap"
 import PropTypes from "prop-types"
 import DarkLightSwitch from "../ThemeToggler"
-
 // import { Fade } from "react-awesome-reveal"
 import { FaEnvelope } from "react-icons/fa"
 
 const Header = props => {
+  let app = useRef(null)
   const [state, setState] = useState(false)
 
   useEffect(() => {
@@ -23,7 +23,11 @@ const Header = props => {
   }, [state, setState])
 
   return (
-    <header className={`${state ? "scrollBox" : ""}`} data-scroll-header>
+    <header
+      className={`${state ? "scrollBox" : ""}`}
+      data-scroll-header
+      ref={el => (app = el)}
+    >
       <div className="backdrop">
         <nav
           className={
