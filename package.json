@@ -7,8 +7,10 @@
   "dependencies": {
     "balloon-css": "^1.2.0",
     "bootstrap": "4.6.0",
+    "browserslist": "^4.16.6",
+    "caniuse-lite": "^1.0.30001243",
     "gatsby": "^3.2.1",
-    "gatsby-cli": "^3.2.0",
+    "gatsby-cli": "^3.9.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-facebook-pixel": "^1.0.5",
     "gatsby-plugin-google-analytics": "^3.2.0",

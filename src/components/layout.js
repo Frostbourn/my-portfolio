@@ -1,22 +1,16 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React, { useEffect, Suspense } from "react"
 
-import React, { useEffect } from "react"
+import gsap, { Bounce } from "gsap"
 
 import Header from "./Header"
 import Hero from "./Hero"
 import SocialLinks from "./SocialLinks"
 import About from "./About"
-import Portfolio from "./Portfolio"
-import SkillSet from "./Skills"
-import ContactForm from "./Contact"
-import Footer from "./Footer"
 
-import gsap, { Bounce, Power2 } from "gsap"
+const Portfolio = React.lazy(() => import("./Portfolio"))
+const SkillSet = React.lazy(() => import("./Skills"))
+const ContactForm = React.lazy(() => import("./Contact"))
+const Footer = React.lazy(() => import("./Footer"))
 
 const Layout = () => {
   useEffect(() => {
@@ -34,16 +28,24 @@ const Layout = () => {
     // tl.to("#id", { opacity: 0, duration: 1 })
   }, [])
 
+  const isSSR = typeof window === "undefined"
+
   return (
     <>
-      <Header />
-      <Hero />
-      <SocialLinks />
-      <About />
-      <Portfolio />
-      <SkillSet />
-      <ContactForm />
-      <Footer />
+      {!isSSR && (
+        <>
+          <Header />
+          <Hero />
+          <SocialLinks />
+          <About />
+          <Suspense fallback={<div>...</div>}>
+            <Portfolio />
+            <SkillSet />
+            <ContactForm />
+            <Footer />
+          </Suspense>
+        </>
+      )}
     </>
   )
 }
