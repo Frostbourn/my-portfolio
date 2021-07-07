@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
@@ -16,44 +17,32 @@ const Portfolio = () => {
     query {
       portfolioOne: file(relativePath: { eq: "postplaner.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData
         }
       }
       portfolioTwo: file(relativePath: { eq: "mltrans.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData
         }
       }
       portfolioThree: file(relativePath: { eq: "lakini.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData
         }
       }
       portfolioFour: file(relativePath: { eq: "rs-car.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData
         }
       }
       portfolioFive: file(relativePath: { eq: "hfb-broker.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData
         }
       }
       portfolioSix: file(relativePath: { eq: "jsns-eu.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData
         }
       }
     }
@@ -194,7 +183,10 @@ const Portfolio = () => {
                 >
                   {" "}
                   <div className="card-img-top img-fluid-top img-fluid">
-                    <Img fluid={data.portfolioOne.childImageSharp.fluid} />
+                    <GatsbyImage
+                      image={getImage(data.portfolioOne)}
+                      alt="Post Planner"
+                    />
                   </div>
                   <div className="card-div">
                     {/* <Badge variant="warning">Commercial</Badge> */}
@@ -331,7 +323,10 @@ const Portfolio = () => {
                   role="presentation"
                 >
                   <div className="card-img-top img-fluid">
-                    <Img fluid={data.portfolioFour.childImageSharp.fluid} />
+                    <GatsbyImage
+                      image={getImage(data.portfolioFour)}
+                      alt="RS Car"
+                    />
                   </div>
                   <div className="card-div">
                     <div className="card-box">
@@ -365,7 +360,10 @@ const Portfolio = () => {
                   role="presentation"
                 >
                   <div className="card-img-top img-fluid-top img-fluid">
-                    <Img fluid={data.portfolioTwo.childImageSharp.fluid} />
+                    <GatsbyImage
+                      image={getImage(data.portfolioTwo)}
+                      alt="ML Trans"
+                    />
                   </div>
                   <div className="card-div">
                     <div className="card-box">
@@ -403,7 +401,10 @@ const Portfolio = () => {
                   role="presentation"
                 >
                   <div className="card-img-top img-fluid">
-                    <Img fluid={data.portfolioFive.childImageSharp.fluid} />
+                    <GatsbyImage
+                      image={getImage(data.portfolioFive)}
+                      alt="HFB Broker"
+                    />
                   </div>
                   <div className="card-div">
                     <div className="card-box">
@@ -437,7 +438,10 @@ const Portfolio = () => {
                   role="presentation"
                 >
                   <div className="card-img-top img-fluid">
-                    <Img fluid={data.portfolioSix.childImageSharp.fluid} />
+                    <GatsbyImage
+                      image={getImage(data.portfolioSix)}
+                      alt="JS NextGen Solutions"
+                    />
                   </div>
                   <div className="card-div">
                     <div className="card-box">

@@ -16,8 +16,19 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `avif`],
+          quality: 100,
+          placeholder: "blurred",
+        },
+      },
+    },
     `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-manifest`,
