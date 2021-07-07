@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
@@ -11,10 +12,7 @@ const About = () => {
     query {
       aboutPhoto: file(relativePath: { eq: "about-photo-square.png" }) {
         childImageSharp {
-          fluid(maxWidth: 600, quality: 100) {
-            ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-          }
+          gatsbyImageData
         }
       }
     }
@@ -27,8 +25,9 @@ const About = () => {
           <Row className="container align-items-center content-row m-auto px-lg-5">
             <Col lg={6} md={6} sm={10} xs={10} className="photo-split">
               <Fade direction="left" triggerOnce>
-                <Img
-                  fluid={data.aboutPhoto.childImageSharp.fluid}
+                <GatsbyImage
+                  image={getImage(data.aboutPhoto)}
+                  alt="Post Planner"
                   style={{
                     margin: "0 auto",
                   }}

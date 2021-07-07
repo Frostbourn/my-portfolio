@@ -62,9 +62,7 @@ const Hero = () => {
                         2500,
                         "Programmer",
                         2500,
-                        "Wordpress Developer",
-                        2500,
-                        "Joomla! Developer",
+                        "Biker",
                         3000,
                       ]}
                       loop={Infinity}
