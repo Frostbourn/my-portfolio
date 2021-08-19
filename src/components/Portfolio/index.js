@@ -30,7 +30,7 @@ const Portfolio = () => {
           gatsbyImageData
         }
       }
-      portfolioFour: file(relativePath: { eq: "rs-car.png" }) {
+      portfolioFour: file(relativePath: { eq: "wldevs.png" }) {
         childImageSharp {
           gatsbyImageData
         }
@@ -62,6 +62,43 @@ const Portfolio = () => {
             </h3>
           </Col>
           <div className="projects-block card-columns">
+            <Fade bottom distance="40px" triggerOnce>
+              <div className="card mb-3">
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://wldevs.com")}
+                  onKeyDown={() => openRepoinNewTab("https://wldevs.com")}
+                  role="presentation"
+                >
+                  <div className="card-img-top img-fluid">
+                    <GatsbyImage
+                      image={getImage(data.portfolioFour)}
+                      alt="RS Car"
+                    />
+                  </div>
+                  <div className="card-div">
+                    <div className="card-box">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                        White Label Developers
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="repo-subtitle align-center">
+                        White Label Web and E-commerce Development for Agencies
+                      </p>
+                      <p className="repo-description align-center">
+                        WLDEVS requested a digital representation of their
+                        company and were willing to put their trust in me to
+                        deliver on their requirements. I developed responsive
+                        website, which was performant on different devices and
+                        varying browsers.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Fade>
             <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
@@ -310,47 +347,6 @@ const Portfolio = () => {
                 </div>
               </Fade>
             </div> */}
-            <Fade bottom distance="40px" triggerOnce>
-              <div className="card mb-3">
-                <div
-                  className="card-wrapper"
-                  onClick={() =>
-                    openRepoinNewTab("https://jakubskowronski.com/rscar")
-                  }
-                  onKeyDown={() =>
-                    openRepoinNewTab("https://jakubskowronski.com/rscar")
-                  }
-                  role="presentation"
-                >
-                  <div className="card-img-top img-fluid">
-                    <GatsbyImage
-                      image={getImage(data.portfolioFour)}
-                      alt="RS Car"
-                    />
-                  </div>
-                  <div className="card-div">
-                    <div className="card-box">
-                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                        RS CAR
-                      </h4>
-                      <div className="card-underline align-center">
-                        <div className="line"></div>
-                      </div>
-                      <p className="repo-subtitle align-center">
-                        Full-service auto paint, collision repair and body shop
-                      </p>
-                      <p className="repo-description align-center">
-                        RS Cars requested a digital representation of their
-                        company and were willing to put their trust in me to
-                        deliver on their requirements. I created a design in
-                        line with their demands, which was performant on
-                        different devices and varying browsers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Fade>
             <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
