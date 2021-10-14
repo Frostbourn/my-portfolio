@@ -13,6 +13,11 @@ const Portfolio = () => {
     win.focus()
   }
 
+  function openRepoinSameTab(url) {
+    const win = window.open(url, "_same")
+    win.focus()
+  }
+
   const data = useStaticQuery(graphql`
     query {
       portfolioOne: file(relativePath: { eq: "postplaner.png" }) {
@@ -25,7 +30,7 @@ const Portfolio = () => {
           gatsbyImageData
         }
       }
-      portfolioThree: file(relativePath: { eq: "lakini.png" }) {
+      portfolioThree: file(relativePath: { eq: "gatsby-landing.png" }) {
         childImageSharp {
           gatsbyImageData
         }
@@ -62,37 +67,82 @@ const Portfolio = () => {
             </h3>
           </Col>
           <div className="projects-block card-columns">
-            <Fade bottom distance="40px" triggerOnce>
-              <div className="card mb-3">
+            <div className="card mb-3">
+              <Fade bottom distance="40px" triggerOnce>
                 <div
                   className="card-wrapper"
-                  onClick={() => openRepoinNewTab("https://wldevs.com")}
-                  onKeyDown={() => openRepoinNewTab("https://wldevs.com")}
+                  onClick={() =>
+                    openRepoinSameTab(
+                      "https://jakubskowronski.com/gatsby-landingpage"
+                    )
+                  }
+                  onKeyDown={() =>
+                    openRepoinSameTab(
+                      "https://jakubskowronski.com/gatsby-landingpage"
+                    )
+                  }
                   role="presentation"
                 >
                   <div className="card-img-top img-fluid">
                     <GatsbyImage
-                      image={getImage(data.portfolioFour)}
-                      alt="RS Car"
+                      image={getImage(data.portfolioThree)}
+                      alt="Gatsby Landingpage Templates"
                     />
                   </div>
                   <div className="card-div">
                     <div className="card-box">
                       <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                        White Label Developers
+                        Gatsby Landing Page Templates
                       </h4>
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
                       <p className="repo-subtitle align-center">
-                        White Label Web and E-commerce Development for Agencies
+                        Collection of multi-purpose landing pages.
                       </p>
                       <p className="repo-description align-center">
-                        WLDEVS requested a digital representation of their
-                        company and were willing to put their trust in me to
-                        deliver on their requirements. I developed responsive
-                        website, which was performant on different devices and
-                        varying browsers.
+                        React/Gatsby templates are built with highly flexible
+                        hook-based React blocks to deliver maximum flexibility.
+                        My goal is to develop templates that are beautiful and
+                        yet easily customizable in many aspects.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Fade>
+            </div>
+
+            <Fade bottom distance="40px" triggerOnce>
+              <div className="card mb-3">
+                <div
+                  className="card-wrapper"
+                  onClick={() => openRepoinNewTab("https://mltrans.eu")}
+                  onKeyDown={() => openRepoinNewTab("https://mltrans.eu")}
+                  role="presentation"
+                >
+                  <div className="card-img-top img-fluid-top img-fluid">
+                    <GatsbyImage
+                      image={getImage(data.portfolioTwo)}
+                      alt="ML Trans"
+                    />
+                  </div>
+                  <div className="card-div">
+                    <div className="card-box">
+                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                        ML TRANS
+                      </h4>
+                      <div className="card-underline align-center">
+                        <div className="line"></div>
+                      </div>
+                      <p className="repo-subtitle align-center">
+                        High quality transport and logistics services
+                      </p>
+                      <p className="align-center repo-description">
+                        This project required me to put in all my experience as
+                        a full-stack developer to create a design and set themes
+                        for the website. It also required a smooth design that
+                        could work on different browsers, and I successfully
+                        achieved the goal.
                       </p>
                     </div>
                   </div>
@@ -161,7 +211,7 @@ const Portfolio = () => {
                             d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"
                           ></path>
                         </svg>
-                        <p>5</p>
+                        <p>9</p>
                       </span>
                       <span>
                         <svg
@@ -178,7 +228,7 @@ const Portfolio = () => {
                             d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"
                           ></path>
                         </svg>
-                        <p>4</p>
+                        <p>14</p>
                       </span>
                     </div>
                     <div className="repo-right-stat">
@@ -320,64 +370,37 @@ const Portfolio = () => {
                 </div>
               </div>
             </Fade>
-            {/* <div className="card mb-3">
-              <Fade bottom delay={200} duration={1000} distance="40px" triggerOnce>
-                <div
-                  className="card-wrapper"
-                  onClick={() => openRepoinNewTab("https://lakini.pl")}
-                  onKeyDown={() => openRepoinNewTab("https://lakini.pl")}
-                  role="presentation"
-                >
-                  <div className="card-div">
-                    <div className="card-img-top img-fluid">
-                      <Img fluid={data.portfolioThree.childImageSharp.fluid} />
-                    </div>
-                    <div className="card-box">
-                      <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                        LAKINI
-                      </h4>
-                      <div className="card-underline align-center">
-                        <div className="line"></div>
-                      </div>
-                      <p className="align-center repo-description">
-                        eCommerce shoes store
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Fade>
-            </div> */}
             <Fade bottom distance="40px" triggerOnce>
               <div className="card mb-3">
                 <div
                   className="card-wrapper"
-                  onClick={() => openRepoinNewTab("https://mltrans.eu")}
-                  onKeyDown={() => openRepoinNewTab("https://mltrans.eu")}
+                  onClick={() => openRepoinNewTab("https://wldevs.com")}
+                  onKeyDown={() => openRepoinNewTab("https://wldevs.com")}
                   role="presentation"
                 >
-                  <div className="card-img-top img-fluid-top img-fluid">
+                  <div className="card-img-top img-fluid">
                     <GatsbyImage
-                      image={getImage(data.portfolioTwo)}
-                      alt="ML Trans"
+                      image={getImage(data.portfolioFour)}
+                      alt="RS Car"
                     />
                   </div>
                   <div className="card-div">
                     <div className="card-box">
                       <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                        ML TRANS
+                        White Label Developers
                       </h4>
                       <div className="card-underline align-center">
                         <div className="line"></div>
                       </div>
                       <p className="repo-subtitle align-center">
-                        High quality transport and logistics services
+                        White Label Web and E-commerce Development for Agencies
                       </p>
-                      <p className="align-center repo-description">
-                        This project required me to put in all my experience as
-                        a full-stack developer to create a design and set themes
-                        for the website. It also required a smooth design that
-                        could work on different browsers, and I successfully
-                        achieved the goal.
+                      <p className="repo-description align-center">
+                        WLDEVS requested a digital representation of their
+                        company and were willing to put their trust in me to
+                        deliver on their requirements. I developed responsive
+                        website, which was performant on different devices and
+                        varying browsers.
                       </p>
                     </div>
                   </div>
