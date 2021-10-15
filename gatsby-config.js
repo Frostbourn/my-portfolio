@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Jakub Skowronski `,
@@ -16,8 +20,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-<<<<<<< Updated upstream
-=======
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -25,7 +27,6 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
->>>>>>> Stashed changes
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     {
