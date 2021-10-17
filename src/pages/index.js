@@ -61,7 +61,7 @@ const IndexPage = () => {
         />
         <meta property="twitter:image" content={data.site.siteMetadata.image} />
       </Helmet>
-      <Layout></Layout>
+      <Layout />
     </>
   )
 }

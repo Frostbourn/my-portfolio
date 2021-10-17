@@ -193,7 +193,12 @@ const Portfolio = () => {
                       )}
                       {isReview ? (
                         <>
-                          <div className="card-review">
+                          <div
+                            className="card-review"
+                            style={
+                              theme === "bg-warning" ? { color: "#000" } : {}
+                            }
+                          >
                             <blockquote>
                               <q>{description.internal.content}</q>
                             </blockquote>
