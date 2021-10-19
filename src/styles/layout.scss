@@ -2425,8 +2425,9 @@ pre {
     }
 
     .repo-svg {
-      margin: 0 0.5rem 0 1.5rem;
+      margin: -10px 0.5rem 0 1.5rem;
       min-width: 16px;
+      fill: var(--headingColor);
     }
 
     .repo-name {
