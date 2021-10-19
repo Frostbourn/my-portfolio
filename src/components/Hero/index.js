@@ -58,7 +58,7 @@ const Hero = () => {
                     <Typical
                       className="hero-cursor"
                       steps={[
-                        "Frontend Developer",
+                        "Front-end Developer",
                         2500,
                         "Programmer",
                         2500,
