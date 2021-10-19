@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jakub Skowroński",
   "dependencies": {
     "babel-preset-gatsby": "^1.14.0",
     "balloon-css": "^1.2.0",
