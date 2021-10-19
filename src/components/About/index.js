@@ -11,17 +11,15 @@ import Emoji from "../Emoji"
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      aboutPhoto: file(relativePath: { eq: "about-photo-square.png" }) {
-        childImageSharp {
-          gatsbyImageData
-        }
-      }
       allContentfulAboutMe {
         nodes {
           description {
             internal {
               content
             }
+          }
+          image {
+            gatsbyImageData
           }
         }
       }
@@ -30,6 +28,7 @@ const About = () => {
 
   const description =
     data.allContentfulAboutMe.nodes[0].description.internal.content
+  const image = data.allContentfulAboutMe.nodes[0].image.gatsbyImageData
 
   return (
     <>
@@ -40,7 +39,7 @@ const About = () => {
             <Col lg={6} md={6} sm={10} xs={10} className="photo-split">
               <Fade direction="left" triggerOnce>
                 <GatsbyImage
-                  image={getImage(data.aboutPhoto)}
+                  image={getImage(image)}
                   alt="Profile Photo"
                   style={{
                     margin: "0 auto",
