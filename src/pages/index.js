@@ -60,11 +60,6 @@ const IndexPage = () => {
           content={data.site.siteMetadata.description}
         />
         <meta property="twitter:image" content={data.site.siteMetadata.image} />
-        <script
-          key="sppixel"
-          async
-          src="https://socialproof.pl/pixel/yhj3yf4jwiearbesr2b46dsciresnqic"
-        ></script>
       </Helmet>
       <Layout />
     </>
