@@ -14,11 +14,6 @@ const Portfolio = () => {
     win.focus()
   }
 
-  function openRepoinSameTab(url) {
-    const win = window.open(url, "_same")
-    win.focus()
-  }
-
   const data = useStaticQuery(graphql`
     query {
       allContentfulPortfolio {
@@ -91,6 +86,14 @@ const Portfolio = () => {
               }) => (
                 <Fade bottom distance="40px" triggerOnce>
                   <div className={`card mb-3 ${theme}`}>
+                    {coverImage && (
+                      <div className="card-img-top img-fluid">
+                        <GatsbyImage
+                          image={getImage(coverImage?.gatsbyImageData)}
+                          alt={coverImage?.title}
+                        />
+                      </div>
+                    )}
                     <div
                       className={`card-${
                         isOpenSource
@@ -163,32 +166,24 @@ const Portfolio = () => {
                         </>
                       ) : (
                         coverImage && (
-                          <>
-                            <div className="card-img-top img-fluid">
-                              <GatsbyImage
-                                image={getImage(coverImage?.gatsbyImageData)}
-                                alt={coverImage?.title}
-                              />
-                            </div>
-                            <div className="card-div">
-                              <div className="card-box">
-                                <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                                  {title}
-                                </h4>
-                                <div className="card-underline align-center">
-                                  <div className="line"></div>
-                                </div>
-                                <p className="repo-subtitle align-center">
-                                  {subtitle}
-                                </p>
-                                <p className="repo-description align-center">
-                                  <ReactMarkdown>
-                                    {description.internal.content}
-                                  </ReactMarkdown>
-                                </p>
+                          <div className="card-div">
+                            <div className="card-box">
+                              <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                                {title}
+                              </h4>
+                              <div className="card-underline align-center">
+                                <div className="line"></div>
                               </div>
+                              <p className="repo-subtitle align-center">
+                                {subtitle}
+                              </p>
+                              <p className="repo-description align-center">
+                                <ReactMarkdown>
+                                  {description.internal.content}
+                                </ReactMarkdown>
+                              </p>
                             </div>
-                          </>
+                          </div>
                         )
                       )}
                       {isReview ? (
@@ -203,7 +198,12 @@ const Portfolio = () => {
                               <q>{description.internal.content}</q>
                             </blockquote>
                           </div>
-                          <div className="card-review-author">
+                          <div
+                            className="card-review-author"
+                            style={
+                              theme === "bg-warning" ? { color: "#000" } : {}
+                            }
+                          >
                             <p>
                               <strong>{author}</strong>
                               <br />

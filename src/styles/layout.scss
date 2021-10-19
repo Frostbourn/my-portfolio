@@ -2647,11 +2647,18 @@ pre {
           0 0 3px 0 rgba(0, 0, 0, 0.1);
         background-color: var(--skillsBackground);
 
-        svg {
+        img {
           display: block;
           margin: 5px auto;
           max-width: 3rem;
           max-height: 3rem;
+        }
+
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
         }
       }
 

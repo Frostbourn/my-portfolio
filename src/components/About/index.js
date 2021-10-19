@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import ReactMarkdown from "react-markdown"
 
 import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
@@ -15,8 +16,21 @@ const About = () => {
           gatsbyImageData
         }
       }
+      allContentfulAboutMe {
+        nodes {
+          description {
+            internal {
+              content
+            }
+          }
+        }
+      }
     }
   `)
+
+  const description =
+    data.allContentfulAboutMe.nodes[0].description.internal.content
+
   return (
     <>
       <section id="about" className="about">
@@ -27,7 +41,7 @@ const About = () => {
               <Fade direction="left" triggerOnce>
                 <GatsbyImage
                   image={getImage(data.aboutPhoto)}
-                  alt="Post Planner"
+                  alt="Profile Photo"
                   style={{
                     margin: "0 auto",
                   }}
@@ -42,19 +56,7 @@ const About = () => {
                   </strong>
                 </div>
                 <div className="mbr-text mbr-fonts-style mbr-light display-7">
-                  I am a freelance Web Developer with many years of experience
-                  creating simple and modern designs from scratch using
-                  top-notch technology. I put in my best effort to create a
-                  better platform for clients, websites that are user-oriented,
-                  accessible, and with fast loading speed. Whatever your
-                  business requirement is, I’m dedicated to using my years of
-                  experience to pick the right tools and processes in order to
-                  create a design that suits your specific requirement. I
-                  recognize that creating a modern website entails combining
-                  design, server technology, and the platform that visitors and
-                  users interact with. I am also available to join your team,
-                  and I'm willing to work efficiently and thoroughly with your
-                  in-house team.
+                  <ReactMarkdown>{description}</ReactMarkdown>
                 </div>
                 <a
                   className="btn btn-md btn-bgr py-3 btn-white display-4"

@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Jakub Skowroński`,
-    titleTemplate: ` | Freelance Full-Stack Developer | Portfolio`,
+    titleTemplate: ` | Freelance Front-end Developer | Portfolio`,
     description: `I specialize in building meaningful digital products and interactive experiences. Check out my portfolio and references.`,
     author: `Jakub Skowroński`,
     url: `https://jakubskowronski.com`,
