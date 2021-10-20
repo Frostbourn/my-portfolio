@@ -1,18 +1,15 @@
-import React, { useEffect, Suspense } from "react"
+import React, { useEffect } from "react"
 
 import gsap, { Bounce } from "gsap"
 
-import PuffLoader from "react-spinners/PuffLoader"
-
 import Header from "./Header"
-
-const Hero = React.lazy(() => import("./Hero"))
-const SocialLinks = React.lazy(() => import("./SocialLinks"))
-const About = React.lazy(() => import("./About"))
-const Portfolio = React.lazy(() => import("./Portfolio"))
-const SkillSet = React.lazy(() => import("./Skills"))
-const ContactForm = React.lazy(() => import("./Contact"))
-const Footer = React.lazy(() => import("./Footer"))
+import Hero from "./Hero"
+import SocialLinks from "./SocialLinks"
+import About from "./About"
+import Portfolio from "./Portfolio"
+import SkillSet from "./Skills"
+import ContactForm from "./Contact"
+import Footer from "./Footer"
 
 const Layout = () => {
   useEffect(() => {
@@ -36,30 +33,14 @@ const Layout = () => {
     <>
       {!isSSR && (
         <>
-          <Suspense
-            fallback={
-              <div
-                style={{
-                  width: "100vw",
-                  height: "100vh",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <PuffLoader size={80} color="#542ce2" />
-              </div>
-            }
-          >
-            <Header />
-            <Hero />
-            <SocialLinks />
-            <About />
-            <Portfolio />
-            <SkillSet />
-            <ContactForm />
-            <Footer />
-          </Suspense>
+          <Header />
+          <Hero />
+          <SocialLinks />
+          <About />
+          <Portfolio />
+          <SkillSet />
+          <ContactForm />
+          <Footer />
         </>
       )}
     </>
