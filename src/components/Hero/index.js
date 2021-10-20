@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 import { Container, Col } from "react-bootstrap"
-import { Fade } from "react-awesome-reveal"
+import { Fade, Slide } from "react-awesome-reveal"
 import Typical from "react-typical"
 
 const Hero = () => {
@@ -38,15 +38,9 @@ const Hero = () => {
             <Col lg={12} className="hero-text">
               <Fade delay="50" direction="right" triggerOnce>
                 <p className="hero-text--main mbr-text mbr-fonts-style display-5">
-                  {/* <Emoji
-                    className="hero-emoji-animation"
-                    symbol="👋"
-                    label="hello"
-                  /> */}
                   Hi there
                 </p>
               </Fade>
-
               <Fade delay="90" direction="right" triggerOnce>
                 <p className="hero-text--main mbr-text mbr-fonts-style display-5">
                   I'm Jakub
