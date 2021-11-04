@@ -2433,12 +2433,15 @@ pre {
     .repo-name {
       margin: 0px;
       margin-bottom: 0.75rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       color: var(--headingColor);
       font-size: 25px;
       font-weight: 700;
+
+      @media (min-width: 767px) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
     }
 
     .repo-star-svg {
