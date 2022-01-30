@@ -85,7 +85,11 @@ const Portfolio = () => {
                 url,
               }) => (
                 <Fade bottom distance="40px" triggerOnce>
-                  <div className={`card mb-3 ${theme}`}>
+                  <div
+                    className={`card mb-3 ${theme}`}
+                    onClick={() => url && openRepoinNewTab(url)}
+                    onKeyDown={() => url && openRepoinNewTab(url)}
+                  >
                     {coverImage && (
                       <div className="card-img-top img-fluid">
                         <GatsbyImage
@@ -102,8 +106,6 @@ const Portfolio = () => {
                           ? "div"
                           : "wrapper"
                       }`}
-                      onClick={() => url && openRepoinNewTab(url)}
-                      onKeyDown={() => url && openRepoinNewTab(url)}
                       role="presentation"
                     >
                       {isOpenSource ? (
