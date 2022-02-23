@@ -6019,9 +6019,9 @@ flatted@^3.1.0:
   integrity sha512-JaTY/wtrcSyvXJl4IMFHPKyFur1sE9AUqc0QnhOaJ0CxHtAoIV8pYDzeEfAaNEtGkOfq4gr3LBFmdXW5mOQFnA==
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.0:
-  version "1.14.4"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.4.tgz#838fdf48a8bbdd79e52ee51fb1c94e3ed98b9379"
-  integrity sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==
+  version "1.14.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
+  integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
 
 for-in@^1.0.2:
   version "1.0.2"
@@ -11509,13 +11509,6 @@ react-type-animation@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/react-type-animation/-/react-type-animation-1.1.2.tgz#ed0fe6da51eb49c49a1f2e5565e3df058cf1b240"
   integrity sha512-/ymDXDR6vksmb9nkWbasmu8qEArUCWFxn1k+D9RndXdfYhO7II7XPSOxsvSLC0rYU1QB3IRoRPME7qLkAp1TRA==
-  dependencies:
-    "@camwiegert/typical" "^0.1.1"
-
-react-typical@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/react-typical/-/react-typical-0.1.3.tgz#c56e607a8e435b6f8a23eb5eaaf00768e35be06d"
-  integrity sha512-VynIYVQvAZ1Nco4C+QNEqR17STGK/xw6Dc1zNj/LuYm8fISw1Qp3q9n3hv6O3iQDLD0OWwdWKHun5oj6mCMB4A==
   dependencies:
     "@camwiegert/typical" "^0.1.1"
 
