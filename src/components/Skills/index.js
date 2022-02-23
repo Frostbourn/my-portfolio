@@ -39,7 +39,7 @@ const SkillSet = () => {
               {sortNodes.map(({ title, imageUrl }) => (
                 <li className="p-4 m-2">
                   <div>
-                    <img src={imageUrl} width="40" />
+                    <img src={imageUrl} width="40" alt={title} />
                     <span>{title}</span>
                   </div>
                 </li>

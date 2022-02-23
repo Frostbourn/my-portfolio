@@ -50,11 +50,11 @@ const Header = () => {
           }
         >
           <Container>
-            <a className="navbar-brand" onClick={handleScrollToTop}>
+            <div className="navbar-brand" onClick={handleScrollToTop}>
               <h3 className="logo">
                 Jakub<span>Skowronski.</span>
               </h3>
-            </a>
+            </div>
             <button
               className="navbar-toggler collapsed"
               type="button"
