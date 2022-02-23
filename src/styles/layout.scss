@@ -1296,7 +1296,9 @@ a.text-black {
 }
 
 .alert-success {
-  background-color: #70c770;
+  background-color: #fff;
+  margin: 0 !important;
+  color: #70c770 !important;
 }
 
 .alert-info {
