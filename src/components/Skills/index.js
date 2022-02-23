@@ -1,9 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
 
 const SkillSet = () => {

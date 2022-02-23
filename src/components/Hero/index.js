@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react"
 
 import { Container, Col } from "react-bootstrap"
-import { Fade, Slide } from "react-awesome-reveal"
-import Typical from "react-typical"
+import { Fade } from "react-awesome-reveal"
+
+import TypeAnimation from "react-type-animation"
+import gsap from "gsap"
+import ParticlesWrapper from "./components/Particles"
 
 const Hero = () => {
   const [state, setState] = useState(false)
@@ -20,20 +23,27 @@ const Hero = () => {
     }
   }, [state, setState])
 
+  useEffect(() => {
+    const tl = gsap.timeline()
+    tl.to(".scroll", {
+      duration: 1,
+      delay: 3,
+      scale: 1,
+      ease: "elastic.inOut",
+      force3D: false,
+      yoyo: true,
+    })
+  }, [])
+
   return (
     <>
       <Fade triggerOnce>
         <section className="hero">
-          <Fade delay="50" triggerOnce>
-            <div className="animation_background">
-              <div className="circle1"></div>
-              <div className="circle2"></div>
-              <div className="circle3"></div>
-              <div className="circle4"></div>
-              <div className="circle5"></div>
-              <div className="circle6"></div>
-            </div>
-          </Fade>
+          <div className="animation_background">
+            <Fade delay="100" triggerOnce>
+              <ParticlesWrapper />
+            </Fade>
+          </div>
           <Container fluid>
             <Col lg={12} className="hero-text">
               <Fade delay="50" direction="right" triggerOnce>
@@ -49,18 +59,19 @@ const Hero = () => {
               <Fade delay="130" direction="right" triggerOnce>
                 <h1 className="mbr-section-title mbr-fonts-style display-1">
                   <strong>
-                    <Typical
+                    <TypeAnimation
                       className="hero-cursor"
-                      steps={[
-                        "Front-end Developer",
+                      cursor={true}
+                      sequence={[
+                        "Frontend Developer",
                         2500,
                         "Programmer",
                         2500,
                         "Biker",
                         3000,
                       ]}
-                      loop={Infinity}
                       wrapper="p"
+                      repeat={Infinity}
                     />
                   </strong>
                 </h1>
@@ -87,31 +98,9 @@ const Hero = () => {
                 </Fade>
               </div>
             </Col>
-            {/* <Col lg={6} className="hero-svg">
-                  <Fade delay="1000" triggerOnce>
-                    <Image />
-                  </Fade>
-                </Col> */}
-
-            {/* <Col lg={5} md={8} sm={8} xs={8} className="photo-split">
-                  <Fade direction="right" triggerOnce>
-                    <Img
-                      fluid={data.aboutPhoto.childImageSharp.fluid}
-                      style={{
-                        margin: "0 auto", // Used to center the image
-                      }}
-                    />
-                  </Fade>
-                </Col> */}
           </Container>
-          {/* <Col className="hero-container">
-            <Fade delay="1000" triggerOnce>
-              <div className="hero-shape"></div>
-            </Fade>
-          </Col> */}
-          <Fade delay="180" triggerOnce>
-            <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
-          </Fade>
+          <div className={`${state ? "hidden" : ""}` + " scroll"}></div>
+
           <div className="waves">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
               <path

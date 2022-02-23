@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react"
 
-import { Fade } from "react-awesome-reveal"
-import {
-  FaFacebookMessenger,
-  FaGithub,
-  FaEnvelopeOpenText,
-} from "react-icons/fa"
+import { FaFacebookMessenger, FaEnvelopeOpenText } from "react-icons/fa"
 import "balloon-css"
+import gsap from "gsap"
 
 const SocialLinks = () => {
   const [state, setState] = useState(false)
@@ -24,51 +20,49 @@ const SocialLinks = () => {
     }
   }, [state, setState])
 
+  useEffect(() => {
+    const tl = gsap.timeline()
+    tl.to("#social-links", {
+      duration: 1,
+      delay: 2.5,
+      autoAlpha: 1,
+      y: "-438px",
+      ease: "power2.inOut",
+    })
+  }, [])
+
   return (
-    <Fade delay="250" triggerOnce>
-      <section
-        id="social-links"
-        className={`${state ? "hidden" : ""}` + " social-links"}
-      >
-        <div className="social-media">
-          <ul className="social-list">
-            <li aria-label="Facebook" data-balloon-pos="left">
-              <a
-                className="icon-transition"
-                href="https://www.m.me/skowronski.jakub"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-              >
-                <FaFacebookMessenger />
-              </a>
-            </li>
-            <li aria-label="Github" data-balloon-pos="left">
-              <a
-                className="icon-transition"
-                href="https://github.com/Frostbourn"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Github"
-              >
-                <FaGithub />
-              </a>
-            </li>
-            <li aria-label="E-mail" data-balloon-pos="left">
-              <a
-                className="icon-transition"
-                href="mailto:kontakt@jakubskowronski.com"
-                rel="noreferrer"
-                aria-label="E-mail"
-              >
-                <FaEnvelopeOpenText />
-              </a>
-            </li>
-            <li className="social-line"></li>
-          </ul>
-        </div>
-      </section>
-    </Fade>
+    <section
+      id="social-links"
+      className={`${state ? "hidden" : ""}` + " social-links"}
+    >
+      <div className="social-media">
+        <ul className="social-list">
+          <li aria-label="Facebook" data-balloon-pos="left">
+            <a
+              className="icon-transition"
+              href="https://www.m.me/skowronski.jakub"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookMessenger />
+            </a>
+          </li>
+          <li aria-label="E-mail" data-balloon-pos="left">
+            <a
+              className="icon-transition"
+              href="mailto:kontakt@jakubskowronski.com"
+              rel="noreferrer"
+              aria-label="E-mail"
+            >
+              <FaEnvelopeOpenText />
+            </a>
+          </li>
+          <li className="social-line"></li>
+        </ul>
+      </div>
+    </section>
   )
 }
 

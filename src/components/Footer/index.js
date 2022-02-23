@@ -2,11 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import Emoji from "../Emoji"
 import { Fade } from "react-awesome-reveal"
-import {
-  FaFacebookMessenger,
-  FaGithub,
-  FaEnvelopeOpenText,
-} from "react-icons/fa"
+import { FaFacebookMessenger, FaEnvelopeOpenText } from "react-icons/fa"
 
 const Footer = () => (
   <footer>
@@ -50,18 +46,6 @@ const Footer = () => (
                 >
                   <span className="mbr-iconfont">
                     <FaFacebookMessenger />
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="icon-transition"
-                  href="https://github.com/Frostbourn"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="mbr-iconfont">
-                    <FaGithub />
                   </span>
                 </a>
               </li>

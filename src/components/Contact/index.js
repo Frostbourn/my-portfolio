@@ -12,6 +12,7 @@ const ContactForm = () => {
     submitting: false,
     status: null,
   })
+
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
       submitting: false,
@@ -44,6 +45,7 @@ const ContactForm = () => {
         handleServerResponse(false, r.response.data.error, form)
       })
   }
+
   const data = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "about-photo.jpg" }) {
@@ -55,6 +57,15 @@ const ContactForm = () => {
       }
     }
   `)
+
+  const handleScrollToTop = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
     <>
       <section id="contact" className="contact features8">
@@ -140,7 +151,11 @@ const ContactForm = () => {
           </Container>
         </Fade>
       </section>
-      <a href="#top" className="btn-primary btn-circle" aria-label="Go to top">
+      <a
+        onClick={handleScrollToTop}
+        className="btn-primary btn-circle"
+        aria-label="Go to top"
+      >
         <FaChevronUp value={{ style: { color: "#ffffff !important" } }} />
       </a>
     </>

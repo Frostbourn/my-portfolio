@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Container } from "react-bootstrap"
 import PropTypes from "prop-types"
 import DarkLightSwitch from "../ThemeToggler"
-// import { Fade } from "react-awesome-reveal"
+
+import gsap from "gsap"
 import { FaEnvelope } from "react-icons/fa"
 
-const Header = props => {
-  let app = useRef(null)
+const Header = () => {
   const [state, setState] = useState(false)
 
   useEffect(() => {
@@ -22,12 +22,27 @@ const Header = props => {
     }
   }, [state, setState])
 
+  useEffect(() => {
+    const tl = gsap.timeline()
+    tl.to("header", {
+      duration: 1,
+      delay: 1,
+      autoAlpha: 1,
+      y: "50%",
+      ease: "bounce.out",
+    })
+  }, [])
+
+  const handleScrollToTop = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
+
   return (
-    <header
-      className={`${state ? "scrollBox" : ""}`}
-      data-scroll-header
-      ref={el => (app = el)}
-    >
+    <header className={`${state ? "scrollBox" : ""}`} data-scroll-header>
       <div className="backdrop">
         <nav
           className={
@@ -35,7 +50,7 @@ const Header = props => {
           }
         >
           <Container>
-            <a className="navbar-brand" href="/#top">
+            <a className="navbar-brand" onClick={handleScrollToTop}>
               <h3 className="logo">
                 Jakub<span>Skowronski.</span>
               </h3>
