@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react"
 
-import { FaFacebookMessenger, FaEnvelopeOpenText } from "react-icons/fa"
+import {
+  FaFacebookMessenger,
+  FaEnvelopeOpenText,
+  FaLinkedinIn,
+} from "react-icons/fa"
 import "balloon-css"
 import gsap from "gsap"
 
@@ -57,6 +61,17 @@ const SocialLinks = () => {
               aria-label="E-mail"
             >
               <FaEnvelopeOpenText />
+            </a>
+          </li>
+          <li aria-label="Linkedin" data-balloon-pos="left">
+            <a
+              className="icon-transition"
+              href="https://www.linkedin.com/in/jakubskowronki/"
+              rel="noreferrer"
+              target="_blank"
+              aria-label="Linkedin"
+            >
+              <FaLinkedinIn />
             </a>
           </li>
           <li className="social-line"></li>
