@@ -30,7 +30,7 @@ const SocialLinks = () => {
       duration: 1,
       delay: 2.5,
       autoAlpha: 1,
-      y: "-438px",
+      y: "-463px",
       ease: "power2.inOut",
     })
   }, [])
