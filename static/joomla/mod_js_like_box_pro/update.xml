@@ -11,7 +11,7 @@
     </tags>
     <maintainer>Jakub Skowronski</maintainer>
     <maintainerurl>https://jsns.eu/</maintainerurl>
-    <targetplatform name="joomla" version="4.[0123456789]"/>
+    <targetplatform name="joomla" version="3.[0123456789]|4.[0123456789]"/>
     <element>mod_js_like_box_pro</element>
     <type>module</type>
     <client>0</client>

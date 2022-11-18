@@ -11,7 +11,7 @@
     </tags>
     <maintainer>Jakub Skowronski</maintainer>
     <maintainerurl>https://jakubskowronski.com/</maintainerurl>
-    <targetplatform name="joomla" version="4.[0123456789]"/>
+    <targetplatform name="joomla" version="3.[8910]|4.[0123456789]"/>
     <element>mod_facebook_slide_likebox</element>
     <type>module</type>
     <client>0</client>
