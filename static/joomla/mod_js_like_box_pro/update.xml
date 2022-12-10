@@ -2,9 +2,9 @@
   <update>
     <name>JS Like Box PRO</name>
     <version>2.2.0</version>
-    <infourl>https://jsns.eu/my-subscriptions</infourl>
+    <infourl>https://jsns.eu/user/download</infourl>
     <downloads>
-        <downloadurl type="full" format="zip">https://jsns.eu/my-subscriptions</downloadurl>
+        <downloadurl type="full" format="zip">https://jsns.eu/user/download</downloadurl>
     </downloads>
     <tags>
         <tag>stable</tag>
