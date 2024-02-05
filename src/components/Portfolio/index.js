@@ -36,6 +36,7 @@ const Portfolio = () => {
           isOpenSource
           lang
           favorites
+          order
           size
           isReview
           theme
@@ -48,9 +49,7 @@ const Portfolio = () => {
   `)
 
   const sortNodes = data.allContentfulPortfolio.nodes
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-    .slice(0)
-    .reverse()
+    .sort((a, b) => new Date(b.order) - new Date(a.order)).reverse();
 
   return (
     <section id="portfolio" className="portfolio features8">
@@ -86,7 +85,7 @@ const Portfolio = () => {
               }) => (
                 <Fade bottom distance="40px" triggerOnce>
                   <div
-                    className={`card mb-3 ${theme}`}
+                    className={`card mb-3 ${theme} ${isReview && "isReview"}`}
                     onClick={() => url && openRepoinNewTab(url)}
                     onKeyDown={() => url && openRepoinNewTab(url)}
                   >

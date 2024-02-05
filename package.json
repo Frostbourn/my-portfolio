@@ -33,7 +33,7 @@
     "gatsby-transformer-sharp": "^3.2.0",
     "gsap": "^3.9.1",
     "jquery": "^3.6.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.0",
     "popper.js": "^1.16.1",
     "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.19",

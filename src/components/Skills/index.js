@@ -12,13 +12,14 @@ const SkillSet = () => {
           createdAt
           title
           imageUrl
+          order
         }
       }
     }
   `)
 
   const sortNodes = data.allContentfulSkills.nodes
-    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .sort((a, b) => new Date(b.order) - new Date(a.order))
     .slice(0)
     .reverse()
 

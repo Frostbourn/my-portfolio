@@ -2345,9 +2345,11 @@ pre {
     }
 
     .card-div {
-      // box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
       padding: 2rem;
-      cursor: pointer;
+
+      @media screen and (max-width: 992px) {
+        padding: 1rem 0.8rem;
+      }
     }
 
     .card-review {
@@ -2499,6 +2501,10 @@ pre {
         }
       }
 
+      &.isReview {
+        cursor: default !important;
+      }
+
       // &::after {
       //     content: '';
       //     position: absolute;
@@ -2644,6 +2650,11 @@ pre {
       padding: unset;
       list-style: none;
 
+      @media screen and (max-width: 446px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
       li {
         display: flex;
         align-items: flex-end;
@@ -2654,6 +2665,12 @@ pre {
         box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05),
           0 0 3px 0 rgba(0, 0, 0, 0.1);
         background-color: var(--skillsBackground);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          box-shadow: 0 10px 20px 3px rgba(0, 0, 0, 0.1);
+          transform: scale(1.05);
+        }
 
         img {
           display: block;
@@ -3101,14 +3118,6 @@ footer {
     &:after {
       display: none;
     }
-
-    .projects-block {
-      -moz-column-gap: 2rem;
-      column-gap: 2rem;
-      -moz-column-count: 1;
-      column-count: 1;
-      grid-column-gap: 2rem;
-    }
   }
 
   .contact {
@@ -3293,6 +3302,16 @@ footer {
     .social-list {
       text-align: center !important;
     }
+  }
+}
+
+@media screen and (max-width: 669px) {
+  .projects-block {
+    -moz-column-gap: 2rem;
+    column-gap: 2rem !important;
+    -moz-column-count: 1;
+    column-count: 1 !important;
+    grid-column-gap: 2rem;
   }
 }
 
