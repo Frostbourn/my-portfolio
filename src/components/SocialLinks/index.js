@@ -66,7 +66,7 @@ const SocialLinks = () => {
           <li aria-label="Linkedin" data-balloon-pos="left">
             <a
               className="icon-transition"
-              href="https://www.linkedin.com/in/jakubskowronki/"
+              href="https://www.linkedin.com/in/jakub-skowronski"
               rel="noreferrer"
               target="_blank"
               aria-label="Linkedin"

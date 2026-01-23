@@ -47,13 +47,14 @@ const ContactForm = () => {
           </Container>
         </Fade>
       </section>
-      <div
+      <button
         onClick={handleScrollToTop}
         className="btn-primary btn-circle"
         aria-label="Go to top"
+        type="button"
       >
-        <FaChevronUp value={{ style: { color: "#ffffff !important" } }} />
-      </div>
+        <FaChevronUp />
+      </button>
     </>
   )
 }

@@ -12,7 +12,7 @@ const Header = () => {
   useEffect(() => {
     const onScroll = () => {
       const isScrolled = window.scrollY > 10
-      if (isScrolled !== state.scrolled) {
+      if (isScrolled !== state) {
         setState(isScrolled)
       }
     }
@@ -20,7 +20,7 @@ const Header = () => {
     return () => {
       document.removeEventListener("scroll", onScroll)
     }
-  }, [state, setState])
+  }, [state])
 
   useEffect(() => {
     const tl = gsap.timeline()
@@ -77,8 +77,18 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="hover nav-item">
+                  <a className="nav-link" href="#experience">
+                    Experience
+                  </a>
+                </li>
+                <li className="hover nav-item">
                   <a className="nav-link" href="#portfolio">
                     Work
+                  </a>
+                </li>
+                <li className="hover nav-item">
+                  <a className="nav-link" href="#skills">
+                    Skills
                   </a>
                 </li>
                 <li className="nav-item">

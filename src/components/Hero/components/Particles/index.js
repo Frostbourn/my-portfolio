@@ -1,23 +1,38 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Particles from "react-tsparticles"
 
 const ParticlesWrapper = () => {
+  const [isLoaded, setIsLoaded] = useState(false)
+
   useEffect(() => {
+    // Delay particles loading to improve initial page load
+    const loadTimer = setTimeout(() => {
+      setIsLoaded(true)
+    }, 1000)
+
+    return () => clearTimeout(loadTimer)
+  }, [])
+
+  useEffect(() => {
+    if (!isLoaded) return
     const timer = setTimeout(() => {
       const el = document.getElementById("tsparticles")
-      const child = el.firstChild
-      child.style.removeProperty("position")
+      if (el && el.firstChild) {
+        el.firstChild.style.removeProperty("position")
+      }
     }, 500)
     return () => {
       clearTimeout(timer)
     }
-  }, [])
+  }, [isLoaded])
+
+  if (!isLoaded) return null
 
   return (
     <Particles
       id="tsparticles"
       options={{
-        fpsLimit: 120,
+        fpsLimit: 30,
         interactivity: {
           events: {
             onClick: {

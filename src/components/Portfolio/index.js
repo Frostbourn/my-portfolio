@@ -82,8 +82,8 @@ const Portfolio = () => {
                 theme,
                 title,
                 url,
-              }) => (
-                <Fade bottom distance="40px" triggerOnce>
+              }, index) => (
+                <Fade key={index} bottom distance="40px" triggerOnce>
                   <div
                     className={`card mb-3 ${theme} ${isReview && "isReview"}`}
                     onClick={() => url && openRepoinNewTab(url)}
@@ -128,11 +128,11 @@ const Portfolio = () => {
                             </svg>
                             <p className="repo-name">{title}</p>
                           </div>
-                          <p className="repo-description">
+                          <div className="repo-description">
                             <ReactMarkdown>
                               {description.internal.content}
                             </ReactMarkdown>
-                          </p>
+                          </div>
                           <div className="repo-stats">
                             <div className="repo-left-stat">
                               <span>
@@ -178,11 +178,11 @@ const Portfolio = () => {
                               <p className="repo-subtitle align-center">
                                 {subtitle}
                               </p>
-                              <p className="repo-description align-center">
+                              <div className="repo-description align-center">
                                 <ReactMarkdown>
                                   {description.internal.content}
                                 </ReactMarkdown>
-                              </p>
+                              </div>
                             </div>
                           </div>
                         )

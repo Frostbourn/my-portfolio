@@ -63,12 +63,14 @@ const Hero = () => {
                       className="hero-cursor"
                       cursor={true}
                       sequence={[
-                        "Frontend Developer",
+                        "Software Developer",
                         2500,
-                        "Programmer",
+                        "AI Enthusiast",
                         2500,
-                        "Biker",
-                        3000,
+                        "React & Next.js Expert",
+                        2500,
+                        "Automation Architect",
+                        2500,
                       ]}
                       wrapper="p"
                       repeat={Infinity}

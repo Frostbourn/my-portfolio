@@ -13,6 +13,7 @@ body {
   --textColor: #24292e;
   --headingColor: #121212;
   --buttonColor: #542ce2;
+  --buttonColorSecondary: #762ce2;
   --hoverColor: #762ce2;
   --wavesColor: #542ce2;
   --cardColor: #ffffff;
@@ -23,6 +24,14 @@ body {
   --contactHeading: var(--background);
   --svgFilter: unset;
   --popupColor: #ffffff;
+  --gradient: linear-gradient(135deg, #542ce2 0%, #762ce2 50%, #8c43ff 100%);
+  --gradientText: linear-gradient(135deg, #542ce2 0%, #8c43ff 100%);
+  --glassBackground: rgba(255, 255, 255, 0.7);
+  --glassBorder: rgba(255, 255, 255, 0.5);
+  --accentGreen: #10b981;
+  --accentBlue: #3b82f6;
+  --accentPink: #ec4899;
+  --timelineColor: #e5e7eb;
   height: auto;
   min-height: 100vh;
   background-color: var(--background);
@@ -43,6 +52,7 @@ body.dark {
   --textColor: #cacaca;
   --headingColor: #ffffff;
   --buttonColor: #a78cf2;
+  --buttonColorSecondary: #a272ec;
   --hoverColor: #a272ec;
   --wavesColor: #1f1f1f;
   --cardColor: #1f1f1f;
@@ -53,6 +63,14 @@ body.dark {
   --contactHeading: var(--headingColor);
   --svgFilter: saturate(0.4);
   --popupColor: #343434;
+  --gradient: linear-gradient(135deg, #a78cf2 0%, #a272ec 50%, #c084fc 100%);
+  --gradientText: linear-gradient(135deg, #a78cf2 0%, #c084fc 100%);
+  --glassBackground: rgba(31, 31, 31, 0.8);
+  --glassBorder: rgba(167, 140, 242, 0.2);
+  --accentGreen: #34d399;
+  --accentBlue: #60a5fa;
+  --accentPink: #f472b6;
+  --timelineColor: #374151;
   background-color: var(--background);
   color: var(--textColor);
   -webkit-font-smoothing: antialiased;
@@ -106,6 +124,8 @@ button,
 header {
   display: flex;
   position: fixed;
+  top: 0;
+  left: 0;
   align-items: center;
   visibility: hidden;
   z-index: 9999;
@@ -114,6 +134,10 @@ header {
   transform: translate(0px, -50%);
   transition: box-shadow 0.3s ease-out, height 0.3s ease-out,
     background 0.3s ease-out;
+
+  &.scrollBox {
+    transform: translate(0px, 0);
+  }
 
   &:not(.scrollBox) {
     height: 90px;
@@ -4043,3 +4067,503 @@ div[class*="kursorChild"].kursorChild:after {
     cursor: auto;
   }
 }
+
+// =====================================================
+// MODERN STYLES 2026
+// =====================================================
+
+// Glass Card Effect
+.glass-card {
+  background: var(--cardColor);
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--boxShadow);
+  }
+}
+
+
+// =====================================================
+// EXPERIENCE SECTION
+// =====================================================
+
+.experience {
+  padding: 80px 0;
+  background: var(--background);
+  position: relative;
+
+  .container {
+    max-width: 1000px;
+  }
+
+  .mbr-section-title {
+    color: var(--headingColor);
+    margin-bottom: 0.5rem;
+  }
+
+  .mbr-section-subtitle {
+    color: var(--textColor);
+    opacity: 0.8;
+    margin-bottom: 3rem;
+  }
+}
+
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 40px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--buttonColor);
+    border-radius: 3px;
+    transform: translateX(-50%);
+
+    @media (max-width: 768px) {
+      left: 20px;
+    }
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  width: 50%;
+  padding-right: 50px;
+
+  &.left {
+    margin-left: 0;
+    padding-right: 50px;
+    padding-left: 0;
+    text-align: right;
+
+    .timeline-marker {
+      right: -17px;
+      left: auto;
+    }
+
+    .timeline-content {
+      text-align: left;
+    }
+  }
+
+  &.right {
+    margin-left: 50%;
+    padding-right: 0;
+    padding-left: 50px;
+
+    .timeline-marker {
+      left: -17px;
+      right: auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+
+    &.left, &.right {
+      margin-left: 0;
+      padding-left: 60px;
+      padding-right: 0;
+
+      .timeline-marker {
+        left: 3px !important;
+        right: auto !important;
+      }
+    }
+  }
+
+  &.current .timeline-marker {
+    background: var(--accentGreen);
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3);
+    -webkit-animation: pulse-green 2s infinite;
+            animation: pulse-green 2s infinite;
+  }
+}
+
+@-webkit-keyframes pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.1);
+  }
+}
+
+@keyframes pulse-green {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.1);
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 30px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--buttonColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  z-index: 2;
+  box-shadow: 0 4px 15px rgba(84, 44, 226, 0.4);
+}
+
+.timeline-content {
+  padding: 25px 30px;
+
+  .timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .company-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background: var(--skillsBackground);
+    padding: 5px;
+  }
+
+  .company-logo-placeholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--buttonColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .job-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--headingColor);
+    margin: 0;
+  }
+
+  .company-name {
+    font-size: 0.95rem;
+    color: var(--textColor);
+    opacity: 0.8;
+    margin: 4px 0 0 0;
+  }
+
+  .job-description {
+    font-size: 0.95rem;
+    color: var(--textColor);
+    font-style: italic;
+    margin: 0 0 10px 0;
+    opacity: 0.9;
+  }
+
+  .badge-current {
+    background: var(--accentGreen);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .timeline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--textColor);
+    opacity: 0.7;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      svg {
+        color: var(--buttonColor);
+      }
+    }
+  }
+
+  .highlights {
+    margin: 0 0 15px 0;
+    padding-left: 20px;
+    list-style: none;
+
+    li {
+      position: relative;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      color: var(--textColor);
+      line-height: 1.5;
+
+      &::before {
+        content: '▸';
+        position: absolute;
+        left: -20px;
+        color: var(--buttonColor);
+        font-weight: bold;
+      }
+    }
+  }
+
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .skill-tag {
+    background: rgba(84, 44, 226, 0.1);
+    color: var(--buttonColor);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
+
+// =====================================================
+// CERTIFICATIONS SECTION
+// =====================================================
+
+.certifications {
+  padding: 80px 0;
+  background: var(--skillsBackground);
+  position: relative;
+
+  .mbr-section-title {
+    color: var(--headingColor);
+    margin-bottom: 0.5rem;
+  }
+
+  .mbr-section-subtitle {
+    color: var(--textColor);
+    opacity: 0.8;
+    margin-bottom: 3rem;
+  }
+}
+
+.cert-grid {
+  margin-top: 40px;
+
+  > div {
+    margin-bottom: 20px;
+  }
+}
+
+.cert-card {
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+
+  &.featured {
+    border: 2px solid var(--buttonColor);
+  }
+
+  .cert-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    background: var(--buttonColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 22px;
+  }
+
+  &.education .cert-icon {
+    background: var(--accentBlue);
+  }
+
+  .cert-content {
+    flex: 1;
+  }
+
+  .cert-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--headingColor);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+  }
+
+  .cert-issuer {
+    font-size: 0.95rem;
+    color: var(--buttonColor);
+    font-weight: 600;
+    margin: 0 0 4px 0;
+  }
+
+  .cert-date {
+    font-size: 0.85rem;
+    color: var(--textColor);
+    opacity: 0.7;
+    margin: 0 0 4px 0;
+  }
+
+  .cert-credential {
+    font-size: 0.8rem;
+    color: var(--textColor);
+    opacity: 0.5;
+    margin: 0;
+    font-family: monospace;
+  }
+
+  .cert-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    span {
+      background: var(--buttonColor);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  .cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--buttonColor);
+    text-decoration: none;
+    border: 1px solid var(--buttonColor);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--buttonColor);
+      color: #fff;
+    }
+
+    svg {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// =====================================================
+// SKILLS SECTION - CATEGORIES
+// =====================================================
+
+.skills {
+  .skills-category {
+    margin-top: 40px;
+
+    .category-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--headingColor);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &.ai-skills {
+      .category-title {
+        color: #10b981;
+      }
+
+      li.ai-skill {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(59, 130, 246, 0.08) 100%);
+        border: 1px solid rgba(16, 185, 129, 0.2);
+
+        &:hover {
+          border-color: #10b981;
+          box-shadow: 0 10px 20px rgba(16, 185, 129, 0.15);
+        }
+      }
+    }
+
+    &.devops-skills {
+      .category-title {
+        color: #f59e0b;
+      }
+
+      li.devops-skill {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(239, 68, 68, 0.08) 100%);
+        border: 1px solid rgba(245, 158, 11, 0.2);
+
+        &:hover {
+          border-color: #f59e0b;
+          box-shadow: 0 10px 20px rgba(245, 158, 11, 0.15);
+        }
+      }
+    }
+
+    &.dev-skills {
+      .category-title {
+        color: var(--buttonColor);
+      }
+    }
+  }
+
+  .skill-list {
+    ul {
+      li {
+        .skill-icon {
+          font-size: 2rem;
+          display: block;
+          margin: 5px auto;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

@@ -21,10 +21,13 @@ const Footer = () => (
                   <a href="#about">About</a>
                 </li>
                 <li className="hover">
+                  <a href="#experience">Experience</a>
+                </li>
+                <li className="hover">
                   <a href="#portfolio">Work</a>
                 </li>
                 <li className="hover">
-                  <a href="#contact">&nbsp;Let's talk!</a>
+                  <a href="#skills">Skills</a>
                 </li>
               </ul>
             </nav>
@@ -68,7 +71,7 @@ const Footer = () => (
               <li>
                 <a
                   className="icon-transition"
-                  href="https://www.linkedin.com/in/jakubskowronki/"
+                  href="https://www.linkedin.com/in/jakub-skowronski"
                   rel="noreferrer"
                   target="_blank"
                   aria-label="Linkedin"

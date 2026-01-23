@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Jakub Skowroński`,
-    titleTemplate: ` | Freelance Front-end Developer | Portfolio`,
+    titleTemplate: ` | Software Engineer | Portfolio`,
     description: `I specialize in building meaningful digital products and interactive experiences. Check out my portfolio and references.`,
     author: `Jakub Skowroński`,
     url: `https://jakubskowronski.com`,
@@ -34,7 +34,7 @@ module.exports = {
       options: {
         defaults: {
           formats: [`auto`, `webp`, `avif`],
-          quality: 100,
+          quality: 80,
           placeholder: "blurred",
         },
       },
@@ -69,8 +69,10 @@ module.exports = {
         fonts: [
           {
             family: "Poppins",
+            weights: ["400", "500", "600", "700"],
           },
         ],
+        display: "swap",
       },
     },
     {
