@@ -1,19 +1,20 @@
 <updates>
-  <update>
-    <name>JS Like Box PRO</name>
-    <version>2.3.0</version>
-    <infourl>https://jsns.eu/user/download</infourl>
-    <downloads>
-        <downloadurl type="full" format="zip">https://jsns.eu/user/download</downloadurl>
-    </downloads>
-    <tags>
-        <tag>stable</tag>
-    </tags>
-    <maintainer>Jakub Skowronski</maintainer>
-    <maintainerurl>https://jsns.eu/</maintainerurl>
-    <targetplatform name="joomla" version="3.[0123456789]|4.[0123456789]"/>
-    <element>mod_js_like_box_pro</element>
-    <type>module</type>
-    <client>0</client>
- </update>
- </updates>
+    <update>
+        <name>Js Like Box Slider</name>
+        <description>Js Like Box Slider v4.1.0 — stale feeds recheck after 30 minutes, the social bar skips Facebook events, and TikTok photo covers are included.</description>
+        <version>4.1.0</version>
+        <infourl>https://jsns.eu/user/download</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://jakubskowronski.com/joomla/mod_js_like_box_pro/mod_js_like_box_pro.zip</downloadurl>
+        </downloads>
+        <tags>
+            <tag>stable</tag>
+        </tags>
+        <maintainer>Jakub Skowroński</maintainer>
+        <maintainerurl>https://jsns.eu/</maintainerurl>
+        <targetplatform name="joomla" version="3.10|4.[0123456789]|5.[0123456789]|6.[0123456789]"/>
+        <element>mod_js_like_box_pro</element>
+        <type>module</type>
+        <client>0</client>
+    </update>
+</updates>
