@@ -62,7 +62,7 @@ const Portfolio = () => {
               </strong>
             </h2>
             <h3 className="mbr-section-subtitle mbr-light mbr-fonts-style pt-3 align-center display-5">
-              Here are a few design projects I've worked on recently.
+              A few recent projects.
             </h3>
           </Col>
 
@@ -107,7 +107,32 @@ const Portfolio = () => {
                       }`}
                       role="presentation"
                     >
-                      {isOpenSource ? (
+                      {isReview ? (
+                        <>
+                          <div
+                            className="card-review"
+                            style={
+                              theme === "bg-warning" ? { color: "#000" } : {}
+                            }
+                          >
+                            <blockquote>
+                              <q>{description.internal.content}</q>
+                            </blockquote>
+                          </div>
+                          <div
+                            className="card-review-author"
+                            style={
+                              theme === "bg-warning" ? { color: "#000" } : {}
+                            }
+                          >
+                            <p>
+                              <strong>{author}</strong>
+                              <br />
+                              {position}
+                            </p>
+                          </div>
+                        </>
+                      ) : isOpenSource ? (
                         <>
                           <span className="badge badge-success">
                             Open Source
@@ -166,53 +191,31 @@ const Portfolio = () => {
                           </div>
                         </>
                       ) : (
-                        coverImage && (
-                          <div className="card-div">
-                            <div className="card-box">
-                              <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
-                                {title}
-                              </h4>
-                              <div className="card-underline align-center">
-                                <div className="line"></div>
-                              </div>
-                              <p className="repo-subtitle align-center">
-                                {subtitle}
-                              </p>
+                        <div className="card-div">
+                          <div className="card-box">
+                            <h4 className="mbr-fonts-style mbr-bold align-center display-5 repo-name">
+                              {title}
+                            </h4>
+                            {subtitle && (
+                              <>
+                                <div className="card-underline align-center">
+                                  <div className="line"></div>
+                                </div>
+                                <p className="repo-subtitle align-center">
+                                  {subtitle}
+                                </p>
+                              </>
+                            )}
+                            {description?.internal?.content && (
                               <div className="repo-description align-center">
                                 <ReactMarkdown>
                                   {description.internal.content}
                                 </ReactMarkdown>
                               </div>
-                            </div>
+                            )}
                           </div>
-                        )
+                        </div>
                       )}
-                      {isReview ? (
-                        <>
-                          <div
-                            className="card-review"
-                            style={
-                              theme === "bg-warning" ? { color: "#000" } : {}
-                            }
-                          >
-                            <blockquote>
-                              <q>{description.internal.content}</q>
-                            </blockquote>
-                          </div>
-                          <div
-                            className="card-review-author"
-                            style={
-                              theme === "bg-warning" ? { color: "#000" } : {}
-                            }
-                          >
-                            <p>
-                              <strong>{author}</strong>
-                              <br />
-                              {position}
-                            </p>
-                          </div>
-                        </>
-                      ) : null}
                     </div>
                   </div>
                 </Fade>

@@ -8,16 +8,17 @@ import { Container, Row, Col } from "react-bootstrap"
 import { Fade } from "react-awesome-reveal"
 import Emoji from "../Emoji"
 
+const description = `I'm a **software engineer**. I build web applications and the systems around them: custom CMS platforms, paywalls, integrations, and workflow automations.
+
+For the past few years that has meant production work on nationwide publishing sites and product stores, and AI workflows with n8n and LLMs. I use React and Next.js when the interface has to stay fast, and automation when a team is still doing the same work by hand.
+
+I join in-house teams and stay with a product from the first version through to something people can rely on.`
+
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulAboutMe {
         nodes {
-          description {
-            internal {
-              content
-            }
-          }
           image {
             gatsbyImageData
           }
@@ -26,8 +27,6 @@ const About = () => {
     }
   `)
 
-  const description =
-    data.allContentfulAboutMe.nodes[0].description.internal.content
   const image = data.allContentfulAboutMe.nodes[0].image.gatsbyImageData
 
   return (
@@ -59,9 +58,9 @@ const About = () => {
                 </div>
                 <a
                   className="btn btn-md btn-bgr py-3 btn-white display-4"
-                  href="#experience"
+                  href="#services"
                 >
-                  My experience
+                  What I do
                 </a>
               </Fade>
             </Col>

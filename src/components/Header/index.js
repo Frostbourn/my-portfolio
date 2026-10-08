@@ -77,8 +77,8 @@ const Header = () => {
                   </a>
                 </li>
                 <li className="hover nav-item">
-                  <a className="nav-link" href="#experience">
-                    Experience
+                  <a className="nav-link" href="#services">
+                    Services
                   </a>
                 </li>
                 <li className="hover nav-item">
