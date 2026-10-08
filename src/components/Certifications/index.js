@@ -86,7 +86,7 @@ const Certifications = () => {
               <Col lg={6} md={6} sm={12} key={`edu-${index}`}>
                 <Fade direction="up" triggerOnce delay={(certifications.length + index) * 100}>
                   <div className="cert-card glass-card education">
-                    <div className="cert-icon education-icon">
+                    <div className="cert-icon">
                       <FaGraduationCap />
                     </div>
                     <div className="cert-content">

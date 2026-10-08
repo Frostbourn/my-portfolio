@@ -68,15 +68,18 @@ const Experience = () => {
           </Col>
 
           <div className="offer-grid">
-            {offers.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="offer-card glass-card">
-                <Icon aria-hidden="true" />
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </div>
+            {offers.map(({ icon: Icon, title, text }, index) => (
+              <Fade key={title} className="reveal-fill" direction="up" triggerOnce delay={index * 80}>
+                <div className="offer-card glass-card">
+                  <Icon aria-hidden="true" />
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </Fade>
             ))}
           </div>
 
+          <Fade direction="up" triggerOnce delay={320}>
           <div className="now-card glass-card">
             <p className="now-label">Currently</p>
             <h3>Software Developer · Gremi Media SA</h3>
@@ -87,12 +90,13 @@ const Experience = () => {
               <li>Workflow automations and integrations with n8n and LLMs</li>
             </ul>
             {cvUrl && (
-              <a className="cv-link" href={cvUrl}>
+              <a className="cv-link" href={cvUrl} target="_blank" rel="noreferrer">
                 <FaDownload aria-hidden="true" />
                 Download CV (PDF)
               </a>
             )}
           </div>
+          </Fade>
         </Container>
       </Fade>
     </section>
