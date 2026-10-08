@@ -4484,13 +4484,12 @@ div[class*="kursorChild"].kursorChild:after {
   }
 
   .hero-grid {
+    display: block;
     position: absolute;
     top: 10%;
     left: 4%;
     width: 46%;
     height: 76%;
-    background-image: radial-gradient(rgba(84, 44, 226, 0.35) 1.3px, transparent 1.3px);
-    background-size: 22px 22px;
     mask-image: radial-gradient(ellipse at center, #000 20%, transparent 72%);
   }
 
@@ -4659,7 +4658,7 @@ body.dark .hero.hero-refresh {
   }
 
   .hero-grid {
-    background-image: radial-gradient(rgba(167, 140, 242, 0.4) 1.3px, transparent 1.3px);
+    opacity: 0.9;
   }
 }
 

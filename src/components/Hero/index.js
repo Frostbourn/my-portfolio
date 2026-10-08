@@ -1,18 +1,26 @@
 import React from "react"
 import { Fade } from "react-awesome-reveal"
+import DotField from "./DotField"
 
 const Hero = () => {
   return (
     <section className="hero hero-refresh">
       <div className="hero-stage" aria-hidden="true">
-        <span className="hero-grid" />
+        <DotField />
         <span className="hero-orb hero-orb-a" />
         <span className="hero-orb hero-orb-b" />
         <span className="hero-orb hero-orb-c" />
         <span className="hero-ring" />
       </div>
       <div className="hero-copy">
-        <Fade cascade damping={0.15} triggerOnce direction="up">
+        <Fade
+          cascade
+          direction="right"
+          duration={700}
+          delay={250}
+          damping={0.45}
+          triggerOnce
+        >
           <p className="hero-kicker">Software engineer</p>
           <h1>I build web applications, AI systems, and the automations around them.</h1>
           <p className="hero-lead">
