@@ -48,11 +48,12 @@ body {
 body.dark {
   --headerBackground: hsl(0 0% 20% / 0.85);
   --background: #121212;
-  --textColor: #cacaca;
+  --textColor: #ededed;
   --headingColor: #ffffff;
-  --buttonColor: #a78cf2;
-  --buttonColorSecondary: #a272ec;
-  --hoverColor: #a272ec;
+  --buttonColor: #5e40d4;
+  --buttonColorSecondary: #7356e4;
+  --hoverColor: #7356e4;
+  --accentText: #e7e0ff;
   --wavesColor: #1f1f1f;
   --cardColor: #1f1f1f;
   --cardText: var(--background);
@@ -73,10 +74,23 @@ body.dark {
   color: var(--textColor);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  .mbr-section-subtitle,
+  .now-meta,
+  .cert-date {
+    opacity: 1;
+    color: #d6d6d6;
+  }
+
+  .hero-kicker,
+  .cert-issuer,
+  .cert-link {
+    color: var(--accentText);
+  }
 }
 
 #gatsby-focus-wrapper {
-  background-color: var(--background) !important;
+  background-color: transparent !important;
 }
 
 .altumcode {
@@ -2939,16 +2953,11 @@ footer {
   }
 
   .hidden-height {
-    float: left;
-    height: 200px;
+    display: none;
   }
 
   .container {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    position: relative;
     height: 130px;
 
     .row {
@@ -4476,76 +4485,6 @@ div[class*="kursorChild"].kursorChild:after {
   overflow: hidden;
   padding: 12vh 8vw 10vh 6vw;
 
-  .hero-stage {
-    position: absolute;
-    z-index: 0;
-    inset: 0;
-    pointer-events: none;
-  }
-
-  .hero-grid {
-    display: block;
-    position: absolute;
-    top: 10%;
-    left: 4%;
-    width: 46%;
-    height: 76%;
-    mask-image: radial-gradient(ellipse at center, #000 20%, transparent 72%);
-  }
-
-  .hero-orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(36px);
-  }
-
-  .hero-orb-a {
-    top: 16%;
-    left: 6%;
-    width: 340px;
-    height: 340px;
-    background: #542ce2;
-    opacity: 0.38;
-    animation: hero-float 9s ease-in-out infinite;
-  }
-
-  .hero-orb-b {
-    top: 46%;
-    left: 26%;
-    width: 220px;
-    height: 220px;
-    background: #8c43ff;
-    opacity: 0.32;
-    animation: hero-float 12s ease-in-out infinite reverse;
-  }
-
-  .hero-orb-c {
-    bottom: 12%;
-    left: 14%;
-    width: 160px;
-    height: 160px;
-    background: #ec4899;
-    opacity: 0.28;
-    animation: hero-float 10s ease-in-out infinite;
-  }
-
-  .hero-ring {
-    position: absolute;
-    top: 22%;
-    left: 10%;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: conic-gradient(
-      from 140deg,
-      transparent 0 62%,
-      rgba(84, 44, 226, 0.85) 82%,
-      transparent 100%
-    );
-    mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px));
-    animation: hero-spin 22s linear infinite;
-  }
-
   .hero-copy {
     position: relative;
     z-index: 1;
@@ -4612,77 +4551,48 @@ div[class*="kursorChild"].kursorChild:after {
       font-size: clamp(1.75rem, 8vw, 2.6rem);
       overflow-wrap: break-word;
     }
-
-    .hero-orb-a,
-    .hero-orb-b {
-      width: 200px;
-      height: 200px;
-      opacity: 0.32;
-    }
-
-    .hero-orb-a {
-      top: 8%;
-      left: -24px;
-    }
-
-    .hero-orb-b {
-      top: auto;
-      right: -24px;
-      bottom: 8%;
-      left: auto;
-    }
-
-    .hero-orb-c {
-      display: none;
-    }
-
-    .hero-ring {
-      display: none;
-    }
-
-    .hero-grid {
-      top: 0;
-      right: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.7;
-    }
   }
 }
 
-body.dark .hero.hero-refresh {
-  .hero-orb-a,
-  .hero-orb-b {
-    opacity: 0.5;
-  }
-
-  .hero-grid {
-    opacity: 0.9;
-  }
+.story-scene {
+  position: fixed;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-22px);
-  }
+.hero.hero-refresh,
+.experience,
+.portfolio,
+.portfolio.work-refresh,
+.certifications,
+.contact .contact-shapes {
+  background-color: transparent;
 }
 
-@keyframes hero-spin {
-  to {
-    transform: rotate(360deg);
-  }
+body.dark .certifications {
+  background: rgba(255, 255, 255, 0.04);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero.hero-refresh .hero-orb,
-  .hero.hero-refresh .hero-ring {
-    animation: none;
+.portfolio.work-refresh {
+  overflow-x: clip;
+}
+
+body.dark {
+  .mbr-section-subtitle,
+  .now-meta,
+  .cert-date {
+    opacity: 1;
+    color: #d6d6d6;
+  }
+
+  .hero.hero-refresh .hero-kicker,
+  .cert-issuer,
+  .cert-link {
+    color: var(--accentText);
   }
 }
 

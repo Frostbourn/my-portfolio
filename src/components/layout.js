@@ -10,6 +10,7 @@ import SkillSet from "./Skills"
 import Certifications from "./Certifications"
 import ContactForm from "./Contact"
 import Footer from "./Footer"
+import CodeDive from "./CodeDive"
 
 const Layout = () => {
   const isSSR = typeof window === "undefined"
@@ -18,6 +19,7 @@ const Layout = () => {
     <>
       {!isSSR && (
         <>
+          <CodeDive />
           <Header />
           <Hero />
           <SocialLinks />
