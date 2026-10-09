@@ -1,4 +1,4 @@
-import { CODE_COLORS, smooth, clamp01, pop, window01, makeHalo, buildGlyphs } from "./kit"
+import { CODE_COLORS, smooth, clamp01, pop, window01, makeHalo } from "./kit"
 
 export const STORY_LOOP = 12
 const TYPE_PAUSE = 4.2
@@ -198,6 +198,72 @@ export const buildRoom = (THREE, kit, halo) => {
   lampLight.position.set(1.05, 1.38, -0.7)
   room.add(lampLight)
 
+  const cat = new THREE.Group()
+  cat.position.set(2.2, 0.02, 0.45)
+  cat.rotation.y = -0.6
+  room.add(cat)
+  box("violet", [0.86, 0.08, 0.66], [0, 0.04, 0], cat)
+  box("pink", [0.86, 0.06, 0.08], [0, 0.11, 0.3], cat)
+  box("pink", [0.86, 0.06, 0.08], [0, 0.11, -0.3], cat)
+  box("pink", [0.08, 0.06, 0.52], [-0.4, 0.11, 0], cat)
+  box("pink", [0.08, 0.06, 0.52], [0.4, 0.11, 0], cat)
+  const catBody = new THREE.Group()
+  catBody.position.set(-0.04, 0.1, -0.02)
+  cat.add(catBody)
+  box("cat", [0.48, 0.16, 0.34], [0, 0.08, 0], catBody)
+  box("cat", [0.38, 0.06, 0.26], [0, 0.18, 0], catBody)
+  ;[-0.12, 0, 0.12].forEach((x) => {
+    box("catStripe", [0.05, 0.015, 0.22], [x, 0.212, 0], catBody)
+    box("catStripe", [0.05, 0.08, 0.015], [x, 0.11, 0.171], catBody)
+  })
+  box("catRuff", [0.16, 0.1, 0.28], [0.36, 0.13, 0.04], cat)
+  ;[-0.06, 0.06].forEach((z) => box("catRuff", [0.1, 0.05, 0.08], [0.34, 0.125, 0.06 + z], cat))
+  const tail = new THREE.Group()
+  tail.position.set(-0.24, 0.11, 0.14)
+  cat.add(tail)
+  box("cat", [0.12, 0.12, 0.13], [0, 0, 0.02], tail)
+  box("cat", [0.4, 0.12, 0.12], [0.2, 0, 0.11], tail)
+  ;[0.12, 0.28].forEach((x) => box("catStripe", [0.04, 0.125, 0.125], [x, 0, 0.11], tail))
+  const tailTip = box("catStripe", [0.12, 0.11, 0.11], [0.45, 0, 0.11], tail)
+
+  const catHead = new THREE.Group()
+  catHead.position.set(0.33, 0.21, 0.04)
+  cat.add(catHead)
+  box("cat", [0.22, 0.18, 0.24], [0, 0, 0], catHead)
+  ;[-1, 1].forEach((side) => box("cat", [0.12, 0.1, 0.04], [0.02, -0.03, side * 0.13], catHead))
+  box("catRuff", [0.06, 0.07, 0.12], [0.11, -0.04, 0], catHead)
+  ;[-0.04, 0, 0.04].forEach((z) => box("catStripe", [0.08, 0.012, 0.02], [0.05, 0.091, z], catHead))
+  const ears = [-1, 1].map((side) => {
+    const ear = new THREE.Group()
+    ear.position.set(-0.01, 0.09, side * 0.08)
+    catHead.add(ear)
+    box("cat", [0.08, 0.1, 0.07], [0, 0.05, 0], ear)
+    box("pink", [0.01, 0.06, 0.04], [0.041, 0.045, 0], ear)
+    box("catStripe", [0.03, 0.05, 0.03], [0, 0.12, 0], ear)
+    return ear
+  })
+  const catEyes = [-1, 1].map((side) => box("hair", [0.01, 0.015, 0.05], [0.112, 0.03, side * 0.06], catHead))
+
+  const zzzMaterial = new THREE.MeshBasicMaterial({ color: "#a48bff", transparent: true, depthWrite: false })
+  const zzz = [0, 1, 2].map((i) => {
+    const z = new THREE.Group()
+    const size = 0.05 + i * 0.015
+    ;[size, -size].forEach((y) => {
+      const bar = new THREE.Mesh(kit.unit, zzzMaterial)
+      bar.scale.set(size * 2, size * 0.35, size * 0.35)
+      bar.position.y = y
+      z.add(bar)
+    })
+    const slash = new THREE.Mesh(kit.unit, zzzMaterial)
+    slash.scale.set(size * 2.8, size * 0.35, size * 0.35)
+    slash.rotation.z = Math.PI / 4
+    z.add(slash)
+    z.rotation.y = -0.6
+    room.add(z)
+    return z
+  })
+  const zzzOrigin = new THREE.Vector3(2.45, 0.45, 0.6)
+
   const dev = new THREE.Group()
   dev.position.set(0.3, 0, 0.85)
   room.add(dev)
@@ -307,25 +373,12 @@ export const buildRoom = (THREE, kit, halo) => {
     return piece
   })
 
-  const deployMaterial = new THREE.MeshBasicMaterial({ color: "#ffc857", transparent: true })
+  const deployMaterial = new THREE.MeshBasicMaterial({ color: "#ff4f9a", transparent: true })
   const deploy = new THREE.Group()
   box(deployMaterial, [0.2, 0.2, 0.2], [0, 0, 0], deploy)
-  const deployHalo = makeHalo(THREE, halo, "#ffc857", 1.1, 0.7)
+  const deployHalo = makeHalo(THREE, halo, "#ff6fb5", 1.1, 0.7)
   deploy.add(deployHalo)
   room.add(deploy)
-
-  const floaters = [
-    ["</>", "#ff4f9a", [-1.9, 3.7, 1.2], 0],
-    ["{ }", "#19b37a", [2.7, 3.2, -0.4], 1.7],
-    [";", "#f5a623", [3.1, 1.9, 1.6], 3.1],
-    ["=>", "#8c6cff", [-0.6, 3.9, -1.8], 4.4],
-  ].map(([text, color, position, phase]) => {
-    const mesh = buildGlyphs(THREE, text, color)
-    mesh.position.set(...position)
-    mesh.userData = { base: position, phase }
-    room.add(mesh)
-    return mesh
-  })
 
   const steamPositions = new Float32Array(30)
   const steam = new THREE.Points(
@@ -346,7 +399,7 @@ export const buildRoom = (THREE, kit, halo) => {
     lampGlow.material.opacity = dark ? 0.75 : 0.35
   }
 
-  const update = (time, dive) => {
+  const update = (time) => {
     const t = time % STORY_LOOP
     const typed = typedFraction(t)
     const fast = t >= THINK_END && t < TYPE_END
@@ -366,6 +419,32 @@ export const buildRoom = (THREE, kit, halo) => {
       thinking * 0.15
     )
     dev.rotation.y = Math.sin((t - BUILD_END) * 5) * 0.25 * cheer
+    const awake = window01(t, BUILD_END + 0.15, DONE_END + 0.2, 0.35)
+    const breath = Math.sin(time * 1.4)
+    catBody.scale.set(1, 1 + breath * 0.05 * (1 - awake), 1 + breath * 0.025)
+    catHead.position.y = 0.21 + breath * 0.008 + awake * 0.1
+    catHead.rotation.set(awake * Math.sin(time * 2) * 0.15, 0, awake * 0.35 - 0.08 * (1 - awake))
+    catEyes.forEach((eye) => eye.scale.set(0.01, 0.015 + awake * 0.035, 0.05))
+    const twitch = Math.max(0, Math.sin(time * 0.9) - 0.94) * 8
+    ears.forEach((ear, i) => {
+      ear.rotation.x = (i ? -1 : 1) * (twitch * 0.5 + awake * 0.1)
+    })
+    tail.rotation.y = Math.sin(time * 0.7) * 0.12 + awake * Math.sin(time * 5) * 0.25
+    tailTip.rotation.y = Math.sin(time * 1.3) * 0.3
+    zzzMaterial.opacity = 1 - awake
+    zzz.forEach((z, i) => {
+      const life = (time * 0.35 + i / 3) % 1
+      z.position.set(
+        zzzOrigin.x + life * 0.35 + Math.sin(life * 6 + i) * 0.04,
+        zzzOrigin.y + life * 0.7,
+        zzzOrigin.z - life * 0.15
+      )
+      z.scale.setScalar(Math.sin(life * Math.PI) * (1 - awake))
+    })
+
+    const lean = fast ? smooth((t - THINK_END) / 0.4) * (1 - smooth((t - TYPE_END + 0.3) / 0.3)) : 0
+    torso.rotation.x = -0.1 - lean * 0.08 + thinking * 0.06
+    head.position.set(0, 1.52 + Math.sin(time * 1.6) * 0.012 - lean * 0.03, 0.78 - 0.85 - lean * 0.06 + thinking * 0.04)
 
     const bulbScale = pop((t - 4.5) / 0.35) * (1 - smooth((t - 6.05) / 0.3))
     bulb.visible = bulbScale > 0.01
@@ -409,12 +488,6 @@ export const buildRoom = (THREE, kit, halo) => {
     deployMaterial.opacity = 1 - rise
     deployHalo.material.opacity = 0.7 * (1 - rise)
 
-    floaters.forEach((mesh, i) => {
-      const { base, phase } = mesh.userData
-      mesh.position.set(base[0], base[1] + Math.sin(time * 0.9 + phase) * 0.12, base[2])
-      mesh.rotation.y = Math.sin(time * 0.4 + phase) * 0.6 + (i % 2 ? 0.4 : -0.4)
-    })
-
     for (let i = 0; i < dustCount; i++) {
       const [u, v, k] = dustSeeds[i]
       const top = WINDOW_TOP
@@ -436,8 +509,7 @@ export const buildRoom = (THREE, kit, halo) => {
     steam.geometry.attributes.position.needsUpdate = true
     dust.geometry.attributes.position.needsUpdate = true
 
-    glow.intensity = 2.6 + Math.sin(time * 7) * 0.25 + dive * 10 + cheer * 1.5
-    screenMaterial.color.set("#140a33").lerp(tokenMaterials[3].color, dive * 0.7)
+    glow.intensity = 2.6 + Math.sin(time * 7) * 0.25 + cheer * 1.5
   }
 
   return { group: room, update, setTheme }

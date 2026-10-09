@@ -14,6 +14,9 @@ export const THEME = {
   yellow: ["#f5a623", "#ffc04d"],
   violet: ["#8c6cff", "#a48bff"],
   sky: ["#bfe3ff", "#22325a"],
+  cat: ["#9b9389", "#8d867d"],
+  catStripe: ["#5b544d", "#4f4943"],
+  catRuff: ["#e6e1da", "#d6d1ca"],
 }
 
 export const CODE_COLORS = ["#ff6fb5", "#3ddc97", "#ffc857", "#a48bff", "#e7e0ff"]
@@ -156,43 +159,4 @@ export const makeHalo = (THREE, texture, color, scale, opacity = 0.6) => {
   )
   sprite.scale.setScalar(scale)
   return sprite
-}
-
-export const GLYPHS = {
-  "{": ["..##", ".#..", ".#..", "#...", ".#..", ".#..", "..##"],
-  "}": ["##..", "..#.", "..#.", "...#", "..#.", "..#.", "##.."],
-  "<": ["...#", "..#.", ".#..", "#...", ".#..", "..#.", "...#"],
-  ">": ["#...", ".#..", "..#.", "...#", "..#.", ".#..", "#..."],
-  "/": ["...#", "...#", "..#.", ".#..", ".#..", "#...", "#..."],
-  ";": [".#", ".#", "..", "..", ".#", ".#", "#."],
-  "=": ["....", "....", "####", "....", "####", "....", "...."],
-  " ": ["..", "..", "..", "..", "..", "..", ".."],
-}
-
-export const buildGlyphs = (THREE, text, color, cell = 0.07) => {
-  const cubes = []
-  let offset = 0
-  ;[...text].forEach((char) => {
-    const rows = GLYPHS[char]
-    rows.forEach((row, y) => {
-      for (let x = 0; x < row.length; x++) {
-        if (row[x] === "#") cubes.push([offset + x, 3 - y])
-      }
-    })
-    offset += rows[0].length + 1
-  })
-  const mesh = new THREE.InstancedMesh(
-    new THREE.BoxGeometry(cell * 0.86, cell * 0.86, cell * 0.86),
-    new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.35, roughness: 0.5 }),
-    cubes.length
-  )
-  const dummy = new THREE.Object3D()
-  const center = (offset - 1) / 2
-  cubes.forEach(([x, y], i) => {
-    dummy.position.set((x - center) * cell, y * cell, 0)
-    dummy.updateMatrix()
-    mesh.setMatrixAt(i, dummy.matrix)
-  })
-  mesh.castShadow = true
-  return mesh
 }
