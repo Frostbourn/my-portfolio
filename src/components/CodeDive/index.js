@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 import { createKit, createDots, createDotMaterial, createHaloTexture } from "./kit"
 import { buildRoom } from "./room"
 
-const CAMERA = { pos: [6.4, 3.8, 8], target: [0.1, 1.25, -0.4], offset: 0.25 }
+const CAMERA = { pos: [6.4, 3.8, 8], target: [0.1, 1.25, -0.4] }
 const DOTS = 1600
 const SPAN = 60
 
@@ -14,7 +14,12 @@ const CodeDive = () => {
     let cleanup = () => {}
 
     import("three").then((THREE) => {
-      if (!disposed) cleanup = mount(THREE, ref.current)
+      if (disposed) return
+      try {
+        cleanup = mount(THREE, ref.current)
+      } catch (error) {
+        console.error(error)
+      }
     })
 
     return () => {
@@ -91,7 +96,33 @@ const mount = (THREE, canvas) => {
   let theme = null
   let scroll = window.scrollY
   let frame = 0
+  let introSettled = false
   const started = performance.now()
+
+  const fadeRoom = (amount) => {
+    room.group.traverse((object) => {
+      if (!object.material) return
+      const materials = Array.isArray(object.material) ? object.material : [object.material]
+      materials.forEach((material) => {
+        if (material.userData.baseOpacity == null) {
+          material.userData.baseOpacity = material.opacity
+          material.userData.baseTransparent = material.transparent
+          if (material.uniforms && material.uniforms.uOpacity) {
+            material.userData.baseUOpacity = material.uniforms.uOpacity.value
+          }
+        }
+        if (amount >= 1) {
+          material.opacity = material.userData.baseOpacity
+          material.transparent = material.userData.baseTransparent
+          if (material.userData.baseUOpacity != null) material.uniforms.uOpacity.value = material.userData.baseUOpacity
+          return
+        }
+        material.transparent = true
+        material.opacity = material.userData.baseOpacity * amount
+        if (material.userData.baseUOpacity != null) material.uniforms.uOpacity.value = material.userData.baseUOpacity * amount
+      })
+    })
+  }
 
   const draw = () => {
     const t = reduce ? 9.5 : (performance.now() - started) / 1000
@@ -108,7 +139,9 @@ const mount = (THREE, canvas) => {
     scroll = reduce ? window.scrollY : scroll + (window.scrollY - scroll) * 0.12
     mouse.x += (mouse.tx - mouse.x) * 0.05
     mouse.y += (mouse.ty - mouse.y) * 0.05
-    const mobile = width <= 768
+    const slot = document.querySelector(".hero-room")
+    const slotRect = slot ? slot.getBoundingClientRect() : null
+    const mobile = slotRect && slotRect.height > 0
 
     for (let i = 0; i < DOTS; i++) {
       const z = base[i * 3 + 2]
@@ -127,13 +160,37 @@ const mount = (THREE, canvas) => {
     const pageY = window.scrollY
     if (pageY < height * 1.2) {
       room.update(t)
+      if (!introSettled) {
+        const elapsed = performance.now() - started
+        const raw = reduce ? 1 : Math.min(1, Math.max(0, (elapsed - 250) / 700))
+        const eased = raw === 1 ? 1 : 1 - (1 - raw) ** 3
+        room.group.position.x = (1 - eased) * -6.4
+        fadeRoom(eased)
+        if (eased === 1) introSettled = true
+      }
       camera.position.set(...CAMERA.pos)
       camera.position.x += mouse.x * 0.35 + (reduce ? 0 : Math.sin(t * 0.25) * 0.15)
       camera.position.y -= mouse.y * 0.2
-      if (mobile) camera.position.sub(target).multiplyScalar(1.95).add(target)
+      if (mobile) {
+        const byHeight = 0.62 / (slotRect.height / height)
+        const byWidth = 1.05 / (width / height)
+        const zoom = Math.min(4, Math.max(2.25, byHeight, byWidth))
+        camera.position.sub(target).multiplyScalar(zoom).add(target)
+      } else {
+        camera.position.sub(target).multiplyScalar(1.72).add(target)
+      }
       camera.lookAt(target)
-      const offsetY = (mobile ? 0.3 * height : 0) + pageY
-      camera.setViewOffset(width, height, mobile ? 0 : CAMERA.offset * width, offsetY, width, height)
+      const hero = document.querySelector(".hero.hero-refresh")
+      const copy = document.querySelector(".hero-copy")
+      const heroLeft = hero ? hero.getBoundingClientRect().left : Math.max(0, (width - 1920) / 2)
+      const copyLeft = copy ? copy.getBoundingClientRect().left : heroLeft + 1200
+      const towardCopy = Math.max(heroLeft + height * 0.16, copyLeft - height * 0.14)
+      const towardEdge = heroLeft + height * 0.04
+      const clearLinks = width < 1700 ? 80 : 0
+      const roomCenter = (towardCopy + towardEdge) / 2 + clearLinks
+      const offsetX = mobile ? 0 : width / 2 - roomCenter
+      const offsetY = mobile ? height / 2 - (slotRect.top + slotRect.height / 2) : pageY
+      camera.setViewOffset(width, height, offsetX, offsetY, width, height)
       renderer.clearDepth()
       renderer.render(scene, camera)
     }

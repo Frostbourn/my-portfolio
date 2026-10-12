@@ -4,6 +4,7 @@ import { Fade } from "react-awesome-reveal"
 const Hero = () => {
   return (
     <section className="hero hero-refresh">
+      <div className="hero-room" aria-hidden="true" />
       <div className="hero-copy">
         <Fade
           cascade

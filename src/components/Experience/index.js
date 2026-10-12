@@ -30,29 +30,13 @@ const offers = [
 const Experience = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulAsset(filter: { file: { contentType: { eq: "application/pdf" } } }) {
-        nodes {
-          title
-          file {
-            url
-            fileName
-          }
-        }
+      localCv {
+        url
       }
     }
   `)
 
-  const pdfs = data.allContentfulAsset.nodes
-  const cv =
-    pdfs.find(
-      (node) =>
-        /cv/i.test(node.file?.fileName || "") || /cv/i.test(node.title || "")
-    ) || (pdfs.length === 1 ? pdfs[0] : null)
-  const cvUrl = cv?.file?.url
-    ? cv.file.url.startsWith("//")
-      ? `https:${cv.file.url}`
-      : cv.file.url
-    : null
+  const cvUrl = data.localCv?.url
 
   return (
     <section id="services" className="experience">
